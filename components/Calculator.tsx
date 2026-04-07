@@ -1,10 +1,6 @@
 "use client";
 
-import { useState } from "react";
-import { cn } from "@/lib/utils";
-
 export default function Calculator() {
-  const [step, setStep] = useState(0);
 
   return (
     <div className="w-full flex-1 flex flex-col pb-10 bg-white">

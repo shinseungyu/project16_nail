@@ -1,4 +1,3 @@
-import Link from "next/link";
 import Sidebar from "@/components/Sidebar";
 
 export default function SubPageLayout({ children }: { children: React.ReactNode }) {
