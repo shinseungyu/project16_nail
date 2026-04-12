@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Image from 'next/image'
 
 export const metadata: Metadata = {
   title: '네일아트 창업 Q&A | 창업 전 궁금한 것 다 물어보세요',
@@ -62,30 +63,30 @@ const qnaList = [
 export default function QnaPage() {
   return (
     <div className="max-w-[1100px] mx-auto px-4 py-12">
-      <p className="text-sm text-pink-500 font-bold mb-2">창업 Q&A</p>
-      <h1 className="text-3xl font-extrabold text-gray-900 mb-3">네일아트 창업 Q&A</h1>
-      <p className="text-gray-500 mb-10">창업 준비 중 가장 많이 묻는 질문과 답변을 모았습니다.</p>
+      <p className="text-xs font-semibold text-stone-400 mb-2 uppercase tracking-widest">창업 Q&A</p>
+      <h1 className="text-3xl font-extrabold text-stone-900 mb-3">네일아트 창업 Q&A</h1>
+      <p className="text-stone-500 mb-10">창업 준비 중 가장 많이 묻는 질문과 답변을 모았습니다.</p>
 
       <section className="mb-12 space-y-4">
         {qnaList.map((item, i) => (
-          <div key={i} className="bg-white border border-gray-100 rounded-2xl p-6 shadow-sm">
-            <p className="flex items-start gap-3 font-bold text-gray-900 mb-3">
-              <span className="shrink-0 w-6 h-6 bg-pink-500 text-white rounded-full flex items-center justify-center text-xs font-extrabold">Q</span>
+          <div key={i} className="bg-white border border-stone-100 rounded-2xl p-6 shadow-sm">
+            <p className="flex items-start gap-3 font-bold text-stone-900 mb-3">
+              <span className="shrink-0 w-6 h-6 bg-stone-800 text-white rounded-full flex items-center justify-center text-xs font-extrabold">Q</span>
               {item.q}
             </p>
-            <p className="flex items-start gap-3 text-[13px] text-gray-600 leading-relaxed">
-              <span className="shrink-0 w-6 h-6 bg-gray-100 text-gray-500 rounded-full flex items-center justify-center text-xs font-extrabold">A</span>
+            <p className="flex items-start gap-3 text-[13px] text-stone-600 leading-relaxed">
+              <span className="shrink-0 w-6 h-6 bg-stone-100 text-stone-500 rounded-full flex items-center justify-center text-xs font-extrabold">A</span>
               {item.a}
             </p>
           </div>
         ))}
       </section>
 
-      <section className="bg-gradient-to-r from-pink-500 to-pink-400 rounded-3xl p-8 text-center text-white">
+      <section className="bg-stone-900 rounded-3xl p-10 text-center text-white">
         <h2 className="text-xl font-extrabold mb-2">더 궁금한 것이 있으신가요?</h2>
-        <p className="text-pink-100 mb-5 text-sm">실제 운영 중인 창업자가 직접 답변해드립니다.</p>
-        <a href={OPEN_CHAT_URL} className="inline-block bg-yellow-400 hover:bg-yellow-300 text-gray-900 font-bold px-8 py-3 rounded-full transition-all">
-          💬 무료 창업 상담
+        <p className="text-stone-400 mb-5 text-sm">실제 운영 중인 창업자가 직접 답변해드립니다.</p>
+        <a href={OPEN_CHAT_URL} className="inline-flex items-center gap-2 bg-[#FEE500] hover:bg-[#FADC00] text-[#000000] font-bold px-8 py-3 rounded-full transition-all">
+          <Image src="/images/kakao_logo.png" alt="카카오톡" width={18} height={18} />무료 창업 상담
         </a>
       </section>
     </div>

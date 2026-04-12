@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Image from 'next/image'
 
 export const metadata: Metadata = {
   title: '네일아트 창업비용 총정리 2026 | 항목별 예산 가이드',
@@ -11,13 +12,13 @@ const OPEN_CHAT_URL = '#'
 export default function CostPage() {
   return (
     <div className="max-w-[1100px] mx-auto px-4 py-12">
-      <p className="text-sm text-pink-500 font-bold mb-2">창업비용 가이드</p>
-      <h1 className="text-3xl font-extrabold text-gray-900 mb-3">네일아트 창업비용 총정리</h1>
-      <p className="text-gray-500 mb-10">2026년 기준 1인 네일샵 창업에 드는 모든 비용을 항목별로 정리했습니다.</p>
+      <p className="text-xs font-semibold text-stone-400 mb-2 uppercase tracking-widest">창업비용 가이드</p>
+      <h1 className="text-3xl font-extrabold text-stone-900 mb-3">네일아트 창업비용 총정리</h1>
+      <p className="text-stone-500 mb-10">2026년 기준 1인 네일샵 창업에 드는 모든 비용을 항목별로 정리했습니다.</p>
 
       {/* 비용 상세 */}
       <section className="mb-12">
-        <h2 className="text-xl font-bold text-gray-900 mb-4">항목별 창업비용</h2>
+        <h2 className="text-xl font-bold text-stone-900 mb-4">항목별 창업비용</h2>
         <div className="space-y-4">
           {[
             { title: '보증금', min: '100만원', avg: '300만원', max: '1,000만원 이상', desc: '상가 규모와 지역에 따라 차이가 크며, 권리금이 추가되는 경우도 있습니다. 소규모 공유 작업실을 이용하면 보증금을 낮출 수 있습니다.' },
@@ -27,25 +28,25 @@ export default function CostPage() {
             { title: '간판·홍보물', min: '30만원', avg: '100만원', max: '200만원', desc: '간판 제작, 현수막, 명함, 스티커, SNS 프로필 촬영 비용입니다. 초기에는 최소한으로 시작하고 수익이 생기면 추가 투자를 권장합니다.' },
             { title: '가구·소품', min: '50만원', avg: '200만원', max: '500만원', desc: '네일 테이블, 의자(시술용·고객용), 소독기, 수납장, 대기 소파 등입니다. 중고나라·당근마켓 활용 시 비용을 크게 줄일 수 있습니다.' },
           ].map((item) => (
-            <div key={item.title} className="bg-white border border-gray-100 rounded-2xl p-6 shadow-sm">
-              <h3 className="text-base font-bold text-gray-900 mb-3">{item.title}</h3>
+            <div key={item.title} className="bg-white border border-stone-100 rounded-2xl p-6 shadow-sm">
+              <h3 className="text-base font-bold text-stone-900 mb-3">{item.title}</h3>
               <div className="flex gap-4 mb-3">
-                <div className="text-center"><p className="text-xs text-gray-400 mb-1">최소</p><p className="text-sm font-bold text-gray-700">{item.min}</p></div>
-                <div className="text-center"><p className="text-xs text-gray-400 mb-1">평균</p><p className="text-sm font-bold text-pink-500">{item.avg}</p></div>
-                <div className="text-center"><p className="text-xs text-gray-400 mb-1">최대</p><p className="text-sm font-bold text-gray-700">{item.max}</p></div>
+                <div className="text-center"><p className="text-xs text-stone-400 mb-1">최소</p><p className="text-sm font-bold text-stone-700">{item.min}</p></div>
+                <div className="text-center"><p className="text-xs text-stone-400 mb-1">평균</p><p className="text-sm font-bold text-stone-900">{item.avg}</p></div>
+                <div className="text-center"><p className="text-xs text-stone-400 mb-1">최대</p><p className="text-sm font-bold text-stone-700">{item.max}</p></div>
               </div>
-              <p className="text-[13px] text-gray-600 leading-relaxed">{item.desc}</p>
+              <p className="text-[13px] text-stone-600 leading-relaxed">{item.desc}</p>
             </div>
           ))}
         </div>
       </section>
 
       {/* CTA */}
-      <section className="bg-gradient-to-r from-pink-500 to-pink-400 rounded-3xl p-8 text-center text-white">
+      <section className="bg-stone-900 rounded-3xl p-10 text-center text-white">
         <h2 className="text-xl font-extrabold mb-2">내 상황에 맞는 창업비용이 궁금하다면?</h2>
-        <p className="text-pink-100 mb-5 text-sm">무료 상담으로 정확한 예산을 잡아드립니다.</p>
-        <a href={OPEN_CHAT_URL} className="inline-block bg-yellow-400 hover:bg-yellow-300 text-gray-900 font-bold px-8 py-3 rounded-full transition-all">
-          💬 무료 창업 상담
+        <p className="text-stone-400 mb-5 text-sm">무료 상담으로 정확한 예산을 잡아드립니다.</p>
+        <a href={OPEN_CHAT_URL} className="inline-flex items-center gap-2 bg-[#FEE500] hover:bg-[#FADC00] text-[#000000] font-bold px-8 py-3 rounded-full transition-all">
+          <Image src="/images/kakao_logo.png" alt="카카오톡" width={18} height={18} />무료 창업 상담
         </a>
       </section>
     </div>

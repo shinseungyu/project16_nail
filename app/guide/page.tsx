@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Image from 'next/image'
 
 export const metadata: Metadata = {
   title: '네일아트 창업 준비 단계별 가이드 2026 | 사업자 등록부터 오픈까지',
@@ -11,9 +12,9 @@ const OPEN_CHAT_URL = '#'
 export default function GuidePage() {
   return (
     <div className="max-w-[1100px] mx-auto px-4 py-12">
-      <p className="text-sm text-pink-500 font-bold mb-2">창업 가이드</p>
-      <h1 className="text-3xl font-extrabold text-gray-900 mb-3">네일아트 창업 준비 단계별 가이드</h1>
-      <p className="text-gray-500 mb-10">처음 창업하는 분도 이 순서대로만 따라가면 됩니다.</p>
+      <p className="text-xs font-semibold text-stone-400 mb-2 uppercase tracking-widest">창업 가이드</p>
+      <h1 className="text-3xl font-extrabold text-stone-900 mb-3">네일아트 창업 준비 단계별 가이드</h1>
+      <p className="text-stone-500 mb-10">처음 창업하는 분도 이 순서대로만 따라가면 됩니다.</p>
 
       <section className="mb-12">
         <div className="space-y-6">
@@ -25,24 +26,24 @@ export default function GuidePage() {
             { step: '05', title: '인테리어 및 장비 세팅', desc: '네일샵은 청결하고 밝은 이미지가 핵심입니다. 조명(자연광 느낌), 환기 설비, 소독 시설에 집중 투자하세요. 장비는 중고로 시작해도 충분합니다.' },
             { step: '06', title: 'SNS 마케팅 및 오픈 준비', desc: '오픈 전 인스타그램 계정 개설 후 시술 사진을 꾸준히 올리세요. 네이버 블로그·플레이스 등록은 필수입니다. 오픈 이벤트(첫 달 할인)로 초기 고객을 확보하는 것이 중요합니다.' },
           ].map((item) => (
-            <div key={item.step} className="bg-white border border-gray-100 rounded-2xl p-6 shadow-sm flex gap-5">
-              <div className="shrink-0 w-12 h-12 bg-pink-50 rounded-full flex items-center justify-center">
-                <span className="text-pink-500 font-extrabold text-sm">{item.step}</span>
+            <div key={item.step} className="bg-white border border-stone-100 rounded-2xl p-6 shadow-sm flex gap-5">
+              <div className="shrink-0 w-12 h-12 bg-stone-100 rounded-full flex items-center justify-center">
+                <span className="text-stone-700 font-extrabold text-sm">{item.step}</span>
               </div>
               <div>
-                <h3 className="text-base font-bold text-gray-900 mb-2">{item.title}</h3>
-                <p className="text-[13px] text-gray-600 leading-relaxed">{item.desc}</p>
+                <h3 className="text-base font-bold text-stone-900 mb-2">{item.title}</h3>
+                <p className="text-[13px] text-stone-600 leading-relaxed">{item.desc}</p>
               </div>
             </div>
           ))}
         </div>
       </section>
 
-      <section className="bg-gradient-to-r from-pink-500 to-pink-400 rounded-3xl p-8 text-center text-white">
+      <section className="bg-stone-900 rounded-3xl p-10 text-center text-white">
         <h2 className="text-xl font-extrabold mb-2">창업 준비, 혼자 하지 마세요</h2>
-        <p className="text-pink-100 mb-5 text-sm">단계별 맞춤 상담을 무료로 받아보세요.</p>
-        <a href={OPEN_CHAT_URL} className="inline-block bg-yellow-400 hover:bg-yellow-300 text-gray-900 font-bold px-8 py-3 rounded-full transition-all">
-          💬 무료 창업 상담
+        <p className="text-stone-400 mb-5 text-sm">단계별 맞춤 상담을 무료로 받아보세요.</p>
+        <a href={OPEN_CHAT_URL} className="inline-flex items-center gap-2 bg-[#FEE500] hover:bg-[#FADC00] text-[#000000] font-bold px-8 py-3 rounded-full transition-all">
+          <Image src="/images/kakao_logo.png" alt="카카오톡" width={18} height={18} />무료 창업 상담
         </a>
       </section>
     </div>

@@ -1,3 +1,32 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #1c1917; /* stone-900 */
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0c0a09; /* stone-950 */
+    --foreground: #f5f5f4; /* stone-100 */
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: var(--font-pretendard);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+::selection {
+  background-color: #fbcfe8; /* rose-200 */
+  color: #881337; /* rose-900 */
+}
