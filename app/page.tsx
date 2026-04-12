@@ -64,7 +64,7 @@ export default function Home() {
           <div className="flex items-center gap-2 mb-2">
             <span className="bg-rose-50 text-rose-600 text-[10px] font-extrabold px-2 py-0.5 rounded tracking-widest uppercase border border-rose-100">가장 많이 묻는 질문 1위</span>
           </div>
-          <h2 className="text-2xl md:text-3xl font-extrabold text-stone-900 mb-3 tracking-tight">네일샵 창업, '자격증'이 꼭 필요한가요?</h2>
+          <h2 className="text-2xl md:text-3xl font-extrabold text-stone-900 mb-3 tracking-tight">네일샵 창업, &apos;자격증&apos;이 꼭 필요한가요?</h2>
           <p className="text-stone-500 text-sm mb-6 leading-relaxed">네, 합법적인 매장 오픈과 영업 신고를 위해서는 <strong className="text-stone-800">무조건 필수</strong>입니다. 자격증은 크게 두 가지로 나뉘니 창업 목표라면 반드시 구분해서 준비하셔야 합니다.</p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-5">
             <div className="bg-stone-50 border-2 border-stone-800 rounded-2xl p-6 relative overflow-hidden shadow-sm">
