@@ -57,10 +57,6 @@ export default function CalculatorPage() {
   }, [totalStartup, monthlyNet])
 
   const fmt = (n: number) => n.toLocaleString('ko-KR')
-  const _fmtWon = (n: number) => {
-    if (n >= 10000) return `${(n / 10000).toFixed(1)}만원`
-    return `${n.toLocaleString()}원`
-  }
   const fmtMon = (n: number) => {
     if (n >= 10000) return `${Math.round(n / 10000)}만원`
     return `${n.toLocaleString()}원`
