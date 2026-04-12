@@ -11,7 +11,7 @@ export default function Home() {
     <div>
       {/* 히어로 */}
       <section className="relative py-36 border-b border-stone-200 overflow-hidden min-h-[560px] flex items-center">
-        <Image src="/images/bg.png" alt="네일샵 창업" fill className="object-cover" priority />
+        <Image src="/images/bg.webp" alt="네일샵 창업" fill className="object-cover" priority />
         <div className="absolute inset-0 bg-black/55" />
         <div className="relative max-w-[1100px] mx-auto px-4 text-center">
           <p className="inline-block bg-white/20 text-white text-xs font-semibold px-4 py-1.5 rounded-full mb-5 tracking-widest uppercase">2026 최신 기준</p>
@@ -176,7 +176,7 @@ export default function Home() {
 
       {/* 섹션 2 - 창업 적합도 (풀폭 배경) */}
       <section className="relative py-24 overflow-hidden min-h-[480px] flex items-center">
-        <Image src="/images/bg2.png" alt="창업 적합도 배경" fill className="object-cover" />
+        <Image src="/images/bg2.webp" alt="창업 적합도 배경" fill className="object-cover" />
         <div className="absolute inset-0 bg-black/60" />
         <div className="relative max-w-[1100px] mx-auto px-4">
           <p className="text-xs font-semibold text-white/60 mb-2 uppercase tracking-widest">창업 적합도</p>
@@ -264,7 +264,7 @@ export default function Home() {
           <p className="text-xs font-semibold text-stone-400 mb-2 uppercase tracking-widest">예상 수익</p>
           <h2 className="text-2xl font-extrabold text-stone-900 mb-2">1인 네일샵 월 수익은 얼마나 될까요?</h2>
           <p className="text-stone-500 text-sm mb-8">하루 고객 수와 시술 단가에 따라 수익이 크게 달라집니다. 고정비 약 150~200만원 제외 기준입니다.</p>
-          <div className="grid grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {[
               { case: '보수적', icon: '🌱', customers: '하루 3명', monthly: '월 300만원', net: '순수익 100~150만', color: 'border-stone-200 bg-white' },
               { case: '평균', icon: '💅', customers: '하루 5명', monthly: '월 500만원', net: '순수익 250~350만', color: 'border-stone-800 bg-stone-50' },

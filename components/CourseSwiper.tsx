@@ -7,10 +7,10 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 
 const courses = [
-  { id: 1, title: '국가자격증', desc: '단기 합격 꿀팁 전수', icon: '📝', image: '/images/con1.png' },
-  { id: 2, title: '현장실무', desc: '샵에서 바로 쓰는 실전 테크닉', icon: '💅', image: '/images/con2.png' },
-  { id: 3, title: '일렉트릭드릴머신', desc: '기초부터 고급 스킬까지', icon: '⚡', image: '/images/con3.png' },
-  { id: 4, title: '젤아트', desc: '트렌디한 인기 아트 기법', icon: '🎨', image: '/images/con4.png' },
+  { id: 1, title: '국가자격증', desc: '단기 합격 꿀팁 전수', icon: '📝', image: '/images/con1.webp' },
+  { id: 2, title: '현장실무', desc: '샵에서 바로 쓰는 실전 테크닉', icon: '💅', image: '/images/con2.webp' },
+  { id: 3, title: '일렉트릭드릴머신', desc: '기초부터 고급 스킬까지', icon: '⚡', image: '/images/con3.webp' },
+  { id: 4, title: '젤아트', desc: '트렌디한 인기 아트 기법', icon: '🎨', image: '/images/con4.webp' },
 ];
 
 export default function CourseSwiper() {
