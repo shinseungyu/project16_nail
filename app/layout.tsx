@@ -151,7 +151,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <meta itemProp="name" content={TITLE} />
         <meta itemProp="description" content={DESC} />
         <meta itemProp="image" content="/images/thumb.png" />
-        <Script id="json-ld" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} strategy="beforeInteractive" />
+        <Script id="json-ld" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} strategy="afterInteractive" />
       </head>
       <body className={`${pretendard.className} antialiased`}>
         {/* 헤더 */}

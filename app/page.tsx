@@ -1,8 +1,10 @@
 import Link from 'next/link'
 import Image from 'next/image'
+import dynamic from 'next/dynamic'
 import NailCalculatorWidget from '@/components/NailCalculatorWidget'
-import CourseSwiper from '@/components/CourseSwiper'
 import { nailServices } from '@/data/services'
+
+const CourseSwiper = dynamic(() => import('@/components/CourseSwiper'), { ssr: false, loading: () => <div className="w-full h-48 bg-stone-100 rounded-2xl animate-pulse mt-5" /> })
 
 const OPEN_CHAT_URL = 'https://open.kakao.com/o/sIOxvlZh'
 
