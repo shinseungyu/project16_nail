@@ -125,7 +125,7 @@ export default function LicensePage() {
               { period: '5~6개월', label: '자격증 취득', desc: '필기·실기 합격 완료, 자격증 수령' },
               { period: '6~8개월', label: '창업 준비', desc: '상권 분석, 사업자 등록, 위생교육, 공간 세팅' },
               { period: '8~10개월', label: '오픈', desc: 'SNS 마케팅 시작, 네이버 플레이스 등록, 오픈 이벤트' },
-            ].map((item, i) => (
+            ].map((item) => (
               <div key={item.period} className="flex gap-4 items-start">
                 <div className="shrink-0 text-right w-20">
                   <p className="text-[11px] font-bold text-stone-400">{item.period}</p>
