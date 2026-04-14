@@ -50,7 +50,7 @@ export const metadata: Metadata = {
     images: ['/images/thumb.webp'],
   },
   verification: {
-    other: { 'naver-site-verification': '' },
+    other: { 'naver-site-verification': '59831489bb696d4bcf38c779cbd83b176bfc7f97' },
   },
   other: {
     'google-adsense-account': 'ca-pub-5378247298190063',
