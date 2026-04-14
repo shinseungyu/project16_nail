@@ -18,7 +18,7 @@ export async function generateMetadata({ params }: { params: { id: string } }): 
   }
 }
 
-const OPEN_CHAT_URL = '#'
+const OPEN_CHAT_URL = 'https://open.kakao.com/o/sIOxvlZh'
 
 export default function InfoPage({ params }: { params: { id: string } }) {
   const section = nailSections.find((s) => s.id === params.id)
@@ -78,7 +78,7 @@ export default function InfoPage({ params }: { params: { id: string } }) {
         <h2 className="text-lg font-extrabold mb-2">더 구체적인 상담이 필요하신가요?</h2>
         <p className="text-stone-400 mb-5 text-sm">실제 운영 중인 창업자가 직접 답변해드립니다.</p>
         <a href={OPEN_CHAT_URL} className="inline-flex items-center gap-2 bg-[#FEE500] hover:bg-[#FADC00] text-[#000000] font-bold px-8 py-3 rounded-full transition-all">
-          <Image src="/images/kakao_logo.png" alt="카카오톡" width={18} height={18} />무료 창업 상담
+          <Image src="/images/kakao_logo.webp" alt="카카오톡" width={18} height={18} />무료 창업 상담
         </a>
       </section>
     </div>

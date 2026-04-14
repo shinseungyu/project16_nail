@@ -1,9 +1,7 @@
 'use client'
 
 import { useState, useMemo } from 'react'
-import Image from 'next/image'
-
-const OPEN_CHAT_URL = '#'
+import KakaoButton from '@/components/KakaoButton'
 
 export default function CalculatorPage() {
   // ── 창업비용 계산기 ──
@@ -259,9 +257,9 @@ export default function CalculatorPage() {
       <section className="mt-8 bg-stone-900 rounded-3xl p-10 text-center text-white">
         <h2 className="text-xl font-extrabold mb-2">계산 결과, 창업 가능성이 보이시나요?</h2>
         <p className="text-stone-400 mb-5 text-sm">실제 지역과 상황에 맞는 현실적인 계획을 같이 세워드립니다.</p>
-        <a href={OPEN_CHAT_URL} className="inline-flex items-center gap-2 bg-[#FEE500] hover:bg-[#FADC00] text-[#000000] font-bold px-8 py-3 rounded-full transition-all">
-          <Image src="/images/kakao_logo.png" alt="카카오톡" width={18} height={18} />무료 창업 상담
-        </a>
+        <KakaoButton location="calculator" className="inline-flex items-center gap-2 bg-[#FEE500] hover:bg-[#FADC00] text-[#000000] font-bold px-8 py-3 rounded-full transition-all">
+          무료 창업 상담
+        </KakaoButton>
       </section>
     </div>
   )

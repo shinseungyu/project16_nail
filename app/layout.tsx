@@ -1,7 +1,8 @@
 import type { Metadata } from 'next'
 import Script from 'next/script'
-import Image from 'next/image'
 import localFont from 'next/font/local'
+import { Analytics } from '@vercel/analytics/next'
+import KakaoFloatButton from '@/components/KakaoFloatButton'
 import './globals.css'
 
 const pretendard = localFont({
@@ -39,14 +40,14 @@ export const metadata: Metadata = {
     siteName: SITE_NAME,
     locale: 'ko_KR',
     type: 'website',
-    images: [{ url: '/images/thumb.png', width: 1200, height: 630, alt: '네일샵 창업 총정리' }],
+    images: [{ url: '/images/thumb.webp', width: 1200, height: 630, alt: '네일샵 창업 총정리' }],
   },
   twitter: {
     card: 'summary_large_image',
     site: SITE_NAME,
     title: TITLE,
     description: DESC,
-    images: ['/images/thumb.png'],
+    images: ['/images/thumb.webp'],
   },
   verification: {
     other: { 'naver-site-verification': '' },
@@ -68,7 +69,7 @@ export const metadata: Metadata = {
     // itemprop (schema.org microdata)
     'itemprop:name': TITLE,
     'itemprop:description': DESC,
-    'itemprop:image': '/images/thumb.png',
+    'itemprop:image': '/images/thumb.webp',
   },
   robots: { index: true, follow: true },
   icons: {
@@ -100,7 +101,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       {
         '@type': 'Service',
         '@id': `${siteUrl}/#service`,
-        name: '네일아트 창업',
+        name: '네일샵 창업',
         serviceType: '네일샵 창업 정보 및 상담 서비스',
         areaServed: { '@type': 'Country', name: 'KR' },
         provider: { '@id': `${siteUrl}/#organization` },
@@ -113,7 +114,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         inLanguage: 'ko-KR',
         description: '네일샵 창업비용, 자격증, 준비물, 예상 수익까지 한번에 확인하세요.',
         isPartOf: { '@id': `${siteUrl}/#website` },
-        about: ['네일샵 창업', '네일샵 창업비용', '1인 네일샵 창업', '네일아트 창업', '네일 자격증'],
+        about: ['네일샵 창업', '네일샵 창업비용', '1인 네일샵 창업', '네일샵 창업', '네일 자격증'],
         mainEntity: { '@id': `${siteUrl}/#service` },
       },
       {
@@ -122,12 +123,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         mainEntity: [
           {
             '@type': 'Question',
-            name: '네일아트 창업비용은 얼마나 드나요?',
+            name: '네일샵 창업비용은 얼마나 드나요?',
             acceptedAnswer: { '@type': 'Answer', text: '1인 네일샵 기준 최소 500만원~2,000만원 수준입니다. 인테리어, 장비, 재료비, 보증금 등에 따라 크게 달라집니다.' },
           },
           {
             '@type': 'Question',
-            name: '네일아트 창업에 자격증이 필요한가요?',
+            name: '네일샵 창업에 자격증이 필요한가요?',
             acceptedAnswer: { '@type': 'Answer', text: '법적 필수 자격증은 없지만 네일 미용사 자격증(국가기술자격) 취득을 권장합니다. 고객 신뢰도와 실력 검증에 도움이 됩니다.' },
           },
           {
@@ -150,7 +151,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <head>
         <meta itemProp="name" content={TITLE} />
         <meta itemProp="description" content={DESC} />
-        <meta itemProp="image" content="/images/thumb.png" />
+        <meta itemProp="image" content="/images/thumb.webp" />
         <Script id="json-ld" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} strategy="afterInteractive" />
       </head>
       <body className={`${pretendard.className} antialiased`}>
@@ -180,7 +181,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <div className="max-w-[1100px] mx-auto px-4">
             <div className="flex flex-col md:flex-row justify-between gap-10 border-b border-stone-800 pb-10 mb-10">
               <div>
-                <p className="font-bold text-white text-lg mb-4 tracking-tight">💅 네일아트 창업</p>
+                <p className="font-bold text-white text-lg mb-4 tracking-tight">💅 네일샵 창업</p>
                 <p className="text-xs leading-relaxed max-w-xs text-stone-500">
                   본 사이트의 정보는 2026년 최신 창업 트렌드를 바탕으로 하며, 실제 창업 비용은 지역 및 규모에 따라 상이할 수 있습니다.
                 </p>
@@ -211,20 +212,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 </div>
               </div>
             </div>
-            <p className="text-[11px] text-stone-600">© 2026 네일아트 창업. All rights reserved.</p>
+            <p className="text-[11px] text-stone-600">© 2026 네일샵 창업. All rights reserved.</p>
           </div>
         </footer>
 
         {/* 플로팅 오픈챗 버튼 */}
-        <a
-          href="https://open.kakao.com/o/sIOxvlZh"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="fixed bottom-8 right-8 z-50 bg-[#FEE500] hover:bg-[#FADC00] hover:-translate-y-1 text-[#000000] font-bold text-sm px-6 py-3.5 rounded-full shadow-2xl transition-all flex items-center gap-3 active:scale-95"
-        >
-          <Image src="/images/kakao_logo.png" alt="카카오톡" width={20} height={20} />
-          <span>멘토 1:1 무료 상담</span>
-        </a>
+        <KakaoFloatButton />
+        <Analytics />
       </body>
     </html>
   )

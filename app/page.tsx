@@ -2,11 +2,11 @@ import Link from 'next/link'
 import Image from 'next/image'
 import dynamic from 'next/dynamic'
 import NailCalculatorWidget from '@/components/NailCalculatorWidget'
+import KakaoButton from '@/components/KakaoButton'
 import { nailServices } from '@/data/services'
 
 const CourseSwiper = dynamic(() => import('@/components/CourseSwiper'), { ssr: false, loading: () => <div className="w-full h-48 bg-stone-100 rounded-2xl animate-pulse mt-5" /> })
 
-const OPEN_CHAT_URL = 'https://open.kakao.com/o/sIOxvlZh'
 
 export default function Home() {
   return (
@@ -24,10 +24,12 @@ export default function Home() {
           <p className="text-base text-white/70 mb-4 max-w-xl mx-auto leading-relaxed">
             창업비용부터 자격증, 예상 수익까지 1인 네일샵 창업의 모든 것을 알려드립니다
           </p>
-          <a href={OPEN_CHAT_URL} className="inline-flex items-center justify-center bg-[#FEE500] hover:bg-[#FADC00] text-[#000000] font-bold text-xl px-12 py-6 rounded-full shadow-md transition-all">
-            <Image src="/images/kakao_logo.png" alt="카카오톡" width={30} height={30} className="mr-2" />
-            무료 창업 상담 받기
-          </a>
+          <div className="relative inline-block mt-[45px]">
+            <span className="hero-balloon">1:1 무료 창업 멘토링 진행 중! 👇</span>
+            <KakaoButton location="hero" className="mt-[5px] inline-flex items-center justify-center bg-[#FEE500] hover:bg-[#FADC00] text-[#000000] font-bold text-xl px-12 py-6 rounded-full shadow-md transition-all" imgSize={30} imgClass="mr-2">
+              무료 창업 상담 받기
+            </KakaoButton>
+          </div>
         </div>
       </section>
 
@@ -47,15 +49,9 @@ export default function Home() {
             </p>
             <CourseSwiper />
           </div>
-          <a
-            href={OPEN_CHAT_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="shrink-0 inline-flex items-center justify-center bg-[#FEE500] hover:bg-[#FADC00] text-[#000000] font-bold text-xl px-10 py-5 rounded-full shadow-md transition-all whitespace-nowrap"
-          >
-            <Image src="/images/kakao_logo.png" alt="카카오톡" width={27} height={27} className="mr-2" />
+          <KakaoButton location="mentor_banner" className="shrink-0 inline-flex items-center justify-center bg-[#FEE500] hover:bg-[#FADC00] text-[#000000] font-bold text-xl px-10 py-5 rounded-full shadow-md transition-all whitespace-nowrap" imgSize={27} imgClass="mr-2">
             멘토에게 무료 상담받기
-          </a>
+          </KakaoButton>
         </div>
       </section>
 
@@ -67,18 +63,30 @@ export default function Home() {
             <span className="bg-rose-50 text-rose-600 text-[10px] font-extrabold px-2 py-0.5 rounded tracking-widest uppercase border border-rose-100">가장 많이 묻는 질문 1위</span>
           </div>
           <h2 className="text-2xl md:text-3xl font-extrabold text-stone-900 mb-3 tracking-tight">네일샵 창업, &apos;자격증&apos;이 꼭 필요한가요?</h2>
-          <p className="text-stone-500 text-sm mb-6 leading-relaxed">네, 합법적인 매장 오픈과 영업 신고를 위해서는 <strong className="text-stone-800">무조건 필수</strong>입니다. 자격증은 크게 두 가지로 나뉘니 창업 목표라면 반드시 구분해서 준비하셔야 합니다.</p>
+          <p className="text-stone-500 text-sm mb-4 leading-relaxed">
+            네, <strong className="text-stone-800">법적으로 반드시 필요합니다.</strong>{' '}
+            <strong className="text-stone-800">공중위생관리법 제6조 제1항</strong>에 따라 미용업을 영위하려면 미용사 면허를 취득해야 하며, 같은 법 <strong className="text-stone-800">시행규칙 제7조</strong>는 미용업 신고 시 면허증 사본 제출을 의무화하고 있습니다. 무면허로 미용업을 운영할 경우 <strong className="text-stone-800">동법 제20조에 따라 1년 이하 징역 또는 1천만원 이하 벌금</strong>에 처해질 수 있습니다.
+          </p>
+          <div className="bg-red-50 border border-red-100 rounded-xl p-4 flex items-start gap-3 mb-6">
+            <span className="text-lg shrink-0 mt-0.5">⚠️</span>
+            <p className="text-xs text-red-800 leading-relaxed">
+              <strong>주의:</strong> &ldquo;자격증 없이도 창업할 수 있다&rdquo;는 정보는 잘못된 내용입니다. 미용사(네일) 면허 없이 손님에게 네일 시술을 하고 대가를 받으면 <strong>공중위생관리법 위반</strong>으로 처벌 대상이 됩니다.
+            </p>
+          </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-5">
             <div className="bg-stone-50 border-2 border-stone-800 rounded-2xl p-6 relative overflow-hidden shadow-sm">
-              <div className="absolute top-0 right-0 bg-stone-800 text-white text-[10px] font-bold px-3 py-1.5 rounded-bl-lg">창업에 필수!</div>
+              <div className="absolute top-0 right-0 bg-stone-800 text-white text-[10px] font-bold px-3 py-1.5 rounded-bl-lg">법적 필수</div>
               <div className="flex items-center gap-2 mb-2">
                 <span className="text-2xl">🏛️</span>
-                <h3 className="text-lg font-extrabold text-stone-900">국가공인 자격증</h3>
+                <h3 className="text-lg font-extrabold text-stone-900">미용사(네일) 국가면허</h3>
               </div>
-              <p className="text-xs text-stone-500 font-semibold mb-3 tracking-wide">미용사(네일) 국가기술자격증</p>
-              <p className="text-sm text-stone-700 leading-relaxed">
-                한국산업인력공단에서 주관합니다. 구청에 <strong>영업신고를 하고 사업자 등록을 하려면 이 자격증이 100% 필수</strong>입니다. 창업을 생각하신다면 가장 먼저 준비해야 할 첫걸음입니다.
-              </p>
+              <p className="text-xs text-stone-500 font-semibold mb-3 tracking-wide">국가기술자격증 취득 후 보건복지부 면허 신청</p>
+              <ul className="space-y-1.5 text-sm text-stone-700">
+                <li className="flex gap-2"><span className="text-green-500 shrink-0">✓</span>한국산업인력공단(Q-Net) 주관 자격시험 합격</li>
+                <li className="flex gap-2"><span className="text-green-500 shrink-0">✓</span>보건복지부에 미용사 면허 신청 (자격증 기반)</li>
+                <li className="flex gap-2"><span className="text-green-500 shrink-0">✓</span>관할 구청 위생과에 미용업 신고 완료 후 영업 가능</li>
+                <li className="flex gap-2"><span className="text-green-500 shrink-0">✓</span><strong>공중위생관리법 제6조·시행규칙 제7조</strong> 근거</li>
+              </ul>
             </div>
             <div className="bg-white border border-stone-200 rounded-2xl p-6 shadow-sm opacity-80">
               <div className="flex items-center gap-2 mb-2">
@@ -86,15 +94,17 @@ export default function Home() {
                 <h3 className="text-lg font-extrabold text-stone-700">민간 자격증</h3>
               </div>
               <p className="text-xs text-stone-400 font-semibold mb-3 tracking-wide">각종 협회/아카데미 발급 자격증</p>
-              <p className="text-sm text-stone-500 leading-relaxed">
-                실력을 증명하거나 젤아트, 드릴 등 특정 과정 수료를 증명하는 용도로는 좋지만, <strong>법적 효력이 없어 이 자격증만으로는 네일샵을 창업할 수 없습니다.</strong> 
-              </p>
+              <ul className="space-y-1.5 text-sm text-stone-500">
+                <li className="flex gap-2"><span className="text-red-400 shrink-0">✗</span>법적 효력 없음 — 미용업 신고 서류로 인정 불가</li>
+                <li className="flex gap-2"><span className="text-red-400 shrink-0">✗</span>이 자격증만으로는 합법적 네일샵 운영 불가</li>
+                <li className="flex gap-2"><span className="text-stone-400 shrink-0">△</span>기술 수료 증명·포트폴리오 보완 용도로만 활용</li>
+              </ul>
             </div>
           </div>
           <div className="bg-orange-50 border border-orange-100 rounded-xl p-4 flex items-start gap-3">
             <span className="text-lg shrink-0 mt-0.5">💡</span>
             <p className="text-xs text-orange-800 leading-relaxed">
-              <strong>초보자 팁:</strong> 자격증이 아예 없는 노베이스 상태라도 걱정하지 마세요. 기초 필기/실기 준비부터 창업 연계까지 <strong>올댓뷰티</strong>와 같은 전문 아카데미의 커리큘럼을 활용하면 생각보다 빠르게 취득할 수 있습니다. 상단의 카카오톡으로 문의하시면 취득 플랜을 잡아드립니다.
+              <strong>노베이스도 가능합니다:</strong> 경험이 전혀 없어도 전문 아카데미 커리큘럼을 따라가면 3~6개월 안에 자격증 취득 후 창업까지 연결됩니다. <strong>올댓뷰티</strong> 연계 멘토가 카카오톡으로 개인 일정에 맞는 취득 플랜을 무료로 잡아드립니다.
             </p>
           </div>
         </section>
@@ -229,7 +239,7 @@ export default function Home() {
         {/* 섹션 4(원래 3) - 창업 전 준비해야 할 것들 */}
         <section>
           <p className="text-xs font-semibold text-stone-400 mb-2 uppercase tracking-widest">창업 준비</p>
-          <h2 className="text-2xl font-extrabold text-stone-900 mb-2">창업 전 무엇을 준비해야 하나요?</h2>
+          <h2 className="text-2xl font-extrabold text-stone-900 mb-2">네일샵 창업 전 무엇을 준비해야 하나요?</h2>
           <p className="text-stone-500 text-sm mb-8">순서대로 따라가면 빠짐없이 준비할 수 있습니다.</p>
           <div className="space-y-3">
             {[
@@ -292,7 +302,7 @@ export default function Home() {
         <section>
           <p className="text-xs font-semibold text-stone-400 mb-2 uppercase tracking-widest">자격증</p>
           <h2 className="text-2xl font-extrabold text-stone-900 mb-2">자격증 없이도 네일샵 창업할 수 있나요?</h2>
-          <p className="text-stone-500 text-sm mb-8">결론부터 말하면 법적으로는 가능합니다. 하지만 현실적으로는 자격증 취득이 훨씬 유리합니다.</p>
+          <p className="text-stone-500 text-sm mb-8">결론부터 말하면 <strong className="text-stone-800">불가능합니다.</strong> 공중위생관리법상 미용업은 면허 없이 운영할 수 없으며, 위반 시 형사 처벌 대상입니다. 자격증 취득이 선택이 아닌 법적 의무입니다.</p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="bg-white border border-stone-100 rounded-2xl p-6 shadow-sm space-y-4">
               <h3 className="text-sm font-extrabold text-stone-800">네일 미용사 자격증이란?</h3>
@@ -311,14 +321,14 @@ export default function Home() {
               </div>
             </div>
             <div className="bg-white border border-stone-100 rounded-2xl p-6 shadow-sm">
-              <h3 className="text-sm font-extrabold text-stone-800 mb-4">자격증 취득의 실질적 장점</h3>
+              <h3 className="text-sm font-extrabold text-stone-800 mb-4">면허 취득 절차 및 효과</h3>
               <ul className="space-y-2.5">
                 {[
-                  '고객이 "자격증 있어요?" 라고 물을 때 자신 있게 대답 가능',
-                  '미용업 신고 서류에 자격증 사본 제출로 신뢰도 상승',
-                  '공유 작업실·건물 입점 시 자격증 요구하는 경우 대비',
-                  '향후 직원 채용 시 교육 기준이 됨',
-                  '보험·대출 등 창업 지원 시 가점 요소',
+                  '① Q-Net 국가기술자격 합격 → ② 보건복지부 미용사 면허 신청 → ③ 구청 미용업 신고',
+                  '면허증 원본은 영업장 내 게시 의무 (공중위생관리법 시행규칙 제19조)',
+                  '무면허 적발 시 영업장 폐쇄 명령 및 형사 처벌 (동법 제11조·제20조)',
+                  '소상공인 창업 지원금·저금리 대출 신청 시 면허증 제출 필요',
+                  '공유 작업실·상가 건물 임대 계약 시 면허증 요구하는 경우 많음',
                 ].map((t) => (
                   <li key={t} className="flex items-start gap-2 text-xs text-stone-600">
                     <span className="text-stone-400 shrink-0">✓</span>{t}
@@ -418,10 +428,9 @@ export default function Home() {
         <section className="bg-stone-900 rounded-3xl p-10 text-center text-white">
           <h2 className="text-2xl font-extrabold mb-2 tracking-tight">창업 준비, 혼자 하지 마세요</h2>
           <p className="text-stone-400 mb-8 text-sm">실제 창업자에게 직접 물어보세요. 비용·자격증·수익까지 무료로 상담해드립니다.</p>
-          <a href={OPEN_CHAT_URL} className="inline-flex items-center justify-center bg-[#FEE500] hover:bg-[#FADC00] text-[#000000] font-bold px-8 py-3.5 rounded-full transition-all shadow-md">
-            <Image src="/images/kakao_logo.png" alt="카카오톡" width={20} height={20} className="mr-2" />
+          <KakaoButton location="main_cta" className="inline-flex items-center justify-center bg-[#FEE500] hover:bg-[#FADC00] text-[#000000] font-bold px-8 py-3.5 rounded-full transition-all shadow-md" imgSize={20} imgClass="mr-2">
             카카오 오픈챗 무료 상담
-          </a>
+          </KakaoButton>
         </section>
 
       </div>

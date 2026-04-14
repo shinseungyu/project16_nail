@@ -1,17 +1,16 @@
 import type { Metadata } from 'next'
-import Image from 'next/image'
+import KakaoButton from '@/components/KakaoButton'
 
 export const metadata: Metadata = {
-  title: '네일아트 창업 Q&A | 창업 전 궁금한 것 다 물어보세요',
-  description: '네일아트 창업을 준비하면서 많이 묻는 질문과 답변을 정리했습니다. 비용, 자격증, 수익, 상권까지 실전 Q&A.',
+  title: '네일샵 창업 Q&A | 창업 전 궁금한 것 다 물어보세요',
+  description: '네일샵 창업을 준비하면서 많이 묻는 질문과 답변을 정리했습니다. 비용, 자격증, 수익, 상권까지 실전 Q&A.',
   alternates: { canonical: '/qna' },
 }
 
-const OPEN_CHAT_URL = '#'
 
 const qnaList = [
   {
-    q: '네일아트 창업에 자격증이 꼭 필요한가요?',
+    q: '네일샵 창업에 자격증이 꼭 필요한가요?',
     a: '법적으로는 필수가 아닙니다. 하지만 미용업 신고 시 자격증 사본을 제출하면 고객 신뢰도가 높아지고, 일부 공간 임차 시 요구하는 경우도 있습니다. 네일 미용사 국가기술자격증(Q-Net) 취득을 강력히 권장합니다.',
   },
   {
@@ -64,7 +63,7 @@ export default function QnaPage() {
   return (
     <div className="max-w-[1100px] mx-auto px-4 py-12">
       <p className="text-xs font-semibold text-stone-400 mb-2 uppercase tracking-widest">창업 Q&A</p>
-      <h1 className="text-3xl font-extrabold text-stone-900 mb-3">네일아트 창업 Q&A</h1>
+      <h1 className="text-3xl font-extrabold text-stone-900 mb-3">네일샵 창업 Q&A</h1>
       <p className="text-stone-500 mb-10">창업 준비 중 가장 많이 묻는 질문과 답변을 모았습니다.</p>
 
       <section className="mb-12 space-y-4">
@@ -85,9 +84,9 @@ export default function QnaPage() {
       <section className="bg-stone-900 rounded-3xl p-10 text-center text-white">
         <h2 className="text-xl font-extrabold mb-2">더 궁금한 것이 있으신가요?</h2>
         <p className="text-stone-400 mb-5 text-sm">실제 운영 중인 창업자가 직접 답변해드립니다.</p>
-        <a href={OPEN_CHAT_URL} className="inline-flex items-center gap-2 bg-[#FEE500] hover:bg-[#FADC00] text-[#000000] font-bold px-8 py-3 rounded-full transition-all">
-          <Image src="/images/kakao_logo.png" alt="카카오톡" width={18} height={18} />무료 창업 상담
-        </a>
+        <KakaoButton location="qna" className="inline-flex items-center gap-2 bg-[#FEE500] hover:bg-[#FADC00] text-[#000000] font-bold px-8 py-3 rounded-full transition-all">
+          무료 창업 상담
+        </KakaoButton>
       </section>
     </div>
   )

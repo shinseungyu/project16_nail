@@ -29,7 +29,7 @@ export default function NailCalculatorWidget() {
   return (
     <section className="mb-14">
       <p className="text-xs font-semibold text-stone-400 mb-2 uppercase tracking-widest">창업비용 계산기</p>
-      <h2 className="text-2xl font-bold text-stone-900 mb-2">내 창업비용 직접 계산하기</h2>
+      <h2 className="text-2xl font-bold text-stone-900 mb-2">네일샵 창업비용 계산기</h2>
       <p className="text-sm text-stone-400 mb-6">항목별 슬라이더를 조정해 예상 창업비용을 바로 확인하세요.</p>
 
       <div className="bg-white border border-stone-100 rounded-2xl p-6 shadow-sm">

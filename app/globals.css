@@ -30,3 +30,45 @@ html {
   background-color: #fbcfe8; /* rose-200 */
   color: #881337; /* rose-900 */
 }
+
+@keyframes bubble-float {
+  0%, 100% {
+    transform: translate(-50%, 0);
+  }
+  50% {
+    transform: translate(-50%, -5px);
+  }
+}
+
+.hero-balloon {
+    position: absolute;
+    top: -45px;
+    left: 50%;
+    display: block;
+    padding: 8px 15px;
+    border-radius: 5px;
+    background-color: #3e2723;
+    color: #fff;
+    width: max-content;
+    transform: translate(-50%, 0);
+    font-weight: 700;
+    font-size: 14px;
+    animation: bubble-float 1.3s ease-in-out infinite;
+    white-space: nowrap;
+    z-index: 10;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.hero-balloon::before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0px;
+    height: 0px;
+    border-top: 10px solid #3e2723;
+    border-left: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-right: 10px solid transparent;
+}
