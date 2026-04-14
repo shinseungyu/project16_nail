@@ -18,7 +18,7 @@ const pretendard = localFont({
 })
 
 const SITE_NAME = '네일샵 창업'
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://nailstartup.kr'
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://nailstartup.com'
 const TITLE = '네일샵 창업 | 1인 네일샵 창업비용·자격증·수익 총정리 2026'
 const DESC = '1인 네일샵 창업을 준비 중이신가요? 창업비용부터 미용사 자격증 취득 방법, 예상 수익까지 2026년 최신 기준으로 한번에 정리했습니다. 올댓뷰티 멘토가 카카오톡으로 무료 상담해드립니다.'
 const KEYWORDS = '네일샵 창업, 네일샵 창업비용, 1인 네일샵 창업, 네일아트 창업, 네일 창업, 네일샵 차리는법, 소자본 창업 네일, 네일아트 창업비용, 네일 자격증 창업, 네일아트 창업 준비'
@@ -80,7 +80,7 @@ export const metadata: Metadata = {
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://nailstartup.kr'
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://nailstartup.com'
 
   const jsonLd = {
     '@context': 'https://schema.org',

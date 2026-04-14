@@ -4,7 +4,7 @@ import { nailServices } from '@/data/services'
 const POST_IDS = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://nailstartup.kr'
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://nailstartup.com'
 
   const servicePaths = nailServices.map((s) => ({
     url: `${baseUrl}/service/${s.id}`,
