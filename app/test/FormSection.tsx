@@ -163,7 +163,7 @@ export default function FormSection() {
           신청하기
         </button>
 
-        <p className="text-xs text-center text-gray-400">※ 테스트 페이지 — 실제 전송되지 않습니다</p>
+        <p className="text-xs text-center text-gray-400">※ 테스트 페이지</p>
       </div>
     </>
   )
