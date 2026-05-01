@@ -1,22 +1,10 @@
-import Link from 'next/link';
+import PrivacyPolicyModal from './PrivacyPolicyModal';
 
 export default function Footer() {
   return (
-    <footer style={{ backgroundColor: '#1c1917', borderTop: '1px solid #292524', marginTop: '3rem', padding: '2.5rem 1rem', width: '100%' }}>
-      <div style={{ maxWidth: '1200px', margin: '0 auto', display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-        <div style={{ display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap', gap: '1rem', alignItems: 'center', fontSize: '0.875rem', color: '#a8a29e' }}>
-          <div>
-            <p style={{ margin: 0 }}>&copy; {new Date().getFullYear()} 네일아트 창업. All rights reserved.</p>
-          </div>
-          <div style={{ display: 'flex', gap: '1.5rem' }}>
-            <Link href="/terms" style={{ color: '#a8a29e', textDecoration: 'none' }}>이용약관</Link>
-            <Link href="/privacy" style={{ color: '#d6d3d1', textDecoration: 'none', fontWeight: 600 }}>개인정보처리방침</Link>
-            <Link href="/cookie-policy" style={{ color: '#a8a29e', textDecoration: 'none' }}>쿠키정책</Link>
-          </div>
-        </div>
-        <div style={{ fontSize: '0.75rem', color: '#78716c', textAlign: 'left' }}>
-          본 사이트의 내용 및 비용 정보는 참고용이며 실제와 다를 수 있습니다.
-        </div>
+    <footer style={{ backgroundColor: '#1c1917', borderTop: '1px solid #292524', marginTop: '3rem', padding: '1.25rem 1rem', width: '100%' }}>
+      <div style={{ maxWidth: '1200px', margin: '0 auto', display: 'flex', alignItems: 'center', gap: '1.5rem', fontSize: '0.8rem', color: '#a8a29e' }}>
+        <span>© 2026 네일샵 창업. All rights reserved.&nbsp;&nbsp;|&nbsp;&nbsp;<PrivacyPolicyModal /></span>
       </div>
     </footer>
   );

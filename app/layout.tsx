@@ -3,6 +3,8 @@ import Script from 'next/script'
 import localFont from 'next/font/local'
 import { Analytics } from '@vercel/analytics/next'
 import KakaoFloatButton from '@/components/KakaoFloatButton'
+import PrivacyPolicyModal from '@/components/PrivacyPolicyModal'
+import LegalNoticeModal from '@/components/LegalNoticeModal'
 import './globals.css'
 
 const pretendard = localFont({
@@ -185,6 +187,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 <p className="text-xs leading-relaxed max-w-xs text-stone-500">
                   본 사이트의 정보는 2026년 최신 창업 트렌드를 바탕으로 하며, 실제 창업 비용은 지역 및 규모에 따라 상이할 수 있습니다.
                 </p>
+                <div className="text-xs text-stone-600 mt-4 space-y-1 leading-relaxed">
+                  <p>상호: 주식회사 와야미디어</p>
+                  <p>사업자등록번호: 105-87-55780</p>
+                  <p>업종: 광고대행, 광고물작성, 기타광고</p>
+                  <p>주소: 서울특별시 마포구 구룡길 19, A429호</p>
+                </div>
               </div>
               <div className="grid grid-cols-2 sm:grid-cols-3 gap-8">
                 <div className="space-y-3">
@@ -206,13 +214,17 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 <div className="space-y-3">
                   <p className="text-white font-semibold text-xs uppercase tracking-widest">법적 고지</p>
                   <ul className="text-xs space-y-2">
-                    <li><a href="/privacy" className="hover:text-brand transition-colors">개인정보처리방침</a></li>
+                    <li><PrivacyPolicyModal /></li>
                     <li><a href="/terms" className="hover:text-brand transition-colors">이용약관</a></li>
                   </ul>
                 </div>
               </div>
             </div>
-            <p className="text-[11px] text-stone-600">© 2026 네일샵 창업. All rights reserved.</p>
+            <p className="text-[11px] text-stone-500 flex items-center gap-3">
+              <span>© 2026 네일샵 창업. All rights reserved.</span>
+              <PrivacyPolicyModal />
+              <LegalNoticeModal />
+            </p>
           </div>
         </footer>
 

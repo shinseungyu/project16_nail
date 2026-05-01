@@ -45,6 +45,7 @@ export default function FormSection() {
       mobile2: phoneResult.mobile2,
       mobile3: "",
       customer_sex: form.customer_sex,
+      category: "네일",
     }
 
     setSubmitted(true)
