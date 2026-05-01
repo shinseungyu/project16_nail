@@ -1,12 +1,12 @@
 import type { Metadata } from 'next'
 import KakaoButton from '@/components/KakaoButton'
+import FormSection from '../test/FormSection'
 
 export const metadata: Metadata = {
   title: '네일샵 창업 Q&A | 창업 전 궁금한 것 다 물어보세요',
   description: '네일샵 창업을 준비하면서 많이 묻는 질문과 답변을 정리했습니다. 비용, 자격증, 수익, 상권까지 실전 Q&A.',
   alternates: { canonical: '/qna' },
 }
-
 
 const qnaList = [
   {
@@ -64,7 +64,14 @@ export default function QnaPage() {
     <div className="max-w-[1100px] mx-auto px-4 py-12">
       <p className="text-xs font-semibold text-stone-400 mb-2 uppercase tracking-widest">창업 Q&A</p>
       <h1 className="text-3xl font-extrabold text-stone-900 mb-3">네일샵 창업 Q&A</h1>
-      <p className="text-stone-500 mb-10">창업 준비 중 가장 많이 묻는 질문과 답변을 모았습니다.</p>
+      <p className="text-stone-500 mb-8">창업 준비 중 가장 많이 묻는 질문과 답변을 모았습니다.</p>
+      
+      <div className="mb-14 animate-fade-in-up">
+        <div className="flex justify-start mb-3">
+          <span className="inline-block bg-[#FEE500] text-black text-sm font-extrabold px-4 py-1.5 rounded-full shadow-sm animate-bounce">간편 신청하기 👇</span>
+        </div>
+        <FormSection />
+      </div>
 
       <section className="mb-12 space-y-4">
         {qnaList.map((item, i) => (

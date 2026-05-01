@@ -4,6 +4,7 @@ import dynamic from 'next/dynamic'
 import NailCalculatorWidget from '@/components/NailCalculatorWidget'
 import KakaoButton from '@/components/KakaoButton'
 import { nailServices } from '@/data/services'
+import FormSection from './test/FormSection'
 
 const CourseSwiper = dynamic(() => import('@/components/CourseSwiper'), { ssr: false, loading: () => <div className="w-full h-48 bg-stone-100 rounded-2xl animate-pulse mt-5" /> })
 
@@ -24,11 +25,11 @@ export default function Home() {
           <p className="text-base text-white/70 mb-4 max-w-xl mx-auto leading-relaxed">
             창업비용부터 자격증, 예상 수익까지 1인 네일샵 창업의 모든 것을 알려드립니다
           </p>
-          <div className="relative inline-block mt-[45px]">
-            <span className="hero-balloon">1:1 무료 창업 멘토링 진행 중! 👇</span>
-            <KakaoButton location="hero" className="mt-[5px] inline-flex items-center justify-center bg-[#FEE500] hover:bg-[#FADC00] text-[#000000] font-bold text-xl px-12 py-6 rounded-full shadow-md transition-all" imgSize={30} imgClass="mr-2">
-              무료 창업 상담 받기
-            </KakaoButton>
+          <div className="relative mt-12 w-full text-left animate-fade-in-up">
+            <div className="flex justify-center md:justify-start mb-3">
+              <span className="inline-block bg-[#FEE500] text-black text-sm font-extrabold px-4 py-1.5 rounded-full shadow-sm animate-bounce">간편 신청하기 👇</span>
+            </div>
+            <FormSection />
           </div>
         </div>
       </section>

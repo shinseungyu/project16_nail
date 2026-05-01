@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import KakaoButton from '@/components/KakaoButton'
 import Link from 'next/link'
+import FormSection from '../test/FormSection'
 
 export const metadata: Metadata = {
   title: '네일샵 창업비용 총정리 2026 | 항목별 예산 가이드',
@@ -14,7 +15,14 @@ export default function CostPage() {
     <div className="max-w-[1100px] mx-auto px-4 py-12">
       <p className="text-xs font-semibold text-stone-400 mb-2 uppercase tracking-widest">창업비용 가이드</p>
       <h1 className="text-3xl font-extrabold text-stone-900 mb-3">네일샵 창업비용 총정리</h1>
-      <p className="text-stone-500 mb-10">2026년 기준 1인 네일샵 창업에 드는 모든 비용을 항목별로 정리했습니다. 창업 형태에 따라 최소 200만원부터 3,000만원 이상까지 차이가 나니, 본인 상황에 맞게 예산을 세워보세요.</p>
+      <p className="text-stone-500 mb-8">2026년 기준 1인 네일샵 창업에 드는 모든 비용을 항목별로 정리했습니다. 창업 형태에 따라 최소 200만원부터 3,000만원 이상까지 차이가 나니, 본인 상황에 맞게 예산을 세워보세요.</p>
+      
+      <div className="mb-14 animate-fade-in-up">
+        <div className="flex justify-start mb-3">
+          <span className="inline-block bg-[#FEE500] text-black text-sm font-extrabold px-4 py-1.5 rounded-full shadow-sm animate-bounce">간편 신청하기 👇</span>
+        </div>
+        <FormSection />
+      </div>
 
       {/* 총비용 요약 */}
       <section className="mb-12">

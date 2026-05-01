@@ -40,108 +40,129 @@ export default function PrivacyModal({ onConfirm, onClose }: Props) {
   return (
     <>
       {/* 개인정보 모달 */}
-      <div className="fixed inset-0 bg-black/60 z-[999] flex items-center justify-center">
-        <div className="relative bg-white rounded-2xl w-[90%] max-w-[720px] max-h-[85dvh] flex flex-col overflow-hidden p-[25px_30px_0_20px] box-border">
-
-          {/* 닫기 X */}
-          <button onClick={handleClose} className="absolute top-5 right-5 w-5 h-5 z-10">
-            <span className="block absolute top-1/2 left-1/2 w-[2px] h-full bg-[#333] -translate-x-1/2 -translate-y-1/2 rotate-45" />
-            <span className="block absolute top-1/2 left-1/2 w-[2px] h-full bg-[#333] -translate-x-1/2 -translate-y-1/2 -rotate-45" />
-          </button>
-
-          {/* 타이틀 */}
-          <div className="pr-16 mb-3">
-            <h2 className="text-[20px] font-semibold tracking-[-1px] leading-snug mb-3">
-              상담 신청을 위한<br />개인정보 수집·이용 동의
+      <div className="fixed inset-0 bg-stone-900/60 backdrop-blur-sm z-[999] flex items-center justify-center p-4 animate-in fade-in duration-200">
+        <div className="relative bg-white rounded-3xl w-full max-w-[600px] max-h-[85dvh] flex flex-col overflow-hidden shadow-2xl">
+          
+          {/* 헤더 영역 */}
+          <div className="px-8 pt-8 pb-4 bg-white z-10 relative">
+            <button onClick={handleClose} className="absolute top-6 right-6 w-8 h-8 flex items-center justify-center bg-stone-100 text-stone-500 rounded-full hover:bg-stone-200 transition-colors">
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 13L13 1M1 1L13 13" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+            </button>
+            <h2 className="text-2xl font-extrabold text-stone-900 mb-2">
+              안전한 상담을 위한<br />
+              <span className="text-brand">개인정보 동의</span>
             </h2>
-            <p className="text-[14px] text-[#777] leading-snug tracking-[-1px]">
-              상담 서비스 제공을 위해 고객님의 개인정보 수집, 이용 및 마케팅 활용에 대한 동의를 받고 있습니다.
+            <p className="text-sm text-stone-500 leading-relaxed">
+              고객님의 소중한 정보는 상담 목적 외에는 절대 사용되지 않으며, 안전하게 보호됩니다.
             </p>
-          </div>
-
-          {/* 전체 동의 */}
-          <div className="mb-4">
-            <label
-              onClick={handleAllAgree}
-              className={`flex items-center justify-center gap-2 w-full py-[10px] px-5 rounded-xl cursor-pointer ${allRequired ? "bg-[#bbb]" : "bg-[#324891]"}`}
-            >
-              <p className="text-[18px] font-semibold text-white tracking-[-1px]">전체 동의하기</p>
-            </label>
           </div>
 
           {/* 스크롤 영역 */}
-          <div className="overflow-y-auto flex-1 pb-[80px]" style={{ scrollbarWidth: "none" }}>
-
-            {/* 개인정보 수집·이용 동의 */}
-            <ContentBox
-              id="pri"
-              checked={priAgree}
-              onChange={(v) => handleIndividual("pri", v)}
-              label="개인정보 수집 및 이용 동의"
-              required
+          <div className="overflow-y-auto px-8 pb-[100px] flex-1 custom-scrollbar">
+            
+            {/* 전체 동의 버튼 (현대적 디자인) */}
+            <button
+              onClick={handleAllAgree}
+              className={`flex items-center gap-3 w-full py-4 px-5 rounded-2xl mb-6 transition-all duration-300 border-2 ${
+                allRequired 
+                  ? "bg-brand/5 border-brand text-brand" 
+                  : "bg-stone-50 border-stone-100 text-stone-600 hover:border-stone-200"
+              }`}
             >
-              <p>
-                수집 주체 : (주)와야미디어<br /><br />
-                수집 목적 : 네일샵 창업 상담 및 관련 교육/멘토링 정보 안내<br /><br />
-                수집 항목 : 성명, 연락처, 창업 희망 지역 등<br /><br />
-                보유 기간 : 수집일로부터 1년 (또는 이용자 파기 요청 시까지)
-              </p>
-            </ContentBox>
+              <div className={`w-6 h-6 rounded-full flex items-center justify-center transition-colors ${allRequired ? "bg-brand text-white" : "bg-stone-200 text-transparent"}`}>
+                <svg width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M1 5L4.5 8.5L11 1.5" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </div>
+              <span className="text-lg font-bold">약관 전체 동의하기</span>
+            </button>
 
-            {/* 개인정보 제3자 제공 동의 */}
-            <ContentBox
-              id="third"
-              checked={thirdAgree}
-              onChange={(v) => handleIndividual("third", v)}
-              label="개인정보 제3자 제공 동의"
-              required
-            >
-              <p>
-                제공받는 자 : 네일샵 창업 전문 멘토 (올뎃뷰티 소속 컨설턴트)<br /><br />
-                제공 목적 : 창업 상세 상담, 멘토링 프로그램 안내 및 마케팅 정보 전송(전화, 문자 등)<br /><br />
-                제공 항목 : 수집된 개인정보 일체<br /><br />
-                보유 기간 : 제공받는 자의 목적 달성 시까지
-              </p>
-            </ContentBox>
+            {/* 개별 약관들 */}
+            <div className="space-y-4">
+              <ContentBox
+                id="pri"
+                checked={priAgree}
+                onChange={(v) => handleIndividual("pri", v)}
+                label="개인정보 수집 및 이용 동의"
+                required
+              >
+                수집 주체 : (주)와야미디어<br />
+                수집 목적 : 네일 관련 상담 및 문의 응대<br />
+                수집 항목 : 성명, 휴대폰 번호, 생년월일, 성별, 거주 지역, 자격증 보유 여부<br />
+                보유 기간 : 수집일로부터 1년 (또는 요청 시 즉시 파기)<br />
+                동의 거부 권리 : 동의를 거부하실 권리가 있으나, 거부 시 상담 신청이 제한될 수 있습니다.
+              </ContentBox>
 
-            {/* 안내 */}
-            <div className="text-[14px] text-[#666] leading-snug tracking-[-1px] space-y-1 pb-2">
-              <p>※ 당사는 수집된 개인정보를 이용목적 외 다른 용도로 절대 사용하지 않으며, 정보 주체는 언제든지 개인정보처리방침 내 이메일을 통해 동의를 철회할 수 있으며, 철회하는 경우 수집된 개인정보는 지체 없이 파기됩니다.</p>
-              <p className="text-red-500">※ 귀하는 개인정보 수집·3자 제공 동의에 관한 동의를 거부하실 수 있습니다. 다만, 본 동의는 &apos;뷰티 서비스 상담&apos;을 위해 필수적인 사항이므로 동의를 거부하셨을 경우 &apos;뷰티 서비스 상담&apos;이 불가능합니다.</p>
+              <ContentBox
+                id="third"
+                checked={thirdAgree}
+                onChange={(v) => handleIndividual("third", v)}
+                label="개인정보 제3자 제공 동의"
+                required
+              >
+                제공받는 자 : 담당 상담사 (컨설턴트)<br />
+                제공 목적 : 원활한 1:1 유선 상담 진행<br />
+                제공 항목 : 성명, 휴대폰 번호, 생년월일, 성별, 거주 지역, 자격증 보유 여부<br />
+                보유 기간 : 상담 목적 달성 시 즉시 파기<br />
+                동의 거부 권리 : 동의를 거부하실 권리가 있으나, 거부 시 상담 신청이 제한될 수 있습니다.
+              </ContentBox>
+            </div>
+
+            <div className="mt-6 text-[13px] text-stone-400 leading-relaxed space-y-1.5 bg-stone-50 p-4 rounded-xl">
+              <p>• 입력하신 정보는 상담 응대를 위한 필수 항목이며, 동의를 거부하실 경우 상담이 제한될 수 있습니다.</p>
+              <p>• 수집된 정보는 상담 목적 외 다른 용도로 사용되지 않습니다.</p>
+              <p>• 정보 주체는 언제든지 동의를 철회할 수 있으며, 이 경우 수집된 개인정보는 지체 없이 파기됩니다.</p>
             </div>
           </div>
 
-          {/* 확인하기 버튼 */}
-          <button
-            onClick={handleConfirm}
-            className={`absolute bottom-0 left-0 w-full py-[18px] text-[20px] font-medium text-white tracking-[-1px] text-center transition-colors ${allRequired ? "bg-[#324891]" : "bg-[#bbb] pointer-events-none"}`}
-          >
-            확인하기
-          </button>
+          {/* 하단 고정 버튼 */}
+          <div className="absolute bottom-0 left-0 w-full p-6 bg-gradient-to-t from-white via-white/80 to-transparent pt-12 pointer-events-none">
+            <button
+              onClick={handleConfirm}
+              className={`w-full py-4 text-lg font-bold rounded-2xl tracking-wide text-center transition-all pointer-events-auto ${
+                allRequired 
+                  ? "bg-brand text-white hover:bg-brand-dark shadow-lg shadow-brand/20 translate-y-0" 
+                  : "bg-stone-200 text-stone-400 shadow-none cursor-not-allowed"
+              }`}
+            >
+              동의하고 상담 신청하기
+            </button>
+          </div>
         </div>
       </div>
 
-      {/* 이탈 경고 모달 */}
+      {/* 이탈 경고 모달 (부드러운 디자인) */}
       {showAlert && (
-        <div className="fixed inset-0 bg-black/60 z-[1000] flex items-center justify-center">
-          <div className="relative bg-white rounded-2xl w-[90%] max-w-[400px] p-8 text-center">
-            <button onClick={() => setShowAlert(false)} className="absolute top-4 right-4 w-5 h-5">
-              <span className="block absolute top-1/2 left-1/2 w-[2px] h-full bg-[#333] -translate-x-1/2 -translate-y-1/2 rotate-45" />
-              <span className="block absolute top-1/2 left-1/2 w-[2px] h-full bg-[#333] -translate-x-1/2 -translate-y-1/2 -rotate-45" />
-            </button>
-            <span className="flex items-center justify-center gap-2 text-[18px] font-medium text-[#555] mb-5 tracking-[-1px]">
-              <i className="flex items-center justify-center w-5 h-5 bg-[#ed4120] rounded-full text-white font-bold text-sm not-italic">!</i>
-              알림
-            </span>
-            <h5 className="text-[20px] font-medium text-[#111] mb-3 tracking-[-1px]">
-              <b className="font-semibold text-[#324891]">상담 신청을 포기</b>하고 그냥 나가시겠습니까?
+        <div className="fixed inset-0 bg-stone-900/60 backdrop-blur-sm z-[1000] flex items-center justify-center p-4 animate-in fade-in zoom-in-95 duration-200">
+          <div className="relative bg-white rounded-3xl w-full max-w-[360px] p-8 text-center shadow-2xl">
+            <div className="w-16 h-16 bg-rose-50 text-brand rounded-full flex items-center justify-center mx-auto mb-5">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
+              </svg>
+            </div>
+            
+            <h5 className="text-xl font-extrabold text-stone-900 mb-2">
+              정말 나가시겠습니까?
             </h5>
-            <p className="text-[16px] text-[#777] leading-snug tracking-[-1px]">
-              귀하의 정보는 안전하게 보호되며,<br />동의 후 더욱 편리한 서비스를 이용할 수 있습니다.
+            <p className="text-[15px] text-stone-500 leading-relaxed mb-8">
+              지금 나가시면 작성하신 내용이<br/>모두 사라집니다.
             </p>
-            <div className="flex justify-center gap-3 mt-5">
-              <button onClick={handleAlertDisagree} className="w-[45%] py-3 bg-[#ccc] text-white rounded-xl text-[16px] font-medium tracking-[-1px]">괜찮아요</button>
-              <button onClick={handleAlertAgree} className="w-[55%] py-3 bg-[#324891] text-white rounded-xl text-[16px] font-medium tracking-[-1px]">동의하고 계속</button>
+            
+            <div className="flex gap-3">
+              <button 
+                onClick={handleAlertDisagree} 
+                className="flex-1 py-3.5 bg-stone-100 hover:bg-stone-200 text-stone-600 rounded-xl font-bold transition-colors"
+              >
+                나가기
+              </button>
+              <button 
+                onClick={handleAlertAgree} 
+                className="flex-1 py-3.5 bg-brand hover:bg-brand-dark text-white rounded-xl font-bold shadow-md shadow-brand/20 transition-colors"
+              >
+                계속 쓰기
+              </button>
             </div>
           </div>
         </div>
@@ -161,30 +182,30 @@ function ContentBox({
   children: React.ReactNode
 }) {
   return (
-    <div className="border border-[#ddd] rounded-[15px] p-[12px_0_12px_12px] mb-3">
-      <div className="flex items-center pb-2 relative">
-        <input
-          type="checkbox"
-          id={`${id}-agree`}
-          checked={checked}
-          onChange={(e) => onChange(e.target.checked)}
-          className="absolute left-0 w-5 h-5 opacity-0 cursor-pointer z-10"
-        />
-        <i className={`block w-5 h-5 rounded border flex-shrink-0 relative ${checked ? "bg-[#324891] border-[#324891]" : "bg-white border-[#ccc]"}`}>
+    <div className="bg-white border border-stone-200 rounded-2xl overflow-hidden transition-all duration-200 hover:border-brand/30">
+      <div 
+        className="flex items-center p-4 cursor-pointer select-none bg-stone-50/50"
+        onClick={() => onChange(!checked)}
+      >
+        <div className={`w-5 h-5 rounded-md flex items-center justify-center mr-3 transition-colors ${checked ? "bg-brand" : "bg-white border-2 border-stone-300"}`}>
           {checked && (
-            <span className="block absolute top-[2px] left-[6px] w-[5px] h-[10px] border-white border-r-2 border-b-2 rotate-45" />
+            <svg width="10" height="8" viewBox="0 0 10 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1 4L3.5 6.5L9 1" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>
           )}
-        </i>
-        <label htmlFor={`${id}-agree`} className="text-[16px] font-semibold text-[#333] tracking-[-1px] pl-2 cursor-pointer">
+        </div>
+        <span className="text-[15px] font-bold text-stone-800 flex-1">
           {label}
-          {required
-            ? <b className="text-[#324891] font-bold ml-1">[필수]</b>
-            : <b className="text-[#818181] font-normal ml-1">[선택]</b>
-          }
-        </label>
+        </span>
+        {required 
+          ? <span className="text-[13px] font-bold text-brand bg-brand/10 px-2 py-0.5 rounded-full">필수</span>
+          : <span className="text-[13px] font-medium text-stone-400 bg-stone-100 px-2 py-0.5 rounded-full">선택</span>
+        }
       </div>
-      <div className="h-[110px] overflow-y-auto pt-2 pr-4 text-[14px] text-[#666] leading-snug tracking-[-1px]">
-        {children}
+      <div className="p-4 pt-0">
+        <div className="h-[80px] overflow-y-auto text-[13px] text-stone-500 leading-relaxed pr-2 custom-scrollbar border-t border-stone-100 pt-3">
+          {children}
+        </div>
       </div>
     </div>
   )

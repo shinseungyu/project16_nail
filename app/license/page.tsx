@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import KakaoButton from '@/components/KakaoButton'
 import Link from 'next/link'
+import FormSection from '../test/FormSection'
 
 export const metadata: Metadata = {
   title: '네일샵 창업 자격증 취득 방법 2026 | 시험 일정·합격 팁 총정리',
@@ -14,7 +15,14 @@ export default function LicensePage() {
     <div className="max-w-[1100px] mx-auto px-4 py-12">
       <p className="text-xs font-semibold text-stone-400 mb-2 uppercase tracking-widest">자격증 가이드</p>
       <h1 className="text-3xl font-extrabold text-stone-900 mb-3">네일샵 창업 자격증 취득 방법</h1>
-      <p className="text-stone-500 mb-10">네일샵 창업의 첫걸음은 미용사(네일) 국가기술자격증입니다. 구청에 미용업 신고를 하고 합법적으로 영업하려면 이 자격증이 100% 필요합니다. 2026년 기준 시험 정보와 합격 전략을 정리했습니다.</p>
+      <p className="text-stone-500 mb-8">네일샵 창업의 첫걸음은 미용사(네일) 국가기술자격증입니다. 구청에 미용업 신고를 하고 합법적으로 영업하려면 이 자격증이 100% 필요합니다. 2026년 기준 시험 정보와 합격 전략을 정리했습니다.</p>
+      
+      <div className="mb-14 animate-fade-in-up">
+        <div className="flex justify-start mb-3">
+          <span className="inline-block bg-[#FEE500] text-black text-sm font-extrabold px-4 py-1.5 rounded-full shadow-sm animate-bounce">간편 신청하기 👇</span>
+        </div>
+        <FormSection />
+      </div>
 
       {/* 핵심 수치 */}
       <section className="mb-12">
