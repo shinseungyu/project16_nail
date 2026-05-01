@@ -82,7 +82,6 @@ export default function PrivacyModal({ onConfirm, onClose }: Props) {
             {/* 개별 약관들 */}
             <div className="space-y-4">
               <ContentBox
-                id="pri"
                 checked={priAgree}
                 onChange={(v) => handleIndividual("pri", v)}
                 label="개인정보 수집 및 이용 동의"
@@ -96,7 +95,6 @@ export default function PrivacyModal({ onConfirm, onClose }: Props) {
               </ContentBox>
 
               <ContentBox
-                id="third"
                 checked={thirdAgree}
                 onChange={(v) => handleIndividual("third", v)}
                 label="개인정보 제3자 제공 동의"
@@ -172,9 +170,8 @@ export default function PrivacyModal({ onConfirm, onClose }: Props) {
 }
 
 function ContentBox({
-  id, checked, onChange, label, required, children
+  checked, onChange, label, required, children
 }: {
-  id: string
   checked: boolean
   onChange: (v: boolean) => void
   label: string
