@@ -109,7 +109,7 @@ export default function PrivacyModal({ onConfirm, onClose }: Props) {
             {/* 안내 */}
             <div className="text-[14px] text-[#666] leading-snug tracking-[-1px] space-y-1 pb-2">
               <p>※ 당사는 수집된 개인정보를 이용목적 외 다른 용도로 절대 사용하지 않으며, 정보 주체는 언제든지 개인정보처리방침 내 이메일을 통해 동의를 철회할 수 있으며, 철회하는 경우 수집된 개인정보는 지체 없이 파기됩니다.</p>
-              <p className="text-red-500">※ 귀하는 개인정보 수집·3자 제공 동의에 관한 동의를 거부하실 수 있습니다. 다만, 본 동의는 '뷰티 서비스 상담'을 위해 필수적인 사항이므로 동의를 거부하셨을 경우 '뷰티 서비스 상담'이 불가능합니다.</p>
+              <p className="text-red-500">※ 귀하는 개인정보 수집·3자 제공 동의에 관한 동의를 거부하실 수 있습니다. 다만, 본 동의는 &apos;뷰티 서비스 상담&apos;을 위해 필수적인 사항이므로 동의를 거부하셨을 경우 &apos;뷰티 서비스 상담&apos;이 불가능합니다.</p>
             </div>
           </div>
 
