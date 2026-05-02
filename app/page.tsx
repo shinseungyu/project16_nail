@@ -425,6 +425,22 @@ export default function Home() {
           </div>
         </section>
 
+        {/* nailhakwon.com 배너 */}
+        <section className="rounded-3xl overflow-hidden mb-6" style={{ background: 'linear-gradient(135deg, #1e293b 0%, #0f172a 100%)' }}>
+          <a href="https://nailhakwon.com" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', display: 'block', padding: '28px 32px' }}>
+            <p style={{ color: '#f43f5e', fontWeight: 800, fontSize: 12, letterSpacing: '0.08em', textTransform: 'uppercase', marginBottom: 8 }}>NAIL ART ACADEMY</p>
+            <p style={{ color: 'white', fontWeight: 800, fontSize: 20, lineHeight: 1.4, marginBottom: 8 }}>
+              네일아트 학원비, 얼마나 드는지 알아보셨나요?
+            </p>
+            <p style={{ color: 'rgba(255,255,255,0.6)', fontSize: 14, lineHeight: 1.6, marginBottom: 20 }}>
+              2026년 최신 기준 국비지원·학원비·해외취업까지 한눈에 비교해드립니다.<br />무료 상담으로 내게 맞는 정보를 바로 확인하세요!
+            </p>
+            <span style={{ display: 'inline-block', background: '#f43f5e', color: 'white', fontWeight: 700, fontSize: 14, padding: '10px 22px', borderRadius: 50 }}>
+              네일아트 학원비 비교사이트 바로가기 →
+            </span>
+          </a>
+        </section>
+
         {/* CTA */}
         <section className="bg-stone-900 rounded-3xl p-10 text-center text-white">
           <h2 className="text-2xl font-extrabold mb-2 tracking-tight">창업 준비, 혼자 하지 마세요</h2>
