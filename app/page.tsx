@@ -450,23 +450,6 @@ export default function Home() {
           </KakaoButton>
         </section>
 
-        {/* 메이크업학원 수강료 배너 */}
-        <a href="https://www.makeupcost.com/" target="_blank" rel="noopener noreferrer" className="block rounded-3xl overflow-hidden">
-          <div className="bg-gradient-to-r from-stone-800 to-stone-900 hover:from-stone-700 hover:to-stone-800 transition-all py-6 px-8 flex flex-col md:flex-row md:items-center md:justify-between gap-3">
-            <div>
-              <p className="text-[10px] font-extrabold text-amber-400 tracking-widest uppercase mb-1">MAKEUP ACADEMY</p>
-              <p className="text-white font-extrabold text-base md:text-lg leading-snug mb-1">
-                메이크업 학원비, 얼마나 드는지 알아보셨나요?
-              </p>
-              <p className="text-stone-400 text-xs md:text-sm leading-relaxed">
-                2026년 최신 기준 국비지원·학원비·해외취업까지 한눈에 비교해드립니다. 무료 상담으로 내게 맞는 정보를 바로 확인하세요!
-              </p>
-            </div>
-            <span className="inline-flex items-center gap-2 bg-amber-400 text-stone-900 font-extrabold text-sm px-5 py-2.5 rounded-full whitespace-nowrap shrink-0 self-start md:self-center">
-              메이크업 학원비 비교사이트 바로가기 →
-            </span>
-          </div>
-        </a>
 
       </div>
     </div>
