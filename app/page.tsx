@@ -9,9 +9,37 @@ import FormSection from './test/FormSection'
 const CourseSwiper = dynamic(() => import('@/components/CourseSwiper'), { ssr: false, loading: () => <div className="w-full h-48 bg-stone-100 rounded-2xl animate-pulse mt-5" /> })
 
 
+const faqJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: '네일샵 창업비용은 얼마나 드나요?',
+      acceptedAnswer: { '@type': 'Answer', text: '1인 네일샵 기준 최소 500만원~2,000만원 수준입니다. 인테리어, 장비, 재료비, 보증금 등에 따라 크게 달라집니다.' },
+    },
+    {
+      '@type': 'Question',
+      name: '네일샵 창업에 자격증이 필요한가요?',
+      acceptedAnswer: { '@type': 'Answer', text: '법적 필수 자격증은 없지만 네일 미용사 자격증(국가기술자격) 취득을 권장합니다. 고객 신뢰도와 실력 검증에 도움이 됩니다.' },
+    },
+    {
+      '@type': 'Question',
+      name: '1인 네일샵 월 수익은 얼마나 되나요?',
+      acceptedAnswer: { '@type': 'Answer', text: '입지와 시술 단가에 따라 다르지만, 평균 월 순수익 150만원~400만원 수준입니다. 단골 고객 확보가 핵심입니다.' },
+    },
+    {
+      '@type': 'Question',
+      name: '네일샵 창업 최소 자본금은 얼마인가요?',
+      acceptedAnswer: { '@type': 'Answer', text: '공유 작업실 기준 200~400만원, 독립 점포 기준 보증금 포함 최소 500~700만원이 필요합니다.' },
+    },
+  ],
+}
+
 export default function Home() {
   return (
     <div>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
       {/* 히어로 */}
       <section className="relative py-36 border-b border-stone-200 overflow-hidden min-h-[560px] flex items-center">
         <Image src="/images/bg.webp" alt="네일샵 창업" fill className="object-cover" priority />
