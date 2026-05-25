@@ -10,9 +10,22 @@ export const metadata: Metadata = {
 }
 
 
+const faqJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    { '@type': 'Question', name: '네일샵 창업에 자격증이 꼭 필요한가요?', acceptedAnswer: { '@type': 'Answer', text: '네, 구청에 미용업 신고를 하려면 미용사(네일) 국가기술자격증이 반드시 필요합니다. 자격증 없이 영업하면 최대 300만원 과태료가 부과될 수 있습니다.' } },
+    { '@type': 'Question', name: '네일 자격증 시험은 얼마나 자주 있나요?', acceptedAnswer: { '@type': 'Answer', text: '연간 4회(분기별) Q-Net(한국산업인력공단)에서 시행됩니다. 필기 합격 후 2년 이내에 실기를 합격해야 최종 취득됩니다.' } },
+    { '@type': 'Question', name: '네일 자격증 합격률은 얼마나 되나요?', acceptedAnswer: { '@type': 'Answer', text: '필기 합격률은 약 60%, 실기 합격률은 약 50% 수준입니다. 전문 아카데미 수강 시 합격률이 크게 높아집니다.' } },
+    { '@type': 'Question', name: '네일 자격증 취득까지 얼마나 걸리나요?', acceptedAnswer: { '@type': 'Answer', text: '필기 준비 1~2개월, 실기 준비 2~4개월로 총 3~6개월이 일반적입니다. 노베이스여도 전문 아카데미 커리큘럼을 따라가면 6개월 안에 취득 후 창업까지 연결됩니다.' } },
+    { '@type': 'Question', name: '국가 자격증과 민간 자격증의 차이는 무엇인가요?', acceptedAnswer: { '@type': 'Answer', text: '국가기술자격증(Q-Net)만 미용업 신고에 법적 효력이 있습니다. 민간 자격증은 법적 효력이 없어 이것만으로는 네일샵 창업이 불가합니다.' } },
+  ],
+}
+
 export default function LicensePage() {
   return (
     <div className="max-w-[1100px] mx-auto px-4 py-12">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
       <p className="text-xs font-semibold text-stone-400 mb-2 uppercase tracking-widest">자격증 가이드</p>
       <h1 className="text-3xl font-extrabold text-stone-900 mb-3">네일샵 창업 자격증 취득 방법</h1>
       <p className="text-stone-500 mb-8">네일샵 창업의 첫걸음은 미용사(네일) 국가기술자격증입니다. 구청에 미용업 신고를 하고 합법적으로 영업하려면 이 자격증이 100% 필요합니다. 2026년 기준 시험 정보와 합격 전략을 정리했습니다.</p>

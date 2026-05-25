@@ -10,9 +10,22 @@ export const metadata: Metadata = {
 }
 
 
+const faqJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    { '@type': 'Question', name: '1인 네일샵 월 수익은 얼마나 되나요?', acceptedAnswer: { '@type': 'Answer', text: '하루 3명 기준 월 순수익 150~200만원, 하루 5명 기준 250~350만원, 하루 7명 기준 400~500만원 수준입니다. 고정비 약 150~200만원 제외 기준입니다.' } },
+    { '@type': 'Question', name: '네일샵 손익분기점은 언제인가요?', acceptedAnswer: { '@type': 'Answer', text: '공유 작업실은 월 15~20건(하루 1명), 독립 매장은 월 30~42건(하루 2명 이상) 시술 시 손익분기점을 넘깁니다. 오픈 후 3~6개월이 평균입니다.' } },
+    { '@type': 'Question', name: '네일샵에서 가장 수익이 높은 시술은 무엇인가요?', acceptedAnswer: { '@type': 'Answer', text: '풀 세트(연장+아트)가 시간당 약 6만원으로 가장 높습니다. 아크릴 연장(5만원), 젤네일+아트(4.5만원) 순입니다. 고단가 시술 비중을 높이면 같은 고객 수로도 매출이 30~50% 증가합니다.' } },
+    { '@type': 'Question', name: '네일샵 수익을 높이는 방법은 무엇인가요?', acceptedAnswer: { '@type': 'Answer', text: '고단가 시술(아트·연장) 비중 확대, 단골 관리 프로그램 운영, 인스타그램 포트폴리오 관리, 손발 세트 판매, 네이버 예약 시스템 활용이 효과적입니다.' } },
+    { '@type': 'Question', name: '1인 네일샵 하루 몇 명이나 받을 수 있나요?', acceptedAnswer: { '@type': 'Answer', text: '기본 젤네일 기준 1인당 1~1.5시간이므로 하루 5~7명이 현실적입니다. 예약제 운영으로 시간 효율을 높이는 것이 중요합니다.' } },
+  ],
+}
+
 export default function RevenuePage() {
   return (
     <div className="max-w-[1100px] mx-auto px-4 py-12">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
       <p className="text-xs font-semibold text-stone-400 mb-2 uppercase tracking-widest">수익 가이드</p>
       <h1 className="text-3xl font-extrabold text-stone-900 mb-3">1인 네일샵 예상 수익</h1>
       <p className="text-stone-500 mb-8">시술 단가와 하루 고객 수를 기준으로 현실적인 월 수익을 계산해드립니다. 손익분기점과 고정비 구조를 먼저 이해하면 창업 후 수익 관리가 훨씬 쉬워집니다.</p>

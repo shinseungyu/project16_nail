@@ -10,9 +10,22 @@ export const metadata: Metadata = {
 }
 
 
+const faqJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    { '@type': 'Question', name: '네일샵 창업 준비는 어디서부터 시작해야 하나요?', acceptedAnswer: { '@type': 'Answer', text: '창업 목표와 예산 설정이 첫 번째입니다. 이후 자격증 취득 → 상권 분석 → 사업자 등록 → 인테리어 → SNS 마케팅 순서로 준비하면 됩니다.' } },
+    { '@type': 'Question', name: '네일샵 사업자 등록은 어떻게 하나요?', acceptedAnswer: { '@type': 'Answer', text: '홈택스(hometax.go.kr) 또는 관할 세무서에서 개인사업자 등록 후, 위생교육 8시간을 이수하고 관할 구청 위생과에 미용업 신고를 해야 합니다.' } },
+    { '@type': 'Question', name: '네일샵 오픈 전 위생교육이 필요한가요?', acceptedAnswer: { '@type': 'Answer', text: '네, 미용업 개설 신고 전 8시간 위생교육이 의무입니다. 대한미용사회 또는 온라인 교육기관에서 이수할 수 있습니다.' } },
+    { '@type': 'Question', name: '네일샵 창업 시 가장 흔한 실수는 무엇인가요?', acceptedAnswer: { '@type': 'Answer', text: '인테리어 과잉 투자, 상권 분석 없는 입지 선택, 오픈 당일부터 SNS 시작, 운영자금 미확보가 가장 흔한 실수입니다. 최소 3~6개월치 생활비를 여유 자금으로 남겨두세요.' } },
+    { '@type': 'Question', name: '네일샵 오픈 전 SNS는 언제부터 시작해야 하나요?', acceptedAnswer: { '@type': 'Answer', text: '오픈 최소 2~4주 전부터 인스타그램 계정을 개설하고 시술 연습 사진을 올리기 시작해야 합니다. 네이버 플레이스도 오픈 전 등록을 완료하세요.' } },
+  ],
+}
+
 export default function GuidePage() {
   return (
     <div className="max-w-[1100px] mx-auto px-4 py-12">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
       <p className="text-xs font-semibold text-stone-400 mb-2 uppercase tracking-widest">창업 가이드</p>
       <h1 className="text-3xl font-extrabold text-stone-900 mb-3">네일샵 창업 준비 단계별 가이드</h1>
       <p className="text-stone-500 mb-8">처음 창업하는 분도 이 순서대로만 따라가면 빠짐없이 준비할 수 있습니다. 자격증 취득부터 오픈 당일까지 총 6단계로 정리했습니다.</p>

@@ -10,9 +10,22 @@ export const metadata: Metadata = {
 }
 
 
+const faqJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    { '@type': 'Question', name: '1인 네일샵 창업비용은 얼마나 드나요?', acceptedAnswer: { '@type': 'Answer', text: '공유 작업실 기준 200~500만원, 1인 독립 매장 기준 700~1,500만원, 풀 인테리어 세팅 기준 1,500~3,000만원 이상이 필요합니다.' } },
+    { '@type': 'Question', name: '네일샵 창업 초보자에게 공유 작업실을 추천하는 이유는 무엇인가요?', acceptedAnswer: { '@type': 'Answer', text: '보증금 없이 월 30~80만원 자리세만 내고 시작할 수 있어 초기 리스크가 낮습니다. 고객층을 먼저 확보한 후 독립 매장으로 확장하는 것이 안전합니다.' } },
+    { '@type': 'Question', name: '네일샵 인테리어 비용은 얼마나 드나요?', acceptedAnswer: { '@type': 'Answer', text: '셀프 인테리어 시 70~200만원, 업체 의뢰 시 500~1,500만원 수준입니다. 조명·환기·소독 시설에 우선 투자하고 나머지는 최소화하는 것을 권장합니다.' } },
+    { '@type': 'Question', name: '네일 장비는 중고로 구입해도 되나요?', acceptedAnswer: { '@type': 'Answer', text: '네, UV/LED 램프, 전동 드릴 등 고가 장비는 중고로 구매하면 50% 이상 절감 가능합니다. 위생 관련 소모품만 새것으로 구입하세요.' } },
+    { '@type': 'Question', name: '네일샵 창업 정부 지원금이 있나요?', acceptedAnswer: { '@type': 'Answer', text: '소상공인진흥공단의 창업 자금 대출(2~3% 저금리) 및 지역별 창업 보조금을 활용할 수 있습니다. 소상공인진흥공단 홈페이지에서 지원 사업을 확인하세요.' } },
+  ],
+}
+
 export default function CostPage() {
   return (
     <div className="max-w-[1100px] mx-auto px-4 py-12">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
       <p className="text-xs font-semibold text-stone-400 mb-2 uppercase tracking-widest">창업비용 가이드</p>
       <h1 className="text-3xl font-extrabold text-stone-900 mb-3">네일샵 창업비용 총정리</h1>
       <p className="text-stone-500 mb-8">2026년 기준 1인 네일샵 창업에 드는 모든 비용을 항목별로 정리했습니다. 창업 형태에 따라 최소 200만원부터 3,000만원 이상까지 차이가 나니, 본인 상황에 맞게 예산을 세워보세요.</p>

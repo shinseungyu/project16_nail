@@ -59,9 +59,20 @@ const qnaList = [
   },
 ]
 
+const faqJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: qnaList.map((item) => ({
+    '@type': 'Question',
+    name: item.q,
+    acceptedAnswer: { '@type': 'Answer', text: item.a },
+  })),
+}
+
 export default function QnaPage() {
   return (
     <div className="max-w-[1100px] mx-auto px-4 py-12">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
       <p className="text-xs font-semibold text-stone-400 mb-2 uppercase tracking-widest">창업 Q&A</p>
       <h1 className="text-3xl font-extrabold text-stone-900 mb-3">네일샵 창업 Q&A</h1>
       <p className="text-stone-500 mb-8">창업 준비 중 가장 많이 묻는 질문과 답변을 모았습니다.</p>
