@@ -469,6 +469,22 @@ export default function Home() {
           </a>
         </section>
 
+        {/* haircost.kr 배너 */}
+        <section className="rounded-3xl overflow-hidden mb-6" style={{ background: 'linear-gradient(135deg, #1A4A9E 0%, #2563C8 100%)' }}>
+          <a href="https://haircost.kr" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', display: 'block', padding: '28px 32px' }}>
+            <p style={{ color: '#93c5fd', fontWeight: 800, fontSize: 12, letterSpacing: '0.08em', textTransform: 'uppercase', marginBottom: 8 }}>HAIR ACADEMY</p>
+            <p style={{ color: 'white', fontWeight: 800, fontSize: 20, lineHeight: 1.4, marginBottom: 8 }}>
+              이용사(헤어)학원 수강료, 국비지원 얼마나 받을 수 있나요?
+            </p>
+            <p style={{ color: 'rgba(255,255,255,0.6)', fontSize: 14, lineHeight: 1.6, marginBottom: 20 }}>
+              2026년 최신 기준 이용사 자격증·학원비·국비지원 정보를 한눈에 비교해드립니다.<br />무료 상담으로 내게 맞는 학원과 과정을 바로 확인하세요!
+            </p>
+            <span style={{ display: 'inline-block', background: 'white', color: '#1A4A9E', fontWeight: 700, fontSize: 14, padding: '10px 22px', borderRadius: 50 }}>
+              이용사학원 수강료 비교사이트 바로가기 →
+            </span>
+          </a>
+        </section>
+
         {/* CTA */}
         <section className="bg-stone-900 rounded-3xl p-10 text-center text-white">
           <h2 className="text-2xl font-extrabold mb-2 tracking-tight">창업 준비, 혼자 하지 마세요</h2>
