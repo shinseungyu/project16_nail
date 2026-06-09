@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import posts from "@/data/posts.json";
+import FormSection from "@/app/test/FormSection";
 
 interface Post {
   id: number;
@@ -54,6 +55,12 @@ export default function BoardPostPage({ params }: { params: { id: string } }) {
   return (
     <main className="min-h-screen bg-stone-50">
       <div className="max-w-3xl mx-auto px-4 py-12 md:py-16">
+        {/* 상담 신청 폼 */}
+        <section className="mb-8">
+          <h2 className="mb-4 text-lg font-bold text-stone-800">무료 상담 신청</h2>
+          <FormSection />
+        </section>
+
         <Link
           href="/board"
           className="mb-8 inline-flex items-center text-sm font-semibold text-stone-500 hover:text-stone-900 transition-colors"
