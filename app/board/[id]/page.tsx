@@ -97,6 +97,9 @@ export default function BoardPostPage({ params }: { params: { id: string } }) {
           </div>
         </article>
 
+        {/* 멀티플렉스 광고 (관련 콘텐츠) */}
+        <AdUnit slot="3291145762" format="autorelaxed" responsive={false} />
+
         {/* 관련 글 */}
         <section className="mt-12">
           <h2 className="mb-5 text-lg font-bold text-stone-800">이런 글은 어떠세요?</h2>

@@ -74,6 +74,9 @@ export default function InfoPage({ params }: { params: { id: string } }) {
         ) : <div />}
       </div>
 
+      {/* 멀티플렉스 광고 (관련 콘텐츠) */}
+      <AdUnit slot="3291145762" format="autorelaxed" responsive={false} />
+
     </div>
   )
 }

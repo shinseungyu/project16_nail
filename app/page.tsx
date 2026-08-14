@@ -465,6 +465,9 @@ export default function Home() {
           </a>
         </section>
 
+        {/* 멀티플렉스 광고 (관련 콘텐츠) */}
+        <AdUnit slot="3291145762" format="autorelaxed" responsive={false} />
+
       </div>
     </div>
   )
