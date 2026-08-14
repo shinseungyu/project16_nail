@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import KakaoButton from '@/components/KakaoButton'
+import AdUnit from '@/components/AdUnit'
 import FormSection from '../test/FormSection'
 
 export const metadata: Metadata = {
@@ -85,8 +85,24 @@ export default function QnaPage() {
       </div>
 
       <section className="mb-12 space-y-4">
-        {qnaList.map((item, i) => (
+        {qnaList.slice(0, 6).map((item, i) => (
           <div key={i} className="bg-white border border-stone-100 rounded-2xl p-6 shadow-sm">
+            <p className="flex items-start gap-3 font-bold text-stone-900 mb-3">
+              <span className="shrink-0 w-6 h-6 bg-stone-800 text-white rounded-full flex items-center justify-center text-xs font-extrabold">Q</span>
+              {item.q}
+            </p>
+            <p className="flex items-start gap-3 text-[13px] text-stone-600 leading-relaxed">
+              <span className="shrink-0 w-6 h-6 bg-stone-100 text-stone-500 rounded-full flex items-center justify-center text-xs font-extrabold">A</span>
+              {item.a}
+            </p>
+          </div>
+        ))}
+
+        {/* 광고 (article-mid) */}
+        <AdUnit slot="1591000951" />
+
+        {qnaList.slice(6).map((item, i) => (
+          <div key={i + 6} className="bg-white border border-stone-100 rounded-2xl p-6 shadow-sm">
             <p className="flex items-start gap-3 font-bold text-stone-900 mb-3">
               <span className="shrink-0 w-6 h-6 bg-stone-800 text-white rounded-full flex items-center justify-center text-xs font-extrabold">Q</span>
               {item.q}
@@ -99,13 +115,6 @@ export default function QnaPage() {
         ))}
       </section>
 
-      <section className="bg-stone-900 rounded-3xl p-10 text-center text-white">
-        <h2 className="text-xl font-extrabold mb-2">더 궁금한 것이 있으신가요?</h2>
-        <p className="text-stone-400 mb-5 text-sm">실제 운영 중인 창업자가 직접 답변해드립니다.</p>
-        <KakaoButton location="qna" className="inline-flex items-center gap-2 bg-[#FEE500] hover:bg-[#FADC00] text-[#000000] font-bold px-8 py-3 rounded-full transition-all">
-          무료 창업 상담
-        </KakaoButton>
-      </section>
     </div>
   )
 }

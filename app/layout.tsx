@@ -2,7 +2,6 @@ import type { Metadata } from 'next'
 import Script from 'next/script'
 import localFont from 'next/font/local'
 import { Analytics } from '@vercel/analytics/next'
-import KakaoFloatButton from '@/components/KakaoFloatButton'
 import PrivacyPolicyModal from '@/components/PrivacyPolicyModal'
 import LegalNoticeModal from '@/components/LegalNoticeModal'
 import './globals.css'
@@ -22,7 +21,7 @@ const pretendard = localFont({
 const SITE_NAME = '네일샵 창업'
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://nailstartup.com'
 const TITLE = '네일샵 창업 | 1인 네일샵 창업비용·자격증·수익 총정리 2026'
-const DESC = '1인 네일샵 창업을 준비 중이신가요? 창업비용부터 미용사 자격증 취득 방법, 예상 수익까지 2026년 최신 기준으로 한번에 정리했습니다. 올댓뷰티 멘토가 카카오톡으로 무료 상담해드립니다.'
+const DESC = '1인 네일샵 창업을 준비 중이신가요? 창업비용부터 미용사 자격증 취득 방법, 예상 수익까지 2026년 최신 기준으로 한번에 정리했습니다.'
 const KEYWORDS = '네일샵 창업, 네일샵 창업비용, 1인 네일샵 창업, 네일아트 창업, 네일 창업, 네일샵 차리는법, 소자본 창업 네일, 네일아트 창업비용, 네일 자격증 창업, 네일아트 창업 준비'
 
 export const metadata: Metadata = {
@@ -137,6 +136,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <meta itemProp="description" content={DESC} />
         <meta itemProp="image" content="/images/thumb.webp" />
         <Script id="json-ld" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} strategy="afterInteractive" />
+        {/* Google AdSense 로더 — 사이트 전체에서 1번만 로드 (광고 단위는 <AdUnit />로 각 페이지 본문에 배치) */}
+        <Script
+          id="adsbygoogle-loader"
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5378247298190063"
+          strategy="afterInteractive"
+          crossOrigin="anonymous"
+        />
       </head>
       <body className={`${pretendard.className} antialiased`}>
         {/* 헤더 */}
@@ -153,7 +159,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               <a href="/revenue" className="hover:text-brand transition-colors">예상수익</a>
               <a href="/calculator" className="hover:text-brand transition-colors">계산기</a>
               <a href="/qna" className="hover:text-brand transition-colors">Q&A</a>
-              <a href="https://open.kakao.com/o/sIOxvlZh" target="_blank" rel="noopener noreferrer" className="bg-brand hover:bg-brand-dark text-white text-xs font-bold px-5 py-2.5 rounded-full transition-all shadow-sm">무료 상담</a>
             </nav>
           </div>
         </header>
@@ -210,8 +215,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           </div>
         </footer>
 
-        {/* 플로팅 오픈챗 버튼 */}
-        <KakaoFloatButton />
         <Analytics />
       </body>
     </html>

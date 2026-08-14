@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useMemo } from 'react'
-import KakaoButton from '@/components/KakaoButton'
+import AdUnit from '@/components/AdUnit'
 import FormSection from '../test/FormSection'
 
 export default function CalculatorPage() {
@@ -209,6 +209,9 @@ export default function CalculatorPage() {
         </section>
       </div>
 
+      {/* 광고 (article-mid) */}
+      <AdUnit slot="1591000951" />
+
       {/* ── 손익분기점 ── */}
       <section className="mt-8 bg-white border border-stone-100 rounded-2xl p-6 shadow-sm">
         <h2 className="text-lg font-extrabold text-stone-900 mb-5 flex items-center gap-2">
@@ -262,13 +265,6 @@ export default function CalculatorPage() {
         )}
       </section>
 
-      <section className="mt-8 bg-stone-900 rounded-3xl p-10 text-center text-white">
-        <h2 className="text-xl font-extrabold mb-2">계산 결과, 창업 가능성이 보이시나요?</h2>
-        <p className="text-stone-400 mb-5 text-sm">실제 지역과 상황에 맞는 현실적인 계획을 같이 세워드립니다.</p>
-        <KakaoButton location="calculator" className="inline-flex items-center gap-2 bg-[#FEE500] hover:bg-[#FADC00] text-[#000000] font-bold px-8 py-3 rounded-full transition-all">
-          무료 창업 상담
-        </KakaoButton>
-      </section>
     </div>
   )
 }

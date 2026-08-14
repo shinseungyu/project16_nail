@@ -1,13 +1,9 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import dynamic from 'next/dynamic'
 import NailCalculatorWidget from '@/components/NailCalculatorWidget'
-import KakaoButton from '@/components/KakaoButton'
+import AdUnit from '@/components/AdUnit'
 import { nailServices } from '@/data/services'
 import FormSection from './test/FormSection'
-
-const CourseSwiper = dynamic(() => import('@/components/CourseSwiper'), { ssr: false, loading: () => <div className="w-full h-48 bg-stone-100 rounded-2xl animate-pulse mt-5" /> })
-
 
 const faqJsonLd = {
   '@context': 'https://schema.org',
@@ -62,29 +58,10 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 멘토 상담 배너 */}
-      <section className="bg-white border-b border-stone-100 py-10">
-        <div className="max-w-[1100px] mx-auto px-4 flex flex-col items-center gap-6 md:gap-10">
-          <div className="flex-1 text-center md:text-left min-w-0 w-full">
-            <p className="text-xs font-semibold text-stone-400 uppercase tracking-widest mb-1">1:1 무료 창업 멘토링</p>
-            <div className="flex flex-col md:flex-row md:items-center gap-2 mb-1 justify-center md:justify-start">
-              <span className="inline-block bg-rose-50 text-rose-600 text-[10px] font-extrabold px-2 py-0.5 rounded border border-rose-100 self-center md:self-auto">올댓뷰티 제휴</span>
-              <h2 className="text-xl md:text-2xl font-extrabold text-stone-900">
-                실전 네일 전문가가 직접 도와드립니다
-              </h2>
-            </div>
-            <p className="text-sm text-stone-500 leading-relaxed mb-3">
-              어디서 시작해야 할지 막막하셨죠? <strong>창업 준비생</strong>은 물론, <strong>아직 자격증이 없는 초보자</strong>분들도 모두 상담받으실 수 있습니다. 여러분이 <strong>창조적인 예술작업을 하는 전문가</strong>로 성장할 수 있도록, 대형 아카데미(<strong>올댓뷰티</strong>) 연계 멘토가 카카오 오픈채팅으로 무료 안내해 드립니다.
-            </p>
-            <CourseSwiper />
-          </div>
-          <KakaoButton location="mentor_banner" className="shrink-0 inline-flex items-center justify-center bg-[#FEE500] hover:bg-[#FADC00] text-[#000000] font-bold text-xl px-10 py-5 rounded-full shadow-md transition-all whitespace-nowrap" imgSize={27} imgClass="mr-2">
-            멘토에게 무료 상담받기
-          </KakaoButton>
-        </div>
-      </section>
-
       <div className="max-w-[1100px] mx-auto px-4 py-14 space-y-20">
+
+        {/* 광고 (hero-top, 사이드바/디스플레이 단위) */}
+        <AdUnit slot="7150499722" />
 
         {/* 섹션 0 - 자격증 필수 안내 */}
         <section>
@@ -133,10 +110,13 @@ export default function Home() {
           <div className="bg-orange-50 border border-orange-100 rounded-xl p-4 flex items-start gap-3">
             <span className="text-lg shrink-0 mt-0.5">💡</span>
             <p className="text-xs text-orange-800 leading-relaxed">
-              <strong>노베이스도 가능합니다:</strong> 경험이 전혀 없어도 전문 아카데미 커리큘럼을 따라가면 3~6개월 안에 자격증 취득 후 창업까지 연결됩니다. <strong>올댓뷰티</strong> 연계 멘토가 카카오톡으로 개인 일정에 맞는 취득 플랜을 무료로 잡아드립니다.
+              <strong>노베이스도 가능합니다:</strong> 경험이 전혀 없어도 전문 아카데미 커리큘럼을 따라가면 3~6개월 안에 자격증 취득 후 창업까지 연결됩니다.
             </p>
           </div>
         </section>
+
+        {/* 광고 (article-mid) */}
+        <AdUnit slot="1591000951" />
 
         {/* 섹션 1 - 네일샵 창업이란? */}
         <section>
@@ -484,16 +464,6 @@ export default function Home() {
             </span>
           </a>
         </section>
-
-        {/* CTA */}
-        <section className="bg-stone-900 rounded-3xl p-10 text-center text-white">
-          <h2 className="text-2xl font-extrabold mb-2 tracking-tight">창업 준비, 혼자 하지 마세요</h2>
-          <p className="text-stone-400 mb-8 text-sm">실제 창업자에게 직접 물어보세요. 비용·자격증·수익까지 무료로 상담해드립니다.</p>
-          <KakaoButton location="main_cta" className="inline-flex items-center justify-center bg-[#FEE500] hover:bg-[#FADC00] text-[#000000] font-bold px-8 py-3.5 rounded-full transition-all shadow-md" imgSize={20} imgClass="mr-2">
-            카카오 오픈챗 무료 상담
-          </KakaoButton>
-        </section>
-
 
       </div>
     </div>

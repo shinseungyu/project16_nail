@@ -3,6 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import posts from "@/data/posts.json";
 import FormSection from "@/app/test/FormSection";
+import AdUnit from "@/components/AdUnit";
 
 interface Post {
   id: number;
@@ -52,6 +53,10 @@ export default function BoardPostPage({ params }: { params: { id: string } }) {
 
   const colorClass = categoryColor[post.category] ?? "bg-gray-100 text-gray-600";
 
+  // 본문을 절반으로 나눠 중간에 광고(article-mid)를 삽입
+  const lines = post.content.split("\n");
+  const mid = Math.ceil(lines.length / 2);
+
   return (
     <main className="min-h-screen bg-stone-50">
       <div className="max-w-3xl mx-auto px-4 py-12 md:py-16">
@@ -82,8 +87,12 @@ export default function BoardPostPage({ params }: { params: { id: string } }) {
             <span>🏷️ {post.tags.join(", ")}</span>
           </div>
           <div className="text-base leading-loose text-stone-700 space-y-3">
-            {post.content.split("\n").map((line, i) =>
-              line.trim() === "" ? <br key={i} /> : <p key={i}>{line}</p>
+            {lines.slice(0, mid).map((line, i) =>
+              line.trim() === "" ? <br key={`a${i}`} /> : <p key={`a${i}`}>{line}</p>
+            )}
+            <AdUnit slot="3886825955" format="fluid" layout="in-article" />
+            {lines.slice(mid).map((line, i) =>
+              line.trim() === "" ? <br key={`b${i}`} /> : <p key={`b${i}`}>{line}</p>
             )}
           </div>
         </article>

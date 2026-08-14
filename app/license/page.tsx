@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
-import KakaoButton from '@/components/KakaoButton'
 import Link from 'next/link'
+import AdUnit from '@/components/AdUnit'
 import FormSection from '../test/FormSection'
 
 export const metadata: Metadata = {
@@ -60,6 +60,9 @@ export default function LicensePage() {
           </p>
         </div>
       </section>
+
+      {/* 광고 (article-mid) */}
+      <AdUnit slot="1591000951" />
 
       {/* 국가 vs 민간 비교 */}
       <section className="mb-12">
@@ -182,13 +185,6 @@ export default function LicensePage() {
         </div>
       </section>
 
-      <section className="bg-stone-900 rounded-3xl p-10 text-center text-white">
-        <h2 className="text-xl font-extrabold mb-2">자격증부터 창업까지 한번에 상담받기</h2>
-        <p className="text-stone-400 mb-5 text-sm">노베이스도 OK. 무료 상담으로 나에게 맞는 루트를 잡아드립니다.</p>
-        <KakaoButton location="license" className="inline-flex items-center gap-2 bg-[#FEE500] hover:bg-[#FADC00] text-[#000000] font-bold px-8 py-3 rounded-full transition-all">
-          무료 창업 상담
-        </KakaoButton>
-      </section>
     </div>
   )
 }

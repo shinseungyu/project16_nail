@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
-import Image from 'next/image'
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
+import AdUnit from '@/components/AdUnit'
 import { nailSections } from '@/data/nail-sections'
 
 export async function generateStaticParams() {
@@ -17,8 +17,6 @@ export async function generateMetadata({ params }: { params: { id: string } }): 
     alternates: { canonical: `/info/${section.id}` },
   }
 }
-
-const OPEN_CHAT_URL = 'https://open.kakao.com/o/sIOxvlZh'
 
 export default function InfoPage({ params }: { params: { id: string } }) {
   const section = nailSections.find((s) => s.id === params.id)
@@ -57,6 +55,9 @@ export default function InfoPage({ params }: { params: { id: string } }) {
         ))}
       </div>
 
+      {/* 광고 (article-mid) */}
+      <AdUnit slot="3886825955" format="fluid" layout="in-article" />
+
       {/* 다른 글 */}
       <div className="mt-12 grid grid-cols-2 gap-4">
         {prev ? (
@@ -73,14 +74,6 @@ export default function InfoPage({ params }: { params: { id: string } }) {
         ) : <div />}
       </div>
 
-      {/* CTA */}
-      <section className="mt-10 bg-stone-900 rounded-3xl p-10 text-center text-white">
-        <h2 className="text-lg font-extrabold mb-2">더 구체적인 상담이 필요하신가요?</h2>
-        <p className="text-stone-400 mb-5 text-sm">실제 운영 중인 창업자가 직접 답변해드립니다.</p>
-        <a href={OPEN_CHAT_URL} className="inline-flex items-center gap-2 bg-[#FEE500] hover:bg-[#FADC00] text-[#000000] font-bold px-8 py-3 rounded-full transition-all">
-          <Image src="/images/kakao_logo.webp" alt="카카오톡" width={18} height={18} />무료 창업 상담
-        </a>
-      </section>
     </div>
   )
 }

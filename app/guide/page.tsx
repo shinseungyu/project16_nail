@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
-import KakaoButton from '@/components/KakaoButton'
 import Link from 'next/link'
+import AdUnit from '@/components/AdUnit'
 import FormSection from '../test/FormSection'
 
 export const metadata: Metadata = {
@@ -132,6 +132,9 @@ export default function GuidePage() {
         </div>
       </section>
 
+      {/* 광고 (article-mid) */}
+      <AdUnit slot="1591000951" />
+
       {/* 창업 전 체크리스트 */}
       <section className="mb-12">
         <h2 className="text-xl font-bold text-stone-900 mb-4">네일샵 오픈 전 최종 체크리스트</h2>
@@ -197,13 +200,6 @@ export default function GuidePage() {
         </div>
       </section>
 
-      <section className="bg-stone-900 rounded-3xl p-10 text-center text-white">
-        <h2 className="text-xl font-extrabold mb-2">네일샵 창업 준비, 혼자 하지 마세요</h2>
-        <p className="text-stone-400 mb-5 text-sm">단계별 맞춤 상담을 무료로 받아보세요.</p>
-        <KakaoButton location="guide" className="inline-flex items-center gap-2 bg-[#FEE500] hover:bg-[#FADC00] text-[#000000] font-bold px-8 py-3 rounded-full transition-all">
-          무료 창업 상담
-        </KakaoButton>
-      </section>
     </div>
   )
 }

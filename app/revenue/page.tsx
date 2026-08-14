@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
-import KakaoButton from '@/components/KakaoButton'
 import Link from 'next/link'
+import AdUnit from '@/components/AdUnit'
 import FormSection from '../test/FormSection'
 
 export const metadata: Metadata = {
@@ -71,6 +71,9 @@ export default function RevenuePage() {
         </div>
         <p className="text-[11px] text-stone-400 mt-2">* 지역 및 숙련도에 따라 단가 차이가 있을 수 있습니다.</p>
       </section>
+
+      {/* 광고 (article-mid) */}
+      <AdUnit slot="1591000951" />
 
       {/* 월 수익 시뮬레이션 */}
       <section className="mb-12">
@@ -201,13 +204,6 @@ export default function RevenuePage() {
         </div>
       </section>
 
-      <section className="bg-stone-900 rounded-3xl p-10 text-center text-white">
-        <h2 className="text-xl font-extrabold mb-2">내 지역에서 실제로 가능한 수익이 궁금하다면?</h2>
-        <p className="text-stone-400 mb-5 text-sm">실제 운영 중인 창업자가 직접 답변해드립니다.</p>
-        <KakaoButton location="revenue" className="inline-flex items-center gap-2 bg-[#FEE500] hover:bg-[#FADC00] text-[#000000] font-bold px-8 py-3 rounded-full transition-all">
-          무료 창업 상담
-        </KakaoButton>
-      </section>
     </div>
   )
 }
