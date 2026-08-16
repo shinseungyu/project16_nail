@@ -1,0 +1,95 @@
+# ============================================================
+# nailstartup.com / robots.txt
+# 최종 수정 2026-08-16
+#
+# 정규 호스트: https://www.nailstartup.com
+#   현재 non-www → www 로 301 되고 있으므로 www 를 정규로 확정합니다.
+#   canonical 태그와 sitemap 의 <loc> 도 전부 www 로 맞춰야 합니다.
+#   (지금은 canonical·sitemap 이 non-www 라 리다이렉트되는 URL 을 정규로 지목한 상태)
+# ============================================================
+
+
+# ------------------------------------------------------------
+# 1. 일반 검색엔진 (Googlebot, Bingbot 등 이름이 없는 모든 봇)
+# ------------------------------------------------------------
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /api/
+
+
+# ------------------------------------------------------------
+# 2. 네이버 (Yeti) — 국내 유입의 핵심 경로
+#    메타태그에만 Yeti: all 이 있고 robots.txt 에는 없어서 명시합니다.
+# ------------------------------------------------------------
+User-agent: Yeti
+Allow: /
+Disallow: /admin/
+Disallow: /api/
+
+
+# ------------------------------------------------------------
+# 3. AI 검색·인용 크롤러  ★ FAQ 인용의 실질 통로
+#
+#    GPTBot 과 OAI-SearchBot 은 다릅니다.
+#      - GPTBot        : 모델 학습용 수집
+#      - OAI-SearchBot : ChatGPT 검색 결과·인용용 색인
+#    인용 노출에 직접 작용하는 것은 이 블록입니다.
+#    PGC 는 이 그룹이 통째로 빠져 있습니다.
+# ------------------------------------------------------------
+User-agent: OAI-SearchBot
+User-agent: ChatGPT-User
+User-agent: PerplexityBot
+User-agent: Perplexity-User
+User-agent: Claude-SearchBot
+User-agent: Claude-User
+User-agent: DuckAssistBot
+User-agent: Applebot
+Allow: /
+Disallow: /admin/
+Disallow: /api/
+
+
+# ------------------------------------------------------------
+# 4. AI 학습 크롤러
+#
+#    학습 허용이 인용 확률을 곧바로 올리지는 않습니다.
+#    다만 모델이 브랜드와 도메인을 아는 상태를 만들어 둡니다.
+#    학습 수집을 원치 않으면 이 블록의 Allow: / 를
+#    Disallow: / 로 바꾸면 됩니다. (3번 블록은 그대로 두세요)
+# ------------------------------------------------------------
+User-agent: GPTBot
+User-agent: ClaudeBot
+User-agent: Google-Extended
+User-agent: CCBot
+User-agent: Applebot-Extended
+User-agent: meta-externalagent
+User-agent: Amazonbot
+User-agent: Bytespider
+User-agent: cohere-ai
+User-agent: AI2Bot
+Allow: /
+Disallow: /admin/
+Disallow: /api/
+
+
+# ------------------------------------------------------------
+# 5. 사이트맵
+#
+#    FAQ 180개 발행 후에는 아래 주석을 풀고 사일로별로 분할하세요.
+#    분할해야 GSC 에서 "어느 사일로가 색인이 안 붙는지" 진단이 됩니다.
+# ------------------------------------------------------------
+Sitemap: https://www.nailstartup.com/sitemap.xml
+
+# Sitemap: https://www.nailstartup.com/sitemap-nail.xml
+# Sitemap: https://www.nailstartup.com/sitemap-skin.xml
+# Sitemap: https://www.nailstartup.com/sitemap-hair.xml
+# Sitemap: https://www.nailstartup.com/sitemap-makeup.xml
+
+
+# ------------------------------------------------------------
+# 참고 — 계산기에 URL 파라미터를 쓰게 되면 아래를 1번 블록에 추가
+# 파라미터 URL 은 무한 생성되어 크롤 예산을 갉아먹습니다.
+#
+# Disallow: /*?
+# ------------------------------------------------------------

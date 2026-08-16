@@ -4,6 +4,7 @@ import NailCalculatorWidget from '@/components/NailCalculatorWidget'
 import AdUnit from '@/components/AdUnit'
 import { nailServices } from '@/data/services'
 import FormSection from './test/FormSection'
+import HubQuickLinks from '@/components/HubQuickLinks'
 
 const homeFaqs = [
   { q: '네일샵 창업, 자격증이 정말 필수인가요?', a: '필수입니다. 공중위생관리법 제8조 제1항은 면허 없이 미용업을 개설하거나 그 업무에 종사하는 것을 금지하며, 위반 시 제20조에 따라 300만원 이하의 벌금 대상입니다. 미용업 신고 자체가 면허증 없이는 수리되지 않습니다. 민간 자격증은 법적 효력이 없습니다.' },
@@ -54,9 +55,15 @@ export default function Home() {
             1인 네일샵 창업, 비용·자격증·수익<br />
             <span className="text-white/80">2026 최신 기준 총정리</span>
           </h1>
-          <p className="text-base text-white/70 mb-4 max-w-xl mx-auto leading-relaxed">
+          <p className="text-base text-white/70 mb-5 max-w-xl mx-auto leading-relaxed">
             창업비용부터 자격증, 예상 수익까지 1인 네일샵 창업의 모든 것을 알려드립니다
           </p>
+          <HubQuickLinks dark items={[
+            { href: '/cost', label: '창업비용', icon: '💰' },
+            { href: '/license', label: '자격증', icon: '📜' },
+            { href: '/revenue', label: '예상수익', icon: '📈' },
+            { href: '/calculator', label: '비용 계산기', icon: '🧮' },
+          ]} />
           <div className="relative mt-12 w-full text-left animate-fade-in-up">
             <div className="flex justify-center md:justify-start mb-3">
               <span className="inline-block bg-[#FEE500] text-black text-sm font-extrabold px-4 py-1.5 rounded-full shadow-sm animate-bounce">간편 신청하기 👇</span>

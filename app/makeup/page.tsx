@@ -3,6 +3,7 @@ import Link from 'next/link'
 import AdUnit from '@/components/AdUnit'
 import MakeupCalculatorWidget from '@/components/MakeupCalculatorWidget'
 import { makeupServices } from '@/data/makeup-services'
+import HubQuickLinks from '@/components/HubQuickLinks'
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.nailstartup.com'
 
@@ -59,6 +60,12 @@ export default function MakeupHub() {
             메이크업샵 창업 비용·자격증·수익<br /><span className="text-stone-500">2026 최신 기준 총정리</span>
           </h1>
           <p className="text-sm text-stone-500 mb-6 max-w-xl leading-relaxed">출장형 300만원부터 시작하는 최소 자본 창업. 미용사(메이크업) 자격증 취득부터 예상 수익까지 정리했습니다.</p>
+          <HubQuickLinks items={[
+            { href: '/makeup/cost', label: '창업비용', icon: '💰' },
+            { href: '/makeup/license', label: '자격증', icon: '📜' },
+            { href: '/makeup/revenue', label: '예상수익', icon: '📈' },
+            { href: '/makeup#calculator', label: '비용 계산기', icon: '🧮' },
+          ]} />
         </div>
       </section>
 

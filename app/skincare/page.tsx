@@ -3,6 +3,7 @@ import Link from 'next/link'
 import AdUnit from '@/components/AdUnit'
 import SkincareCalculatorWidget from '@/components/SkincareCalculatorWidget'
 import { skincareServices } from '@/data/skincare-services'
+import HubQuickLinks from '@/components/HubQuickLinks'
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.nailstartup.com'
 
@@ -84,6 +85,12 @@ export default function SkincareHub() {
           <p className="text-sm text-stone-500 mb-6 max-w-xl leading-relaxed">
             창업비용 2,000~3,500만원부터 미용사(피부) 자격증 취득, 예상 수익까지 1인 피부관리샵 창업의 모든 것을 정리했습니다.
           </p>
+          <HubQuickLinks items={[
+            { href: '/skincare/cost', label: '창업비용', icon: '💰' },
+            { href: '/skincare/license', label: '자격증', icon: '📜' },
+            { href: '/skincare/revenue', label: '예상수익', icon: '📈' },
+            { href: '/skincare#calculator', label: '비용 계산기', icon: '🧮' },
+          ]} />
         </div>
       </section>
 

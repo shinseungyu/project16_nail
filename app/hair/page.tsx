@@ -3,6 +3,7 @@ import Link from 'next/link'
 import AdUnit from '@/components/AdUnit'
 import HairCalculatorWidget from '@/components/HairCalculatorWidget'
 import { hairServices } from '@/data/hair-services'
+import HubQuickLinks from '@/components/HubQuickLinks'
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.nailstartup.com'
 
@@ -59,6 +60,12 @@ export default function HairHub() {
             이용원·바버샵 창업<br /><span className="text-stone-500">비용·자격증·수익 총정리</span>
           </h1>
           <p className="text-sm text-stone-500 mb-6 max-w-xl leading-relaxed">재방문 주기가 가장 짧고 매출 예측이 쉬운 업종. 이용사 자격증부터 창업비용, 예상 수익까지 정리했습니다.</p>
+          <HubQuickLinks items={[
+            { href: '/hair/cost', label: '창업비용', icon: '💰' },
+            { href: '/hair/license', label: '자격증', icon: '📜' },
+            { href: '/hair/revenue', label: '예상수익', icon: '📈' },
+            { href: '/hair#calculator', label: '비용 계산기', icon: '🧮' },
+          ]} />
         </div>
       </section>
 
