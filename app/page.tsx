@@ -5,30 +5,37 @@ import AdUnit from '@/components/AdUnit'
 import { nailServices } from '@/data/services'
 import FormSection from './test/FormSection'
 
+const homeFaqs = [
+  { q: '네일샵 창업, 자격증이 정말 필수인가요?', a: '필수입니다. 공중위생관리법 제8조 제1항은 면허 없이 미용업을 개설하거나 그 업무에 종사하는 것을 금지하며, 위반 시 제20조에 따라 300만원 이하의 벌금 대상입니다. 미용업 신고 자체가 면허증 없이는 수리되지 않습니다. 민간 자격증은 법적 효력이 없습니다.' },
+  { q: '네일 자격증 따는 데 얼마나 걸리나요?', a: '필기 2~3개월, 실기 2~4개월로 총 3~6개월이 일반적입니다. 연 4회 시행되며 필기 합격은 2년간 유효해 실기를 여러 번 시도할 수 있습니다.' },
+  { q: '집에서 홈네일샵을 해도 되나요?', a: '주거 공간에서 영업하려면 해당 건물의 용도와 미용업 신고 가능 여부를 관할 구청 위생과에서 먼저 확인해야 합니다. 신고 없이 영업하면 공중위생관리법 제3조 제1항 위반으로 1년 이하 징역 또는 1천만원 이하 벌금 대상입니다. 시설·설비 기준도 충족해야 하므로 반드시 사전 확인이 필요합니다.' },
+  { q: '1인 네일샵 vs 프랜차이즈, 어떤 게 유리한가요?', a: '초기 비용 면에서는 1인 독립샵이 유리합니다. 프랜차이즈는 브랜드 인지도를 활용할 수 있지만 가맹비·로열티가 추가됩니다. 기술 자신감이 있다면 독립샵이 수익률이 더 높습니다.' },
+  { q: '네일샵 창업 최소 자본금은 얼마인가요?', a: '공유 작업실 기준 200~400만원, 독립 점포 기준 보증금 포함 최소 500~700만원이 필요합니다.' },
+  { q: '창업 후 손익분기점은 언제인가요?', a: '일반적으로 오픈 후 3~6개월이 평균입니다. SNS 마케팅과 후기 관리를 적극적으로 하면 2~3개월로 앞당길 수 있습니다.' },
+  { q: '1인 네일샵, 하루 몇 명이나 받을 수 있나요?', a: '기본 젤네일 기준 1인당 1~1.5시간이므로 하루 5~7명이 현실적입니다. 예약제 운영으로 시간 효율을 높이는 것이 중요합니다.' },
+  { q: '네일샵과 피부관리샵 중 뭐가 나을까요?', a: '초기 자금이 적다면 네일샵입니다. 창업비용이 1,000~2,000만원으로 피부관리샵(2,000~3,500만원)의 절반 수준입니다. 반면 객단가는 피부관리샵이 2~3배 높아 같은 고객 수에서 매출이 큽니다. 자금 여유가 있고 회원권 상담에 자신 있다면 피부관리샵이 순수익 절대액에서 유리합니다.' },
+]
+
 const faqJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
-  mainEntity: [
-    {
-      '@type': 'Question',
-      name: '네일샵 창업비용은 얼마나 드나요?',
-      acceptedAnswer: { '@type': 'Answer', text: '1인 네일샵 기준 최소 500만원~2,000만원 수준입니다. 인테리어, 장비, 재료비, 보증금 등에 따라 크게 달라집니다.' },
-    },
-    {
-      '@type': 'Question',
-      name: '네일샵 창업에 자격증이 필요한가요?',
-      acceptedAnswer: { '@type': 'Answer', text: '법적 필수 자격증은 없지만 네일 미용사 자격증(국가기술자격) 취득을 권장합니다. 고객 신뢰도와 실력 검증에 도움이 됩니다.' },
-    },
-    {
-      '@type': 'Question',
-      name: '1인 네일샵 월 수익은 얼마나 되나요?',
-      acceptedAnswer: { '@type': 'Answer', text: '입지와 시술 단가에 따라 다르지만, 평균 월 순수익 150만원~400만원 수준입니다. 단골 고객 확보가 핵심입니다.' },
-    },
-    {
-      '@type': 'Question',
-      name: '네일샵 창업 최소 자본금은 얼마인가요?',
-      acceptedAnswer: { '@type': 'Answer', text: '공유 작업실 기준 200~400만원, 독립 점포 기준 보증금 포함 최소 500~700만원이 필요합니다.' },
-    },
+  mainEntity: homeFaqs.map((f) => ({
+    '@type': 'Question',
+    name: f.q,
+    acceptedAnswer: { '@type': 'Answer', text: f.a },
+  })),
+}
+
+const howToJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'HowTo',
+  name: '네일샵 창업 준비 5단계',
+  step: [
+    { '@type': 'HowToStep', position: 1, name: '자격증 취득', text: '미용사(네일) 국가기술자격 취득 후 시장·군수·구청장에게 면허를 신청합니다. 법적 필수 요건이며, 필기+실기 합격까지 3~6개월이 걸립니다.' },
+    { '@type': 'HowToStep', position: 2, name: '상권 분석 및 위치 선정', text: '목표 고객층(직장인·주부·대학생)에 맞는 상권 선택. 임대료와 유동인구 균형이 핵심.' },
+    { '@type': 'HowToStep', position: 3, name: '사업자 등록 + 미용업 신고', text: '홈택스에서 개인사업자 등록 후, 관할 구청에 미용업 신고. 영업 전 위생교육 이수 필수(교육 시간은 관할 구청 확인).' },
+    { '@type': 'HowToStep', position: 4, name: '인테리어 및 장비 세팅', text: '조명·환기·소독 시설 우선 투자. 중고 장비 활용으로 비용 절감 가능.' },
+    { '@type': 'HowToStep', position: 5, name: 'SNS 개설 및 오픈 준비', text: '인스타그램·네이버 플레이스 오픈 전 등록 완료. 오픈 이벤트로 초기 고객 확보.' },
   ],
 }
 
@@ -36,6 +43,7 @@ export default function Home() {
   return (
     <div>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToJsonLd) }} />
       {/* 히어로 */}
       <section className="relative py-36 border-b border-stone-200 overflow-hidden min-h-[560px] flex items-center">
         <Image src="/images/bg.webp" alt="네일샵 창업" fill className="object-cover" priority />
@@ -43,7 +51,7 @@ export default function Home() {
         <div className="relative max-w-[1100px] mx-auto px-4 text-center">
           <p className="inline-block bg-white/20 text-white text-xs font-semibold px-4 py-1.5 rounded-full mb-5 tracking-widest uppercase">2026 최신 기준</p>
           <h1 className="text-4xl md:text-5xl font-extrabold text-white mb-4 leading-tight tracking-tight">
-            네일샵 창업 비용·자격증·수익<br />
+            1인 네일샵 창업, 비용·자격증·수익<br />
             <span className="text-white/80">2026 최신 기준 총정리</span>
           </h1>
           <p className="text-base text-white/70 mb-4 max-w-xl mx-auto leading-relaxed">
@@ -71,13 +79,37 @@ export default function Home() {
           <h2 className="text-2xl md:text-3xl font-extrabold text-stone-900 mb-3 tracking-tight">네일샵 창업, &apos;자격증&apos;이 꼭 필요한가요?</h2>
           <p className="text-stone-500 text-sm mb-4 leading-relaxed">
             네, <strong className="text-stone-800">법적으로 반드시 필요합니다.</strong>{' '}
-            <strong className="text-stone-800">공중위생관리법 제6조 제1항</strong>에 따라 미용업을 영위하려면 미용사 면허를 취득해야 하며, 같은 법 <strong className="text-stone-800">시행규칙 제7조</strong>는 미용업 신고 시 면허증 사본 제출을 의무화하고 있습니다. 무면허로 미용업을 운영할 경우 <strong className="text-stone-800">동법 제20조에 따라 1년 이하 징역 또는 1천만원 이하 벌금</strong>에 처해질 수 있습니다.
+            <strong className="text-stone-800">공중위생관리법 제6조</strong>는 미용업에 종사하려는 사람이 미용사 면허를 받도록 정하고 있으며, 같은 법 <strong className="text-stone-800">제8조 제1항</strong>은 면허를 받지 않은 사람이 미용업을 개설하거나 그 업무에 종사하는 것을 금지합니다. 같은 법 시행령 제4조는 미용업을 일반·피부·네일·화장분장·종합 미용업으로 구분하며, <strong className="text-stone-800">네일미용업</strong>(손톱과 발톱을 손질·화장하는 영업)을 영위하려면 <strong className="text-stone-800">미용사(네일) 면허</strong>가 필요합니다.
           </p>
-          <div className="bg-red-50 border border-red-100 rounded-xl p-4 flex items-start gap-3 mb-6">
-            <span className="text-lg shrink-0 mt-0.5">⚠️</span>
-            <p className="text-xs text-red-800 leading-relaxed">
-              <strong>주의:</strong> &ldquo;자격증 없이도 창업할 수 있다&rdquo;는 정보는 잘못된 내용입니다. 미용사(네일) 면허 없이 손님에게 네일 시술을 하고 대가를 받으면 <strong>공중위생관리법 위반</strong>으로 처벌 대상이 됩니다.
+          <div className="bg-red-50 border border-red-100 rounded-xl p-4 mb-6">
+            <p className="text-xs text-red-800 leading-relaxed flex items-start gap-2 mb-3">
+              <span className="text-lg shrink-0">⚠️</span>
+              <span><strong>주의:</strong> &ldquo;자격증 없이도 창업할 수 있다&rdquo;는 정보는 잘못된 내용입니다. 다만 위반 유형에 따라 처벌 수위가 다르므로 정확히 알아둘 필요가 있습니다.</span>
             </p>
+            <div className="overflow-x-auto rounded-lg border border-red-100 bg-white">
+              <table className="w-full text-xs min-w-[440px]">
+                <thead className="bg-red-100/50 text-red-900">
+                  <tr>
+                    <th className="text-left px-3 py-2 font-bold">위반 내용</th>
+                    <th className="text-left px-3 py-2 font-bold">근거 조항</th>
+                    <th className="text-left px-3 py-2 font-bold">벌칙</th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-red-50 text-stone-700">
+                  <tr>
+                    <td className="px-3 py-2">면허 없이 미용업 개설·종사</td>
+                    <td className="px-3 py-2">제8조 제1항 위반</td>
+                    <td className="px-3 py-2 font-bold">300만원 이하 벌금</td>
+                  </tr>
+                  <tr>
+                    <td className="px-3 py-2">신고 없이 영업</td>
+                    <td className="px-3 py-2">제3조 제1항 전단 위반</td>
+                    <td className="px-3 py-2 font-bold">1년 이하 징역 또는 1천만원 이하 벌금</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p className="text-[11px] text-red-700 mt-2">무면허·미신고 상태로 영업하면 두 가지 모두 문제가 됩니다.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-5">
             <div className="bg-stone-50 border-2 border-stone-800 rounded-2xl p-6 relative overflow-hidden shadow-sm">
@@ -86,12 +118,12 @@ export default function Home() {
                 <span className="text-2xl">🏛️</span>
                 <h3 className="text-lg font-extrabold text-stone-900">미용사(네일) 국가면허</h3>
               </div>
-              <p className="text-xs text-stone-500 font-semibold mb-3 tracking-wide">국가기술자격증 취득 후 보건복지부 면허 신청</p>
+              <p className="text-xs text-stone-500 font-semibold mb-3 tracking-wide">국가기술자격증 취득 후 시장·군수·구청장 면허 신청</p>
               <ul className="space-y-1.5 text-sm text-stone-700">
                 <li className="flex gap-2"><span className="text-green-500 shrink-0">✓</span>한국산업인력공단(Q-Net) 주관 자격시험 합격</li>
-                <li className="flex gap-2"><span className="text-green-500 shrink-0">✓</span>보건복지부에 미용사 면허 신청 (자격증 기반)</li>
+                <li className="flex gap-2"><span className="text-green-500 shrink-0">✓</span>시장·군수·구청장에게 미용사 면허 신청 (자격증 기반)</li>
                 <li className="flex gap-2"><span className="text-green-500 shrink-0">✓</span>관할 구청 위생과에 미용업 신고 완료 후 영업 가능</li>
-                <li className="flex gap-2"><span className="text-green-500 shrink-0">✓</span><strong>공중위생관리법 제6조·시행규칙 제7조</strong> 근거</li>
+                <li className="flex gap-2"><span className="text-green-500 shrink-0">✓</span><strong>공중위생관리법 제6조·제8조 제1항</strong> 근거</li>
               </ul>
             </div>
             <div className="bg-white border border-stone-200 rounded-2xl p-6 shadow-sm opacity-80">
@@ -119,7 +151,7 @@ export default function Home() {
         <AdUnit slot="1591000951" />
 
         {/* 섹션 1 - 네일샵 창업이란? */}
-        <section>
+        <section id="services">
           <p className="text-xs font-semibold text-stone-400 mb-2 uppercase tracking-widest">네일샵 창업</p>
           <h2 className="text-2xl font-extrabold text-stone-900 mb-2">네일샵 창업이란?</h2>
           <p className="text-stone-500 text-sm mb-8">손발톱을 관리·장식하는 미용 서비스업입니다. 1인 운영이 가능하고 재료비 대비 수익률이 높아 소자본 창업 아이템으로 꾸준히 주목받고 있습니다.</p>
@@ -139,7 +171,7 @@ export default function Home() {
                 </div>
                 <p className="text-xs text-stone-500 leading-relaxed mb-2">{item.summary}</p>
                 <p className="text-xs text-stone-400 leading-relaxed mb-3" style={{ display: '-webkit-box', WebkitLineClamp: 5, WebkitBoxOrient: 'vertical', overflow: 'hidden' }}>
-                  {item.sections[0].body}
+                  {item.intro.replace(/\*\*/g, '')}
                 </p>
                 <div className="flex items-center justify-between">
                   <span className="text-xs font-bold text-stone-700">{item.price}</span>
@@ -147,6 +179,45 @@ export default function Home() {
                 </div>
               </Link>
             ))}
+          </div>
+
+          {/* 시술별 수익성 표 */}
+          <h3 className="text-base font-extrabold text-stone-800 mb-3">시술별 단가·시간·수익성 한눈에 보기</h3>
+          <div className="overflow-x-auto rounded-2xl border border-stone-100 shadow-sm mb-4">
+            <table className="w-full text-sm min-w-[640px]">
+              <thead className="bg-stone-50 text-stone-600">
+                <tr>
+                  {['시술', '태그', '소요시간', '가격대', '재료 원가율', '시간당 수익'].map((h) => (
+                    <th key={h} className="px-3 py-3 font-bold text-center first:text-left whitespace-nowrap">{h}</th>
+                  ))}
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-stone-50 text-stone-700">
+                {[
+                  { s: '젤네일', tag: '수요 1위', time: '60~80분', price: '3~8만원', cost: '15~20%', profit: '약 3.6만원', hl: false },
+                  { s: '아크릴 연장', tag: '단가 높음', time: '90~120분', price: '6~10만원', cost: '15~20%', profit: '약 3.4만원', hl: false },
+                  { s: '네일 아트', tag: 'SNS 인기', time: '80~120분', price: '5~12만원', cost: '15~20%', profit: '약 3.6만원', hl: false },
+                  { s: '손·발 케어', tag: '단골 유도', time: '40~60분', price: '2~4만원', cost: '10~15%', profit: '약 3.1만원', hl: false },
+                  { s: '젤 제거', tag: '회전율 ↑', time: '20~30분', price: '1~2만원', cost: '5~10%', profit: '약 3.4만원', hl: true },
+                  { s: '풀 세트', tag: '객단가 최고', time: '120~150분', price: '8~15만원', cost: '15~20%', profit: '약 4.6만원', hl: false },
+                ].map((r) => (
+                  <tr key={r.s} className="hover:bg-stone-50/60">
+                    <td className="px-3 py-3 text-left font-bold text-stone-800 whitespace-nowrap">{r.s}</td>
+                    <td className="px-3 py-3 text-center text-xs text-stone-500 whitespace-nowrap">{r.tag}</td>
+                    <td className="px-3 py-3 text-center whitespace-nowrap">{r.time}</td>
+                    <td className="px-3 py-3 text-center whitespace-nowrap">{r.price}</td>
+                    <td className="px-3 py-3 text-center whitespace-nowrap">{r.cost}</td>
+                    <td className={`px-3 py-3 text-center whitespace-nowrap font-bold ${r.hl ? 'text-rose-600' : 'text-stone-800'}`}>{r.profit}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <div className="bg-stone-50 border border-stone-100 rounded-2xl p-5 mb-10 space-y-2">
+            <p className="text-xs font-bold text-stone-500 mb-1">여기서 읽어야 할 것</p>
+            <p className="text-[13px] text-stone-600 leading-relaxed"><strong className="text-stone-900">1. 풀 세트가 시간당 수익 1위</strong>입니다. 시간은 오래 걸리지만 단가가 압도적입니다.</p>
+            <p className="text-[13px] text-stone-600 leading-relaxed"><strong className="text-stone-900">2. 젤 제거는 단독 메뉴로 저평가</strong>되어 있습니다. 20~30분이면 끝나 시간당 수익이 젤네일과 비슷해 예약 공백을 채우는 데 유용합니다.</p>
+            <p className="text-[13px] text-stone-600 leading-relaxed"><strong className="text-stone-900">3. 재료 원가율이 전 시술 15~20%로 낮습니다.</strong> 원가 절감보다 단가 인상이 훨씬 효과적입니다.</p>
           </div>
 
           {/* 고객층 */}
@@ -252,9 +323,9 @@ export default function Home() {
           <p className="text-stone-500 text-sm mb-8">순서대로 따라가면 빠짐없이 준비할 수 있습니다.</p>
           <div className="space-y-3">
             {[
-              { step: '01', title: '자격증 취득', desc: '네일 미용사 국가기술자격증 (Q-Net). 법적 필수는 아니지만 강력 권장. 필기+실기 합격까지 3~6개월.' },
+              { step: '01', title: '자격증 취득', desc: '미용사(네일) 국가기술자격 취득 후 시장·군수·구청장에게 면허를 신청합니다. 법적 필수 요건이며, 필기+실기 합격까지 3~6개월이 걸립니다.' },
               { step: '02', title: '상권 분석 및 위치 선정', desc: '목표 고객층(직장인·주부·대학생)에 맞는 상권 선택. 임대료와 유동인구 균형이 핵심.' },
-              { step: '03', title: '사업자 등록 + 미용업 신고', desc: '홈택스에서 개인사업자 등록 후, 관할 구청에 미용업 신고. 위생교육 8시간 이수 필수.' },
+              { step: '03', title: '사업자 등록 + 미용업 신고', desc: '홈택스에서 개인사업자 등록 후, 관할 구청에 미용업 신고. 영업 전 위생교육 이수 필수(교육 시간은 관할 구청 확인).' },
               { step: '04', title: '인테리어 및 장비 세팅', desc: '조명·환기·소독 시설 우선 투자. 중고 장비 활용으로 비용 절감 가능.' },
               { step: '05', title: 'SNS 개설 및 오픈 준비', desc: '인스타그램·네이버 플레이스 오픈 전 등록 완료. 오픈 이벤트로 초기 고객 확보.' },
             ].map((item) => (
@@ -284,25 +355,60 @@ export default function Home() {
         <section>
           <p className="text-xs font-semibold text-stone-400 mb-2 uppercase tracking-widest">예상 수익</p>
           <h2 className="text-2xl font-extrabold text-stone-900 mb-2">1인 네일샵 월 수익은 얼마나 될까요?</h2>
-          <p className="text-stone-500 text-sm mb-8">하루 고객 수와 시술 단가에 따라 수익이 크게 달라집니다. 고정비 약 150~200만원 제외 기준입니다.</p>
+          <p className="text-stone-500 text-sm mb-4">하루 고객 수와 시술 단가에 따라 수익이 크게 달라집니다. 아래는 계산 근거를 공개한 현실적인 시뮬레이션입니다.</p>
+          <p className="text-xs text-stone-500 bg-stone-50 border border-stone-100 rounded-lg px-3 py-2 mb-6 inline-block">계산 기준: 평균 객단가 5만원 · 월 영업일 24일 · 고정비 175만원</p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {[
-              { case: '보수적', icon: '🌱', customers: '하루 3명', monthly: '월 300만원', net: '순수익 100~150만', color: 'border-stone-200 bg-white' },
-              { case: '평균', icon: '💅', customers: '하루 5명', monthly: '월 500만원', net: '순수익 250~350만', color: 'border-stone-800 bg-stone-50' },
-              { case: '적극', icon: '🚀', customers: '하루 7명', monthly: '월 700만원', net: '순수익 400~500만', color: 'border-amber-200 bg-amber-50' },
+              { case: '보수적', icon: '🌱', customers: '하루 3명', monthly: '월 매출 360만원', net: '약 185만원', color: 'border-stone-200 bg-white' },
+              { case: '평균', icon: '💅', customers: '하루 5명', monthly: '월 매출 600만원', net: '약 425만원', color: 'border-stone-800 bg-stone-50' },
+              { case: '적극', icon: '🚀', customers: '하루 7명', monthly: '월 매출 840만원', net: '약 665만원', color: 'border-amber-200 bg-amber-50' },
             ].map((item) => (
               <div key={item.case} className={`border-2 ${item.color} rounded-2xl p-5 shadow-sm`}>
                 <p className="text-xl mb-2">{item.icon}</p>
                 <p className="text-xs font-bold text-stone-400 mb-3">{item.case} 케이스</p>
                 <p className="text-xs text-stone-400">고객 수</p>
                 <p className="font-bold text-stone-800 mb-1">{item.customers}</p>
-                <p className="text-xs text-stone-400">월 매출 (20일)</p>
-                <p className="font-bold text-stone-800 mb-2">{item.monthly}</p>
-                <p className="font-extrabold text-stone-700">{item.net}</p>
+                <p className="text-xs text-stone-400">{item.monthly} (24일)</p>
+                <p className="text-xs text-stone-400 mt-2">월 순수익</p>
+                <p className="font-extrabold text-stone-800 text-lg">{item.net}</p>
               </div>
             ))}
           </div>
-          <div className="mt-4 text-right">
+          <div className="mt-4 bg-amber-50 border border-amber-100 rounded-xl p-4 flex items-start gap-3">
+            <span className="text-lg shrink-0 mt-0.5">⚠️</span>
+            <p className="text-xs text-amber-800 leading-relaxed">하루 7명은 젤네일 기준 순수 시술 시간만 8시간입니다. 상담·청소·SNS 관리까지 포함하면 11시간 이상이 되어 매일 유지하기는 어렵습니다. <strong>하루 4~5명이 지속 가능한 현실 구간</strong>입니다.</p>
+          </div>
+
+          {/* 객단가별 수익 */}
+          <h3 className="text-base font-extrabold text-stone-800 mt-8 mb-3">객단가를 올렸을 때 (하루 5명 고정)</h3>
+          <div className="overflow-x-auto rounded-2xl border border-stone-100 shadow-sm">
+            <table className="w-full text-sm">
+              <thead className="bg-stone-50 text-stone-600">
+                <tr>
+                  <th className="text-left px-4 py-3 font-bold">평균 객단가</th>
+                  <th className="text-center px-4 py-3 font-bold">월 매출</th>
+                  <th className="text-center px-4 py-3 font-bold">월 순수익</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-stone-50 text-stone-700">
+                {[
+                  { price: '4만원', sales: '480만원', net: '305만원' },
+                  { price: '5만원', sales: '600만원', net: '425만원' },
+                  { price: '6만원', sales: '720만원', net: '545만원' },
+                  { price: '7만원', sales: '840만원', net: '665만원' },
+                ].map((r) => (
+                  <tr key={r.price} className="hover:bg-stone-50/60">
+                    <td className="px-4 py-3 font-medium text-stone-800">{r.price}</td>
+                    <td className="px-4 py-3 text-center">{r.sales}</td>
+                    <td className="px-4 py-3 text-center font-bold text-stone-900">{r.net}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <p className="text-xs text-stone-500 leading-relaxed mt-3">같은 고객 수에서 <strong className="text-stone-800">객단가 1만원을 올리면 월 순수익이 120만원 늘어납니다.</strong> 고객을 하루 1명 더 받는 것과 같은 효과인데 체력 부담은 없습니다.</p>
+
+          <div className="mt-5 text-right">
             <Link href="/revenue" className="text-sm text-stone-600 font-semibold hover:text-stone-900 hover:underline">시술 단가별 수익 계산 보기 →</Link>
           </div>
         </section>
@@ -414,12 +520,7 @@ export default function Home() {
           <p className="text-xs font-semibold text-stone-400 mb-2 uppercase tracking-widest">자주 묻는 질문</p>
           <h2 className="text-2xl font-extrabold text-stone-900 mb-8">네일샵 창업 Q&A</h2>
           <div className="space-y-3">
-            {[
-              { q: '1인 네일샵 vs 프랜차이즈, 어떤 게 유리한가요?', a: '초기 비용 면에서는 1인 독립샵이 유리합니다. 프랜차이즈는 브랜드 인지도를 활용할 수 있지만 가맹비·로열티가 추가됩니다. 기술 자신감이 있다면 독립샵이 수익률이 더 높습니다.' },
-              { q: '네일샵 창업 최소 자본금은 얼마인가요?', a: '공유 작업실 기준 200~400만원, 독립 점포 기준 보증금 포함 최소 500~700만원이 필요합니다.' },
-              { q: '창업 후 손익분기점은 언제인가요?', a: '일반적으로 오픈 후 3~6개월이 평균입니다. SNS 마케팅과 후기 관리를 적극적으로 하면 2~3개월로 앞당길 수 있습니다.' },
-              { q: '1인 네일샵, 하루 몇 명이나 받을 수 있나요?', a: '기본 젤네일 기준 1인당 1~1.5시간이므로 하루 5~7명이 현실적입니다. 예약제 운영으로 시간 효율을 높이는 것이 중요합니다.' },
-            ].map((item) => (
+            {homeFaqs.map((item) => (
               <div key={item.q} className="bg-white border border-stone-100 rounded-2xl p-5 shadow-sm">
                 <h3 className="text-[14px] font-bold text-stone-800 mb-2 flex items-start gap-2">
                   <span className="text-stone-500 font-extrabold shrink-0">Q.</span>{item.q}
@@ -430,6 +531,27 @@ export default function Home() {
           </div>
           <div className="mt-4 text-right">
             <Link href="/qna" className="text-sm text-stone-600 font-semibold hover:text-stone-900 hover:underline">더 많은 Q&A 보기 →</Link>
+          </div>
+        </section>
+
+        {/* 다른 미용 업종 창업 */}
+        <section>
+          <p className="text-xs font-semibold text-stone-400 mb-2 uppercase tracking-widest">다른 업종 비교</p>
+          <h2 className="text-2xl font-extrabold text-stone-900 mb-2">다른 미용 업종 창업도 알아보고 계신가요?</h2>
+          <p className="text-stone-500 text-sm mb-6">객단가가 높은 피부관리샵, 최소 자본으로 시작하는 메이크업샵 창업 정보도 준비했습니다.</p>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <Link href="/skincare" className="bg-stone-50 border border-stone-200 rounded-2xl p-5 hover:border-stone-400 transition-colors">
+              <p className="text-xs font-semibold text-stone-400 mb-1">객단가 2~3배</p>
+              <p className="font-bold text-stone-900">피부관리샵 창업 →</p>
+            </Link>
+            <Link href="/makeup" className="bg-stone-50 border border-stone-200 rounded-2xl p-5 hover:border-stone-400 transition-colors">
+              <p className="text-xs font-semibold text-stone-400 mb-1">300만원부터 시작</p>
+              <p className="font-bold text-stone-900">메이크업샵 창업 →</p>
+            </Link>
+            <Link href="/hair" className="bg-stone-50 border border-stone-200 rounded-2xl p-5 hover:border-stone-400 transition-colors">
+              <p className="text-xs font-semibold text-stone-400 mb-1">재방문 주기 최단</p>
+              <p className="font-bold text-stone-900">이용원·바버샵 창업 →</p>
+            </Link>
           </div>
         </section>
 

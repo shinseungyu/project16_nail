@@ -4,6 +4,7 @@ import localFont from 'next/font/local'
 import { Analytics } from '@vercel/analytics/next'
 import PrivacyPolicyModal from '@/components/PrivacyPolicyModal'
 import LegalNoticeModal from '@/components/LegalNoticeModal'
+import SiteHeader from '@/components/SiteHeader'
 import './globals.css'
 
 const pretendard = localFont({
@@ -19,9 +20,9 @@ const pretendard = localFont({
 })
 
 const SITE_NAME = '네일샵 창업'
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://nailstartup.com'
-const TITLE = '네일샵 창업 | 1인 네일샵 창업비용·자격증·수익 총정리 2026'
-const DESC = '1인 네일샵 창업을 준비 중이신가요? 창업비용부터 미용사 자격증 취득 방법, 예상 수익까지 2026년 최신 기준으로 한번에 정리했습니다.'
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.nailstartup.com'
+const TITLE = '네일샵 창업 | 창업비용 1,480만원·자격증·수익 총정리 2026'
+const DESC = '1인 네일샵 창업비용 800~2,000만원, 월 순수익 250~350만원. 미용사(네일) 자격증 취득 절차와 손익분기점까지 2026년 기준으로 정리했습니다.'
 const KEYWORDS = '네일샵 창업, 네일샵 창업비용, 1인 네일샵 창업, 네일아트 창업, 네일 창업, 네일샵 차리는법, 소자본 창업 네일, 네일아트 창업비용, 네일 자격증 창업, 네일아트 창업 준비'
 
 export const metadata: Metadata = {
@@ -81,7 +82,7 @@ export const metadata: Metadata = {
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://nailstartup.com'
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.nailstartup.com'
 
   const jsonLd = {
     '@context': 'https://schema.org',
@@ -111,7 +112,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         '@type': 'WebPage',
         '@id': `${siteUrl}/#webpage`,
         url: `${siteUrl}/`,
-        name: '네일샵 창업 | 1인 네일샵 창업비용·자격증·수익 총정리 2026',
+        name: TITLE,
         inLanguage: 'ko-KR',
         description: '네일샵 창업비용, 자격증, 준비물, 예상 수익까지 한번에 확인하세요.',
         isPartOf: { '@id': `${siteUrl}/#website` },
@@ -145,23 +146,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         />
       </head>
       <body className={`${pretendard.className} antialiased`}>
-        {/* 헤더 */}
-        <header className="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-rose-100/50">
-          <div className="max-w-[1100px] mx-auto px-4 h-16 flex items-center justify-between">
-            <a href="/" className="font-bold text-lg text-stone-900 tracking-tight flex items-center gap-2">
-              <span className="text-xl">💅</span> 
-              <span>네일아트 <span className="text-brand">창업</span></span>
-            </a>
-            <nav className="hidden md:flex items-center gap-8 text-[13px] text-stone-500 font-semibold uppercase tracking-wider">
-              <a href="/cost" className="hover:text-brand transition-colors">창업비용</a>
-              <a href="/guide" className="hover:text-brand transition-colors">창업가이드</a>
-              <a href="/license" className="hover:text-brand transition-colors">자격증</a>
-              <a href="/revenue" className="hover:text-brand transition-colors">예상수익</a>
-              <a href="/calculator" className="hover:text-brand transition-colors">계산기</a>
-              <a href="/qna" className="hover:text-brand transition-colors">Q&A</a>
-            </nav>
-          </div>
-        </header>
+        {/* 헤더 (현재 업종에 맞춰 로고·네비 전환) */}
+        <SiteHeader />
 
         <main className="min-h-screen">{children}</main>
 
@@ -188,6 +174,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                     <li><a href="/cost" className="hover:text-brand transition-colors">창업비용 안내</a></li>
                     <li><a href="/guide" className="hover:text-brand transition-colors">단계별 가이드</a></li>
                     <li><a href="/license" className="hover:text-brand transition-colors">자격증 취득정보</a></li>
+                    <li><a href="/skincare" className="hover:text-brand transition-colors">피부관리샵 창업</a></li>
+                    <li><a href="/makeup" className="hover:text-brand transition-colors">메이크업샵 창업</a></li>
+                    <li><a href="/hair" className="hover:text-brand transition-colors">이용원·바버샵 창업</a></li>
                   </ul>
                 </div>
                 <div className="space-y-3">

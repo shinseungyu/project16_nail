@@ -1,40 +1,40 @@
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import ServiceDetail from '@/components/ServiceDetail'
-import { nailServices } from '@/data/services'
+import { hairServices } from '@/data/hair-services'
 
 export async function generateStaticParams() {
-  return nailServices.map((s) => ({ id: s.id }))
+  return hairServices.map((s) => ({ id: s.id }))
 }
 
 export async function generateMetadata({ params }: { params: { id: string } }): Promise<Metadata> {
-  const service = nailServices.find((s) => s.id === params.id)
+  const service = hairServices.find((s) => s.id === params.id)
   if (!service) return {}
   return {
     title: { absolute: service.metaTitle },
     description: service.metaDescription,
     keywords: service.keywords,
-    alternates: { canonical: `/service/${service.id}` },
+    alternates: { canonical: `/hair/service/${service.id}` },
     openGraph: {
       title: service.metaTitle,
       description: service.metaDescription,
-      url: `/service/${service.id}`,
+      url: `/hair/service/${service.id}`,
     },
   }
 }
 
-export default function ServicePage({ params }: { params: { id: string } }) {
-  const service = nailServices.find((s) => s.id === params.id)
+export default function HairServicePage({ params }: { params: { id: string } }) {
+  const service = hairServices.find((s) => s.id === params.id)
   if (!service) notFound()
 
   return (
     <ServiceDetail
       service={service}
-      siblings={nailServices}
-      basePath="/service"
-      hubHref="/"
-      hubLabel="네일샵 창업 홈"
-      parentCrumb={{ name: '시술', href: '/#services' }}
+      siblings={hairServices}
+      basePath="/hair/service"
+      hubHref="/hair"
+      hubLabel="이용원 창업"
+      parentCrumb={{ name: '이용원', href: '/hair' }}
     />
   )
 }
