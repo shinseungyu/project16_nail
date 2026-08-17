@@ -20,20 +20,21 @@ const CATEGORIES: Cat[] = [
   },
   {
     key: 'skincare', home: '/skincare', icon: '✨', brand: '피부관리', label: '피부관리샵',
-    nav: [['/skincare/cost', '창업비용'], ['/skincare/license', '자격증'], ['/skincare/revenue', '예상수익'], ['/skincare#calculator', '계산기']],
+    nav: [['/skincare/cost', '창업비용'], ['/skincare/license', '자격증'], ['/skincare/revenue', '예상수익'], ['/skincare#calculator', '계산기'], ['/qna#skin-care', 'Q&A']],
   },
   {
     key: 'makeup', home: '/makeup', icon: '💄', brand: '메이크업', label: '메이크업',
-    nav: [['/makeup/cost', '창업비용'], ['/makeup/license', '자격증'], ['/makeup/revenue', '예상수익'], ['/makeup#calculator', '계산기']],
+    nav: [['/makeup/cost', '창업비용'], ['/makeup/license', '자격증'], ['/makeup/revenue', '예상수익'], ['/makeup#calculator', '계산기'], ['/qna#makeup-care', 'Q&A']],
   },
   {
     key: 'hair', home: '/hair', icon: '💈', brand: '이용원', label: '이용원',
-    nav: [['/hair/cost', '창업비용'], ['/hair/license', '자격증'], ['/hair/revenue', '예상수익'], ['/hair#calculator', '계산기']],
+    nav: [['/hair/cost', '창업비용'], ['/hair/license', '자격증'], ['/hair/revenue', '예상수익'], ['/hair#calculator', '계산기'], ['/qna#hair-style', 'Q&A']],
   },
   // 반영구화장은 문신사법 적용 대상. 창업 권유가 아닌 정보 제공 클러스터라 nav 구성이 다르다.
+  // Q&A는 눈썹 문신·반영구 질문이 모여 있는 메이크업 시술 섹션으로 보낸다.
   {
     key: 'semi-permanent', home: '/semi-permanent', icon: '🖊️', brand: '반영구화장', label: '반영구화장', suffix: '정보',
-    nav: [['/semi-permanent/legal', '자격·법'], ['/semi-permanent/law-timeline', '시행일정'], ['/semi-permanent/price', '가격'], ['/semi-permanent/removal', '제거']],
+    nav: [['/semi-permanent/legal', '자격·법'], ['/semi-permanent/law-timeline', '시행일정'], ['/semi-permanent/price', '가격'], ['/semi-permanent/removal', '제거'], ['/qna#makeup-care', 'Q&A']],
   },
 ]
 
