@@ -25,8 +25,22 @@ interface ServiceDetailProps {
 }
 
 export default function ServiceDetail({ service, siblings, basePath, hubHref, hubLabel, parentCrumb }: ServiceDetailProps) {
+  // 클러스터 밖 경로는 siblings로 라벨을 찾을 수 없어 명시 매핑이 필요하다.
+  const CROSS_LABELS: Record<string, string> = {
+    '/hair/license': '이용사 자격증',
+    '/hair/license/beautician': '미용사(일반) 자격증',
+    '/hair/license/difference': '미용사와 이용사 차이',
+    '/hair/cost': '미용실 창업비용',
+    '/hair/revenue': '헤어 수익 구조',
+    '/hair/scalp': '두피 스케일링',
+    '/hair/scalp/clinic': '헤어 클리닉',
+    '/hair/career/salary': '헤어 디자이너 연봉',
+  }
+
   const labelFor = (href: string) =>
-    href === hubHref ? hubLabel : siblings.find((s) => `${basePath}/${s.id}` === href)?.title ?? href
+    href === hubHref
+      ? hubLabel
+      : siblings.find((s) => `${basePath}/${s.id}` === href)?.title ?? CROSS_LABELS[href] ?? href
 
   const faqJsonLd = {
     '@context': 'https://schema.org',
@@ -165,10 +179,18 @@ export default function ServiceDetail({ service, siblings, basePath, hubHref, hu
       {/* 내부링크 */}
       <div className="mb-10">
         <p className="text-xs font-bold text-stone-400 mb-3 uppercase tracking-widest">함께 보면 좋은 글</p>
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+        {/* 1:1 정사각 카드 — 모바일 2열, sm 이상 3열 */}
+        <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
           {service.related.map((href) => (
-            <Link key={href} href={href} className="bg-stone-50 border border-stone-200 rounded-2xl p-4 hover:border-stone-400 transition-colors">
-              <p className="text-sm font-bold text-stone-800">{labelFor(href)} →</p>
+            <Link
+              key={href}
+              href={href}
+              className="group aspect-square bg-stone-50 border border-stone-200 rounded-2xl p-5 flex flex-col justify-between hover:border-stone-400 hover:bg-white hover:shadow-md transition-all"
+            >
+              <p className="text-[15px] sm:text-base font-extrabold text-stone-800 leading-snug break-keep">
+                {labelFor(href)}
+              </p>
+              <span className="self-end text-lg text-stone-300 group-hover:text-stone-700 transition-colors">→</span>
             </Link>
           ))}
         </div>

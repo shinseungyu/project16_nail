@@ -8,12 +8,26 @@ export async function generateStaticParams() {
   return nailSections.map((s) => ({ id: s.id }))
 }
 
+/**
+ * ⚠️ 이 클러스터는 색인 대상이 아니다.
+ * 5개 전부 더 길고 강한 전용 페이지의 얇은 중복이다.
+ *   /info/license      1,110자  ↔  /license      2,082자
+ *   /info/revenue      1,296자  ↔  /revenue      2,226자
+ *   /info/startup-cost 1,532자  ↔  /cost
+ *   /info/what-is-nail 2,018자  ↔  /board/15 (같은 주제)
+ *   /info/who-succeeds 1,349자  ↔  /board/13 (같은 주제)
+ * 사이트맵에도 없고 내부링크도 0개라 사실상 도달 불가 상태였다.
+ * 색인시키면 카니발라이제이션만 늘어나므로 noindex,follow로 고정한다.
+ * (follow는 유지 — 이 페이지들이 내보내는 링크 신호는 살린다)
+ */
 export async function generateMetadata({ params }: { params: { id: string } }): Promise<Metadata> {
   const section = nailSections.find((s) => s.id === params.id)
   if (!section) return {}
   return {
-    title: `${section.title} | 네일창업연구소`,
+    // 루트 layout의 title 템플릿이 다시 붙어 접미사가 두 번 나오던 것을 absolute로 고정
+    title: { absolute: `${section.title} | 네일창업연구소` },
     description: section.summary,
+    robots: { index: false, follow: true },
     alternates: { canonical: `/info/${section.id}` },
   }
 }

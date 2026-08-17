@@ -15,15 +15,43 @@ interface Post {
   date: string;
   category: string;
   summary: string;
+  metaDescription?: string;
   content: string;
   tags: string[];
 }
 
 const allPosts = posts as Post[];
 
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://www.nailstartup.com";
+
+// 목록 페이지에도 구조화 데이터가 없어 위치 신호가 없었다.
+const breadcrumbJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "홈", item: `${SITE_URL}/` },
+    { "@type": "ListItem", position: 2, name: "창업 정보", item: `${SITE_URL}/board` },
+  ],
+};
+
+const itemListJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  name: "네일샵 창업 정보 글 목록",
+  numberOfItems: allPosts.length,
+  itemListElement: allPosts.map((p, i) => ({
+    "@type": "ListItem",
+    position: i + 1,
+    url: `${SITE_URL}/board/${p.id}`,
+    name: p.title,
+  })),
+};
+
 export default function BoardPage() {
   return (
     <main className="min-h-screen bg-white">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListJsonLd) }} />
       <div className="max-w-3xl mx-auto px-4 py-8">
         <h1 className="text-xl font-bold text-gray-900 mb-1">네일샵 창업 정보</h1>
         <p className="text-xs text-gray-400 mb-6">총 {allPosts.length}개의 글</p>

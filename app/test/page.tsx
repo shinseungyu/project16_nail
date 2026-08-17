@@ -1,6 +1,12 @@
 import FormSection from "./FormSection"
 
-export const metadata = { title: "상담 신청 폼", robots: "noindex,nofollow" }
+// canonical을 지정하지 않으면 루트 layout의 '/'를 상속해 홈의 중복 신호가 된다.
+export const metadata = {
+  title: { absolute: "상담 신청 폼" },
+  description: "네일샵 창업 무료 상담 신청 폼입니다.",
+  robots: "noindex,nofollow",
+  alternates: { canonical: "/test" },
+}
 
 export default function TestPage() {
   return (

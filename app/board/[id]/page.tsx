@@ -5,12 +5,17 @@ import posts from "@/data/posts.json";
 import FormSection from "@/app/test/FormSection";
 import AdUnit from "@/components/AdUnit";
 
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://www.nailstartup.com";
+
 interface Post {
   id: number;
   title: string;
   date: string;
   category: string;
   summary: string;
+  // 목록에 노출되는 summary는 짧아 검색결과 스니펫을 못 채운다.
+  // 검색용 설명은 별도 필드로 두고, 없으면 summary로 폴백한다.
+  metaDescription?: string;
   content: string;
   tags: string[];
 }
@@ -33,16 +38,19 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: { params: { id: string } }): Promise<Metadata> {
   const post = allPosts.find((p) => p.id === Number(params.id));
   if (!post) return {};
+  const desc = post.metaDescription ?? post.summary;
   return {
     title: post.title,
-    description: post.summary,
+    description: desc,
     keywords: post.tags,
     alternates: { canonical: `/board/${post.id}` },
     openGraph: {
       title: post.title,
-      description: post.summary,
+      description: desc,
       type: "article",
       publishedTime: post.date,
+      // openGraph를 직접 지정하면 루트 layout의 images를 상속하지 못해 og:image가 사라진다.
+      images: [{ url: "/images/thumb.webp", width: 1200, height: 630, alt: post.title }],
     },
   };
 }
@@ -57,8 +65,42 @@ export default function BoardPostPage({ params }: { params: { id: string } }) {
   const lines = post.content.split("\n");
   const mid = Math.ceil(lines.length / 2);
 
+  // 글 페이지인데 구조화 데이터가 없어 리치 결과를 못 받고 있었다.
+  const articleJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: post.title,
+    description: post.metaDescription ?? post.summary,
+    datePublished: post.date,
+    dateModified: post.date,
+    inLanguage: "ko-KR",
+    keywords: post.tags.join(", "),
+    articleSection: post.category,
+    mainEntityOfPage: { "@type": "WebPage", "@id": `${SITE_URL}/board/${post.id}` },
+    image: [`${SITE_URL}/images/thumb.webp`],
+    author: { "@type": "Organization", name: "네일샵 창업", url: SITE_URL },
+    publisher: {
+      "@type": "Organization",
+      name: "네일샵 창업",
+      url: SITE_URL,
+      logo: { "@type": "ImageObject", url: `${SITE_URL}/images/thumb.webp` },
+    },
+  };
+
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "홈", item: `${SITE_URL}/` },
+      { "@type": "ListItem", position: 2, name: "창업 정보", item: `${SITE_URL}/board` },
+      { "@type": "ListItem", position: 3, name: post.title, item: `${SITE_URL}/board/${post.id}` },
+    ],
+  };
+
   return (
     <main className="min-h-screen bg-stone-50">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
       <div className="max-w-3xl mx-auto px-4 py-12 md:py-16">
         {/* 상담 신청 폼 */}
         <section className="mb-8">

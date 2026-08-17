@@ -19,6 +19,8 @@ export async function generateMetadata({ params }: { params: { id: string } }): 
       title: service.metaTitle,
       description: service.metaDescription,
       url: `/makeup/service/${service.id}`,
+      // openGraph를 직접 지정하면 루트 layout의 images를 상속하지 못해 og:image가 사라진다.
+      images: [{ url: '/images/thumb.webp', width: 1200, height: 630, alt: service.metaTitle }],
     },
   }
 }

@@ -6,8 +6,9 @@ type Cat = {
   key: string
   home: string
   icon: string
-  brand: string // 로고에 표시 (뒤에 "창업"이 붙음)
+  brand: string // 로고에 표시 (뒤에 suffix가 붙음)
   label: string // 업종 스위처에 표시
+  suffix?: string // 로고 접미사. 기본 '창업'. 반영구화장은 창업 권유를 하지 않아 '정보'
   nav: [string, string][]
 }
 
@@ -29,6 +30,11 @@ const CATEGORIES: Cat[] = [
     key: 'hair', home: '/hair', icon: '💈', brand: '이용원', label: '이용원',
     nav: [['/hair/cost', '창업비용'], ['/hair/license', '자격증'], ['/hair/revenue', '예상수익'], ['/hair#calculator', '계산기']],
   },
+  // 반영구화장은 문신사법 적용 대상. 창업 권유가 아닌 정보 제공 클러스터라 nav 구성이 다르다.
+  {
+    key: 'semi-permanent', home: '/semi-permanent', icon: '🖊️', brand: '반영구화장', label: '반영구화장', suffix: '정보',
+    nav: [['/semi-permanent/legal', '자격·법'], ['/semi-permanent/law-timeline', '시행일정'], ['/semi-permanent/price', '가격'], ['/semi-permanent/removal', '제거']],
+  },
 ]
 
 export default function SiteHeader() {
@@ -42,7 +48,7 @@ export default function SiteHeader() {
       <div className="max-w-[1100px] mx-auto px-4 h-16 flex items-center justify-between">
         <a href={active.home} className="font-bold text-lg text-stone-900 tracking-tight flex items-center gap-2">
           <span className="text-xl">{active.icon}</span>
-          <span>{active.brand} <span className="text-brand">창업</span></span>
+          <span>{active.brand} <span className="text-brand">{active.suffix ?? '창업'}</span></span>
         </a>
         <nav className="hidden md:flex items-center gap-5 text-[13px] text-stone-500 font-semibold uppercase tracking-wide">
           {active.nav.map(([href, label]) => (

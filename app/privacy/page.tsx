@@ -1,4 +1,12 @@
 import React from 'react';
+import type { Metadata } from 'next';
+
+// 자체 metadata가 없으면 layout의 canonical('/')을 상속해 홈의 중복으로 처리된다.
+export const metadata: Metadata = {
+  title: { absolute: '개인정보처리방침 | 네일샵 창업' },
+  description: '네일샵 창업 정보 사이트의 개인정보 수집·이용·보관 및 파기 절차와 이용자 권리를 안내합니다.',
+  alternates: { canonical: '/privacy' },
+};
 
 export default function PrivacyPolicy() {
   return (
