@@ -4,6 +4,7 @@ import { skincareServices } from '@/data/skincare-services'
 import { makeupServices } from '@/data/makeup-services'
 import { hairServices } from '@/data/hair-services'
 import posts from '@/data/posts.json'
+import { PUBLISHED_SLUGS } from '@/data/qna'
 
 // 하드코딩하면 글이 늘어날 때마다 누락된다. 데이터에서 직접 파생시킨다.
 const POST_IDS = (posts as { id: number }[]).map((p) => p.id).sort((a, b) => a - b)
@@ -53,7 +54,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/license`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
     { url: `${baseUrl}/revenue`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
     { url: `${baseUrl}/calculator`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.9 },
-    { url: `${baseUrl}/qna`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.8 },
+    { url: `${baseUrl}/qna`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.9 },
+    // 상세는 원고가 작성된 것만 등록. QNA_DETAILS에 추가되면 자동 반영된다.
+    ...PUBLISHED_SLUGS.map((slug) => ({
+      url: `${baseUrl}/qna/${slug}`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly' as const,
+      priority: 0.8,
+    })),
     { url: `${baseUrl}/board`, lastModified: new Date(), changeFrequency: 'daily', priority: 0.7 },
     ...servicePaths,
     // 소비자 검색 유입로 — 창업 허브와 역할을 분리한 페이지들

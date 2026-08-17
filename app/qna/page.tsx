@@ -1,120 +1,187 @@
 import type { Metadata } from 'next'
+import Link from 'next/link'
 import AdUnit from '@/components/AdUnit'
 import FormSection from '../test/FormSection'
+import { QNA_SECTIONS, QNA_ITEMS, itemsBySection, isPublished, PUBLISHED_SLUGS } from '@/data/qna'
+
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.nailstartup.com'
 
 export const metadata: Metadata = {
-  title: '네일샵 창업 Q&A | 창업 전 궁금한 것 다 물어보세요',
-  description: '네일샵 창업을 준비하면서 많이 묻는 질문과 답변을 정리했습니다. 비용, 자격증, 수익, 상권까지 실전 Q&A.',
+  title: { absolute: '뷰티 자주 묻는 질문 93선 | 네일·메이크업·스킨케어·헤어' },
+  description:
+    '네일·메이크업·스킨케어·헤어 시술부터 자격증·창업까지, 가장 많이 나오는 질문 93개를 카테고리별로 정리했습니다.',
+  keywords: ['뷰티 자주 묻는 질문', '네일 질문', '미용 자격증 질문', '뷰티 창업 Q&A', '미용실 창업 질문'],
   alternates: { canonical: '/qna' },
+  openGraph: { type: 'website' },
 }
 
-const qnaList = [
-  {
-    q: '네일샵 창업에 자격증이 꼭 필요한가요?',
-    a: '법적으로는 필수가 아닙니다. 하지만 미용업 신고 시 자격증 사본을 제출하면 고객 신뢰도가 높아지고, 일부 공간 임차 시 요구하는 경우도 있습니다. 네일 미용사 국가기술자격증(Q-Net) 취득을 강력히 권장합니다.',
-  },
-  {
-    q: '1인 네일샵 최소 창업비용은 얼마인가요?',
-    a: '공유 작업실 이용 기준으로 최소 300~500만원으로도 시작 가능합니다. 독립 매장 기준으로는 보증금 + 인테리어 + 장비 + 재료비 합산 최소 680만원 이상이 필요합니다. 중고 장비 활용, 셀프 인테리어 시 비용을 크게 줄일 수 있습니다.',
-  },
-  {
-    q: '네일 미용사 자격증 시험은 얼마나 자주 있나요?',
-    a: '연간 4회(분기별) 시행됩니다. Q-Net(한국산업인력공단) 홈페이지에서 일정을 확인할 수 있습니다. 필기 합격 후 2년 내 실기 합격이 필요합니다.',
-  },
-  {
-    q: '1인 네일샵 평균 월 수익은 어느 정도인가요?',
-    a: '하루 고객 3~5명 기준, 월 매출 300~500만원, 고정비(월세·재료비 등) 약 150~200만원 제외 후 순수익 150~350만원 수준입니다. 입지와 단가 전략에 따라 크게 차이납니다.',
-  },
-  {
-    q: '네일샵 창업 전 위생교육을 받아야 하나요?',
-    a: '네, 미용업 개설 신고 전 8시간 위생교육이 의무입니다. 대한미용사회 또는 온라인 교육기관에서 이수할 수 있습니다. 교육 수료증은 미용업 신고 시 필요합니다.',
-  },
-  {
-    q: '네일샵 창업 시 어떤 형태가 유리한가요? 독립 매장 vs 공유 작업실',
-    a: '초기 자금이 부족하다면 공유 작업실(네일 공방)을 추천합니다. 보증금 없이 월 30~80만원 수준의 자리 임차료만 내면 시작 가능합니다. 고객층이 안정되고 수익이 확보된 후 독립 매장으로 확장하는 것이 리스크를 줄이는 방법입니다.',
-  },
-  {
-    q: '사업자 등록은 어떻게 하나요?',
-    a: '홈택스(hometax.go.kr)에서 온라인으로 신청하거나, 관할 세무서에 방문해 개인사업자 등록을 합니다. 이후 관할 구청 위생과에 미용업 신고를 별도로 해야 합니다.',
-  },
-  {
-    q: '네일샵 마케팅은 어떻게 시작해야 하나요?',
-    a: '인스타그램 계정 개설 후 시술 사진을 꾸준히 올리는 것이 가장 효과적입니다. 개업 전 네이버 플레이스에 등록하고, 오픈 초기에는 할인 이벤트로 첫 방문 고객을 확보하세요. 단골 고객 1명이 신규 고객 3명을 데려오는 효과를 기억하세요.',
-  },
-  {
-    q: '네일샵 인테리어는 얼마나 투자해야 하나요?',
-    a: '셀프 인테리어 시 70~200만원, 업체 의뢰 시 500~1,500만원 수준입니다. 조명, 환기 설비, 소독 시설에 우선 투자하고 나머지는 최소화하는 것을 권장합니다. 인테리어보다 기술과 마케팅이 수익에 훨씬 큰 영향을 줍니다.',
-  },
-  {
-    q: '초기 재료비는 어느 정도 준비해야 하나요?',
-    a: '젤 컬러(50~100색), 베이스·탑 코트, 팁, 파일 등 기본 세팅에 50~150만원이 필요합니다. 도매 구입 시 30~40% 절감 가능합니다. 처음에는 기본 색상과 기능 위주로 세팅하고, 수요에 따라 추가 구비하는 것을 권장합니다.',
-  },
-  {
-    q: '네일샵 손익분기점은 어느 정도인가요?',
-    a: '월세(50~150만원), 재료비(50~100만원), 보험·통신비 등 고정비 합산 약 150~200만원입니다. 시술 단가 5만원 기준으로 월 30~40건 이상 시술 시 손익분기점을 넘깁니다. 하루 2명 이상 고객이면 기본 유지가 가능합니다.',
-  },
-  {
-    q: '네일샵 창업에서 가장 흔한 실패 원인은 무엇인가요?',
-    a: '가장 흔한 실패 원인은 과도한 초기 투자(인테리어 과잉), 상권 분석 없는 입지 선택, 마케팅 포기, 가격 경쟁입니다. 최소 6개월치 생활비를 여유 자금으로 남겨두고, 오픈 전부터 SNS 활동을 시작하는 것이 중요합니다.',
-  },
-]
-
-const faqJsonLd = {
+/**
+ * 스키마: BreadcrumbList + ItemList
+ * ★ FAQPage는 넣지 않는다 — 상세 페이지가 FAQPage를 갖기 때문에 중복이 된다 (원고 지시)
+ */
+const breadcrumbJsonLd = {
   '@context': 'https://schema.org',
-  '@type': 'FAQPage',
-  mainEntity: qnaList.map((item) => ({
-    '@type': 'Question',
-    name: item.q,
-    acceptedAnswer: { '@type': 'Answer', text: item.a },
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: '홈', item: `${SITE_URL}/` },
+    { '@type': 'ListItem', position: 2, name: '자주 묻는 질문', item: `${SITE_URL}/qna` },
+  ],
+}
+
+// 발행된 상세만 ItemList에 담는다 (미발행 항목은 URL이 없으므로)
+const itemListJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: '뷰티 자주 묻는 질문',
+  numberOfItems: PUBLISHED_SLUGS.length,
+  itemListElement: QNA_ITEMS.filter((i) => isPublished(i.slug)).map((i, idx) => ({
+    '@type': 'ListItem',
+    position: idx + 1,
+    url: `${SITE_URL}/qna/${i.slug}`,
+    name: i.question,
   })),
 }
 
-export default function QnaPage() {
+export default function QnaHubPage() {
+  const total = QNA_ITEMS.length
+  const published = PUBLISHED_SLUGS.length
+
   return (
-    <div className="max-w-[1100px] mx-auto px-4 py-12">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
-      <p className="text-xs font-semibold text-stone-400 mb-2 uppercase tracking-widest">창업 Q&A</p>
-      <h1 className="text-3xl font-extrabold text-stone-900 mb-3">네일샵 창업 Q&A</h1>
-      <p className="text-stone-500 mb-8">창업 준비 중 가장 많이 묻는 질문과 답변을 모았습니다.</p>
-      
-      <div className="mb-14 animate-fade-in-up">
-        <div className="flex justify-start mb-3">
-          <span className="inline-block bg-[#FEE500] text-black text-sm font-extrabold px-4 py-1.5 rounded-full shadow-sm animate-bounce">간편 신청하기 👇</span>
-        </div>
-        <FormSection />
+    <div className="max-w-[860px] mx-auto px-4 py-12">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListJsonLd) }} />
+
+      <nav className="text-xs text-stone-400 mb-6 flex items-center gap-1.5 flex-wrap">
+        <Link href="/" className="hover:text-stone-700">홈</Link><span>›</span>
+        <span className="text-stone-600">자주 묻는 질문</span>
+      </nav>
+
+      <h1 className="text-3xl font-extrabold text-stone-900 mb-3">자주 묻는 질문</h1>
+      <p className="text-[15px] text-stone-600 leading-relaxed mb-5">
+        네일·메이크업·스킨케어·헤어 네 개 분야에서 가장 많이 나오는 질문을 모았습니다. 시술 종류와 가격, 유지 기간부터
+        자격증 취득, 학원 선택, 창업 준비까지 카테고리별로 찾아보실 수 있습니다.
+      </p>
+
+      {/* 기준 정보 바 */}
+      <div className="flex flex-wrap gap-2 mb-8">
+        {['2026년 최신 기준', `총 ${total}개 질문`, '최종 업데이트 2026.08.17'].map((t) => (
+          <span key={t} className="text-[11px] font-bold text-stone-500 bg-stone-100 rounded-full px-3 py-1.5">
+            {t}
+          </span>
+        ))}
       </div>
 
-      <section className="mb-12 space-y-4">
-        {qnaList.slice(0, 6).map((item, i) => (
-          <div key={i} className="bg-white border border-stone-100 rounded-2xl p-6 shadow-sm">
-            <p className="flex items-start gap-3 font-bold text-stone-900 mb-3">
-              <span className="shrink-0 w-6 h-6 bg-stone-800 text-white rounded-full flex items-center justify-center text-xs font-extrabold">Q</span>
-              {item.q}
-            </p>
-            <p className="flex items-start gap-3 text-[13px] text-stone-600 leading-relaxed">
-              <span className="shrink-0 w-6 h-6 bg-stone-100 text-stone-500 rounded-full flex items-center justify-center text-xs font-extrabold">A</span>
-              {item.a}
-            </p>
-          </div>
-        ))}
-
-        {/* 광고 (article-mid) */}
-        <AdUnit slot="1591000951" />
-
-        {qnaList.slice(6).map((item, i) => (
-          <div key={i + 6} className="bg-white border border-stone-100 rounded-2xl p-6 shadow-sm">
-            <p className="flex items-start gap-3 font-bold text-stone-900 mb-3">
-              <span className="shrink-0 w-6 h-6 bg-stone-800 text-white rounded-full flex items-center justify-center text-xs font-extrabold">Q</span>
-              {item.q}
-            </p>
-            <p className="flex items-start gap-3 text-[13px] text-stone-600 leading-relaxed">
-              <span className="shrink-0 w-6 h-6 bg-stone-100 text-stone-500 rounded-full flex items-center justify-center text-xs font-extrabold">A</span>
-              {item.a}
-            </p>
-          </div>
-        ))}
+      {/* 카테고리에서 찾기 */}
+      <section className="mb-8">
+        <h2 className="text-base font-extrabold text-stone-800 mb-3">카테고리에서 찾기</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+          {QNA_SECTIONS.map((s) => {
+            const count = itemsBySection(s.key).length
+            return (
+              <a
+                key={s.key}
+                href={`#${s.key}`}
+                className="bg-stone-50 border border-stone-200 rounded-xl px-4 py-3 flex items-center justify-between hover:border-stone-400 hover:bg-white transition-colors"
+              >
+                <span className="text-sm font-bold text-stone-800 flex items-center gap-2">
+                  <span>{s.icon}</span>
+                  {s.label}
+                </span>
+                <span className="text-xs font-bold text-stone-400 shrink-0">{count}</span>
+              </a>
+            )
+          })}
+        </div>
       </section>
 
+      {/* 상담 신청 폼 — 카테고리 목록 바로 아래 1회. min-height로 CLS 방지 */}
+      <section className="mb-10" style={{ minHeight: 320 }}>
+        <h2 className="text-base font-extrabold text-stone-800 mb-3">무료 상담 신청</h2>
+        <FormSection />
+      </section>
+
+      <AdUnit slot="1591000951" />
+
+      {/* 8개 섹션 */}
+      <div className="mt-8">
+        {QNA_SECTIONS.map((s) => {
+          const items = itemsBySection(s.key)
+          return (
+            <section key={s.key} id={s.key} className="mb-10 scroll-mt-20">
+              <h2 className="text-xl font-bold text-stone-900 mb-1 flex items-center gap-2">
+                <span>{s.icon}</span>
+                {s.label}
+              </h2>
+              <p className="text-xs text-stone-400 mb-4">{items.length}개 질문</p>
+
+              <ul className="divide-y divide-stone-100 border-y border-stone-100">
+                {items.map((i) =>
+                  isPublished(i.slug) ? (
+                    <li key={i.slug}>
+                      <Link
+                        href={`/qna/${i.slug}`}
+                        className="group flex items-center gap-3 py-3.5 hover:bg-stone-50 transition-colors"
+                      >
+                        <span className="text-stone-300 shrink-0 text-sm">Q</span>
+                        <span className="text-[14px] text-stone-700 font-medium leading-snug break-keep group-hover:text-stone-900">
+                          {i.question}
+                        </span>
+                        <span className="ml-auto shrink-0 text-stone-300 group-hover:text-stone-700 transition-colors">→</span>
+                      </Link>
+                    </li>
+                  ) : (
+                    // 원고 미작성분 — 링크를 걸면 404가 되므로 제목만 노출한다
+                    <li key={i.slug} className="flex items-center gap-3 py-3.5">
+                      <span className="text-stone-200 shrink-0 text-sm">Q</span>
+                      <span className="text-[14px] text-stone-400 leading-snug break-keep">{i.question}</span>
+                      <span className="ml-auto shrink-0 text-[10px] font-bold text-stone-300 bg-stone-50 rounded-full px-2 py-0.5">
+                        준비 중
+                      </span>
+                    </li>
+                  )
+                )}
+              </ul>
+            </section>
+          )
+        })}
+      </div>
+
+      <p className="text-xs text-stone-400 mb-8">
+        현재 {published}개 질문의 상세 답변이 공개되어 있습니다. 나머지는 순차적으로 작성해 공개합니다.
+      </p>
+
+      {/* 면책 */}
+      <section className="mb-8">
+        <div className="bg-stone-50 border border-stone-200 rounded-xl p-4">
+          <p className="text-[11px] text-stone-500 leading-relaxed">
+            본 내용은 일반적인 정보이며, 실제 비용·효과·소요 기간은 지역과 개인에 따라 다릅니다. 법령 관련 사항은 관할
+            기관에 확인하시기 바랍니다.
+          </p>
+        </div>
+      </section>
+
+      {/* 다른 사일로 — 허브끼리만 상호 링크 (원고 지시) */}
+      <section className="mb-8">
+        <p className="text-xs font-semibold text-stone-400 mb-3">업종별 창업 정보</p>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+          {[
+            { href: '/', label: '네일샵 창업' },
+            { href: '/skincare', label: '피부관리샵 창업' },
+            { href: '/makeup', label: '메이크업샵 창업' },
+            { href: '/hair', label: '이용원 창업' },
+          ].map((l) => (
+            <Link
+              key={l.href}
+              href={l.href}
+              className="bg-stone-50 border border-stone-200 rounded-2xl p-4 hover:border-stone-400 transition-colors"
+            >
+              <p className="text-[13px] font-bold text-stone-800">{l.label} →</p>
+            </Link>
+          ))}
+        </div>
+      </section>
+
+      <AdUnit slot="3291145762" format="autorelaxed" responsive={false} />
     </div>
   )
 }
