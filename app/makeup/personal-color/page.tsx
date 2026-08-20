@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import RelatedQna from '@/components/RelatedQna'
 import Link from 'next/link'
 import AdUnit from '@/components/AdUnit'
 
@@ -322,6 +323,8 @@ export default function PersonalColorPage() {
           </Link>
         </div>
       </section>
+    <RelatedQna sections={['makeup-care']} offset={2} />
+
     </div>
   )
 }

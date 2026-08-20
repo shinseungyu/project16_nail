@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import RelatedQna from '@/components/RelatedQna'
 import Link from 'next/link'
 import AdUnit from '@/components/AdUnit'
 
@@ -211,6 +212,8 @@ export default function HairLicensePage() {
           <a href="https://haircost.kr" target="_blank" rel="noopener noreferrer" className="bg-stone-50 border border-stone-200 rounded-2xl p-5 hover:border-stone-400 transition-colors"><p className="text-xs font-semibold text-stone-400 mb-1">외부</p><p className="font-bold text-stone-900">학원비·수강료 비교 ↗</p></a>
         </div>
       </section>
+    <RelatedQna sections={['hair-license']} offset={0} />
+
     </div>
   )
 }

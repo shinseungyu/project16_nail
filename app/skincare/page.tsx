@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import RelatedQna from '@/components/RelatedQna'
 import Link from 'next/link'
 import AdUnit from '@/components/AdUnit'
 import SkincareCalculatorWidget from '@/components/SkincareCalculatorWidget'
@@ -487,6 +488,8 @@ export default function SkincareHub() {
         </section>
 
         {/* 멀티플렉스 광고 */}
+        <RelatedQna sections={['skin-care', 'skin-license']} limit={8} />
+
         <AdUnit slot="3291145762" format="autorelaxed" responsive={false} />
       </div>
     </div>

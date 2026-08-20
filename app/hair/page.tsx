@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import RelatedQna from '@/components/RelatedQna'
 import Link from 'next/link'
 import AdUnit from '@/components/AdUnit'
 import HairCalculatorWidget from '@/components/HairCalculatorWidget'
@@ -397,6 +398,8 @@ export default function HairHub() {
           </div>
           <p className="text-xs text-stone-400 mt-4">이용사 학원 수강료·국비지원 비교는 외부 사이트 <a href="https://haircost.kr" target="_blank" rel="noopener noreferrer" className="text-blue-700 hover:underline">haircost.kr ↗</a>에서 확인하세요.</p>
         </section>
+
+        <RelatedQna sections={['hair-style', 'hair-license']} limit={8} />
 
         <AdUnit slot="3291145762" format="autorelaxed" responsive={false} />
       </div>

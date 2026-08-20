@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import RelatedQna from '@/components/RelatedQna'
 import Link from 'next/link'
 import AdUnit from '@/components/AdUnit'
 import FormSection from '../test/FormSection'
@@ -203,6 +204,8 @@ export default function CostPage() {
           </Link>
         </div>
       </section>
+
+    <RelatedQna sections={['nail-license']} offset={3} />
 
     </div>
   )

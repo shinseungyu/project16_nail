@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import RelatedQna from '@/components/RelatedQna'
 import Link from 'next/link'
 import AdUnit from '@/components/AdUnit'
 import HairCta from '@/components/HairCta'
@@ -224,6 +225,8 @@ export default function DifferencePage() {
       </section>
 
       <HairCta withAcademy />
+    <RelatedQna sections={['hair-license']} offset={2} />
+
     </div>
   )
 }

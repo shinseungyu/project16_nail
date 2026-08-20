@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import RelatedQna from '@/components/RelatedQna'
 import Link from 'next/link'
 import AdUnit from '@/components/AdUnit'
 import { MedicalScopeNotice, ScalpCta } from '@/components/ScalpNotice'
@@ -334,6 +335,8 @@ export default function ScalpPage() {
       <div className="mt-6">
         <AdUnit slot="3291145762" format="autorelaxed" responsive={false} />
       </div>
+    <RelatedQna sections={['hair-style']} offset={4} />
+
     </div>
   )
 }

@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import RelatedQna from '@/components/RelatedQna'
 import Link from 'next/link'
 import AdUnit from '@/components/AdUnit'
 import HubQuickLinks from '@/components/HubQuickLinks'
@@ -337,6 +338,8 @@ export default function NailArtPage() {
 
         <AdUnit slot="3291145762" format="autorelaxed" responsive={false} />
       </div>
+    <RelatedQna sections={['nail-care']} offset={7} />
+
     </div>
   )
 }

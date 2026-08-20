@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import RelatedQna from '@/components/RelatedQna'
 import Link from 'next/link'
 import AdUnit from '@/components/AdUnit'
 import HubQuickLinks from '@/components/HubQuickLinks'
@@ -271,7 +272,9 @@ export default function SemiPermanentHubPage() {
         <OtherCategories />
 
         <div className="mt-6">
-          <AdUnit slot="3291145762" format="autorelaxed" responsive={false} />
+          <RelatedQna sections={['makeup-care']} limit={8} />
+
+        <AdUnit slot="3291145762" format="autorelaxed" responsive={false} />
         </div>
       </div>
     </div>

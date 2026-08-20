@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import RelatedQna from '@/components/RelatedQna'
 import Link from 'next/link'
 import AdUnit from '@/components/AdUnit'
 import HairCta from '@/components/HairCta'
@@ -278,6 +279,8 @@ export default function ClipperPage() {
       </section>
 
       <HairCta />
+    <RelatedQna sections={['hair-style']} offset={15} />
+
     </div>
   )
 }

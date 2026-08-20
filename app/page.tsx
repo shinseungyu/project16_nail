@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import RelatedQna from '@/components/RelatedQna'
 import Image from 'next/image'
 import NailCalculatorWidget from '@/components/NailCalculatorWidget'
 import AdUnit from '@/components/AdUnit'
@@ -563,6 +564,8 @@ export default function Home() {
         </section>
 
         {/* 멀티플렉스 광고 (관련 콘텐츠) */}
+        <RelatedQna sections={['nail-care', 'nail-license']} limit={8} />
+
         <AdUnit slot="3291145762" format="autorelaxed" responsive={false} />
 
       </div>

@@ -1,8 +1,25 @@
 import Link from 'next/link'
 import AdUnit from '@/components/AdUnit'
+import RelatedQna from '@/components/RelatedQna'
+import type { SectionKey } from '@/data/qna'
 import type { NailService } from '@/data/services'
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.nailstartup.com'
+
+// 시술 상세 basePath -> Q&A 섹션. FAQ 상세가 /qna 밖에서 링크를 받도록 연결한다.
+const QNA_SECTION_BY_BASE: Record<string, SectionKey> = {
+  '/service': 'nail-care',
+  '/skincare/service': 'skin-care',
+  '/makeup/service': 'makeup-care',
+  '/hair/service': 'hair-style',
+}
+
+// 같은 섹션을 쓰는 시술 페이지들이 서로 다른 질문을 걸도록 id로 오프셋을 만든다
+function qnaOffset(id: string): number {
+  let h = 0
+  for (let i = 0; i < id.length; i++) h = (h * 31 + id.charCodeAt(i)) % 997
+  return h
+}
 
 // **볼드** 마크다운을 <strong>으로 렌더링
 export function renderText(text: string): React.ReactNode {
@@ -197,6 +214,10 @@ export default function ServiceDetail({ service, siblings, basePath, hubHref, hu
       </div>
 
       {/* 멀티플렉스 광고 (관련 콘텐츠) */}
+      {QNA_SECTION_BY_BASE[basePath] && (
+        <RelatedQna sections={[QNA_SECTION_BY_BASE[basePath]]} offset={qnaOffset(service.id)} />
+      )}
+
       <AdUnit slot="3291145762" format="autorelaxed" responsive={false} />
     </div>
   )

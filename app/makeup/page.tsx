@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import RelatedQna from '@/components/RelatedQna'
 import Link from 'next/link'
 import AdUnit from '@/components/AdUnit'
 import MakeupCalculatorWidget from '@/components/MakeupCalculatorWidget'
@@ -379,6 +380,8 @@ export default function MakeupHub() {
             <Link href="/hair" className="bg-stone-50 border border-stone-200 rounded-2xl p-5 hover:border-stone-400 transition-colors"><p className="text-xs font-semibold text-stone-400 mb-1">재방문 주기 최단</p><p className="font-bold text-stone-900">이용원·바버샵 창업과 비교하기 →</p></Link>
           </div>
         </section>
+
+        <RelatedQna sections={['makeup-care', 'makeup-license']} limit={8} />
 
         <AdUnit slot="3291145762" format="autorelaxed" responsive={false} />
       </div>

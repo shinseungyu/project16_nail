@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import RelatedQna from '@/components/RelatedQna'
 import Link from 'next/link'
 import AdUnit from '@/components/AdUnit'
 
@@ -388,6 +389,8 @@ export default function SkincareGuidePage() {
           </Link>
         </div>
       </section>
+    <RelatedQna sections={['skin-care']} offset={5} />
+
     </div>
   )
 }
