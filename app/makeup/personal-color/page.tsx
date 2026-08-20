@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { hreflang } from '@/lib/hreflang'
 import RelatedQna from '@/components/RelatedQna'
 import Link from 'next/link'
 import AdUnit from '@/components/AdUnit'
@@ -10,7 +11,7 @@ export const metadata: Metadata = {
   description:
     '퍼스널컬러 진단 비용 3~15만원. 봄웜·여름쿨·가을웜·겨울쿨 4계절 유형별 특징과 진단 방식 차이, 셀프 진단 한계까지 정리했습니다.',
   keywords: ['퍼스널컬러', '퍼스널컬러 진단', '퍼스널컬러 비용', '봄웜톤', '여름쿨톤', '가을웜톤', '겨울쿨톤', '피부톤 진단'],
-  alternates: { canonical: '/makeup/personal-color' },
+  alternates: { canonical: '/makeup/personal-color', languages: hreflang('/makeup/personal-color') },
 }
 
 const seasons = [

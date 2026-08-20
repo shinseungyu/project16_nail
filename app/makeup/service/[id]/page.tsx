@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { hreflang } from '@/lib/hreflang'
 import { notFound } from 'next/navigation'
 import ServiceDetail from '@/components/ServiceDetail'
 import { makeupServices } from '@/data/makeup-services'
@@ -14,7 +15,7 @@ export async function generateMetadata({ params }: { params: { id: string } }): 
     title: { absolute: service.metaTitle },
     description: service.metaDescription,
     keywords: service.keywords,
-    alternates: { canonical: `/makeup/service/${service.id}` },
+    alternates: { canonical: `/makeup/service/${service.id}`, languages: hreflang(`/makeup/service/${service.id}`) },
     openGraph: {
       title: service.metaTitle,
       description: service.metaDescription,

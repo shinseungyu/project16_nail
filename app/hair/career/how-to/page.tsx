@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { hreflang } from '@/lib/hreflang'
 import RelatedQna from '@/components/RelatedQna'
 import Link from 'next/link'
 import AdUnit from '@/components/AdUnit'
@@ -11,7 +12,7 @@ export const metadata: Metadata = {
   description:
     '헤어 디자이너가 되는 과정을 단계별로 정리했습니다. 자격증 취득, 인턴, 디자이너 승급, 독립까지 걸리는 기간과 각 단계 준비 사항을 확인하세요.',
   keywords: ['헤어 디자이너 되는법', '미용사 되는 과정', '미용실 취업', '미용사 진로'],
-  alternates: { canonical: '/hair/career/how-to' },
+  alternates: { canonical: '/hair/career/how-to', languages: hreflang('/hair/career/how-to') },
 }
 
 const roadmap = [

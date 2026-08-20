@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { hreflang } from '@/lib/hreflang'
 import RelatedQna from '@/components/RelatedQna'
 import Link from 'next/link'
 import AdUnit from '@/components/AdUnit'
@@ -15,7 +16,7 @@ export const metadata: Metadata = {
   title: { absolute: TITLE },
   description: DESC,
   keywords: ['피부관리샵 창업', '피부관리샵 창업비용', '1인 피부관리실 창업', '피부미용 창업', '에스테틱 창업', '피부관리실 차리는법', '소자본 피부관리샵', '미용사 피부 자격증'],
-  alternates: { canonical: '/skincare' },
+  alternates: { canonical: '/skincare', languages: hreflang('/skincare') },
   openGraph: {
     title: TITLE,
     description: DESC,

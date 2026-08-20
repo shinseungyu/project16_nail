@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { hreflang } from '@/lib/hreflang'
 import RelatedQna from '@/components/RelatedQna'
 import Link from 'next/link'
 import AdUnit from '@/components/AdUnit'
@@ -7,7 +8,7 @@ import FormSection from '../test/FormSection'
 export const metadata: Metadata = {
   title: '네일샵 창업 자격증 취득 방법 2026 | 시험 일정·합격 팁 총정리',
   description: '네일샵 창업을 위한 미용사(네일) 국가기술자격증 취득 방법, 시험 일정, 합격률, 준비 기간까지 2026년 최신 기준으로 정리했습니다.',
-  alternates: { canonical: '/license' },
+  alternates: { canonical: '/license', languages: hreflang('/license') },
 }
 
 

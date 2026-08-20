@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { hreflang } from '@/lib/hreflang'
 import RelatedQna from '@/components/RelatedQna'
 import Link from 'next/link'
 import AdUnit from '@/components/AdUnit'
@@ -15,7 +16,7 @@ export const metadata: Metadata = {
   title: { absolute: TITLE },
   description: DESC,
   keywords: ['이용원 창업', '바버샵 창업', '이용사 자격증', '남성 전문 미용실 창업', '이용원 창업비용', '바버샵 창업비용', '이발소 창업'],
-  alternates: { canonical: '/hair' },
+  alternates: { canonical: '/hair', languages: hreflang('/hair') },
   openGraph: { title: TITLE, description: DESC, url: '/hair', images: [{ url: '/images/thumb.webp', width: 1200, height: 630, alt: '이용원·바버샵 창업 총정리' }] },
 }
 

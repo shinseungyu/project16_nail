@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { hreflang } from '@/lib/hreflang'
 import RelatedQna from '@/components/RelatedQna'
 import Link from 'next/link'
 import AdUnit from '@/components/AdUnit'
@@ -11,7 +12,7 @@ export const metadata: Metadata = {
   description:
     '네일아트 종류를 디자인별로 정리했습니다. 그라데이션·마블·프렌치·3D 가격 5~15만원, 소요시간과 유지 기간, 셀프와 비교까지 확인하세요.',
   keywords: ['네일아트', '네일아트 종류', '네일아트 가격', '네일 디자인', '심플 네일', '마블 네일', '오로라 네일'],
-  alternates: { canonical: '/nail-art' },
+  alternates: { canonical: '/nail-art', languages: hreflang('/nail-art') },
 }
 
 const designs = [

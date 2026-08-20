@@ -5,6 +5,8 @@ import { makeupServices } from '@/data/makeup-services'
 import { hairServices } from '@/data/hair-services'
 import posts from '@/data/posts.json'
 import { PUBLISHED_SLUGS } from '@/data/qna'
+import { EN_PAGES } from '@/data/en'
+import { sitemapAlternates } from '@/lib/hreflang'
 
 // 하드코딩하면 글이 늘어날 때마다 누락된다. 데이터에서 직접 파생시킨다.
 const POST_IDS = (posts as { id: number }[]).map((p) => p.id).sort((a, b) => a - b)
@@ -47,7 +49,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.6,
   }))
 
-  return [
+  const koEntries: MetadataRoute.Sitemap = [
     { url: `${baseUrl}`, lastModified: new Date(), changeFrequency: 'daily', priority: 1.0 },
     { url: `${baseUrl}/cost`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.9 },
     { url: `${baseUrl}/guide`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.9 },
@@ -115,4 +117,24 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/privacy`, lastModified: new Date(), changeFrequency: 'yearly', priority: 0.3 },
     { url: `${baseUrl}/terms`, lastModified: new Date(), changeFrequency: 'yearly', priority: 0.3 },
   ]
+
+  // 영문판 — 아티클은 data/en/index.ts에서 파생시킨다. 페이지를 늘려도 여기는 안 고쳐도 된다.
+  const enEntries: MetadataRoute.Sitemap = [
+    { url: `${baseUrl}/en`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.9 },
+    ...EN_PAGES.map((p) => ({
+      url: `${baseUrl}${p.path}`,
+      lastModified: new Date(p.updatedIso),
+      changeFrequency: 'monthly' as const,
+      priority: 0.8,
+    })),
+    { url: `${baseUrl}/en/about`, lastModified: new Date(), changeFrequency: 'yearly', priority: 0.4 },
+    { url: `${baseUrl}/en/privacy`, lastModified: new Date(), changeFrequency: 'yearly', priority: 0.3 },
+  ]
+
+  // hreflang 은 항목마다 손으로 쓰지 않는다. lib/hreflang.ts의 짝 매핑에서 일괄 파생시켜야
+  // HTML <link> 쪽과 sitemap 쪽이 어긋나지 않는다. 짝이 없는 경로는 아무것도 붙지 않는다.
+  return [...koEntries, ...enEntries].map((entry) => ({
+    ...entry,
+    ...sitemapAlternates(entry.url.slice(baseUrl.length) || '/'),
+  }))
 }

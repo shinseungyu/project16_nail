@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { hreflang } from '@/lib/hreflang'
 import RelatedQna from '@/components/RelatedQna'
 import Link from 'next/link'
 import AdUnit from '@/components/AdUnit'
@@ -11,7 +12,7 @@ export const metadata: Metadata = {
   description:
     '두피 스케일링 가격 3~8만원, 권장 주기 2~4주. 관리 과정과 어떤 사람에게 맞는지, 병원 진료와의 차이까지 정리했습니다.',
   keywords: ['두피 스케일링', '두피 스케일링 가격', '두피 스케일링 주기', '두피 스케일링 효과', '두피 관리'],
-  alternates: { canonical: '/hair/scalp' },
+  alternates: { canonical: '/hair/scalp', languages: hreflang('/hair/scalp') },
 }
 
 const faqs = [

@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { hreflang } from '@/lib/hreflang'
 import RelatedQna from '@/components/RelatedQna'
 import Link from 'next/link'
 import AdUnit from '@/components/AdUnit'
@@ -13,7 +14,7 @@ export const metadata: Metadata = {
   description:
     '반영구화장 눈썹문신 가격 20~60만원. 시술 종류별 차이와 유지 기간, 그리고 문신사법 시행으로 달라지는 자격·법적 요건을 2026년 8월 기준으로 정리했습니다.',
   keywords: ['반영구화장', '눈썹문신', '눈썹문신 가격', '반영구 눈썹', '반영구화장 자격', '눈썹문신 종류', '문신사법'],
-  alternates: { canonical: '/semi-permanent' },
+  alternates: { canonical: '/semi-permanent', languages: hreflang('/semi-permanent') },
 }
 
 const faqs = [

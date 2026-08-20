@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { hreflang } from '@/lib/hreflang'
 import RelatedQna from '@/components/RelatedQna'
 import Link from 'next/link'
 import AdUnit from '@/components/AdUnit'
@@ -7,7 +8,7 @@ import FormSection from '../test/FormSection'
 export const metadata: Metadata = {
   title: '네일샵 창업비용 총정리 2026 | 항목별 예산 가이드',
   description: '1인 네일샵 창업비용을 항목별로 정리했습니다. 보증금, 인테리어, 장비, 재료비까지 최소~평균 비용과 창업 형태별 비교, 절약 팁까지 2026년 기준으로 확인하세요.',
-  alternates: { canonical: '/cost' },
+  alternates: { canonical: '/cost', languages: hreflang('/cost') },
 }
 
 
