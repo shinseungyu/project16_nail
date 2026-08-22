@@ -1,0 +1,138 @@
+import type { EnPage } from './types'
+import { EN_UPDATED, EN_UPDATED_ISO } from './common'
+
+export const howLongDoGelXNailsLast: EnPage = {
+  path: '/en/how-long-do-gel-x-nails-last',
+  title: 'How Long Do Gel X Nails Last?',
+  h1: 'How Long Do Gel X Nails Last?',
+  description:
+    'Gel X lasts three to four weeks with fills every two to three. What causes early lifting, and how to get the full wear out of a set.',
+  keywords: ['how long do gel x nails last', 'gel x wear time', 'gel x lifting'],
+  category: 'Nails',
+  stage: 4,
+  updated: EN_UPDATED,
+  updatedIso: EN_UPDATED_ISO,
+  lead:
+    '**Three to four weeks, with most people filling at two to three.** Lifting before two weeks points to prep or sizing rather than to the product itself.',
+  blocks: [
+    { t: 'h2', id: 'timeline', text: 'Week by week' },
+    {
+      t: 'table',
+      head: ['Week', 'What you will see'],
+      rows: [
+        ['1', 'Looks new'],
+        ['2', 'Slight regrowth visible at the cuticle'],
+        ['2 - 3', 'The fill window'],
+        ['4', 'Noticeable gap, higher snag risk'],
+        ['5+', 'Structural weakness, lift risk rises'],
+      ],
+    },
+    { t: 'p', text: 'The reason to fill at two to three weeks rather than four is structural rather than cosmetic. As the nail grows, the strongest part of the enhancement moves away from where the stress is, and the regrown section becomes the weak point.' },
+    { t: 'h2', id: 'why-early', text: 'Why yours lift early' },
+    {
+      t: 'table',
+      head: ['Cause', 'Fix'],
+      rows: [
+        ['Insufficient prep', 'Dehydration and cuticle work matter most'],
+        ['Tip sizing too small', 'Gaps at the sidewall'],
+        ['Product on skin', 'Lifts almost immediately'],
+        ['Under-curing', 'Lamp wattage and timing'],
+        ['Very oily nail plates', 'Thorough dehydration needed'],
+        ['Heavy hand use', 'Shorter length helps'],
+      ],
+    },
+    { t: 'p', text: '**Under-curing is the one clients cannot see.** A lamp that is old, a bulb that has weakened, or a cure cycle cut short all produce a set that looks perfect leaving the salon and lifts within days.' },
+    { t: 'h2', id: 'extending', text: 'Extending wear' },
+    {
+      t: 'ul',
+      items: [
+        '**Cuticle oil daily** — flexible product chips less.',
+        'Gloves for washing up and cleaning.',
+        'Do not use your nails as tools.',
+        '**Book fills on schedule** rather than letting them grow out.',
+        'Keep the length moderate if you are hard on your hands.',
+      ],
+    },
+    { t: 'h2', id: 'length', text: 'Length is a wear decision' },
+    { t: 'p', text: 'People choose length for how it looks and then experience the consequences as a durability problem. The two are the same decision.' },
+    {
+      t: 'table',
+      head: ['Length', 'Typical experience'],
+      rows: [
+        ['Natural or just past the fingertip', 'Full three to four weeks, few repairs'],
+        ['Medium', 'Three weeks, occasional repair'],
+        ['Long', 'Fills sooner, more repairs'],
+        ['Extra long or extreme shapes', 'Gel X is not the ideal system'],
+      ],
+    },
+    { t: 'p', text: 'Gel X is more flexible than acrylic, which is comfortable at moderate lengths and a disadvantage at extreme ones. If you want very long nails and want them to survive, acrylic is the more suitable system.' },
+    { t: 'h2', id: 'repairs', text: 'When one nail goes' },
+    { t: 'p', text: 'Losing a single nail mid-cycle is common and it is a repair rather than a redo. What matters is not attempting to reattach it yourself.' },
+    {
+      t: 'table',
+      head: ['Do', 'Do not'],
+      rows: [
+        ['Book a single-nail repair', 'Reattach with household glue'],
+        ['Keep the nail if it came off intact', 'File the natural nail to match'],
+        ['File any sharp edge smooth', 'Leave a snag that catches'],
+        ['Mention it at your next fill', 'Assume it was bad luck if it recurs'],
+      ],
+    },
+    { t: 'note', title: 'A pattern of the same nail lifting is information', text: 'If it is always the same finger, the cause is usually sizing on that nail or how you use that hand, and either is fixable once the technician knows.' },
+    { t: 'h2', id: 'fill-vs-new', text: 'Fill or a whole new set?' },
+    { t: 'p', text: 'This is the recurring decision, and the answer depends on the condition of the existing set rather than on how long it has been.' },
+    {
+      t: 'table',
+      head: ['Situation', 'Usually'],
+      rows: [
+        ['2 - 3 weeks, everything intact', 'Fill'],
+        ['One or two nails lifted', 'Fill, with those nails replaced'],
+        ['Several nails lifted', 'New set'],
+        ['4+ weeks, grown out significantly', 'New set'],
+        ['You want a different shape or length', 'New set'],
+        ['Colour change only', 'Fill, with a colour change'],
+      ],
+    },
+    { t: 'p', text: 'Fills are cheaper and faster, and there is a point past which insisting on one is false economy because the technician ends up rebuilding most of the set anyway.' },
+    { t: 'h2', id: 'habits', text: 'Habits that quietly shorten wear' },
+    {
+      t: 'table',
+      head: ['Habit', 'Why it matters'],
+      rows: [
+        ['Using nails to open things', 'Direct leverage on the bond'],
+        ['Washing up without gloves', 'Heat, detergent and prolonged water'],
+        ['Picking at a lifted edge', 'Turns one lifted nail into several'],
+        ['Very hot showers', 'Softens product and swells the nail'],
+        ['Hand sanitiser many times a day', 'Repeated solvent exposure at the edges'],
+        ['Typing with the very tips', 'Constant small impacts'],
+      ],
+    },
+    { t: 'note', title: 'Gloves are the highest-return habit', text: 'Nothing else on that list is as easy to change or makes as much difference. A pair of washing-up gloves reliably adds days to a set.' },
+    { t: 'h2', id: 'seasonal', text: 'Why wear changes through the year' },
+    { t: 'p', text: 'People often notice sets lasting differently in summer and winter and assume the salon changed something. Usually the environment did.' },
+    {
+      t: 'table',
+      head: ['Condition', 'Effect'],
+      rows: [
+        ['Frequent swimming', 'Prolonged water exposure weakens edges'],
+        ['Very dry indoor heating', 'Nails and cuticles dehydrate, more lifting'],
+        ['Humid weather', 'Generally neutral to positive'],
+        ['Gardening or outdoor work', 'Mechanical stress and soil moisture'],
+        ['More hand washing during illness seasons', 'Cumulative water exposure'],
+      ],
+    },
+    { t: 'p', text: 'None of this is fixable, but it is worth mentioning at your appointment. A technician who knows you swim four times a week may prep or shape differently.' },
+  ],
+  faq: [
+    { q: 'How long do Gel X nails last?', a: 'Three to four weeks, with fills typically at two to three.' },
+    { q: 'Why did mine lift in a week?', a: 'Almost always prep, sizing, or under-curing, rather than the product itself.' },
+    { q: 'Can I go longer between fills?', a: 'You can, but the regrowth gap weakens the structure and raises the risk of a nail catching and tearing.' },
+    { q: 'Do they last longer than acrylic?', a: 'Comparable. Both run three to four weeks with fills every two to three.' },
+    { q: 'What if one pops off?', a: 'Get a single-nail repair. Do not reattach it with household glue.' },
+  ],
+  related: [
+    { href: '/en/gel-x-removal', label: 'How to Remove Gel X Nails' },
+    { href: '/en/gel-x-cost', label: 'How Much Do Gel X Nails Cost?' },
+    { href: '/en/gel-x-damage', label: 'Do Gel X Nails Damage Your Nails?' },
+  ],
+}

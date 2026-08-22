@@ -106,6 +106,20 @@ export const balayageVsOmbre: EnPage = {
       ],
     },
     { t: 'p', text: 'Ombre stretches longest because the transition simply moves down the hair as it grows, and nothing about it depends on where your root is. That is its real advantage over the other two.' },
+    { t: 'h2', id: 'asking', text: 'Getting what you pictured' },
+    { t: 'p', text: 'Because these three words are used inconsistently, the reliable approach is to describe the result and let the colourist choose the method.' },
+    {
+      t: 'table',
+      head: ['Describe', 'Rather than'],
+      rows: [
+        ['Light through the ends, dark at the root', 'Ombre'],
+        ['Soft brightness around my face', 'Balayage'],
+        ['Barely noticeable, just some depth', 'Sombre'],
+        ['A visible line where it changes', 'Any of the three names'],
+        ['No visible line at all', 'Any of the three names'],
+      ],
+    },
+    { t: 'p', text: 'The words in the right column can each produce either of the last two rows depending on how they are executed, which is exactly why the left column is the safer way to ask.' },
   ],
   faq: [
     { q: 'What is the difference between balayage and ombre?', a: 'Balayage is a technique for applying colour. Ombre is the gradient effect you end up with. You can produce ombre using balayage.' },

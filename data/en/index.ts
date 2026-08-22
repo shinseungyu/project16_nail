@@ -61,6 +61,14 @@ import { balayageVsOmbre } from './balayage-vs-ombre'
 import { balayageGoneWrong } from './balayage-gone-wrong'
 import { balayageDamage } from './balayage-damage'
 
+import { whatAreGelXNails } from './what-are-gel-x-nails'
+import { gelXVsAcrylic } from './gel-x-vs-acrylic'
+import { gelXCost } from './gel-x-cost'
+import { gelXRemoval } from './gel-x-removal'
+import { howLongDoGelXNailsLast } from './how-long-do-gel-x-nails-last'
+import { gelXVsBuilderGel } from './gel-x-vs-builder-gel'
+import { gelXDamage } from './gel-x-damage'
+
 /**
  * 영문 콘텐츠 페이지 전체 목록.
  * 허브의 섹션 카드와 sitemap이 여기서 파생되므로, 페이지를 추가하면 이 파일만 갱신하면 된다.
@@ -183,6 +191,22 @@ export const EN_SECTIONS: EnSection[] = [
       balayageVsOmbre,
       balayageGoneWrong,
       balayageDamage,
+    ],
+  },
+  {
+    key: 'gel-x',
+    title: 'Gel X and soft gel extensions',
+    blurb:
+      'What the system actually is, how it compares with acrylic on cost and removal, and why soak-off is the part that decides whether your nails come out fine.',
+    icon: '💎',
+    pages: [
+      whatAreGelXNails,
+      gelXVsAcrylic,
+      gelXCost,
+      howLongDoGelXNailsLast,
+      gelXRemoval,
+      gelXVsBuilderGel,
+      gelXDamage,
     ],
   },
 ]

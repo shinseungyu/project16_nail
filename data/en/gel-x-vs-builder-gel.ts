@@ -1,0 +1,126 @@
+import type { EnPage } from './types'
+import { EN_UPDATED, EN_UPDATED_ISO } from './common'
+
+export const gelXVsBuilderGel: EnPage = {
+  path: '/en/gel-x-vs-builder-gel',
+  title: 'Gel X vs Builder Gel: Tips vs Sculpting',
+  h1: 'Gel X vs Builder Gel: What Is the Difference?',
+  description:
+    'Gel X uses pre-made tips; builder gel is sculpted onto the nail. Which suits length, strength, and natural nail overlays.',
+  keywords: ['gel x vs builder gel', 'builder gel overlay', 'soft gel vs builder gel'],
+  category: 'Nails',
+  stage: 4,
+  updated: EN_UPDATED,
+  updatedIso: EN_UPDATED_ISO,
+  lead:
+    '**Gel X uses a pre-shaped tip. Builder gel is applied and shaped directly onto the nail.** Gel X is faster and more consistent; builder gel is more customisable and works as an overlay on natural nails.',
+  blocks: [
+    { t: 'h2', id: 'comparison', text: 'Comparison' },
+    {
+      t: 'table',
+      head: ['', 'Gel X', 'Builder gel'],
+      rows: [
+        ['Method', 'Pre-formed full-cover tip', 'Sculpted or applied on the nail'],
+        ['Extension', 'Yes', 'Yes, or overlay only'],
+        ['Natural nail overlay', 'Not really', 'Yes - the main use case'],
+        ['Consistency', 'Very consistent', 'Depends on the technician'],
+        ['Application time', '60 - 90 min', '75 - 120 min'],
+        ['Customisation', 'Limited to available tip shapes', 'Fully custom'],
+        ['Cost', '$60 - 120', '$55 - 110'],
+      ],
+    },
+    { t: 'h2', id: 'when-each', text: 'When each makes sense' },
+    {
+      t: 'table',
+      head: ['Situation', 'Pick'],
+      rows: [
+        ['Adding length quickly', 'Gel X'],
+        ['Strengthening natural nails without length', 'Builder gel'],
+        ['An unusual nail shape', 'Builder gel'],
+        ['A consistent, repeatable result', 'Gel X'],
+        ['Very wide or curved nail beds', 'Builder gel'],
+      ],
+    },
+    { t: 'p', text: '**Builder gel over natural nails is the use case Gel X does not cover.** It is the standard answer for people who want strength and a little length without an extension, and it is why the two systems coexist rather than competing directly.' },
+    { t: 'h2', id: 'overlay', text: 'The overlay use case in detail' },
+    { t: 'p', text: 'An overlay is a thin layer of builder gel over your own nail, adding strength without changing the length. For people whose nails break before they grow, this is often the actual solution.' },
+    {
+      t: 'table',
+      head: ['If your problem is', 'Overlay helps?'],
+      rows: [
+        ['Nails split before they grow long', 'Yes - this is the main case'],
+        ['Nails are strong but you want length', 'No - you want an extension'],
+        ['Nails peel in layers', 'Often, while the damage grows out'],
+        ['You want a natural look with durability', 'Yes'],
+        ['You want a dramatic shape', 'No - sculpting or tips'],
+      ],
+    },
+    { t: 'h2', id: 'removal', text: 'Removal differs' },
+    { t: 'p', text: 'This is the practical difference people find out about later, and it depends on the specific product rather than the category.' },
+    {
+      t: 'table',
+      head: ['System', 'Removal'],
+      rows: [
+        ['Gel X', 'Soaks off'],
+        ['Soak-off builder gel', 'Soaks off'],
+        ['Hard builder gel', 'Filed down - does not soak'],
+      ],
+    },
+    { t: 'note', title: 'Ask which builder gel is being used', text: 'Builder gel is a category, not one product, and some soak off while others must be filed. Knowing which is on your nails determines how it comes off safely.' },
+    { t: 'h2', id: 'appointments', text: 'What each appointment involves' },
+    { t: 'p', text: 'The two feel different in the chair, and knowing which you have booked avoids surprises about time.' },
+    {
+      t: 'table',
+      head: ['', 'Gel X', 'Builder gel'],
+      rows: [
+        ['Sizing step', 'Yes, ten tips', 'None'],
+        ['Sculpting', 'None', 'Yes, on each nail'],
+        ['Forms', 'Not used', 'Used for extensions'],
+        ['Curing cycles', 'Several', 'Several, often more'],
+        ['Filing at the end', 'Shape refinement', 'More - the shape is created here'],
+        ['Consistency across ten nails', 'Very high', 'Depends on the technician'],
+      ],
+    },
+    { t: 'p', text: 'Builder gel puts more of the outcome in the technician’s hands, for better and worse. A skilled sculptor produces something a tip cannot match; a rushed one produces unevenness a tip would have prevented.' },
+    { t: 'h2', id: 'maintenance', text: 'Maintenance compared' },
+    {
+      t: 'table',
+      head: ['', 'Gel X', 'Builder gel overlay'],
+      rows: [
+        ['Fill interval', '2 - 3 weeks', '3 - 4 weeks'],
+        ['Fill cost', '$50 - 90', '$40 - 80'],
+        ['What a fill involves', 'Regrowth filled, structure rebalanced', 'Regrowth filled, apex rebalanced'],
+        ['Typical reason to redo entirely', 'Lifting, or a shape change', 'Growth, or damage underneath'],
+      ],
+    },
+    { t: 'p', text: 'An overlay on natural nails often stretches slightly further between appointments, because there is no extension weight and the regrowth area is under less stress.' },
+    { t: 'h2', id: 'choosing', text: 'A simple way to decide' },
+    { t: 'p', text: 'The choice is usually settled by one question: do you want length, or do you want your own nails to survive long enough to grow?' },
+    {
+      t: 'table',
+      head: ['What you want', 'System'],
+      rows: [
+        ['Length now', 'Gel X'],
+        ['Your own nails to stop breaking', 'Builder gel overlay'],
+        ['Both, over time', 'Overlay first, extensions later'],
+        ['A specific dramatic shape', 'Gel X, or sculpted'],
+        ['The most natural possible look', 'Builder gel overlay'],
+      ],
+    },
+    { t: 'p', text: 'Many people arrive asking for extensions when an overlay is what solves their problem. If your complaint is that your nails break before they grow, length is not the fix — strength is.' },
+    { t: 'h2', id: 'combining', text: 'Using both' },
+    { t: 'p', text: 'Some technicians apply builder gel over Gel X tips for additional strength at longer lengths, which is a reasonable combination rather than a contradiction. Ask what is being used so you know how it comes off.' },
+  ],
+  faq: [
+    { q: 'Which is stronger?', a: 'Comparable when applied well. Technique matters more than the product category here.' },
+    { q: 'Can builder gel be used without extending?', a: 'Yes, and that overlay use is one of its main purposes.' },
+    { q: 'Which is cheaper?', a: 'Similar, with builder gel sometimes slightly less depending on the salon.' },
+    { q: 'Which is faster?', a: 'Gel X, generally, because the tip removes the sculpting step.' },
+    { q: 'Can I switch?', a: 'Yes, at a full removal rather than at a fill.' },
+  ],
+  related: [
+    { href: '/en/what-are-gel-x-nails', label: 'What Are Gel X Nails?' },
+    { href: '/en/gel-x-vs-acrylic', label: 'Gel X vs Acrylic' },
+    { href: '/en/gel-x-damage', label: 'Do Gel X Nails Damage Your Nails?' },
+  ],
+}
