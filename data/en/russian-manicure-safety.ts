@@ -1,0 +1,126 @@
+import type { EnPage } from './types'
+import { EN_UPDATED, EN_UPDATED_ISO, MED_STATE_SCOPE } from './common'
+
+export const russianManicureSafety: EnPage = {
+  path: '/en/russian-manicure-safety',
+  title: 'Is a Russian Manicure Safe? What to Know First',
+  h1: 'Is a Russian Manicure Safe?',
+  description:
+    'The Russian manicure safety discussion explained: infection risk, technician skill, state scope rules, and questions to ask before booking.',
+  keywords: ['russian manicure safety', 'is russian manicure safe', 'russian manicure infection risk'],
+  category: 'Nails',
+  stage: 5,
+  updated: EN_UPDATED,
+  updatedIso: EN_UPDATED_ISO,
+  lead:
+    '**It depends heavily on the technician’s skill and hygiene practice.** The technique works close to living tissue that protects against infection, so a poorly executed Russian manicure carries more risk than a poorly executed standard one. Ask direct questions before booking.',
+  blocks: [
+    { t: 'note', tone: 'warn', text: 'General information, not medical advice. Consult a healthcare professional about your own circumstances, particularly if you have any condition affecting circulation, immunity, or healing.' },
+    { t: 'h2', id: 'core-issue', text: 'The core issue' },
+    { t: 'p', text: 'The eponychium is living tissue that seals the space between the nail plate and the skin, acting as a barrier against bacteria. Working near it is what produces the finish, and it is also what creates the risk.' },
+    {
+      t: 'table',
+      head: ['Done correctly', 'Done poorly'],
+      rows: [
+        ['Removes only non-living tissue on the plate', 'Cuts or thins living tissue'],
+        ['The seal remains intact', 'The barrier is compromised'],
+        ['No bleeding', 'Bleeding, which should not happen'],
+        ['No pain', 'Pain during or after'],
+      ],
+    },
+    { t: 'p', text: '**Pain and bleeding are not part of a correct Russian manicure.** If either happens, that is a signal rather than a normal part of the process.' },
+    { t: 'h2', id: 'risks', text: 'Risks' },
+    {
+      t: 'table',
+      head: ['Risk', 'Note'],
+      rows: [
+        ['Infection', 'If the seal is broken and hygiene is inadequate'],
+        ['Over-thinning the nail plate', 'Excessive e-file use'],
+        ['Cuts to living tissue', 'Technique'],
+        ['Cross-contamination', 'If bits are not properly sterilised'],
+      ],
+    },
+    { t: 'h2', id: 'questions', text: 'Questions to ask before booking' },
+    {
+      t: 'ol',
+      items: [
+        '**What training do you have in this technique specifically?**',
+        '**How are your bits sterilised between clients?** Autoclave is the standard to ask about.',
+        'Do you work on living tissue, or only on the nail plate?',
+        'What should I do if I feel pain during the service?',
+        'How many of these do you do per week?',
+      ],
+    },
+    { t: 'p', text: '**A skilled technician will answer all of these readily.** Hesitation or defensiveness is itself an answer, and it costs nothing to ask.' },
+    { t: 'h2', id: 'scope', text: 'Scope of practice' },
+    { t: 'p', text: 'Whether e-file cuticle work of this kind falls within a nail technician’s scope **varies by state.** Some states have specific rules about working on living tissue.' },
+    { t: 'p', text: 'If you are a professional considering offering it, check your state board before you start. **A training certificate does not expand your legal scope.**' },
+    { t: 'h2', id: 'after', text: 'After your appointment' },
+    { t: 'p', text: 'See a doctor if you notice increasing redness, swelling, or warmth around a nail; pus; throbbing pain; or fever. **Nail infections are treatable but time-sensitive.**' },
+    { t: 'h2', id: 'who-should-skip', text: 'Who should skip it' },
+    {
+      t: 'ul',
+      items: [
+        'Diabetes or circulation conditions — consult your doctor first.',
+        'Immunocompromised.',
+        'An existing nail or skin infection.',
+        'Very thin or damaged nail plates.',
+        'Bleeding disorders.',
+      ],
+    },
+    { t: 'note', tone: 'warn', text: 'That list is not exhaustive and it is not a self-screening tool. If any of it applies to you, the conversation belongs with your doctor rather than with a salon.' },
+    { t: 'h2', id: 'hygiene-basics', text: 'What good hygiene looks like from the chair' },
+    { t: 'p', text: 'You cannot audit a salon, but several things are visible during a normal appointment and they tell you a great deal.' },
+    {
+      t: 'table',
+      head: ['Good sign', 'Concerning'],
+      rows: [
+        ['Bits taken from a sealed pouch', 'Bits from an open drawer or tray'],
+        ['Visible autoclave or sterilisation equipment', 'No visible process'],
+        ['Hands washed or sanitised in front of you', 'Straight from the previous client'],
+        ['Fresh file or clearly single-use items', 'Visibly used disposables'],
+        ['Clean, uncluttered station', 'Dust and debris from earlier clients'],
+        ['Willing to explain their process', 'Deflects the question'],
+      ],
+    },
+    { t: 'p', text: '**Sealed pouches are the single clearest signal.** Autoclaved bits come out of a pouch that changes colour when the cycle has run, and a technician who uses them will have no problem showing you.' },
+    { t: 'h2', id: 'if-something-happens', text: 'If something happens during the service' },
+    {
+      t: 'ol',
+      items: [
+        '**Say so immediately** — pain or a sharp sensation is not something to endure politely.',
+        '**Ask them to stop** if it recurs after an adjustment.',
+        '**Do not let the service continue** over a bleeding point.',
+        '**Note which nail it was**, so you can watch it over the following days.',
+        '**Do not rebook** with a technician where it bled.',
+      ],
+    },
+    { t: 'note', tone: 'warn', title: 'One bleed is not a disaster; a pattern is', text: 'A single nick can happen to a careful technician. What matters is how they respond to it, and whether it happens again. If it does, the issue is technique rather than bad luck.' },
+    { t: 'h2', id: 'balance', text: 'Holding both things at once' },
+    { t: 'p', text: 'This service attracts strong opinions in both directions, and neither extreme is a useful basis for a decision.' },
+    {
+      t: 'table',
+      head: ['Overstated', 'Also overstated'],
+      rows: [
+        ['It is inherently dangerous', 'It is completely risk-free'],
+        ['No technician should do it', 'Any trained technician can do it anywhere'],
+        ['It always damages the nail', 'It never causes problems'],
+        ['It is banned', 'Scope is the same in every state'],
+      ],
+    },
+    { t: 'p', text: '**The accurate position sits between them.** It is a technique with a real risk profile that is largely managed by skill, hygiene, and screening, performed under rules that differ by state.' },
+  ],
+  faq: [
+    { q: 'Is a Russian manicure safe?', a: 'It can be in skilled, hygienic hands. The risk rises considerably with poor technique because of how close the work is to living tissue.' },
+    { q: 'Should it hurt?', a: 'No. Pain means stop and speak up during the service rather than afterwards.' },
+    { q: 'Should it bleed?', a: 'No. Bleeding indicates that living tissue was cut.' },
+    { q: 'Is it legal everywhere in the US?', a: 'Scope rules vary by state, particularly around work near living tissue. Check your state board.' },
+    { q: 'Can it damage my nails?', a: 'Excessive e-file use can thin the nail plate, which is one reason technician skill matters so much here.' },
+    { q: 'Who should not get one?', a: 'Anyone with diabetes, circulation issues, immunosuppression, or an active infection should consult a doctor first.' },
+  ],
+  related: [
+    { href: '/en/what-is-a-russian-manicure', label: 'What Is a Russian Manicure?' },
+    { href: '/en/russian-manicure-aftercare', label: 'Russian Manicure Aftercare' },
+    { href: '/en/russian-manicure-training', label: 'Russian Manicure Training and US Scope Rules' },
+  ],
+}

@@ -1,0 +1,138 @@
+import type { EnPage } from './types'
+import { EN_UPDATED, EN_UPDATED_ISO, MED_STATE_SCOPE } from './common'
+
+export const russianVsRegularManicure: EnPage = {
+  path: '/en/russian-vs-regular-manicure',
+  title: 'Russian Manicure vs Regular Manicure Compared',
+  h1: 'Russian Manicure vs Regular Manicure',
+  description:
+    'Time, cost, finish and wear compared, plus who each suits and when a standard manicure is the sensible choice.',
+  keywords: ['russian vs regular manicure', 'russian manicure comparison', 'combination manicure'],
+  category: 'Nails',
+  stage: 5,
+  updated: EN_UPDATED,
+  updatedIso: EN_UPDATED_ISO,
+  lead:
+    '**A Russian manicure is dry, e-file based, and takes two to three times as long for a much closer cuticle finish. A regular manicure uses hand tools and often a soak.** Both can produce excellent results; the Russian technique trades time and cost for precision.',
+  blocks: [
+    { t: 'h2', id: 'comparison', text: 'Comparison' },
+    {
+      t: 'table',
+      head: ['', 'Russian', 'Regular'],
+      rows: [
+        ['Soak', 'None', 'Often'],
+        ['Tools', 'E-file, fine bits', 'Pusher, nippers'],
+        ['Time', '90 - 150 min', '45 - 70 min'],
+        ['Cost', '$70 - 150', '$30 - 70'],
+        ['Cuticle finish', 'Very close', 'A small margin'],
+        ['Skill required', 'High', 'Moderate'],
+        ['Reported wear', 'Often longer', 'Standard'],
+        ['Availability', 'Limited', 'Everywhere'],
+      ],
+    },
+    { t: 'h2', id: 'which-suits', text: 'Which suits you' },
+    {
+      t: 'table',
+      head: ['Priority', 'Choose'],
+      rows: [
+        ['Budget', 'Regular'],
+        ['Time', 'Regular'],
+        ['The cleanest possible finish', 'Russian'],
+        ['Stretching appointments', 'Russian'],
+        ['Easy availability', 'Regular'],
+        ['Sensitive skin or slow healing', 'Regular - less invasive'],
+        ['Diabetes or circulation conditions', 'Consult a doctor first'],
+      ],
+    },
+    { t: 'h2', id: 'middle-option', text: 'A middle option' },
+    { t: 'p', text: 'Some technicians offer a **combination or dry manicure** — e-file for the nail plate but hand tools near the eponychium. Shorter than a full Russian manicure, cleaner than a standard one, and lower risk.' },
+    { t: 'p', text: '**Ask whether your salon offers it.** For many people it is the right compromise, and it is often not on the printed menu.' },
+    { t: 'h2', id: 'wear', text: 'Why the wear difference is not what it seems' },
+    { t: 'p', text: 'People report Russian manicures lasting longer, and that is a real observation with a specific explanation that is worth understanding.' },
+    {
+      t: 'table',
+      head: ['', 'Standard gel', 'Russian manicure'],
+      rows: [
+        ['Gap at the cuticle on day one', 'Small but present', 'Effectively none'],
+        ['Weeks until the gap is obvious', '2 - 3', '4 - 5'],
+        ['Actual gel durability', 'Same', 'Same'],
+      ],
+    },
+    { t: 'p', text: '**The product is not more durable.** The starting point is closer to the skin, so it takes longer for growth to become visible. That is a genuine benefit and it is a different claim from the gel lasting longer.' },
+    { t: 'h2', id: 'trying', text: 'If you want to try it' },
+    {
+      t: 'ol',
+      items: [
+        '**Ask about training and sterilisation** before booking, not on the day.',
+        '**Book a combination manicure first** if you are unsure.',
+        '**Say immediately if anything is painful.**',
+        '**Look at your cuticles for a few days afterwards.**',
+        '**Do not go back** to a technician where it bled.',
+      ],
+    },
+    { t: 'h2', id: 'skill-gap', text: 'Why the skill gap matters more here' },
+    { t: 'p', text: 'A mediocre standard manicure is disappointing. A mediocre Russian manicure carries more consequence, and that changes how you should choose a technician.' },
+    {
+      t: 'table',
+      head: ['', 'Regular manicure', 'Russian manicure'],
+      rows: [
+        ['Worst realistic outcome of poor work', 'Uneven polish, early chipping', 'Cut tissue, infection risk'],
+        ['How visible poor technique is', 'Immediately', 'Sometimes only days later'],
+        ['Recovery from a bad appointment', 'Redo it', 'May need a doctor'],
+        ['How much training separates good from bad', 'Moderate', 'Considerable'],
+      ],
+    },
+    { t: 'p', text: 'This is not an argument against the service. It is an argument for choosing the technician rather than the salon, and for asking about training rather than assuming it.' },
+    { t: 'h2', id: 'cost-comparison', text: 'A year of each' },
+    {
+      t: 'table',
+      head: ['Pattern', 'Annual'],
+      rows: [
+        ['Regular gel every 3 weeks at $50', 'approx. $870'],
+        ['Russian every 4 weeks at $110', 'approx. $1,430'],
+        ['Russian every 5 weeks at $110', 'approx. $1,140'],
+        ['Combination manicure every 3 - 4 weeks at $70', 'approx. $910 - 1,210'],
+      ],
+    },
+    { t: 'p', text: 'The combination option often lands closest to a standard manicure on cost while delivering much of the finish, which is why it is worth asking about even when it is not advertised.' },
+    { t: 'h2', id: 'try-first', text: 'A sensible way to try it' },
+    { t: 'p', text: 'If you are curious but unsure, there is a low-risk order to do this in that most people do not think of.' },
+    {
+      t: 'ol',
+      items: [
+        '**Book a combination or dry manicure first** where one is offered.',
+        '**Ask the technician about their Russian manicure training** while you are in the chair.',
+        '**See how your cuticles look and feel** over the following week.',
+        '**Book the full service with that technician** if both went well.',
+        '**Stay with them** — this is not a service to shop around on.',
+      ],
+    },
+    { t: 'p', text: 'That sequence costs less than the full service, tells you what you need to know about the technician, and leaves you with a perfectly good manicure either way.' },
+    { t: 'h2', id: 'availability', text: 'Availability is part of the decision' },
+    { t: 'p', text: 'A standard manicure is available almost everywhere. This one is not, and that has practical consequences beyond convenience.' },
+    {
+      t: 'table',
+      head: ['Consideration', 'Effect'],
+      rows: [
+        ['Fewer technicians offer it', 'Booking further ahead'],
+        ['Longer slots', 'Fewer appointment times available'],
+        ['You may travel further', 'Adds to the real cost'],
+        ['If your technician leaves', 'Harder to replace than a standard manicurist'],
+        ['On holiday or travelling', 'Unlikely to find an equivalent'],
+      ],
+    },
+    { t: 'p', text: 'The fourth row catches people out. Building a routine around one technician is fine until they move, and with a specialised service the replacement search is genuinely harder.' },
+  ],
+  faq: [
+    { q: 'Is a Russian manicure better?', a: 'Not universally. It is more precise and more expensive, and it requires more skill to do safely.' },
+    { q: 'Does a regular manicure last as long?', a: 'Wear is comparable. The visible cuticle gap appears sooner, which is what people notice.' },
+    { q: 'Is one safer?', a: 'A regular manicure is less invasive near living tissue, which is the main safety distinction.' },
+    { q: 'Can I try both?', a: 'Yes, and many people alternate. A combination manicure sits between them.' },
+    { q: 'What is a combination manicure?', a: 'E-file on the nail plate with hand tools near the skin — a middle ground that some salons offer.' },
+  ],
+  related: [
+    { href: '/en/russian-manicure-safety', label: 'Is a Russian Manicure Safe?' },
+    { href: '/en/russian-manicure-cost', label: 'How Much Does a Russian Manicure Cost?' },
+    { href: '/en/how-long-does-a-russian-manicure-last', label: 'How Long Does a Russian Manicure Last?' },
+  ],
+}

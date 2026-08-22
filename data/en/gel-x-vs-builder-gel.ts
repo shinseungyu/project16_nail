@@ -110,6 +110,19 @@ export const gelXVsBuilderGel: EnPage = {
     { t: 'p', text: 'Many people arrive asking for extensions when an overlay is what solves their problem. If your complaint is that your nails break before they grow, length is not the fix — strength is.' },
     { t: 'h2', id: 'combining', text: 'Using both' },
     { t: 'p', text: 'Some technicians apply builder gel over Gel X tips for additional strength at longer lengths, which is a reasonable combination rather than a contradiction. Ask what is being used so you know how it comes off.' },
+    { t: 'h2', id: 'cost-over-time', text: 'Cost over a year' },
+    { t: 'p', text: 'The per-appointment prices are close enough that the annual figure comes down to how often you go, and the fill intervals differ slightly.' },
+    {
+      t: 'table',
+      head: ['Pattern', 'Annual'],
+      rows: [
+        ['Gel X, fills every 2 - 3 weeks', 'approx. $950 - 1,600'],
+        ['Builder gel overlay, fills every 3 - 4 weeks', 'approx. $700 - 1,200'],
+        ['Either, with art each time', 'Add $300 - 800'],
+        ['Either, on and off through the year', 'Roughly half, plus removals'],
+      ],
+    },
+    { t: 'p', text: 'An overlay is usually the cheaper habit, mostly because it stretches a week further between appointments rather than because the appointment itself costs much less.' },
   ],
   faq: [
     { q: 'Which is stronger?', a: 'Comparable when applied well. Technique matters more than the product category here.' },

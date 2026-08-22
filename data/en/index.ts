@@ -69,6 +69,14 @@ import { howLongDoGelXNailsLast } from './how-long-do-gel-x-nails-last'
 import { gelXVsBuilderGel } from './gel-x-vs-builder-gel'
 import { gelXDamage } from './gel-x-damage'
 
+import { whatIsARussianManicure } from './what-is-a-russian-manicure'
+import { russianManicureCost } from './russian-manicure-cost'
+import { russianManicureSafety } from './russian-manicure-safety'
+import { russianVsRegularManicure } from './russian-vs-regular-manicure'
+import { howLongDoesARussianManicureLast } from './how-long-does-a-russian-manicure-last'
+import { russianManicureAftercare } from './russian-manicure-aftercare'
+import { russianManicureTraining } from './russian-manicure-training'
+
 /**
  * 영문 콘텐츠 페이지 전체 목록.
  * 허브의 섹션 카드와 sitemap이 여기서 파생되므로, 페이지를 추가하면 이 파일만 갱신하면 된다.
@@ -207,6 +215,22 @@ export const EN_SECTIONS: EnSection[] = [
       gelXRemoval,
       gelXVsBuilderGel,
       gelXDamage,
+    ],
+  },
+  {
+    key: 'russian-manicure',
+    title: 'Russian manicure, both sides of it',
+    blurb:
+      'What the technique is, why the safety discussion exists, what to ask before booking, and why a training certificate does not settle the scope question.',
+    icon: '🔎',
+    pages: [
+      whatIsARussianManicure,
+      russianManicureSafety,
+      russianManicureCost,
+      russianVsRegularManicure,
+      howLongDoesARussianManicureLast,
+      russianManicureAftercare,
+      russianManicureTraining,
     ],
   },
 ]

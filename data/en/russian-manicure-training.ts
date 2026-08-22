@@ -1,0 +1,128 @@
+import type { EnPage } from './types'
+import { EN_UPDATED, EN_UPDATED_ISO, MED_STATE_SCOPE } from './common'
+
+export const russianManicureTraining: EnPage = {
+  path: '/en/russian-manicure-training',
+  title: 'Russian Manicure Training and US Scope Rules',
+  h1: 'Russian Manicure Training: What Professionals Need to Know',
+  description:
+    'What Russian manicure training involves, and why a certificate does not expand your legal scope of practice. Check your state board first.',
+  keywords: ['russian manicure training', 'russian manicure certification', 'e-file scope of practice'],
+  category: 'Nails',
+  stage: 5,
+  updated: EN_UPDATED,
+  updatedIso: EN_UPDATED_ISO,
+  lead:
+    '**Training is widely available, but a certificate does not grant you legal scope your licence does not include.** Whether this technique falls within a nail technician’s scope varies by state, particularly around working near living tissue. Check your state board before offering it.',
+  blocks: [
+    { t: 'note', tone: 'warn', text: MED_STATE_SCOPE },
+    { t: 'h2', id: 'distinction', text: 'The distinction that matters' },
+    {
+      t: 'table',
+      head: ['', 'Certification', 'Scope of practice'],
+      rows: [
+        ['Granted by', 'A training company', 'Your state board'],
+        ['Means', 'You were trained', 'You are permitted'],
+        ['Determines legality', 'No', 'Yes'],
+      ],
+    },
+    { t: 'p', text: 'Training providers sell courses. **State boards define what you may legally do.** These are separate things, and conflating them is a licensing risk rather than a technicality.' },
+    { t: 'h2', id: 'verify', text: 'What to verify before offering it' },
+    {
+      t: 'ol',
+      items: [
+        '**Your state board’s rules** on e-file use and work near living tissue.',
+        'Whether any additional credential is required.',
+        '**Your insurance position** — policies typically exclude out-of-scope work.',
+        'Your employer’s or landlord’s requirements.',
+        'Sanitation requirements for e-file bits in your state.',
+      ],
+    },
+    { t: 'h2', id: 'good-training', text: 'What good training covers' },
+    {
+      t: 'table',
+      head: ['Area', 'Why'],
+      rows: [
+        ['E-file control', 'The core skill; the risk lives here'],
+        ['Bit selection and RPM', 'The wrong bit or speed causes damage'],
+        ['Anatomy - eponychium, cuticle, nail plate', 'Knowing what not to touch'],
+        ['Bit sterilisation protocol', 'Autoclave process'],
+        ['Contraindications and client screening', 'Who to decline'],
+        ['Hands-on with live models', 'Mannequin practice is not sufficient'],
+        ['What to do if bleeding occurs', 'It should not, and you need a protocol'],
+      ],
+    },
+    { t: 'p', text: '**Avoid short courses that are demonstration-only.** This technique’s risk profile makes supervised hands-on practice essential rather than preferable.' },
+    { t: 'h2', id: 'insurance', text: 'Insurance' },
+    { t: 'p', text: 'Most professional liability policies require you to work within your licensed scope. **A claim arising from out-of-scope work may not be covered**, which is the practical reason the scope question matters beyond regulation.' },
+    { t: 'p', text: 'Contact your insurer directly and ask about this specific technique by name. A general assurance that you are covered for nail services is not the same answer.' },
+    { t: 'h2', id: 'sanitation', text: 'Sanitation' },
+    { t: 'p', text: 'E-file bits require proper sterilisation between clients. Requirements vary by state, but **autoclave sterilisation is the standard to ask about and to be able to demonstrate.** Keep records where your state requires them.' },
+    { t: 'h2', id: 'business', text: 'Deciding whether to offer it' },
+    { t: 'p', text: 'Beyond the regulatory question, it is a business decision with real trade-offs, and it is worth weighing them before investing in training.' },
+    {
+      t: 'table',
+      head: ['In favour', 'Against'],
+      rows: [
+        ['Higher ticket per appointment', 'Two to three times the chair time'],
+        ['Differentiation in a crowded market', 'Fewer clients per day'],
+        ['Clients who book longer intervals', 'Which also means fewer visits per client'],
+        ['Skill that transfers to other services', 'Meaningful training investment'],
+        ['Demand in some markets', 'Scope uncertainty in some states'],
+      ],
+    },
+    { t: 'note', title: 'Run the numbers on chair time', text: 'A $110 service taking 120 minutes is $55 an hour. Two $50 gel manicures in the same slot is $50 an hour with less risk and no scope question. The premium is real but narrower than the price difference suggests.' },
+    { t: 'h2', id: 'documenting', text: 'Documenting your position' },
+    { t: 'p', text: 'If you decide to offer it, the paperwork matters as much as the technique, and it is straightforward to put in place before you start rather than after a question arises.' },
+    {
+      t: 'table',
+      head: ['Keep', 'Why'],
+      rows: [
+        ['Written confirmation from your state board', 'Verbal guidance is hard to rely on later'],
+        ['Your insurer’s written position on this service', 'Cover is the practical exposure'],
+        ['Training certificates and course content', 'Shows what was actually taught'],
+        ['Sterilisation logs where required', 'Frequently the first thing inspected'],
+        ['Client consultation and consent records', 'Screening and contraindications'],
+      ],
+    },
+    { t: 'p', text: 'None of this is onerous. It is a folder, and it is the difference between answering a question in a minute and reconstructing a position under pressure.' },
+    { t: 'h2', id: 'screening', text: 'Screening clients' },
+    { t: 'p', text: 'The contraindications for this service are the same as for any nail work near the skin, but they carry more weight here and are worth asking about explicitly rather than relying on clients to volunteer.' },
+    {
+      t: 'ul',
+      items: [
+        '**Diabetes or circulation conditions** — refer to their doctor.',
+        '**Immunosuppression**, for any reason.',
+        '**Active nail or skin infection** — decline and refer.',
+        '**Bleeding disorders or anticoagulant medication.**',
+        '**Very thin or damaged nail plates.**',
+      ],
+    },
+    { t: 'note', tone: 'warn', text: 'Declining a client is part of practising safely rather than a lost booking. A documented reason for declining protects both of you.' },
+    { t: 'h2', id: 'starting-out', text: 'If you decide to add it' },
+    { t: 'p', text: 'Assuming the scope and insurance questions are settled, the rollout matters. This is not a service to start offering to a full book on day one.' },
+    {
+      t: 'ol',
+      items: [
+        '**Complete hands-on training with live models**, not a demonstration course.',
+        '**Practise on willing regulars** at a reduced rate before listing it.',
+        '**Book longer slots than you think you need** while you are learning.',
+        '**Set your screening questions** before the first paying client.',
+        '**Price it for the time it takes you**, not for what an experienced technician charges.',
+      ],
+    },
+    { t: 'p', text: 'Underpricing while learning is a common mistake in the other direction: a service that takes you three hours at $70 is below minimum wage once product and overhead come out.' },
+  ],
+  faq: [
+    { q: 'Do I need special certification?', a: 'Training is strongly advisable. Whether a specific credential is required varies by state, so check your board.' },
+    { q: 'Is a certificate enough to offer it legally?', a: 'No. Scope is defined by your state board, not by your training provider.' },
+    { q: 'Can nail techs do Russian manicures in the US?', a: 'It varies by state, particularly regarding work near living tissue. Verify with your own board.' },
+    { q: 'Will my insurance cover it?', a: 'Ask your insurer directly and by name. Out-of-scope work is typically excluded from cover.' },
+    { q: 'How should bits be sterilised?', a: 'Follow your state’s requirements. Autoclave sterilisation is the standard to ask about.' },
+  ],
+  related: [
+    { href: '/en/russian-manicure-safety', label: 'Is a Russian Manicure Safe?' },
+    { href: '/en/nail-tech-license', label: 'How to Get a Nail Tech License' },
+    { href: '/en/salon-business-costs', label: 'Salon Business Costs' },
+  ],
+}
