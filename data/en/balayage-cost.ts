@@ -1,0 +1,127 @@
+import type { EnPage } from './types'
+import { EN_UPDATED, EN_UPDATED_ISO } from './common'
+
+export const balayageCost: EnPage = {
+  path: '/en/balayage-cost',
+  title: 'How Much Does Balayage Cost? Full Price Breakdown',
+  h1: 'How Much Does Balayage Cost?',
+  description:
+    'Balayage runs $150 to $400 for most people, more for long or dark hair needing multiple sessions. What is included, and what gets billed extra.',
+  keywords: ['balayage cost', 'how much does balayage cost', 'balayage price', 'balayage salon cost'],
+  category: 'Hair Colour',
+  stage: 3,
+  updated: EN_UPDATED,
+  updatedIso: EN_UPDATED_ISO,
+  lead:
+    '**Most balayage services run $150 to $400.** Short hair at a mid-range salon sits at the low end; long dark hair at a high-end salon needing multiple sessions sits well above it. The toner and gloss are often billed separately, and that is the most common surprise at the till.',
+  blocks: [
+    { t: 'h2', id: 'ranges', text: 'Typical price ranges' },
+    {
+      t: 'table',
+      head: ['Situation', 'Range'],
+      rows: [
+        ['Short hair, mid-range salon', '$120 - 200'],
+        ['Medium length, mid-range', '$180 - 300'],
+        ['Long hair, mid-range', '$250 - 400'],
+        ['High-end or master colourist', '$350 - 600+'],
+        ['Correction from a previous colour', '$400 - 800+'],
+      ],
+    },
+    { t: 'p', text: 'Prices vary by region and salon tier as much as by your hair, so treat these as a shape rather than a quote. What transfers between markets is the structure: length and starting colour move the number more than anything else.' },
+    { t: 'h2', id: 'extras', text: 'What is often billed extra' },
+    {
+      t: 'table',
+      head: ['Add-on', 'Typical'],
+      rows: [
+        ['Toner or gloss', '$30 - 80 - often required, often not quoted'],
+        ['Bond builder treatment', '$25 - 60'],
+        ['Haircut', '$40 - 80'],
+        ['Blow-dry finish', '$25 - 50'],
+        ['Deep conditioning', '$20 - 50'],
+      ],
+    },
+    { t: 'note', title: 'Ask whether toner is included when you book', text: 'A $200 quote frequently becomes $260 at the till, and the toner is not an upsell — it is usually what makes the colour look finished. The problem is that it is quoted as an extra rather than as part of the service.' },
+    { t: 'h2', id: 'dark-hair', text: 'Why dark hair costs more' },
+    { t: 'p', text: 'Lifting dark hair to a light balayage takes more product and more time, and often more than one session. That is not a salon marking you up; it is the number of appointments the process actually requires.' },
+    {
+      t: 'table',
+      head: ['Starting colour', 'Sessions to reach light balayage'],
+      rows: [
+        ['Light brown', 'Usually 1'],
+        ['Medium brown', '1 - 2'],
+        ['Dark brown or black', '2 - 3'],
+        ['Previously box-dyed dark', '2 - 4, unpredictable'],
+      ],
+    },
+    { t: 'p', text: '**Ask for the total across all sessions**, not the price of the first one. A $250 first appointment that becomes three appointments is a $750 service, and knowing that before you start is the difference between a plan and a surprise.' },
+    { t: 'h2', id: 'why-quotes-differ', text: 'Why your quote differs from the menu' },
+    { t: 'p', text: 'Menu prices assume a baseline. Almost nobody is the baseline, and the adjustments are made at consultation rather than on the price list.' },
+    {
+      t: 'table',
+      head: ['Factor', 'Effect on price'],
+      rows: [
+        ['Hair length below the shoulder', 'More product, more time'],
+        ['Density - thick hair', 'Significant, often a surcharge'],
+        ['Previous colour, especially box dye', 'More sessions, sometimes correction'],
+        ['How light you want to go', 'The biggest single driver'],
+        ['Stylist level', 'Junior to master can double the figure'],
+        ['Toner or gloss included or not', 'Explains most of the gap at the till'],
+      ],
+    },
+    { t: 'h2', id: 'saving', text: 'Where you can and cannot save' },
+    { t: 'p', text: 'There is real money to be saved on this service, and there is money that only looks like a saving.' },
+    {
+      t: 'table',
+      head: ['Reasonable saving', 'False economy'],
+      rows: [
+        ['A junior stylist or training night', 'Box dye before your appointment'],
+        ['Going slightly warmer than your reference', 'Skipping the toner'],
+        ['Skipping the blow-dry finish', 'Skipping the bond builder on a big lift'],
+        ['Stretching to a gloss between full appointments', 'Stretching past the point of visible regrowth'],
+        ['A partial balayage rather than full', 'Doing it yourself on dark hair'],
+      ],
+    },
+    { t: 'p', text: '**Colour correction later costs more than any saving on the way in.** That is the single most reliable rule in this category, and it is why colourists ask so many questions about what you have used before.' },
+    { t: 'h2', id: 'consultation', text: 'Get the number at consultation, not at the chair' },
+    { t: 'p', text: 'The most reliable way to avoid a surprise is a separate consultation before the appointment. Many salons offer these free, and they take fifteen minutes.' },
+    {
+      t: 'table',
+      head: ['Ask', 'Why it changes the number'],
+      rows: [
+        ['What is the total for the result I showed you?', 'Forces a plan rather than a session price'],
+        ['How many sessions?', 'Dark or previously coloured hair is rarely one'],
+        ['Is toner included, and how often will I need it?', 'The most common gap between quote and bill'],
+        ['Do you charge extra for length or density?', 'Frequently yes, and rarely on the menu'],
+        ['What level of stylist is this quote for?', 'Junior to master can double it'],
+        ['What happens if we do not reach the target?', 'Establishes whether a further session is included'],
+      ],
+    },
+    { t: 'p', text: 'A colourist who answers all six comfortably has thought about your hair. One who quotes a single figure without asking what you have used before has not, and that is worth knowing before you sit down.' },
+    { t: 'h2', id: 'annual-cost', text: 'What it costs over a year' },
+    { t: 'p', text: 'The per-appointment figure is the one people compare. The annual figure is the one they actually pay, and it changes the ranking between services.' },
+    {
+      t: 'table',
+      head: ['Pattern', 'Annual'],
+      rows: [
+        ['Balayage 3x a year at $250', '$750'],
+        ['Plus two glosses between each', 'approx. $1,000 - 1,200'],
+        ['Balayage 4x a year at $300', '$1,200'],
+        ['Dark hair, first year including the initial plan', '$1,200 - 2,000'],
+        ['Maintenance year after that', 'Closer to the standard figures'],
+      ],
+    },
+    { t: 'note', title: 'The first year is the expensive one on dark hair', text: 'Getting there costs more than staying there. Budgeting from the first-year figure makes the service look more expensive than it settles at, and budgeting from the maintenance figure understates the start.' },
+  ],
+  faq: [
+    { q: 'How much does balayage cost?', a: 'Commonly $150 to $400, varying by length, starting colour, and salon tier. High-end salons and colour correction run higher.' },
+    { q: 'Is toner included?', a: 'Often not. Ask specifically when booking, because it usually accounts for the gap between the quote and the final bill.' },
+    { q: 'Why is my quote higher than the menu price?', a: 'Length and density, mostly. Long thick hair uses considerably more product and chair time than the menu baseline assumes.' },
+    { q: 'How much is it for dark hair?', a: 'More, because it usually takes multiple sessions. Ask for a total estimate across the whole plan.' },
+    { q: 'Can I get it cheaper?', a: 'Junior stylists and training nights cost less. Box dye beforehand and skipped toner are false economies that cost more later.' },
+  ],
+  related: [
+    { href: '/en/balayage-vs-highlights', label: 'Balayage vs Highlights: The Actual Difference' },
+    { href: '/en/how-long-does-balayage-last', label: 'How Long Does Balayage Last?' },
+    { href: '/en/balayage-dark-hair', label: 'Balayage on Dark Hair: What Is Achievable' },
+  ],
+}

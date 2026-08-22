@@ -52,6 +52,15 @@ import { doPressOnNailsDamageYourNails } from './do-press-on-nails-damage-your-n
 import { pressOnNailsShortNails } from './press-on-nails-short-nails'
 import { reusingPressOnNails } from './reusing-press-on-nails'
 
+import { balayageCost } from './balayage-cost'
+import { balayageVsHighlights } from './balayage-vs-highlights'
+import { howLongDoesBalayageLast } from './how-long-does-balayage-last'
+import { balayageDarkHair } from './balayage-dark-hair'
+import { balayageMaintenance } from './balayage-maintenance'
+import { balayageVsOmbre } from './balayage-vs-ombre'
+import { balayageGoneWrong } from './balayage-gone-wrong'
+import { balayageDamage } from './balayage-damage'
+
 /**
  * 영문 콘텐츠 페이지 전체 목록.
  * 허브의 섹션 카드와 sitemap이 여기서 파생되므로, 페이지를 추가하면 이 파일만 갱신하면 된다.
@@ -157,6 +166,23 @@ export const EN_SECTIONS: EnSection[] = [
       pressOnNailsVsGel,
       pressOnNailsShortNails,
       reusingPressOnNails,
+    ],
+  },
+  {
+    key: 'balayage',
+    title: 'Balayage, from cost to correction',
+    blurb:
+      'What it costs including the toner nobody quotes, why dark hair takes several sessions, and how to keep it from going brassy four weeks in.',
+    icon: '🎨',
+    pages: [
+      balayageCost,
+      balayageVsHighlights,
+      howLongDoesBalayageLast,
+      balayageMaintenance,
+      balayageDarkHair,
+      balayageVsOmbre,
+      balayageGoneWrong,
+      balayageDamage,
     ],
   },
 ]
