@@ -32,7 +32,7 @@ export const US_PAY_NOTE =
  * 원고를 더 쓰는 것과 공개하는 것을 분리하기 위한 스위치다.
  * 기획서 지정 페이스: 주 10~15페이지를 넘기지 말 것.
  */
-export const EN_RELEASED_STAGE = 0
+export const EN_RELEASED_STAGE = 5
 
 /**
  * 의료 인접 시술(microneedling, chemical peel 등) 공통 고지.
