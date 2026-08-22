@@ -1,4 +1,5 @@
 import type { EnPage } from './types'
+import { EN_RELEASED_STAGE } from './common'
 
 import { nailSalonKorea } from './nail-salon-korea'
 import { nailArtKorea } from './nail-art-korea'
@@ -32,6 +33,15 @@ import { gelNailRemovalAtHome } from './gel-nail-removal-at-home'
 import { nailDustCollector } from './nail-dust-collector'
 import { salonBusinessCosts } from './salon-business-costs'
 import { acrylicNailApplication } from './acrylic-nail-application'
+
+import { microneedlingCost } from './microneedling-cost'
+import { microneedlingAftercare } from './microneedling-aftercare'
+import { microneedlingVsChemicalPeel } from './microneedling-vs-chemical-peel'
+import { microneedlingHealingTime } from './microneedling-healing-time'
+import { isMicroneedlingWorthIt } from './is-microneedling-worth-it'
+import { microneedlingAtHomeVsProfessional } from './microneedling-at-home-vs-professional'
+import { microneedlingSideEffects } from './microneedling-side-effects'
+import { whoCanPerformMicroneedling } from './who-can-perform-microneedling'
 
 /**
  * 영문 콘텐츠 페이지 전체 목록.
@@ -106,7 +116,35 @@ export const EN_SECTIONS: EnSection[] = [
     icon: '🧰',
     pages: [salonBusinessCosts, nailDustCollector, acrylicNailApplication],
   },
+  {
+    key: 'microneedling',
+    title: 'Microneedling, explained properly',
+    blurb:
+      'Cost, aftercare, healing time and side effects - plus the question most pages skip, which is who is legally allowed to perform it where you live.',
+    icon: '✨',
+    pages: [
+      microneedlingCost,
+      microneedlingAftercare,
+      microneedlingHealingTime,
+      microneedlingSideEffects,
+      microneedlingVsChemicalPeel,
+      isMicroneedlingWorthIt,
+      microneedlingAtHomeVsProfessional,
+      whoCanPerformMicroneedling,
+    ],
+  },
 ]
 
-/** sitemap·내부링크용 평면 목록 */
-export const EN_PAGES: EnPage[] = EN_SECTIONS.flatMap((s) => s.pages)
+/** 원고가 존재하는 전체 목록 (공개 여부 무관) */
+export const EN_ALL_PAGES: EnPage[] = EN_SECTIONS.flatMap((s) => s.pages)
+
+/** 공개된 페이지인지 */
+export const isReleased = (p: EnPage) => (p.stage ?? 0) <= EN_RELEASED_STAGE
+
+/** sitemap·허브·내부링크용 — 공개된 것만 */
+export const EN_PAGES: EnPage[] = EN_ALL_PAGES.filter(isReleased)
+
+/** 허브 섹션도 공개분만 남긴다. 빈 섹션은 통째로 감춘다. */
+export const EN_RELEASED_SECTIONS: EnSection[] = EN_SECTIONS
+  .map((s) => ({ ...s, pages: s.pages.filter(isReleased) }))
+  .filter((s) => s.pages.length > 0)

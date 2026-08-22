@@ -1,0 +1,146 @@
+import type { EnPage } from './types'
+import { EN_UPDATED, EN_UPDATED_ISO, MED_DISCLAIMER, MED_STATE_SCOPE } from './common'
+
+export const microneedlingSideEffects: EnPage = {
+  path: '/en/microneedling-side-effects',
+  title: 'Microneedling Side Effects and Who Should Avoid It',
+  h1: 'Microneedling Side Effects: What to Know Before Booking',
+  description:
+    'Common and less common side effects of microneedling, contraindications to discuss with a provider, and the warning signs that need medical attention.',
+  keywords: ['microneedling side effects', 'microneedling risks', 'microneedling contraindications'],
+  category: 'Skin Treatments',
+  stage: 1,
+  updated: EN_UPDATED,
+  updatedIso: EN_UPDATED_ISO,
+  lead:
+    '**Redness, tightness, and mild swelling are common and usually short-lived.** Less common effects include infection, pigmentation changes, and scarring. Several conditions and medications are contraindications, and a licensed provider must assess you.',
+  blocks: [
+    { t: 'note', tone: 'warn', text: MED_DISCLAIMER },
+    { t: 'h2', id: 'common', text: 'Common and expected' },
+    {
+      t: 'table',
+      head: ['Effect', 'Typical duration'],
+      rows: [
+        ['Redness', '1 - 3 days'],
+        ['Warmth, tightness', '1 - 2 days'],
+        ['Mild swelling', '1 - 2 days'],
+        ['Dryness, flaking', 'Days 3 - 7'],
+      ],
+    },
+    { t: 'h2', id: 'less-common', text: 'Less common' },
+    {
+      t: 'table',
+      head: ['Effect', 'Note'],
+      rows: [
+        ['Infection', 'Uncommon; sterility and aftercare matter'],
+        ['Pigmentation changes', 'Risk varies by skin type'],
+        ['Scarring', 'Associated with excessive depth or poor technique'],
+        ['Cold sore reactivation', 'Discuss prophylaxis if you are prone'],
+        ['Reaction to topicals used during treatment', 'Disclose allergies beforehand'],
+      ],
+    },
+    { t: 'h2', id: 'discuss', text: 'Discuss with a provider if you have' },
+    {
+      t: 'ul',
+      items: [
+        'Active acne, infection, or inflamed skin.',
+        'History of keloid or hypertrophic scarring.',
+        'Recent isotretinoin use.',
+        'Certain autoimmune or skin conditions.',
+        'Blood clotting disorders, or relevant medications.',
+        'Pregnancy.',
+        'Recent other facial procedures.',
+      ],
+    },
+    { t: 'note', tone: 'warn', title: 'This list is not exhaustive and is not a self-screening tool', text: 'Its purpose is to show you the kinds of things that matter, so that you raise them at consultation. The assessment itself belongs to a licensed provider.' },
+    { t: 'h2', id: 'seek-care', text: 'Seek medical attention if' },
+    {
+      t: 'ul',
+      items: [
+        'Pain is increasing rather than decreasing.',
+        'You have pus, spreading redness, warmth, or fever.',
+        'You develop blistering.',
+        'Symptoms go well beyond what your provider described.',
+      ],
+    },
+    { t: 'h2', id: 'reducing-risk', text: 'What reduces risk' },
+    { t: 'p', text: 'Most of the controllable risk sits in two places: who performs the treatment, and what you do in the days afterwards.' },
+    {
+      t: 'table',
+      head: ['Lever', 'Why it matters'],
+      rows: [
+        ['Provider credentials and experience', 'Depth judgement and technique'],
+        ['Full disclosure at consultation', 'Contraindications are only useful if raised'],
+        ['Single-use sterile cartridges', 'The infection control baseline'],
+        ['Following aftercare', 'Sun exposure and actives are the common slips'],
+        ['Spacing sessions as directed', 'Stacking treatments compounds risk'],
+      ],
+    },
+    { t: 'h2', id: 'expected-vs-not', text: 'Telling expected from concerning' },
+    { t: 'p', text: 'Most post-treatment anxiety comes from not knowing which category something falls into. The dividing line is usually direction of travel rather than severity on day one.' },
+    {
+      t: 'table',
+      head: ['Observation', 'Usually expected', 'Warrants contact'],
+      rows: [
+        ['Redness', 'Fading day by day', 'Increasing after day two'],
+        ['Sensation', 'Tight, warm, settling', 'Pain increasing'],
+        ['Swelling', 'Mild, brief', 'Spreading or firm'],
+        ['Texture', 'Dry, flaking briefly', 'Blistering or open areas'],
+        ['Whole-body', 'Nothing', 'Fever'],
+      ],
+    },
+    { t: 'p', text: '**Anything trending worse over days belongs in the right-hand column**, regardless of how mild it looked at the start.' },
+    { t: 'h2', id: 'pigmentation', text: 'Pigmentation risk, in plain terms' },
+    { t: 'p', text: 'Post-inflammatory hyperpigmentation is the side effect that most differs by skin type, and it is the one worth raising explicitly at consultation rather than waiting to be asked about.' },
+    {
+      t: 'ul',
+      items: [
+        'Ask how much experience the provider has with your skin type specifically.',
+        'Ask what they adjust for it — depth, spacing, or pre-treatment.',
+        'Ask what their plan is if pigmentation does occur.',
+        '**Sun protection afterwards matters more here than anywhere else.**',
+      ],
+    },
+    { t: 'note', title: 'A provider who takes the question seriously', text: 'is the one to book with. This is a reasonable thing to ask, and a good answer is specific rather than reassuring.' },
+    { t: 'h2', id: 'disclosure', text: 'What to disclose at consultation' },
+    { t: 'p', text: 'Most avoidable complications trace back to something that was not mentioned. Providers ask, but the list is long and it is easy to forget items that seem unrelated.' },
+    {
+      t: 'table',
+      head: ['Disclose', 'Why it matters here'],
+      rows: [
+        ['All medications, including recent courses', 'Some affect healing directly'],
+        ['Isotretinoin, even historic', 'Timing rules apply'],
+        ['Skin conditions, active or in remission', 'May be triggered'],
+        ['History of cold sores', 'Prophylaxis may be recommended'],
+        ['Keloid or hypertrophic scarring', 'Changes the risk assessment'],
+        ['Recent procedures or treatments', 'Stacking is the concern'],
+        ['Pregnancy or trying to conceive', 'Many providers decline'],
+        ['Your usual skincare routine', 'Actives affect barrier state'],
+      ],
+    },
+    { t: 'p', text: '**Volunteering these is more reliable than waiting to be asked.** Intake forms vary in thoroughness, and a form is not a conversation.' },
+    { t: 'h2', id: 'after-a-reaction', text: 'If you have a reaction' },
+    {
+      t: 'ol',
+      items: [
+        '**Contact your provider first** — they know what was done and at what depth.',
+        '**Seek medical care** for signs of infection, spreading symptoms, or fever.',
+        '**Photograph it**, which helps whoever assesses it later.',
+        '**Do not treat it yourself** with actives or additional products.',
+        '**Report it back** even after it resolves, because it changes the plan for any future session.',
+      ],
+    },
+  ],
+  faq: [
+    { q: 'Is microneedling safe?', a: 'It is generally well tolerated when performed by a qualified provider on appropriate candidates, but it carries risks like any procedure.' },
+    { q: 'Can it cause scarring?', a: 'Rarely, and generally in association with excessive depth or technique issues.' },
+    { q: 'Is it safe for darker skin tones?', a: 'Pigmentation risk varies by skin type. Seek a provider experienced with your skin type specifically.' },
+    { q: 'Can I get it while pregnant?', a: 'Discuss it with your doctor. Many providers decline during pregnancy.' },
+    { q: 'What if I get a cold sore afterwards?', a: 'Tell your provider beforehand if you are prone, since prophylaxis may be recommended.' },
+  ],
+  related: [
+    { href: '/en/microneedling-aftercare', label: 'Microneedling Aftercare, Day by Day' },
+    { href: '/en/is-microneedling-worth-it', label: 'Is Microneedling Worth It?' },
+    { href: '/en/who-can-perform-microneedling', label: 'Who Can Legally Perform Microneedling?' },
+  ],
+}

@@ -35,6 +35,13 @@ export type EnPage = {
   updatedIso: string
   /** 리드 문단. 1~2문장으로 결론부터 */
   lead: string
+  /**
+   * 공개 단계. 생략하면 0(=즉시 공개).
+   * 한 번에 수십 페이지를 사이트맵에 올리면 대량 생성 콘텐츠로 읽히므로
+   * 원고는 미리 다 쓰되 공개는 EN_RELEASED_STAGE 로 나눠서 연다.
+   * 미공개 페이지는 sitemap·허브에서 빠지고 noindex 가 붙는다.
+   */
+  stage?: number
   blocks: EnBlock[]
   faq: EnFaq[]
   related: EnRelated[]

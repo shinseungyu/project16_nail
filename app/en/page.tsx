@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import AdUnit from '@/components/AdUnit'
 import { SITE_URL, hreflang } from '@/lib/hreflang'
-import { EN_SECTIONS } from '@/data/en'
+import { EN_RELEASED_SECTIONS as EN_SECTIONS } from '@/data/en'
 import { EN_UPDATED } from '@/data/en/common'
 
 const TITLE = 'Korea Beauty Guide: Prices, Bookings and Treatments (2026)'

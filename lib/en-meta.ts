@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { hreflang } from '@/lib/hreflang'
 import type { EnPage } from '@/data/en/types'
+import { EN_RELEASED_STAGE } from '@/data/en/common'
 
 /**
  * 영문 페이지 metadata 생성기.
@@ -32,6 +33,7 @@ export function enMetadata(page: EnPage): Metadata {
       description: page.description,
       images: ['/images/thumb.webp'],
     },
-    robots: { index: true, follow: true },
+    // 아직 공개 단계가 아닌 원고는 색인시키지 않는다 (sitemap 에서도 빠진다)
+    robots: { index: (page.stage ?? 0) <= EN_RELEASED_STAGE, follow: true },
   }
 }
