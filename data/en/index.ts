@@ -16,6 +16,23 @@ import { beautyLicenseKorea } from './beauty-license-korea'
 import { workBeautyIndustryKorea } from './work-beauty-industry-korea'
 import { openBeautySalonKorea } from './open-beauty-salon-korea'
 
+import { estheticianSalary } from './esthetician-salary'
+import { nailTechSalary } from './nail-tech-salary'
+import { barberHairstylistSalary } from './barber-hairstylist-salary'
+import { lashTechSalary } from './lash-tech-salary'
+import { cosmetologyLicenseRenewal } from './cosmetology-license-renewal'
+import { onlineEstheticianSchool } from './online-esthetician-school'
+import { nailTechLicense } from './nail-tech-license'
+import { lashCertification } from './lash-certification'
+import { cosmetologyLicenseRequirements } from './cosmetology-license-requirements'
+import { howLongDoLashExtensionsLast } from './how-long-do-lash-extensions-last'
+import { howLongDoesWaxingLast } from './how-long-does-waxing-last'
+import { howLongDoGelNailsLast } from './how-long-do-gel-nails-last'
+import { gelNailRemovalAtHome } from './gel-nail-removal-at-home'
+import { nailDustCollector } from './nail-dust-collector'
+import { salonBusinessCosts } from './salon-business-costs'
+import { acrylicNailApplication } from './acrylic-nail-application'
+
 /**
  * 영문 콘텐츠 페이지 전체 목록.
  * 허브의 섹션 카드와 sitemap이 여기서 파생되므로, 페이지를 추가하면 이 파일만 갱신하면 된다.
@@ -54,6 +71,40 @@ export const EN_SECTIONS: EnSection[] = [
       'Licensing, the career ladder, pay, and opening your own shop — including the visa question that decides whether any of it is possible.',
     icon: '📋',
     pages: [beautyLicenseKorea, workBeautyIndustryKorea, openBeautySalonKorea],
+  },
+  {
+    key: 'us-careers',
+    title: 'Beauty careers in the US: pay, licensing, school',
+    blurb:
+      'What the pay actually is once tips and commission are separated out, and what each licence really requires. Rules are set state by state, so every page points you back to your own board.',
+    icon: '💵',
+    pages: [
+      estheticianSalary,
+      nailTechSalary,
+      barberHairstylistSalary,
+      lashTechSalary,
+      cosmetologyLicenseRequirements,
+      cosmetologyLicenseRenewal,
+      nailTechLicense,
+      onlineEstheticianSchool,
+      lashCertification,
+    ],
+  },
+  {
+    key: 'treatment-faq',
+    title: 'How long does it last?',
+    blurb:
+      'The questions people actually search before or after an appointment, and more usefully, why the answer is what it is and what changes it.',
+    icon: '⏱️',
+    pages: [howLongDoLashExtensionsLast, howLongDoesWaxingLast, howLongDoGelNailsLast, gelNailRemovalAtHome],
+  },
+  {
+    key: 'salon-business',
+    title: 'Equipment and salon business',
+    blurb:
+      'Booth rent versus commission with the break-even worked out, what to charge, and the equipment decisions that turn out to be occupational health questions.',
+    icon: '🧰',
+    pages: [salonBusinessCosts, nailDustCollector, acrylicNailApplication],
   },
 ]
 

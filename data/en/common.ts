@@ -13,3 +13,15 @@ export const FX_NOTE =
 /** 여러 페이지에서 반복 인용되는 한국 법령 사실. 표현이 갈리지 않게 한 곳에서 관리. */
 export const LAW_LICENCE_REQUIRED =
   'Under the Public Health Control Act, Article 8(1), performing beauty services without the national licence is prohibited, and Article 20 sets a fine of up to 3 million KRW. Operating a shop without filing the business report under Article 3(1) carries up to 1 year imprisonment or a 10 million KRW fine.'
+
+
+/**
+ * 미국 대상 페이지 공통.
+ * 기획서 필수 항목: 주(state)별 상이 명시 + 주 미용위원회 확인 안내 + 법률 조언 아님.
+ */
+export const US_STATE_NOTE =
+  'Licensing rules, required training hours and fees are set state by state and change over time. Confirm current requirements with your state board of cosmetology. This page is general information, not legal advice.'
+
+/** 급여 수치는 단일 숫자 단정 금지 — 범위 + 출처 유형을 항상 병기한다. */
+export const US_PAY_NOTE =
+  'Figures reflect wage aggregator data as of August 2026 and change frequently. They are given as ranges because sources measure different things — some count base wage only, others include tips and commission.'

@@ -1,0 +1,203 @@
+import type { EnPage } from './types'
+import { EN_UPDATED, EN_UPDATED_ISO, US_STATE_NOTE } from './common'
+
+export const salonBusinessCosts: EnPage = {
+  path: '/en/salon-business-costs',
+  title: 'Salon Business Costs: Booth Rent, Insurance & Pricing',
+  h1: 'What It Actually Costs to Run a Salon Business',
+  description:
+    'Booth rent vs commission with the break-even worked out, typical salon insurance costs, suite pricing, and how to set prices that work.',
+  keywords: [
+    'salon insurance cost',
+    'booth rent vs commission',
+    'salon booth rental cost',
+    'home nail salon setup',
+    'nail salon profit margin',
+    'how to price nail services',
+    'salon sanitation requirements',
+  ],
+  category: 'Equipment & Business',
+  updated: EN_UPDATED,
+  updatedIso: EN_UPDATED_ISO,
+  lead:
+    '**Booth rent typically runs $150 to $400 a week, suites $250 to $600. Commission splits are usually 40 to 60%. Professional liability insurance commonly costs a few hundred dollars a year.** Which structure earns you more depends entirely on how consistently you are booked.',
+  blocks: [
+    { t: 'note', tone: 'warn', text: 'General business information, not legal, tax, or insurance advice. Verify with your state board and qualified professionals. ' + US_STATE_NOTE },
+    { t: 'h2', id: 'booth-vs-commission', text: 'Booth rent vs commission' },
+    { t: 'p', text: 'The most consequential decision in this industry, and the one most often made on gut feeling.' },
+    {
+      t: 'table',
+      head: ['', 'Commission', 'Booth rent'],
+      rows: [
+        ['You receive', '40 - 60% of service revenue', '100%, minus rent'],
+        ['You pay', 'Nothing upfront', 'Weekly rent regardless of bookings'],
+        ['Products', 'Usually supplied', 'You buy them'],
+        ['Taxes', 'Employee withholding', 'Self-employment tax'],
+        ['Client ownership', 'Often the salon’s', 'Usually yours'],
+        ['Schedule control', 'The salon’s', 'Yours'],
+        ['Risk', 'Low', 'High'],
+      ],
+    },
+    { t: 'h3', text: 'The break-even math' },
+    { t: 'p', text: 'Take a **$300 a week booth rent** against a **50% commission.** All figures pre-tax, before product costs.' },
+    {
+      t: 'table',
+      head: ['Weekly service revenue', 'Commission take', 'Booth rent take (after rent)', 'Winner'],
+      rows: [
+        ['$400', '$200', '$100', 'Commission'],
+        ['$600', '$300', '$300', 'Tie'],
+        ['$900', '$450', '$600', 'Booth'],
+        ['$1,200', '$600', '$900', 'Booth'],
+      ],
+    },
+    {
+      t: 'note',
+      tone: 'warn',
+      title: 'Break-even sits around double your weekly rent',
+      text: 'Below that, commission wins. Above it, booth rent wins and the gap widens fast. **But model your worst month, not your best** — rent does not pause for illness, holidays, or a slow January.',
+    },
+    { t: 'h2', id: 'rental-costs', text: 'Booth and suite rental costs' },
+    {
+      t: 'table',
+      head: ['Arrangement', 'Typical weekly', 'What is included'],
+      rows: [
+        ['Booth in a salon', '$150 - 400', 'Station, shared amenities, sometimes reception'],
+        ['Private suite', '$250 - 600', 'Own room, door, often own sink'],
+        ['Part-time booth', '$75 - 200', 'Limited days'],
+      ],
+    },
+    {
+      t: 'p',
+      text: '**Suites cost more but change the business.** A private room means you control the environment, the music, the branding, and the client experience, which supports higher pricing. Before signing, ask what is included: utilities and wifi, reception and booking support, laundry, product storage, backbar supplies, and the notice period and rent increase terms.',
+    },
+    { t: 'h2', id: 'insurance', text: 'Insurance' },
+    {
+      t: 'table',
+      head: ['Type', 'Typical annual', 'Covers'],
+      rows: [
+        ['Professional liability', 'Commonly a few hundred dollars', 'Claims arising from services performed'],
+        ['General liability', 'Varies', 'Slip-and-fall, property damage'],
+        ['Combined policies', 'Varies', 'Both, often bundled for beauty pros'],
+        ['Property / contents', 'Varies', 'Your equipment'],
+      ],
+    },
+    {
+      t: 'note',
+      title: 'Most policies require you to be properly licensed',
+      text: 'An unlicensed claim may not be covered, which is one practical reason a certificate alone is not enough. Costs vary substantially by state, services offered, and coverage limits — get quotes rather than relying on ranges.',
+    },
+    { t: 'h2', id: 'pricing', text: 'Setting your prices' },
+    {
+      t: 'p',
+      text: 'Most beauty professionals underprice, and the usual reason is copying the salon down the street rather than calculating from their own costs.',
+    },
+    { t: 'h3', text: 'Work backwards from what you need' },
+    {
+      t: 'ol',
+      items: [
+        'Monthly costs — rent, products, insurance, software, tax set-aside.',
+        'Target take-home.',
+        'Required monthly revenue = step 1 + step 2.',
+        'Realistic appointments per month.',
+        'Required average ticket = step 3 divided by step 4.',
+      ],
+    },
+    {
+      t: 'table',
+      caption: 'Worked example (pre-tax)',
+      head: ['Item', 'Amount'],
+      rows: [
+        ['Booth rent', '$1,300/mo'],
+        ['Products', '$500'],
+        ['Insurance, software, misc', '$150'],
+        ['Target take-home', '$4,000'],
+        ['Required revenue', 'approx. $7,500 before tax set-aside'],
+        ['Realistic appointments', '100/mo'],
+        ['Required average ticket', '$75'],
+      ],
+    },
+    {
+      t: 'p',
+      text: 'If your current average ticket is $50, you have three levers: **raise prices, add services, or see more clients.** Only one of those does not cost you more hours.',
+    },
+    { t: 'h3', text: 'Pricing principles that hold up' },
+    {
+      t: 'ol',
+      items: [
+        '**Price by time, not by tradition.** A 45-minute service and a 90-minute service should not be $10 apart.',
+        '**Charge for removal.** It is labour and it takes chair time.',
+        '**Raise prices on new clients first**, then existing ones with notice.',
+        '**Do not discount to fill gaps** — fill them with short add-on services instead.',
+        '**Review annually.** Product costs rise; static prices are a quiet pay cut.',
+      ],
+    },
+    { t: 'h2', id: 'home', text: 'Working from home' },
+    {
+      t: 'table',
+      head: ['Consideration', 'Reality'],
+      rows: [
+        ['Zoning', 'Many residential areas restrict commercial activity - verify locally'],
+        ['Licensing', 'Some states have specific rules for home salons'],
+        ['Insurance', 'Homeowner policies typically do not cover business activity'],
+        ['Ventilation', 'Harder to achieve in a residential room'],
+        ['Client comfort', 'Some prefer it, some do not'],
+        ['Cost', 'Dramatically lower overhead'],
+      ],
+    },
+    {
+      t: 'note',
+      tone: 'warn',
+      text: '**Check zoning and state licensing before setting anything up.** Retrofitting compliance is far more expensive than checking first, and in some cases it is not possible at all.',
+    },
+    { t: 'h2', id: 'sanitation', text: 'Sanitation' },
+    {
+      t: 'p',
+      text: 'Requirements are set at state level and are typically among the most actively inspected areas. Common elements include:',
+    },
+    {
+      t: 'table',
+      head: ['Area', 'Typical requirement'],
+      rows: [
+        ['Implement disinfection', 'Approved disinfectant, specified contact time'],
+        ['Single-use items', 'Files, buffers, applicators - discard or dedicate to one client'],
+        ['Storage', 'Clean and used implements stored separately'],
+        ['Surfaces', 'Disinfected between clients'],
+        ['Hand hygiene', 'Before and after each client'],
+        ['Record-keeping', 'Some states require logs'],
+      ],
+    },
+    { t: 'p', text: '**Your state board publishes the actual rules.** Read them directly rather than relying on summaries, including this one.' },
+    { t: 'h2', id: 'margin', text: 'Profit margin reality' },
+    { t: 'p', text: 'Salon margins vary enormously by model. The variables that move it most:' },
+    {
+      t: 'table',
+      head: ['Lever', 'Effect'],
+      rows: [
+        ['Rebooking rate', 'The single biggest driver of stable revenue'],
+        ['Service mix', 'High-margin services versus low-margin fillers'],
+        ['Chair utilisation', 'Empty chair time is the largest hidden cost'],
+        ['Product cost control', 'Buying habits, waste'],
+        ['Retail attachment', 'High margin, no additional chair time'],
+      ],
+    },
+    {
+      t: 'note',
+      title: 'Utilisation matters more than price',
+      text: 'A chair booked 80% of open hours at moderate prices outperforms one booked 45% at premium prices. Raising prices is the lever people reach for first; filling gaps is usually the one that moves the number.',
+    },
+  ],
+  faq: [
+    { q: 'Is booth rent or commission better?', a: 'Break-even is roughly double your weekly rent in service revenue. Below that, commission. Above it, booth rent — but model your slowest month before committing.' },
+    { q: 'How much does salon booth rental cost?', a: 'Typically $150 to $400 weekly for a booth and $250 to $600 for a private suite. Confirm exactly what is included before signing.' },
+    { q: 'How much is salon insurance?', a: 'Professional liability commonly runs a few hundred dollars annually, varying by state, services, and coverage limits. Get quotes rather than relying on published ranges.' },
+    { q: 'How do I price my services?', a: 'Work backwards from monthly costs plus target income, divided by realistic appointment volume. That gives your required average ticket.' },
+    { q: 'Can I run a nail salon from home?', a: 'Sometimes — it depends on local zoning and state licensing rules. Verify both before setting up, and note that homeowner insurance generally will not cover business activity.' },
+    { q: 'What is a good salon profit margin?', a: 'It varies widely by model. Chair utilisation and rebooking rate influence it more than pricing does.' },
+    { q: 'What are salon sanitation requirements?', a: 'They are set by state and are among the most inspected areas. Read your state board rules directly rather than a summary.' },
+  ],
+  related: [
+    { href: '/en/nail-tech-salary', label: 'How Much Do Nail Techs Actually Make?' },
+    { href: '/en/esthetician-salary', label: 'Esthetician Salary: Why Sources Disagree' },
+    { href: '/en/cosmetology-license-requirements', label: 'Cosmetology License Requirements & Reciprocity' },
+  ],
+}
