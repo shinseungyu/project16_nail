@@ -176,7 +176,7 @@ export default function PracticalPage() {
             href="https://www.q-net.or.kr/cst006.do?id=cst00602&gSite=Q&gId=&brdId=Q006&code=1204&artlSeq=5209203"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-700 hover:underline"
+            className="text-rose-700 underline decoration-2 decoration-rose-300 underline-offset-2 hover:decoration-rose-600 transition-colors"
           >
             Q-Net 공개문제 ↗
           </a>
@@ -201,7 +201,7 @@ export default function PracticalPage() {
           <p className="text-xs text-stone-500 mt-3">
             <strong className="text-stone-700">필기 독학 + 실기 학원 병행</strong>이 비용 대비 가장 효율적입니다. 학원비
             비교는{' '}
-            <a href="https://haircost.kr" target="_blank" rel="noopener noreferrer" className="text-blue-700 font-semibold hover:underline">
+            <a href="https://haircost.kr" target="_blank" rel="noopener noreferrer" className="text-rose-700 font-semibold underline decoration-2 decoration-rose-300 underline-offset-2 hover:decoration-rose-600 transition-colors">
               haircost.kr ↗
             </a>
           </p>

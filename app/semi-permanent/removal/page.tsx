@@ -91,7 +91,7 @@ export default function RemovalPage() {
         </div>
         <p className="text-xs text-stone-500">
           시술 쪽 자격 체계는 별도로 정리했습니다 —{' '}
-          <Link href="/semi-permanent/legal" className="text-blue-700 font-semibold hover:underline">
+          <Link href="/semi-permanent/legal" className="text-rose-700 font-semibold underline decoration-2 decoration-rose-300 underline-offset-2 hover:decoration-rose-600 transition-colors">
             반영구화장 자격과 문신사법
           </Link>
         </p>
@@ -167,7 +167,7 @@ export default function RemovalPage() {
             <li>색소 성분과 알레르기 가능성, 사전 패치 테스트 여부를 확인하세요.</li>
             <li>
               유행하는 형태보다 본인 얼굴에 맞는 형태를 우선하세요. 1~3년간 유지됩니다.{' '}
-              <Link href="/semi-permanent/eyebrow" className="text-blue-700 font-semibold hover:underline">
+              <Link href="/semi-permanent/eyebrow" className="text-rose-700 font-semibold underline decoration-2 decoration-rose-300 underline-offset-2 hover:decoration-rose-600 transition-colors">
                 종류별 차이 보기
               </Link>
             </li>

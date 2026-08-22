@@ -28,7 +28,7 @@ export default function HairCta({ withAcademy = false }: { withAcademy?: boolean
             href="https://haircost.kr"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-700 font-semibold hover:underline"
+            className="text-rose-700 font-semibold underline decoration-2 decoration-rose-300 underline-offset-2 hover:decoration-rose-600 transition-colors"
           >
             haircost.kr ↗
           </a>

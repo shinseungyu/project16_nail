@@ -211,7 +211,7 @@ export default function ScalpPage() {
         <p className="text-xs text-stone-500 leading-relaxed">
           <strong className="text-stone-700">&ldquo;두피관리사 자격증&rdquo;은 민간 자격입니다.</strong> 국가기술자격이
           아니며, 영업에는 미용사 또는 이용사 면허가 필요합니다.{' '}
-          <Link href="/hair/license" className="text-blue-700 font-semibold hover:underline">
+          <Link href="/hair/license" className="text-rose-700 font-semibold underline decoration-2 decoration-rose-300 underline-offset-2 hover:decoration-rose-600 transition-colors">
             이용사 자격증 보기
           </Link>
         </p>

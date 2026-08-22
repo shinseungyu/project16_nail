@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import AdUnit from '@/components/AdUnit'
 import FormSection from '@/app/test/FormSection'
+import { QnaLinkRow, QnaPendingRow, QnaCardLink, QnaSeeAllLink } from '@/components/QnaLinks'
 import {
   QNA_DETAILS,
   QNA_SECTIONS,
@@ -157,10 +158,11 @@ export default function QnaDetailPage({ params }: { params: { slug: string } }) 
       {/* 카테고리 라벨 → 허브 앵커로 복귀 */}
       <Link
         href={`/qna#${section.key}`}
-        className="inline-flex items-center gap-1.5 text-[11px] font-bold text-stone-500 bg-stone-100 rounded-full px-3 py-1.5 mb-4 hover:bg-stone-200 transition-colors"
+        className="group inline-flex items-center gap-1.5 text-[11px] font-bold text-brand-dark bg-white border border-brand/40 rounded-full px-3 py-1.5 mb-4 hover:bg-brand-dark hover:text-white hover:border-brand-dark transition-colors"
       >
-        <span>{section.icon}</span>
+        <span aria-hidden>{section.icon}</span>
         {section.label}
+        <span className="group-hover:translate-x-0.5 transition-transform" aria-hidden>›</span>
       </Link>
 
       <h1 className="text-[26px] md:text-3xl font-extrabold text-stone-900 leading-snug mb-5 break-keep">{d.h1}</h1>
@@ -187,16 +189,13 @@ export default function QnaDetailPage({ params }: { params: { slug: string } }) 
       {/* ⑤ 관련 정보 */}
       {d.relatedInfo && d.relatedInfo.length > 0 && (
         <section className="mb-9">
-          <h2 className="text-base font-extrabold text-stone-800 mb-3">관련 정보</h2>
+          <h2 className="text-base font-extrabold text-stone-800 mb-3 flex items-center gap-2">
+            <span className="w-1 h-4 rounded-full bg-brand" aria-hidden />
+            관련 정보
+          </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             {d.relatedInfo.map((r) => (
-              <Link
-                key={r.href}
-                href={r.href}
-                className="bg-stone-50 border border-stone-200 rounded-xl px-4 py-3 hover:border-stone-400 transition-colors"
-              >
-                <p className="text-[13px] font-bold text-stone-800">{r.label} →</p>
-              </Link>
+              <QnaCardLink key={r.href} href={r.href} label={r.label} />
             ))}
           </div>
         </section>
@@ -210,33 +209,28 @@ export default function QnaDetailPage({ params }: { params: { slug: string } }) 
 
       {/* ⑦ 관련 질문 4개 — 같은 카테고리 안에서만 */}
       <section className="mb-9">
-        <h2 className="text-base font-extrabold text-stone-800 mb-3">관련 질문</h2>
+        <h2 className="text-base font-extrabold text-stone-800 mb-3 flex items-center gap-2">
+          <span className="w-1 h-4 rounded-full bg-brand" aria-hidden />
+          관련 질문
+        </h2>
         <ul className="divide-y divide-stone-100 border-y border-stone-100">
           {related.map((r) =>
             r && QNA_DETAILS[r.slug] ? (
               <li key={r.slug}>
-                <Link href={`/qna/${r.slug}`} className="group flex items-center gap-3 py-3.5 hover:bg-stone-50 transition-colors">
-                  <span className="text-stone-300 shrink-0 text-sm">Q</span>
-                  <span className="text-[14px] text-stone-700 font-medium leading-snug break-keep group-hover:text-stone-900">
-                    {r.question}
-                  </span>
-                  <span className="ml-auto shrink-0 text-stone-300 group-hover:text-stone-700 transition-colors">→</span>
-                </Link>
+                <QnaLinkRow href={`/qna/${r.slug}`} question={r.question} />
               </li>
             ) : r ? (
-              <li key={r.slug} className="flex items-center gap-3 py-3.5">
-                <span className="text-stone-200 shrink-0 text-sm">Q</span>
-                <span className="text-[14px] text-stone-400 leading-snug break-keep">{r.question}</span>
-                <span className="ml-auto shrink-0 text-[10px] font-bold text-stone-300 bg-stone-50 rounded-full px-2 py-0.5">
-                  준비 중
-                </span>
+              <li key={r.slug}>
+                <QnaPendingRow question={r.question} />
               </li>
             ) : null
           )}
         </ul>
-        <Link href={`/qna#${section.key}`} className="inline-block mt-4 text-sm font-bold text-blue-700 hover:underline">
-          {section.label} 질문 전체 보기 →
-        </Link>
+        <QnaSeeAllLink
+          href={`/qna#${section.key}`}
+          label={`${section.label} 질문 전체 보기`}
+          className="mt-4 text-sm"
+        />
       </section>
 
       {/* ⑨ 면책 */}

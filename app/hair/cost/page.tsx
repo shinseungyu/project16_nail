@@ -181,7 +181,7 @@ export default function HairCostPage() {
             <div key={r.name} className="bg-white border border-stone-100 rounded-2xl p-4 shadow-sm"><p className="text-sm font-bold text-stone-800 mb-1">{r.name}</p><p className="text-xs text-stone-500">{r.desc}</p><p className="text-[11px] text-stone-400 mt-1">확인처: {r.where}</p></div>
           ))}
         </div>
-        <p className="text-xs text-stone-500 mt-3 leading-relaxed">금액·요건은 매년 변경됩니다. 대부분 <strong className="text-stone-700">사업자등록증과 이용사 면허증</strong>을 요구합니다. 학원비·국비지원 상세는 <a href="https://haircost.kr" target="_blank" rel="noopener noreferrer" className="text-blue-700 hover:underline">haircost.kr ↗</a>에서 확인하세요.</p>
+        <p className="text-xs text-stone-500 mt-3 leading-relaxed">금액·요건은 매년 변경됩니다. 대부분 <strong className="text-stone-700">사업자등록증과 이용사 면허증</strong>을 요구합니다. 학원비·국비지원 상세는 <a href="https://haircost.kr" target="_blank" rel="noopener noreferrer" className="text-rose-700 underline decoration-2 decoration-rose-300 underline-offset-2 hover:decoration-rose-600 transition-colors">haircost.kr ↗</a>에서 확인하세요.</p>
       </section>
 
       {/* 내부링크 */}

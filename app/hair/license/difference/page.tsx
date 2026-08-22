@@ -152,9 +152,9 @@ export default function DifferencePage() {
         </div>
         <p className="text-xs text-stone-500 leading-relaxed">
           피부관리·네일·화장분장은 각각{' '}
-          <Link href="/skincare/license" className="text-blue-700 font-semibold hover:underline">미용사(피부)</Link>,{' '}
-          <Link href="/license" className="text-blue-700 font-semibold hover:underline">미용사(네일)</Link>,{' '}
-          <Link href="/makeup/license" className="text-blue-700 font-semibold hover:underline">미용사(메이크업)</Link>{' '}
+          <Link href="/skincare/license" className="text-rose-700 font-semibold underline decoration-2 decoration-rose-300 underline-offset-2 hover:decoration-rose-600 transition-colors">미용사(피부)</Link>,{' '}
+          <Link href="/license" className="text-rose-700 font-semibold underline decoration-2 decoration-rose-300 underline-offset-2 hover:decoration-rose-600 transition-colors">미용사(네일)</Link>,{' '}
+          <Link href="/makeup/license" className="text-rose-700 font-semibold underline decoration-2 decoration-rose-300 underline-offset-2 hover:decoration-rose-600 transition-colors">미용사(메이크업)</Link>{' '}
           면허의 영역입니다.
         </p>
       </section>

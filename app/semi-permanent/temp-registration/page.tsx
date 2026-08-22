@@ -230,7 +230,7 @@ export default function TempRegistrationPage() {
             <li>위생·안전 교육과 건강진단 이력을 미리 갖춰두면 유리합니다.</li>
             <li>
               시행령·시행규칙 발표를 주시하세요.{' '}
-              <Link href="/semi-permanent/law-timeline" className="text-blue-700 font-semibold hover:underline">
+              <Link href="/semi-permanent/law-timeline" className="text-rose-700 font-semibold underline decoration-2 decoration-rose-300 underline-offset-2 hover:decoration-rose-600 transition-colors">
                 일정 확인
               </Link>
             </li>

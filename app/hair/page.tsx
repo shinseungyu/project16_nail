@@ -270,7 +270,7 @@ export default function HairHub() {
           </div>
           <div className="mt-4 bg-stone-50 border border-stone-100 rounded-xl p-4 flex items-center justify-between gap-4">
             <p className="text-xs text-stone-500 leading-relaxed"><strong className="text-stone-700">이용사 학원비·국비지원</strong>이 궁금하신가요? 학원 수강료 비교는 별도 사이트에서 확인하세요.</p>
-            <a href="https://haircost.kr" target="_blank" rel="noopener noreferrer" className="shrink-0 text-xs font-bold text-blue-700 hover:underline">haircost.kr 바로가기 ↗</a>
+            <a href="https://haircost.kr" target="_blank" rel="noopener noreferrer" className="shrink-0 text-xs font-bold text-rose-700 underline decoration-2 decoration-rose-300 underline-offset-2 hover:decoration-rose-600 transition-colors">haircost.kr 바로가기 ↗</a>
           </div>
         </section>
 
@@ -397,7 +397,7 @@ export default function HairHub() {
             <Link href="/skincare" className="bg-stone-50 border border-stone-200 rounded-2xl p-5 hover:border-stone-400 transition-colors"><p className="text-xs font-semibold text-stone-400 mb-1">객단가 높은</p><p className="font-bold text-stone-900">피부관리샵 창업과 비교하기 →</p></Link>
             <Link href="/makeup" className="bg-stone-50 border border-stone-200 rounded-2xl p-5 hover:border-stone-400 transition-colors"><p className="text-xs font-semibold text-stone-400 mb-1">최소 자본</p><p className="font-bold text-stone-900">메이크업샵 창업과 비교하기 →</p></Link>
           </div>
-          <p className="text-xs text-stone-400 mt-4">이용사 학원 수강료·국비지원 비교는 외부 사이트 <a href="https://haircost.kr" target="_blank" rel="noopener noreferrer" className="text-blue-700 hover:underline">haircost.kr ↗</a>에서 확인하세요.</p>
+          <p className="text-xs text-stone-400 mt-4">이용사 학원 수강료·국비지원 비교는 외부 사이트 <a href="https://haircost.kr" target="_blank" rel="noopener noreferrer" className="text-rose-700 underline decoration-2 decoration-rose-300 underline-offset-2 hover:decoration-rose-600 transition-colors">haircost.kr ↗</a>에서 확인하세요.</p>
         </section>
 
         <RelatedQna sections={['hair-style', 'hair-license']} limit={8} />

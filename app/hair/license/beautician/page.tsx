@@ -132,7 +132,7 @@ export default function BeauticianPage() {
           </table>
         </div>
         <p className="text-xs text-stone-500">
-          <Link href="/hair/license/difference" className="text-blue-700 font-semibold hover:underline">
+          <Link href="/hair/license/difference" className="text-rose-700 font-semibold underline decoration-2 decoration-rose-300 underline-offset-2 hover:decoration-rose-600 transition-colors">
             미용사와 이용사 차이 자세히 보기
           </Link>
         </p>

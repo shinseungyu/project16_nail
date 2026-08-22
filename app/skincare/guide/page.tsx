@@ -135,13 +135,13 @@ export default function SkincareGuidePage() {
         </div>
         <p className="text-xs text-stone-500">
           관리별 상세는{' '}
-          <Link href="/skincare/service/basic" className="text-blue-700 font-semibold hover:underline">기본관리</Link>
+          <Link href="/skincare/service/basic" className="text-rose-700 font-semibold underline decoration-2 decoration-rose-300 underline-offset-2 hover:decoration-rose-600 transition-colors">기본관리</Link>
           {' · '}
-          <Link href="/skincare/service/acne" className="text-blue-700 font-semibold hover:underline">여드름</Link>
+          <Link href="/skincare/service/acne" className="text-rose-700 font-semibold underline decoration-2 decoration-rose-300 underline-offset-2 hover:decoration-rose-600 transition-colors">여드름</Link>
           {' · '}
-          <Link href="/skincare/service/lifting" className="text-blue-700 font-semibold hover:underline">리프팅</Link>
+          <Link href="/skincare/service/lifting" className="text-rose-700 font-semibold underline decoration-2 decoration-rose-300 underline-offset-2 hover:decoration-rose-600 transition-colors">리프팅</Link>
           {' · '}
-          <Link href="/skincare/service/waxing" className="text-blue-700 font-semibold hover:underline">왁싱</Link>
+          <Link href="/skincare/service/waxing" className="text-rose-700 font-semibold underline decoration-2 decoration-rose-300 underline-offset-2 hover:decoration-rose-600 transition-colors">왁싱</Link>
           {' '}페이지에 있습니다.
         </p>
       </section>

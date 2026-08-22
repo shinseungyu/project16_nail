@@ -1,6 +1,6 @@
-import Link from 'next/link'
 import { QNA_ITEMS, QNA_SECTIONS, isPublished } from '@/data/qna'
 import type { SectionKey } from '@/data/qna'
+import { QnaLinkRow, QnaSeeAllLink } from '@/components/QnaLinks'
 
 type Props = {
   /** 노출할 Q&A 섹션 (첫 번째 섹션이 "전체 보기" 앵커가 된다) */
@@ -46,28 +46,21 @@ export default function RelatedQna({ sections, limit = 6, offset = 0, title = '�
   return (
     <section className="mb-10">
       <div className="flex items-baseline justify-between gap-3 mb-3">
-        <h2 className="text-base font-extrabold text-stone-800">{title}</h2>
-        <Link
+        <h2 className="text-base font-extrabold text-stone-800 flex items-center gap-2">
+          <span className="w-1 h-4 rounded-full bg-brand" aria-hidden />
+          {title}
+        </h2>
+        <QnaSeeAllLink
           href={`/qna#${anchor}`}
-          aria-label={`${sectionLabel} 질문 전체 보기`}
-          className="text-[13px] font-bold text-blue-700 hover:underline shrink-0"
-        >
-          전체 보기 →
-        </Link>
+          ariaLabel={`${sectionLabel} 질문 전체 보기`}
+          label="전체 보기"
+          className="text-[13px] shrink-0"
+        />
       </div>
       <ul className="divide-y divide-stone-100 border-y border-stone-100">
         {picked.map((q) => (
           <li key={q.slug}>
-            <Link
-              href={`/qna/${q.slug}`}
-              className="group flex items-center gap-3 py-3 hover:bg-stone-50 transition-colors"
-            >
-              <span className="text-stone-300 shrink-0 text-sm">Q</span>
-              <span className="text-[14px] text-stone-700 font-medium leading-snug break-keep group-hover:text-stone-900">
-                {q.question}
-              </span>
-              <span className="ml-auto shrink-0 text-stone-300 group-hover:text-stone-700 transition-colors">→</span>
-            </Link>
+            <QnaLinkRow href={`/qna/${q.slug}`} question={q.question} />
           </li>
         ))}
       </ul>

@@ -127,7 +127,7 @@ export default function WrittenPage() {
             href="http://www.q-net.or.kr/crf005.do?id=crf00503&jmCd=7908"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-700 hover:underline"
+            className="text-rose-700 underline decoration-2 decoration-rose-300 underline-offset-2 hover:decoration-rose-600 transition-colors"
           >
             Q-Net 이용사 종목 정보 ↗
           </a>

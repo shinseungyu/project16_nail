@@ -200,7 +200,7 @@ export default function CurlingIronPage() {
         </div>
         <p className="text-xs text-stone-500 mt-3">
           손상이 이미 진행됐다면{' '}
-          <Link href="/hair/scalp/clinic" className="text-blue-700 font-semibold hover:underline">
+          <Link href="/hair/scalp/clinic" className="text-rose-700 font-semibold underline decoration-2 decoration-rose-300 underline-offset-2 hover:decoration-rose-600 transition-colors">
             헤어 클리닉
           </Link>
           으로 진행을 늦출 수 있습니다.

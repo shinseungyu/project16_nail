@@ -177,7 +177,7 @@ export default function HairLicensePage() {
           </table>
         </div>
         <div className="bg-emerald-50 border border-emerald-100 rounded-xl p-4">
-          <p className="text-xs text-emerald-900 leading-relaxed"><strong>현실적인 추천:</strong> 필기는 독학, 실기는 학원. 실기에 기구 분해·소독이 포함되어 있어 실물 장비로 반복 연습이 필요합니다. <strong>학원 수강료와 국비지원 금액 비교는</strong> <a href="https://haircost.kr" target="_blank" rel="noopener noreferrer" className="text-blue-700 hover:underline font-bold">haircost.kr ↗</a>에서 확인하세요.</p>
+          <p className="text-xs text-emerald-900 leading-relaxed"><strong>현실적인 추천:</strong> 필기는 독학, 실기는 학원. 실기에 기구 분해·소독이 포함되어 있어 실물 장비로 반복 연습이 필요합니다. <strong>학원 수강료와 국비지원 금액 비교는</strong> <a href="https://haircost.kr" target="_blank" rel="noopener noreferrer" className="text-rose-700 underline decoration-2 decoration-rose-300 underline-offset-2 hover:decoration-rose-600 transition-colors font-bold">haircost.kr ↗</a>에서 확인하세요.</p>
         </div>
       </section>
 

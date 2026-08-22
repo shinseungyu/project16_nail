@@ -218,7 +218,7 @@ export default function SalonEquipmentPage() {
         </div>
         <p className="text-xs text-stone-500">
           인테리어·보증금까지 포함한 전체 창업비용은{' '}
-          <Link href="/hair/cost" className="text-blue-700 font-semibold hover:underline">
+          <Link href="/hair/cost" className="text-rose-700 font-semibold underline decoration-2 decoration-rose-300 underline-offset-2 hover:decoration-rose-600 transition-colors">
             미용실 창업비용
           </Link>{' '}
           페이지에 있습니다.

@@ -137,7 +137,7 @@ export default function SemiPermanentLegalPage() {
         </div>
         <p className="text-xs text-stone-500 mt-3">
           기존 종사자 특례는 별도로 정리했습니다 —{' '}
-          <Link href="/semi-permanent/temp-registration" className="text-blue-700 font-semibold hover:underline">
+          <Link href="/semi-permanent/temp-registration" className="text-rose-700 font-semibold underline decoration-2 decoration-rose-300 underline-offset-2 hover:decoration-rose-600 transition-colors">
             임시등록 특례 자세히 보기
           </Link>
         </p>

@@ -171,7 +171,7 @@ export default function HowToPage() {
         </div>
         <p className="text-xs text-stone-500">
           학원비·국비지원 비교는{' '}
-          <a href="https://haircost.kr" target="_blank" rel="noopener noreferrer" className="text-blue-700 font-semibold hover:underline">
+          <a href="https://haircost.kr" target="_blank" rel="noopener noreferrer" className="text-rose-700 font-semibold underline decoration-2 decoration-rose-300 underline-offset-2 hover:decoration-rose-600 transition-colors">
             haircost.kr ↗
           </a>
           에서 확인하세요.
@@ -253,9 +253,9 @@ export default function HowToPage() {
           </table>
         </div>
         <p className="text-xs text-stone-500">
-          <Link href="/hair/career/freelance" className="text-blue-700 font-semibold hover:underline">프리랜서 배분 구조 자세히</Link>
+          <Link href="/hair/career/freelance" className="text-rose-700 font-semibold underline decoration-2 decoration-rose-300 underline-offset-2 hover:decoration-rose-600 transition-colors">프리랜서 배분 구조 자세히</Link>
           {' · '}
-          <Link href="/hair/cost" className="text-blue-700 font-semibold hover:underline">창업비용 계산</Link>
+          <Link href="/hair/cost" className="text-rose-700 font-semibold underline decoration-2 decoration-rose-300 underline-offset-2 hover:decoration-rose-600 transition-colors">창업비용 계산</Link>
         </p>
       </section>
 

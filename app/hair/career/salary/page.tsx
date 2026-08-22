@@ -276,7 +276,7 @@ export default function SalaryPage() {
           <p className="text-xs text-stone-500 mt-3 leading-relaxed bg-stone-50 border border-stone-100 rounded-xl p-3">
             여기서 <strong className="text-stone-700">4대 보험·세금·휴직 대비</strong>를 본인이 부담합니다. 직장인 월급
             600만원과 단순 비교하면 안 됩니다.{' '}
-            <Link href="/hair/revenue" className="text-blue-700 font-semibold hover:underline">
+            <Link href="/hair/revenue" className="text-rose-700 font-semibold underline decoration-2 decoration-rose-300 underline-offset-2 hover:decoration-rose-600 transition-colors">
               수익 구조 자세히
             </Link>
           </p>

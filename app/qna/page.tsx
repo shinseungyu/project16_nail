@@ -3,6 +3,7 @@ import Link from 'next/link'
 import AdUnit from '@/components/AdUnit'
 import FormSection from '../test/FormSection'
 import { QNA_SECTIONS, QNA_ITEMS, itemsBySection, isPublished, PUBLISHED_SLUGS } from '@/data/qna'
+import { QnaLinkRow, QnaPendingRow, QnaCardLink } from '@/components/QnaLinks'
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.nailstartup.com'
 
@@ -73,24 +74,21 @@ export default function QnaHubPage() {
 
       {/* 카테고리에서 찾기 */}
       <section className="mb-8">
-        <h2 className="text-base font-extrabold text-stone-800 mb-3">카테고리에서 찾기</h2>
+        <h2 className="text-base font-extrabold text-stone-800 mb-3 flex items-center gap-2">
+          <span className="w-1 h-4 rounded-full bg-brand" aria-hidden />
+          카테고리에서 찾기
+        </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
-          {QNA_SECTIONS.map((s) => {
-            const count = itemsBySection(s.key).length
-            return (
-              <a
-                key={s.key}
-                href={`#${s.key}`}
-                className="bg-stone-50 border border-stone-200 rounded-xl px-4 py-3 flex items-center justify-between hover:border-stone-400 hover:bg-white transition-colors"
-              >
-                <span className="text-sm font-bold text-stone-800 flex items-center gap-2">
-                  <span>{s.icon}</span>
-                  {s.label}
-                </span>
-                <span className="text-xs font-bold text-stone-400 shrink-0">{count}</span>
-              </a>
-            )
-          })}
+          {QNA_SECTIONS.map((s) => (
+            <QnaCardLink
+              key={s.key}
+              href={`#${s.key}`}
+              anchor
+              icon={s.icon}
+              label={s.label}
+              badge={itemsBySection(s.key).length}
+            />
+          ))}
         </div>
       </section>
 
@@ -115,31 +113,16 @@ export default function QnaHubPage() {
               <p className="text-xs text-stone-400 mb-4">{items.length}개 질문</p>
 
               <ul className="divide-y divide-stone-100 border-y border-stone-100">
-                {items.map((i) =>
-                  isPublished(i.slug) ? (
-                    <li key={i.slug}>
-                      <Link
-                        href={`/qna/${i.slug}`}
-                        className="group flex items-center gap-3 py-3.5 hover:bg-stone-50 transition-colors"
-                      >
-                        <span className="text-stone-300 shrink-0 text-sm">Q</span>
-                        <span className="text-[14px] text-stone-700 font-medium leading-snug break-keep group-hover:text-stone-900">
-                          {i.question}
-                        </span>
-                        <span className="ml-auto shrink-0 text-stone-300 group-hover:text-stone-700 transition-colors">→</span>
-                      </Link>
-                    </li>
-                  ) : (
-                    // 원고 미작성분 — 링크를 걸면 404가 되므로 제목만 노출한다
-                    <li key={i.slug} className="flex items-center gap-3 py-3.5">
-                      <span className="text-stone-200 shrink-0 text-sm">Q</span>
-                      <span className="text-[14px] text-stone-400 leading-snug break-keep">{i.question}</span>
-                      <span className="ml-auto shrink-0 text-[10px] font-bold text-stone-300 bg-stone-50 rounded-full px-2 py-0.5">
-                        준비 중
-                      </span>
-                    </li>
-                  )
-                )}
+                {items.map((i) => (
+                  <li key={i.slug}>
+                    {isPublished(i.slug) ? (
+                      <QnaLinkRow href={`/qna/${i.slug}`} question={i.question} />
+                    ) : (
+                      // 원고 미작성분 — 링크를 걸면 404가 되므로 제목만 노출한다
+                      <QnaPendingRow question={i.question} />
+                    )}
+                  </li>
+                ))}
               </ul>
             </section>
           )
@@ -170,13 +153,7 @@ export default function QnaHubPage() {
             { href: '/makeup', label: '메이크업샵 창업' },
             { href: '/hair', label: '이용원 창업' },
           ].map((l) => (
-            <Link
-              key={l.href}
-              href={l.href}
-              className="bg-stone-50 border border-stone-200 rounded-2xl p-4 hover:border-stone-400 transition-colors"
-            >
-              <p className="text-[13px] font-bold text-stone-800">{l.label} →</p>
-            </Link>
+            <QnaCardLink key={l.href} href={l.href} label={l.label} />
           ))}
         </div>
       </section>
