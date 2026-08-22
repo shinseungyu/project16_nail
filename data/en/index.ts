@@ -43,6 +43,15 @@ import { microneedlingAtHomeVsProfessional } from './microneedling-at-home-vs-pr
 import { microneedlingSideEffects } from './microneedling-side-effects'
 import { whoCanPerformMicroneedling } from './who-can-perform-microneedling'
 
+import { howLongDoPressOnNailsLast } from './how-long-do-press-on-nails-last'
+import { howToRemovePressOnNails } from './how-to-remove-press-on-nails'
+import { pressOnNailsVsGel } from './press-on-nails-vs-gel'
+import { pressOnNailsSizing } from './press-on-nails-sizing'
+import { howToApplyPressOnNails } from './how-to-apply-press-on-nails'
+import { doPressOnNailsDamageYourNails } from './do-press-on-nails-damage-your-nails'
+import { pressOnNailsShortNails } from './press-on-nails-short-nails'
+import { reusingPressOnNails } from './reusing-press-on-nails'
+
 /**
  * 영문 콘텐츠 페이지 전체 목록.
  * 허브의 섹션 카드와 sitemap이 여기서 파생되므로, 페이지를 추가하면 이 파일만 갱신하면 된다.
@@ -131,6 +140,23 @@ export const EN_SECTIONS: EnSection[] = [
       isMicroneedlingWorthIt,
       microneedlingAtHomeVsProfessional,
       whoCanPerformMicroneedling,
+    ],
+  },
+  {
+    key: 'press-on-nails',
+    title: 'Press on nails, done properly',
+    blurb:
+      'Sizing, application, and the removal method that decides whether they damage your nails. Written around the fact that prep is the whole game.',
+    icon: '💅',
+    pages: [
+      howLongDoPressOnNailsLast,
+      howToApplyPressOnNails,
+      pressOnNailsSizing,
+      howToRemovePressOnNails,
+      doPressOnNailsDamageYourNails,
+      pressOnNailsVsGel,
+      pressOnNailsShortNails,
+      reusingPressOnNails,
     ],
   },
 ]

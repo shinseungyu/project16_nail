@@ -1,0 +1,125 @@
+import type { EnPage } from './types'
+import { EN_UPDATED, EN_UPDATED_ISO } from './common'
+
+export const howLongDoPressOnNailsLast: EnPage = {
+  path: '/en/how-long-do-press-on-nails-last',
+  title: 'How Long Do Press On Nails Last?',
+  h1: 'How Long Do Press On Nails Actually Last?',
+  description:
+    'Press ons last three days to two weeks depending on the adhesive and how you prep. The realistic range, and what actually makes the difference.',
+  keywords: ['how long do press on nails last', 'press on nails wear time', 'press on nails falling off'],
+  category: 'Nails',
+  stage: 2,
+  updated: EN_UPDATED,
+  updatedIso: EN_UPDATED_ISO,
+  lead:
+    '**Adhesive tabs give you three to seven days. Nail glue gives you one to two weeks.** The single biggest variable is not the nails themselves — it is preparation. Oily, unprepped nails will lose press ons in a day regardless of what you paid for them.',
+  blocks: [
+    { t: 'h2', id: 'by-adhesive', text: 'By adhesive type' },
+    {
+      t: 'table',
+      head: ['Method', 'Typical wear', 'Removal difficulty', 'Reusable?'],
+      rows: [
+        ['Adhesive tabs', '3 - 7 days', 'Easy', 'Yes'],
+        ['Nail glue', '1 - 2 weeks', 'Harder', 'Usually not'],
+        ['Gel adhesive with a lamp', '2 - 3 weeks', 'Requires soak-off', 'No'],
+      ],
+    },
+    { t: 'p', text: 'The adhesive decides the ceiling; your prep decides whether you reach it. A glue application on a properly prepped nail comfortably reaches two weeks, and the same glue on an unprepped nail can fail the same day.' },
+    { t: 'h2', id: 'why-early', text: 'Why yours fall off early' },
+    {
+      t: 'table',
+      head: ['Cause', 'Fix'],
+      rows: [
+        ['Oils on the nail plate', 'Wipe with alcohol or a dehydrator before applying'],
+        ['Wrong size', 'A tip that does not reach sidewall to sidewall will lift'],
+        ['Not pressing long enough', 'Hold each nail 30 seconds'],
+        ['Water too soon', 'Wait at least one to two hours before washing up'],
+        ['Cuticle overlap', 'Adhesive on skin lifts immediately'],
+        ['Nails too long for your routine', 'Leverage pulls them off'],
+      ],
+    },
+    { t: 'p', text: '**Oils are the dominant cause by a wide margin.** Hands produce them constantly, hand cream leaves them behind, and a rinse under the tap does not remove them. That is why the alcohol wipe matters more than any other single step.' },
+    { t: 'h2', id: 'making-them-last', text: 'Making them last' },
+    {
+      t: 'ol',
+      items: [
+        '**Push back cuticles and buff lightly** — a slightly matte surface holds better than a shiny one.',
+        '**Wipe with alcohol** and let it dry fully. This step alone adds days.',
+        '**Size each nail individually.** Sizing kits exist because ten nails are not one size.',
+        'Apply adhesive to both the natural nail and the tip.',
+        '**Press for 30 seconds per nail**, firmly, and count it.',
+        'Avoid water for one to two hours afterwards.',
+      ],
+    },
+    { t: 'h2', id: 'lifestyle', text: 'What your routine does to wear time' },
+    { t: 'p', text: 'Two people can apply the same set identically and get very different results, because press ons are held on by an adhesive bond that daily life works against.' },
+    {
+      t: 'table',
+      head: ['Factor', 'Effect'],
+      rows: [
+        ['Frequent hand washing', 'Repeated wetting weakens the bond'],
+        ['Washing up without gloves', 'Heat and detergent together, the worst combination'],
+        ['Hand sanitiser', 'Alcohol degrades some adhesives over time'],
+        ['Typing and manual work', 'Constant small leverage at the free edge'],
+        ['Long or extreme shapes', 'More leverage on the same bond'],
+        ['Hot showers and baths', 'Softens adhesive and swells the nail'],
+      ],
+    },
+    { t: 'note', title: 'Shorter lasts longer', text: 'If your sets keep failing early and your prep is solid, the length is usually the remaining variable. A shorter tip puts far less strain on the same bond.' },
+    { t: 'h2', id: 'expectations', text: 'What is realistic' },
+    { t: 'p', text: 'Press ons are a short-term wear product by design, and holding them to a gel manicure’s timeline sets up disappointment. The trade you are making is durability for flexibility, cost, and the ability to change your mind.' },
+    {
+      t: 'table',
+      head: ['If you want', 'Realistic plan'],
+      rows: [
+        ['A set for one event', 'Tabs - easy on, easy off'],
+        ['A week of wear', 'Glue, well prepped'],
+        ['Two weeks', 'Glue, shorter length, gloves for washing up'],
+        ['Three weeks or more', 'A salon system rather than press ons'],
+      ],
+    },
+    { t: 'h2', id: 'tabs-vs-glue', text: 'Choosing between tabs and glue' },
+    { t: 'p', text: 'This is the decision that sets your wear time before you touch a nail, and it is worth making deliberately rather than using whatever came in the box.' },
+    {
+      t: 'table',
+      head: ['', 'Adhesive tabs', 'Nail glue'],
+      rows: [
+        ['Wear', '3 - 7 days', '1 - 2 weeks'],
+        ['Removal', 'Warm water, easy', 'Acetone or long soak'],
+        ['Reuse', 'Usually yes', 'Usually not'],
+        ['Damage risk', 'Lower', 'Low if soaked off'],
+        ['Works on short nails', 'Less well', 'Better'],
+        ['Best for', 'One event, frequent changes', 'Two-week wear'],
+      ],
+    },
+    { t: 'p', text: 'Many people use both — tabs for a weekend, glue when they want the set to hold. Buying one of each costs very little and removes the compromise entirely.' },
+    { t: 'h2', id: 'troubleshooting', text: 'Troubleshooting by symptom' },
+    { t: 'p', text: 'Failures follow patterns, and the pattern usually points at the cause more precisely than a general checklist does.' },
+    {
+      t: 'table',
+      head: ['What happens', 'Most likely cause'],
+      rows: [
+        ['All ten lift within a day', 'Oils not removed - the alcohol wipe'],
+        ['One or two specific nails only', 'Sizing on those fingers'],
+        ['Lifts at the cuticle end', 'Adhesive touched skin, or overlap'],
+        ['Lifts at the free edge', 'Length and leverage'],
+        ['Pops off cleanly, intact', 'Not enough adhesive, or not pressed long enough'],
+        ['Comes off after washing up', 'Water too soon, or heat and detergent'],
+      ],
+    },
+    { t: 'note', title: 'Diagnose before buying different nails', text: 'People often conclude a brand is bad after one failed set. If all ten lifted on the same day, the brand was not the variable — the prep was.' },
+  ],
+  faq: [
+    { q: 'How long do press on nails last?', a: 'Three to seven days with adhesive tabs, and one to two weeks with nail glue, assuming the nails were prepped properly.' },
+    { q: 'Why do mine fall off in a day?', a: 'Almost always oils left on the nail plate, or incorrect sizing. Both are fixable and neither is about the quality of the nails.' },
+    { q: 'Can I shower with them?', a: 'Yes, after the first couple of hours. Prolonged soaking shortens wear, so baths are harder on them than showers.' },
+    { q: 'Can I reuse them?', a: 'With tabs, usually yes. With glue, usually not, because the residue is difficult to remove without damaging the tip.' },
+    { q: 'Do they damage nails?', a: 'Application generally does not. Pulling them off does, which is where nearly all press-on damage comes from.' },
+  ],
+  related: [
+    { href: '/en/how-to-remove-press-on-nails', label: 'How to Remove Press On Nails Without Damage' },
+    { href: '/en/how-to-apply-press-on-nails', label: 'How to Apply Press On Nails Properly' },
+    { href: '/en/press-on-nails-vs-gel', label: 'Press On Nails vs Gel' },
+  ],
+}

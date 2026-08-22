@@ -1,0 +1,128 @@
+import type { EnPage } from './types'
+import { EN_UPDATED, EN_UPDATED_ISO } from './common'
+
+export const pressOnNailsVsGel: EnPage = {
+  path: '/en/press-on-nails-vs-gel',
+  title: 'Press On Nails vs Gel: Cost, Wear and Damage Compared',
+  h1: 'Press On Nails vs Gel: Which Actually Makes Sense?',
+  description:
+    'Press ons cost a fraction of a gel set but last a fraction as long. The real annual cost comparison, and which actually damages nails more.',
+  keywords: ['press on nails vs gel', 'press ons or gel', 'press on nails cost comparison'],
+  category: 'Nails',
+  stage: 2,
+  updated: EN_UPDATED,
+  updatedIso: EN_UPDATED_ISO,
+  lead:
+    '**Press ons cost $5 to $30 a set and last up to two weeks. Gel costs $30 to $60 and lasts three to four weeks.** Per week of wear they are closer than they look, but press ons win on flexibility and gel wins on finish and durability.',
+  blocks: [
+    { t: 'h2', id: 'comparison', text: 'Side by side' },
+    {
+      t: 'table',
+      head: ['', 'Press ons', 'Gel manicure'],
+      rows: [
+        ['Cost per set', '$5 - 30', '$30 - 60'],
+        ['Wear time', '3 days - 2 weeks', '3 - 4 weeks'],
+        ['Cost per week of wear', '$3 - 15', '$8 - 20'],
+        ['Application time', '15 - 30 min', '60 - 70 min'],
+        ['Where', 'At home', 'Salon, or a DIY kit'],
+        ['Design range', 'Whatever you buy', 'Whatever the artist can do'],
+        ['Reusable', 'Often', 'No'],
+        ['Change frequency', 'Any time', 'Committed for weeks'],
+      ],
+    },
+    { t: 'h2', id: 'annual', text: 'Annual cost, realistically' },
+    {
+      t: 'table',
+      head: ['Scenario', 'Annual'],
+      rows: [
+        ['Press ons, new set every 10 days', 'approx. $180 - 730'],
+        ['Press ons, reusing sets', 'approx. $60 - 250'],
+        ['Gel every 3 weeks at a salon', 'approx. $520 - 1,040'],
+        ['Gel every 3 weeks plus removal fees', 'approx. $700 - 1,300'],
+      ],
+    },
+    { t: 'p', text: '**Press ons are cheaper, but not by as much as the sticker price suggests** once you account for how often you replace them. Reusing is what turns the gap from meaningful into large.' },
+    { t: 'h2', id: 'damage', text: 'Which damages nails more' },
+    { t: 'p', text: '**Neither, if removed properly. Both, if you pull them off.** The damage mechanism is identical: force separates the adhesive along with layers of nail plate. Soaking is the answer in both cases.' },
+    { t: 'p', text: 'There is one real difference. Gel prep involves buffing the natural nail to give the product something to grip, and press ons generally need less of that. Over months of continuous wear, that is a genuine if modest advantage.' },
+    { t: 'h2', id: 'when-each', text: 'When each makes sense' },
+    {
+      t: 'table',
+      head: ['Press ons if', 'Gel if'],
+      rows: [
+        ['You change designs often', 'You want set-and-forget'],
+        ['You need nails for one event', 'You want maximum durability'],
+        ['Budget is the priority', 'Finish quality matters most'],
+        ['You cannot get to a salon', 'You want custom art'],
+        ['Your nails need a break from filing', 'You are hard on your hands'],
+      ],
+    },
+    { t: 'h2', id: 'time-cost', text: 'The cost nobody counts' },
+    { t: 'p', text: 'Press ons are cheaper in money and more expensive in time, and for many people that is the decision rather than the price.' },
+    {
+      t: 'table',
+      head: ['', 'Press ons', 'Gel'],
+      rows: [
+        ['Your time per application', '20 - 30 min', '0 - you are sitting there anyway'],
+        ['Applications per year', '25 - 36', '13 - 17'],
+        ['Your annual time', 'approx. 10 - 18 hrs', 'Salon time, but not your labour'],
+        ['Removal time', '15 - 25 min each', 'Included in the appointment'],
+      ],
+    },
+    { t: 'note', title: 'Neither answer is wrong', text: 'If doing your nails is something you enjoy, the time column is not a cost. If it is a chore you resent, the gel premium is buying something real.' },
+    { t: 'h2', id: 'finish', text: 'The finish difference, honestly' },
+    { t: 'p', text: 'Press on quality has improved enough that the gap is smaller than it was, but it has not closed, and it closes least in the places people look.' },
+    {
+      t: 'table',
+      head: ['', 'Press ons', 'Gel'],
+      rows: [
+        ['Fit at the cuticle', 'A visible edge, however small', 'Flush to the skin'],
+        ['Thickness', 'The tip has its own thickness', 'Thin, follows the nail'],
+        ['Custom shape', 'Limited to what you buy', 'Filed to your nail'],
+        ['Custom colour', 'What is in the set', 'Anything'],
+        ['Consistency across ten nails', 'Very consistent', 'Depends on the artist'],
+      ],
+    },
+    { t: 'p', text: 'The cuticle edge is the tell. A gel manicure has no seam there; a press on always does, however well sized. At arm’s length nobody notices. Close up, some people do.' },
+    { t: 'h2', id: 'switching', text: 'Switching between them' },
+    { t: 'p', text: 'Moving from one to the other is straightforward as long as the first is removed properly rather than worked around.' },
+    {
+      t: 'ol',
+      items: [
+        '**Remove completely** rather than applying over anything.',
+        '**Assess the nail underneath** — if it feels thin, give it a short break.',
+        '**Do not apply press ons over gel**; adhesion to a cured surface is unreliable.',
+        '**Do not apply gel over press ons**; the tip is not a base the salon can prep.',
+        '**Tell a salon what you have been wearing** so they prep appropriately.',
+      ],
+    },
+    { t: 'note', title: 'Alternating is a reasonable pattern', text: 'Press ons during a busy period and gel when you want to stop thinking about it is a sensible rhythm rather than an inconsistency, and it gives the nail plate periodic breaks from buffing.' },
+    { t: 'h2', id: 'who-each-suits', text: 'A quick way to decide' },
+    { t: 'p', text: 'If you are going back and forth, the deciding question is usually not cost or durability but how much you enjoy the process itself.' },
+    {
+      t: 'table',
+      head: ['If this is true of you', 'Lean toward'],
+      rows: [
+        ['Doing your nails is downtime you enjoy', 'Press ons'],
+        ['You want nails handled and not thought about', 'Gel'],
+        ['You change your mind about colour often', 'Press ons'],
+        ['You work with your hands all day', 'Gel, or short press ons'],
+        ['You travel and cannot book appointments', 'Press ons'],
+        ['You want the closest thing to a natural finish', 'Gel'],
+      ],
+    },
+    { t: 'p', text: 'Neither is a commitment. Alternating between them is common and gives the nail plate periodic breaks from salon buffing, which is a small but real benefit over a year.' },
+  ],
+  faq: [
+    { q: 'Are press ons cheaper than gel?', a: 'Yes per set, and yes annually, though less dramatically than the per-set price implies once replacement frequency is counted.' },
+    { q: 'Which lasts longer?', a: 'Gel, by roughly double. Three to four weeks against one to two.' },
+    { q: 'Which damages nails more?', a: 'Neither, if removed correctly. Both, if pulled off. Gel prep involves slightly more buffing.' },
+    { q: 'Do press ons look as good?', a: 'Quality has improved substantially, though a custom gel set still offers more in finish and design.' },
+    { q: 'Can I put press ons over gel?', a: 'It is not advisable. Adhesion to a cured gel surface is unreliable.' },
+  ],
+  related: [
+    { href: '/en/how-long-do-gel-nails-last', label: 'How Long Do Gel Nails Last?' },
+    { href: '/en/how-long-do-press-on-nails-last', label: 'How Long Do Press On Nails Last?' },
+    { href: '/en/press-on-nails-sizing', label: 'How to Size Press On Nails Properly' },
+  ],
+}
