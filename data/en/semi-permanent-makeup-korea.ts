@@ -35,7 +35,7 @@ export const semiPermanentMakeupKorea: EnPage = {
       items: [
         '**Until April 2025** — tattooing, including semi-permanent makeup, was interpreted as a medical procedure. Non-physicians performing it were treated as practising medicine without a licence.',
         '**May 2025** — the Supreme Court reversed its 1992 position, holding that ordinary tattooing by a non-physician does not constitute unlicensed medical practice. A 33-year precedent changed.',
-        '**28 October 2025** — the **Tattooist Act (문신사법, Act No. 21070)** was promulgated. It defines tattooing and semi-permanent makeup together as "tattoo practice" and creates a national licensing system.',
+        '**28 October 2025** — the **Tattooist Act** was promulgated. It defines tattooing and semi-permanent makeup together as "tattoo practice" and creates a national licensing system.',
         '**2026-2027** — enforcement decrees, examination standards and the registration system are being built.',
         '**29 October 2027** — the Act takes full effect. Licensing and shop registration begin operating from this date.',
         '**Until 28 October 2029** — a transitional window in which existing practitioners can obtain a licence and complete formal registration.',
@@ -95,7 +95,7 @@ export const semiPermanentMakeupKorea: EnPage = {
     },
     {
       t: 'h3',
-      text: 'Natural / embo (자연눈썹, 엠보)',
+      text: 'Natural / embo',
     },
     {
       t: 'p',
@@ -103,7 +103,7 @@ export const semiPermanentMakeupKorea: EnPage = {
     },
     {
       t: 'h3',
-      text: 'Shadow / powder (섀도우, 수지)',
+      text: 'Shadow / powder',
     },
     {
       t: 'p',
@@ -111,7 +111,7 @@ export const semiPermanentMakeupKorea: EnPage = {
     },
     {
       t: 'h3',
-      text: 'Combo (콤보)',
+      text: 'Combo',
     },
     {
       t: 'p',
@@ -119,7 +119,7 @@ export const semiPermanentMakeupKorea: EnPage = {
     },
     {
       t: 'h3',
-      text: 'Lips (립)',
+      text: 'Lips',
     },
     {
       t: 'p',

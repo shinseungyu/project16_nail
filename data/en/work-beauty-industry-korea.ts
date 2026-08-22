@@ -77,10 +77,10 @@ export const workBeautyIndustryKorea: EnPage = {
     {
       t: 'ol',
       items: [
-        '**Intern / assistant (인턴, 스태프).** Shampooing, prep, cleaning, watching. One to two years is normal. Pay is at or near minimum wage and the hours are long.',
-        '**Junior designer (디자이너).** You take your own clients. Pay shifts from salary toward a commission share on the services you perform.',
-        '**Senior designer (실장).** An established client base, higher commission share, and a price multiplier of roughly 1.3 to 1.6 times the base menu.',
-        '**Director (부원장, 원장).** 1.6 to 2.5 times base pricing, and often a stake in the business.',
+        '**Intern / assistant.** Shampooing, prep, cleaning, watching. One to two years is normal. Pay is at or near minimum wage and the hours are long.',
+        '**Junior designer.** You take your own clients. Pay shifts from salary toward a commission share on the services you perform.',
+        '**Senior designer.** An established client base, higher commission share, and a price multiplier of roughly 1.3 to 1.6 times the base menu.',
+        '**Director.** 1.6 to 2.5 times base pricing, and often a stake in the business.',
         '**Owner or freelancer.** Renting a chair, opening a studio, or building an independent client base.',
       ],
     },

@@ -63,7 +63,7 @@ export default function EnHeader({ pathname }: { pathname: string }) {
           <span className="w-px h-4 bg-stone-200" aria-hidden />
           {/* 언어 전환 — 기획서 지정대로 국기 아이콘 없이 텍스트만 */}
           <a href={koTarget} lang="ko" className="text-brand hover:opacity-70 transition-opacity normal-case">
-            한국어
+            Korean
           </a>
         </nav>
 
@@ -127,7 +127,7 @@ export default function EnHeader({ pathname }: { pathname: string }) {
                 onClick={() => setOpen(false)}
                 className="inline-flex items-center gap-1.5 rounded-full border border-stone-200 bg-stone-50 px-3.5 py-2 text-[13px] font-bold text-stone-700 active:border-stone-400"
               >
-                한국어로 보기
+                View in Korean
               </a>
             </div>
           </nav>

@@ -33,16 +33,16 @@ export const beautyLicenseKorea: EnPage = {
     {
       t: 'table',
       caption: 'The national qualifications',
-      head: ['Licence', 'Korean', 'Covers'],
+      head: ['Licence', 'Korean (romanised)', 'Covers'],
       rows: [
-        ['Cosmetologist (Hair)', '미용사(일반)', 'Cutting, colour, perms — standard salon work'],
-        ['Cosmetologist (Skin)', '미용사(피부)', 'Facials, skin care, waxing, body care'],
-        ['Cosmetologist (Nail)', '미용사(네일)', 'Manicure, pedicure, gel, extensions, nail art'],
-        ['Cosmetologist (Makeup)', '미용사(메이크업)', 'Makeup, character makeup, lash extensions'],
-        ['Barber', '이용사', 'Barber business, including the traditional razor shave'],
+        ['Cosmetologist (Hair)', 'Miyongsa', 'Cutting, colour, perms — standard salon work'],
+        ['Cosmetologist (Skin)', 'Miyongsa', 'Facials, skin care, waxing, body care'],
+        ['Cosmetologist (Nail)', 'Miyongsa', 'Manicure, pedicure, gel, extensions, nail art'],
+        ['Cosmetologist (Makeup)', 'Miyongsa', 'Makeup, character makeup, lash extensions'],
+        ['Barber', 'Iyongsa', 'Barber business, including the traditional razor shave'],
       ],
       note:
-        'The barber licence sits under a legally separate business category (이용업) from the beauty business category (미용업). One does not substitute for the other in either direction.',
+        'The barber licence sits under a legally separate business category from the beauty business category. One does not substitute for the other in either direction.',
     },
     {
       t: 'note',
@@ -58,12 +58,12 @@ export const beautyLicenseKorea: EnPage = {
     },
     {
       t: 'p',
-      text: 'All five qualifications follow the same structure: a written exam, then a practical exam. Both are administered by the Human Resources Development Service of Korea (한국산업인력공단) and applied for through the Q-Net portal.',
+      text: 'All five qualifications follow the same structure: a written exam, then a practical exam. Both are administered by the Human Resources Development Service of Korea and applied for through the Q-Net portal.',
     },
     {
       t: 'table',
       caption: 'Exam structure and 2026 fees',
-      head: ['', 'Written (필기)', 'Practical (실기)'],
+      head: ['', 'Written', 'Practical'],
       rows: [
         ['Format', '60 multiple-choice questions, 4 subjects', 'Hands-on tasks, timed'],
         ['Pass mark', '60 points (36 of 60 correct)', '60 points'],
@@ -107,7 +107,7 @@ export const beautyLicenseKorea: EnPage = {
     },
     {
       t: 'p',
-      text: 'Passing the exam gives you the qualification. The licence itself (면허) is then applied for at the city, county or district office where you reside. Certain grounds — including specified health conditions and drug-related disqualifications set out in the Public Health Control Act — bar issuance regardless of exam results.',
+      text: 'Passing the exam gives you the qualification. The licence itself is then applied for at the city, county or district office where you reside. Certain grounds — including specified health conditions and drug-related disqualifications set out in the Public Health Control Act — bar issuance regardless of exam results.',
     },
     {
       t: 'h3',

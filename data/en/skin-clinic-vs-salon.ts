@@ -28,7 +28,7 @@ export const skinClinicVsSalon: EnPage = {
     },
     {
       t: 'p',
-      text: 'In many countries a "medi-spa" can sit anywhere on the spectrum between a facial and a laser. Korea does not allow that middle ground. A dermatology clinic (피부과) is a medical institution operating under medical law with a licensed physician. A skin-care shop (피부관리실 or 에스테틱) is a beauty business operating under the Public Health Control Act with a national cosmetology (skin) licence holder.',
+      text: 'In many countries a "medi-spa" can sit anywhere on the spectrum between a facial and a laser. Korea does not allow that middle ground. A dermatology clinic is a medical institution operating under medical law with a licensed physician. A skin-care shop is a beauty business operating under the Public Health Control Act with a national cosmetology (skin) licence holder.',
     },
     {
       t: 'p',
@@ -126,7 +126,7 @@ export const skinClinicVsSalon: EnPage = {
     {
       t: 'ol',
       items: [
-        '**Read the name.** 피부과 means dermatology and is a medical specialty. 피부관리실, 에스테틱, 스킨케어 are beauty shops. A place calling itself 의원 (clinic) is medical.',
+        '**Read the name.** Pibugwa means dermatology and is a medical specialty. Pibu-gwallisil, Eseutetik, Seukinkeeo are beauty shops. A place calling itself Uiwon (clinic) is medical.',
         '**Look for the doctor.** Medical institutions display the physician’s licence and the institution’s opening certificate. Beauty shops display a business report certificate and a cosmetology licence — different documents.',
         '**Check what is being promised.** Language like "treats", "cures", "medical" from a beauty shop is a licensing problem. Korean beauty shops are legally required to avoid medical claims, and the careful ones are visibly careful about wording.',
         '**Ask what device is being used.** Medical device categories cannot be operated by a beauty shop. A vague answer is an answer.',
@@ -157,7 +157,7 @@ export const skinClinicVsSalon: EnPage = {
   faq: [
     {
       q: 'What is the difference between a Korean skin clinic and a beauty salon?',
-      a: 'A dermatology clinic (피부과) is a medical institution run by a licensed physician and can perform lasers, injections, medical peels and anything that breaks the skin. A skin-care shop (피부관리실, 에스테틱) is a beauty business run by a licensed skin-care technician and is limited to non-medical care: facials, extraction, massage, cosmetic-grade peels and waxing.',
+      a: 'A dermatology clinic is a medical institution run by a licensed physician and can perform lasers, injections, medical peels and anything that breaks the skin. A skin-care shop is a beauty business run by a licensed skin-care technician and is limited to non-medical care: facials, extraction, massage, cosmetic-grade peels and waxing.',
     },
     {
       q: 'Can a Korean beauty salon do laser treatments?',
@@ -177,7 +177,7 @@ export const skinClinicVsSalon: EnPage = {
     },
     {
       q: 'How do I tell whether a place is medical or not?',
-      a: 'Read the Korean name. 피부과 and 의원 indicate a medical institution; 피부관리실, 에스테틱 and 스킨케어 indicate a beauty shop. Medical institutions display a physician licence and an institution opening certificate, while beauty shops display a business report certificate and a cosmetology licence. And check the wording — legally, a beauty shop cannot claim to treat or cure anything.',
+      a: 'Read the Korean name. Pibugwa and Uiwon indicate a medical institution; Pibu-gwallisil, Eseutetik and Seukinkeeo indicate a beauty shop. Medical institutions display a physician licence and an institution opening certificate, while beauty shops display a business report certificate and a cosmetology licence. And check the wording — legally, a beauty shop cannot claim to treat or cure anything.',
     },
   ],
   related: [

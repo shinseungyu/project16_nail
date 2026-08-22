@@ -210,18 +210,18 @@ export default function EnHub() {
               </thead>
               <tbody>
                 {[
-                  ['Nail salon', '네일', 'Add the neighbourhood: 네일 성수'],
-                  ['Gel extensions', '젤 연장', 'Soft gel tips are the Korean default'],
-                  ['Waxing', '왁싱', '남성 왁싱 for male menus'],
-                  ['Lash extensions', '속눈썹 연장', '속눈썹 펌 for a lash lift instead'],
-                  ['Hair salon', '미용실', '바버샵 for a barbershop and razor shave'],
-                  ['Perm', '셋팅펌 / 디지털펌', 'Naming the type avoids a long consultation'],
-                  ['Root volume straightening', '볼륨매직', 'No clean English equivalent'],
-                  ['Scalp scaling', '두피 스케일링', '헤드스파 for the longer spa format'],
-                  ['Aqua peel facial', '아쿠아필', 'Offered by both salons and clinics'],
-                  ['Semi-permanent brows', '반영구 눈썹', '자연눈썹, 섀도우, 콤보 are the styles'],
-                  ['Personal colour', '퍼스널컬러', 'Confirm English service before booking'],
-                  ['Booking / appointment', '예약', '예약금 means deposit'],
+                  ['Nail salon', 'Neil', 'Add the neighbourhood: Neil Seongsu'],
+                  ['Gel extensions', 'Jel yeonjang', 'Soft gel tips are the Korean default'],
+                  ['Waxing', 'Waksing', 'Namseong waksing for male menus'],
+                  ['Lash extensions', 'Songnunsseop yeonjang', 'Songnunsseop peom for a lash lift instead'],
+                  ['Hair salon', 'Miyongsil', 'Beobeosyap for a barbershop and razor shave'],
+                  ['Perm', 'Setting-peom / Dijiteol-peom', 'Naming the type avoids a long consultation'],
+                  ['Root volume straightening', 'Bollyum-maejik', 'No clean English equivalent'],
+                  ['Scalp scaling', 'Dupi seukeilling', 'Hedeuseupa for the longer spa format'],
+                  ['Aqua peel facial', 'Aqua-pil', 'Offered by both salons and clinics'],
+                  ['Semi-permanent brows', 'Banyeonggu nunsseop', 'Jayeon-nunsseop, Syaedou, Kombo are the styles'],
+                  ['Personal colour', 'Peoseoneol keolleo', 'Confirm English service before booking'],
+                  ['Booking / appointment', 'Yeyak', 'Yeyakgeum means deposit'],
                 ].map(([en, ko, note]) => (
                   <tr key={en} className="border-b border-stone-100 last:border-0">
                     <td className="px-4 py-3 font-semibold text-stone-900">{en}</td>
@@ -251,7 +251,7 @@ export default function EnHub() {
               <div>
                 <p className="font-bold text-stone-900 text-[16px] mb-1">Find the shop on Naver Map</p>
                 <p className="text-[15px] leading-[1.8] text-stone-600">
-                  Search the Korean service word plus the neighbourhood — 네일 성수, 왁싱 강남, 속눈썹 홍대. Naver
+                  Search the Korean service word plus the neighbourhood
                   listings carry the real menu, real prices and a booking button, and the reviews are attached to
                   actual bookings rather than posted by anyone. Naver Map has an English interface; the salon-written
                   text stays Korean, which a translation app handles.
@@ -325,7 +325,7 @@ export default function EnHub() {
             Korean, it goes considerably deeper than this section does.
           </p>
           <Link href="/" className="text-[15px] font-bold text-rose-600 hover:underline">
-            한국어 사이트로 이동 →
+            Go to the Korean site →
           </Link>
         </section>
 

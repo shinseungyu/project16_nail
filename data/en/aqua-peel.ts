@@ -79,6 +79,35 @@ export const aquaPeel: EnPage = {
     },
     {
       t: 'h2',
+      id: 'vs-hydrafacial',
+      text: 'Aqua peel vs HydraFacial — the question most people arrive with',
+    },
+    {
+      t: 'p',
+      text: 'If you have heard of hydradermabrasion at all, you have probably heard of it under a brand name. Both are the same family of treatment; the difference is what the word refers to.',
+    },
+    {
+      t: 'table',
+      caption: 'Category versus brand',
+      head: ['', 'Aqua peel (Korea)', 'HydraFacial'],
+      rows: [
+        ['What it is', 'A category of hydradermabrasion treatment', 'A specific trademarked system'],
+        ['Device', 'Various manufacturers', 'One proprietary device'],
+        ['Where offered', 'Salons and clinics', 'Licensed providers'],
+        ['Consistency', 'Varies by device and operator', 'Standardised by the brand'],
+      ],
+    },
+    {
+      t: 'p',
+      text: 'Aqua peel is not a knock-off. Both are hydradermabrasion — one is a brand, the other is how the treatment category is generally named in Korea. Because aqua peel is not a single standardised protocol, **what you get varies more between providers.** Ask which device is used and what the steps are, rather than assuming every aqua peel is equivalent.',
+    },
+    {
+      t: 'note',
+      text:
+        'HydraFacial is a registered trademark of its owner, referenced here for comparison only. Aqua peel is not that brand.',
+    },
+    {
+      t: 'h2',
       id: 'who',
       text: 'Who it works for, and who should skip it',
     },
@@ -162,13 +191,13 @@ export const aquaPeel: EnPage = {
     },
     {
       t: 'p',
-      text: 'Search 아쿠아필 (aqua peel) or 아쿠아 필링 plus a neighbourhood on Naver Map. Listings carry the menu and price. Most shops in tourist areas take Instagram DM bookings in English, and a facial needs less precise communication than a haircut does — the vocabulary is small.',
+      text: 'Search Aqua-pil (aqua peel) or Aqua piling plus a neighbourhood on Naver Map. Listings carry the menu and price. Most shops in tourist areas take Instagram DM bookings in English, and a facial needs less precise communication than a haircut does — the vocabulary is small.',
     },
     {
       t: 'ul',
       items: [
-        '**Useful terms:** 아쿠아필 (aqua peel), 피부관리 (skin care), 각질 (dead skin), 모공 (pores), 진정 (soothing), 수분 (hydration).',
-        '**Say your skin type:** 지성 (oily), 건성 (dry), 복합성 (combination), 민감성 (sensitive).',
+        '**Useful terms:** Aqua-pil (aqua peel), Pibu gwalli (skin care), Gakjil (dead skin), Mogong (pores), Jinjeong (soothing), Subun (hydration).',
+        '**Say your skin type:** Jiseong (oily), Geonseong (dry), Bokhapseong (combination), Mingamseong (sensitive).',
         '**Ask about the add-ons.** LED, ultrasound and mask steps are frequently offered mid-session at extra cost. Decide before you lie down.',
         '**No tipping**, as everywhere in Korean salons.',
       ],
@@ -206,6 +235,10 @@ export const aquaPeel: EnPage = {
     {
       q: 'Will aqua peel make my pores smaller?',
       a: 'Temporarily and only in appearance. Pores look smaller because they have been emptied, and they refill over the following weeks. No water-vacuum device changes pore size structurally, so treat any promise of permanent pore reduction as overselling.',
+    },
+      {
+      q: 'Is aqua peel the same as a HydraFacial?',
+      a: 'Both are hydradermabrasion. HydraFacial is a specific trademarked system, while aqua peel is how the treatment category is commonly named in Korea. Devices and protocols vary between providers, so ask what equipment and steps a shop uses.',
     },
   ],
   related: [

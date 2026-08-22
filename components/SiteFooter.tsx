@@ -118,7 +118,7 @@ function EnFooter() {
                 <li><a href="/en/beauty-license-korea" className="hover:text-brand transition-colors">Licensing</a></li>
                 <li><a href="/en/about" className="hover:text-brand transition-colors">About this site</a></li>
                 <li><a href="/en/privacy" className="hover:text-brand transition-colors">Privacy policy</a></li>
-                <li><a href="/" lang="ko" className="hover:text-brand transition-colors">한국어</a></li>
+                <li><a href="/" lang="ko" className="hover:text-brand transition-colors">Korean</a></li>
               </ul>
             </div>
           </div>

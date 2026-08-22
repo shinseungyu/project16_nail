@@ -28,11 +28,11 @@ export const volumeMagicPerm: EnPage = {
     },
     {
       t: 'p',
-      text: 'Magic straight (매직) applies straightening cream and a flat iron along the entire hair shaft, root included. The result is uniformly straight and very smooth. It is the correct choice for genuinely frizzy or wavy hair that you want gone.',
+      text: 'Magic straight applies straightening cream and a flat iron along the entire hair shaft, root included. The result is uniformly straight and very smooth. It is the correct choice for genuinely frizzy or wavy hair that you want gone.',
     },
     {
       t: 'p',
-      text: 'Volume magic (볼륨매직) treats the hair in two zones. The mid-lengths and ends are straightened the same way, but the root section is worked separately — lifted and set standing away from the scalp rather than pressed flat. The hair falls smooth but keeps height at the top.',
+      text: 'Volume magic treats the hair in two zones. The mid-lengths and ends are straightened the same way, but the root section is worked separately — lifted and set standing away from the scalp rather than pressed flat. The hair falls smooth but keeps height at the top.',
     },
     {
       t: 'table',
@@ -54,6 +54,36 @@ export const volumeMagicPerm: EnPage = {
       title: 'Why the root fades faster',
       text:
         'The straightened lengths stay straight until you cut them off — the hair itself is chemically changed. The root lift, by contrast, is on hair that keeps growing, so new growth arrives untreated. Two to four months in, you have lifted mid-shaft and flat new root. This is the normal grow-out, not a failed service.',
+    },
+    {
+      t: 'h2',
+      id: 'japanese-straightening',
+      text: 'If you know Japanese straightening, start here',
+    },
+    {
+      t: 'p',
+      text: 'Most English speakers meet this category as **Japanese straightening** or **thermal reconditioning** — a permanent chemical straightening service that Western salons have offered for years. The underlying technology is the same one used here.',
+    },
+    {
+      t: 'table',
+      caption: 'Same technology, different product split',
+      head: ['', 'Volume magic (Korea)', 'Japanese straightening / thermal reconditioning'],
+      rows: [
+        ['Core process', 'Chemical + heat restructuring', 'Chemical + heat restructuring'],
+        ['Root treatment', 'Deliberately left with lift', 'Typically straightened throughout'],
+        ['Aim', 'Natural straight with body', 'Maximum straightness'],
+        ['Result on fine hair', 'Keeps apparent volume', 'Can read as thinner'],
+      ],
+    },
+    {
+      t: 'p',
+      text: 'The Korean market simply split one technology into two products, based on whether root volume is preserved. That split turns out to matter a great deal for fine hair, which is why the distinction exists here and not on most Western menus.',
+    },
+    {
+      t: 'note',
+      title: 'Not the same as a keratin treatment',
+      text:
+        'Keratin treatments are a different category. Keratin smooths and reduces frizz semi-permanently, then washes out over a few months. Magic straight and volume magic restructure the hair itself, so they grow out rather than fade out. If you have only ever had keratin, expect a considerably more permanent result.',
     },
     {
       t: 'h2',
@@ -142,6 +172,41 @@ export const volumeMagicPerm: EnPage = {
     },
     {
       t: 'h2',
+      id: 'maintenance',
+      text: 'Maintenance — ask for roots only',
+    },
+    {
+      t: 'p',
+      text: 'This is where people waste money and damage hair. The lengths are already straight; re-treating them puts the same sections through heat and chemicals again for no benefit.',
+    },
+    {
+      t: 'table',
+      caption: 'What to book, and when',
+      head: ['Time since treatment', 'What to book', 'Price (KRW)'],
+      rows: [
+        ['3 - 4 months', 'Root retouch only', '60,000 - 120,000'],
+        ['5 - 6 months', 'Full retreatment', '100,000 - 220,000'],
+      ],
+      note: FX_NOTE,
+    },
+    {
+      t: 'p',
+      text: 'Ask specifically for a root retouch. A designer who insists on full-length treatment at every visit is either taking the easy route or upselling — and the cost is cumulative damage you cannot undo.',
+    },
+    {
+      t: 'table',
+      caption: 'Price by area — volume magic',
+      head: ['Area', 'Typical range (KRW)'],
+      rows: [
+        ['Gangnam, Apgujeong (upscale southern Seoul)', '160,000 - 300,000'],
+        ['Hongdae, Sinchon (student districts)', '100,000 - 180,000'],
+        ['Residential Seoul, Gyeonggi Province', '110,000 - 200,000'],
+        ['Busan, Daegu, other cities', '100,000 - 180,000'],
+      ],
+      note: FX_NOTE,
+    },
+    {
+      t: 'h2',
       id: 'aftercare',
       text: 'Aftercare — the 48-hour rule matters here',
     },
@@ -194,6 +259,18 @@ export const volumeMagicPerm: EnPage = {
     {
       q: 'Why can I not wash my hair for two days afterwards?',
       a: 'The chemical bonds that hold the new shape are still settling for about 48 hours. Washing, tying, clipping or tucking hair behind your ears during that window can set a permanent kink. It is the single rule that most determines whether the result holds.',
+    },
+      {
+      q: 'Is volume magic the same as Japanese straightening?',
+      a: 'The underlying technology is the same chemical-plus-heat restructuring used in Japanese straightening or thermal reconditioning. The Korean market splits it into two services depending on whether the root lift is preserved, which is the part that matters most on fine hair.',
+    },
+    {
+      q: 'Is it the same as a keratin treatment?',
+      a: 'No. Keratin smooths and reduces frizz semi-permanently and washes out over a few months. Volume magic and magic straight restructure the hair, so the treated sections stay straight and grow out instead of fading.',
+    },
+    {
+      q: 'Do I need the full length redone every time?',
+      a: 'No, and you should not. After three to four months ask for a root retouch only, at roughly 60,000-120,000 KRW. The lengths are already straight; re-treating them adds damage without adding result.',
     },
   ],
   related: [

@@ -72,6 +72,30 @@ export const scalpScaling: EnPage = {
     },
     {
       t: 'h2',
+      id: 'vs-western',
+      text: 'How Korea does this differently',
+    },
+    {
+      t: 'p',
+      text: 'Scalp exfoliation exists in most Western markets, but usually as an **add-on** — a scrub before shampooing, or part of a spa scalp facial. In Korea it is a standalone menu item at ordinary hair salons, priced and booked on its own.',
+    },
+    {
+      t: 'table',
+      caption: 'Same treatment family, different market position',
+      head: ['', 'Korea', 'Typical Western equivalent'],
+      rows: [
+        ['Availability', 'Standard at most salons', 'Specialty salons and spas'],
+        ['Booked as', 'Standalone service', 'Usually an add-on'],
+        ['Assessment', 'Magnifier or scalp camera common', 'Less common'],
+        ['Frequency', 'Every 2 - 4 weeks is normal', 'Occasional'],
+      ],
+    },
+    {
+      t: 'p',
+      text: 'If you have had a scalp facial abroad, this is the same family of treatment — just more routine, more accessible, and usually cheaper.',
+    },
+    {
+      t: 'h2',
       id: 'who',
       text: 'Who benefits',
     },
@@ -178,6 +202,10 @@ export const scalpScaling: EnPage = {
     {
       q: 'When should I see a doctor instead?',
       a: 'Persistent dandruff that returns quickly, redness, sores or painful patches, a widening part or thinning hairline, and any sudden patchy loss. Seborrhoeic dermatitis and pattern hair loss are medical diagnoses, and repeated salon sessions for those spend money to delay the appointment that would help.',
+    },
+      {
+      q: 'How is it different from a scalp facial abroad?',
+      a: 'It is the same family of treatment. The difference is market position: in Korea it is a routine standalone service at ordinary hair salons rather than a spa add-on, so it is easier to book and generally cheaper.',
     },
   ],
   related: [

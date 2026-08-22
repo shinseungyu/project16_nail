@@ -39,7 +39,7 @@ export const openBeautySalonKorea: EnPage = {
       tone: 'warn',
       title: 'Confirm the immigration side first',
       text:
-        'Investment thresholds, permitted activities and business-status conditions change, and getting them wrong is expensive after you have signed a lease. Verify your specific situation with **Hi Korea** or the Immigration Contact Center (1345, multilingual), and consider a licensed administrative scrivener (행정사) for the filings. Nothing on this page is immigration or legal advice.',
+        'Investment thresholds, permitted activities and business-status conditions change, and getting them wrong is expensive after you have signed a lease. Verify your specific situation with **Hi Korea** or the Immigration Contact Center (1345, multilingual), and consider a licensed administrative scrivener for the filings. Nothing on this page is immigration or legal advice.',
     },
     {
       t: 'h2',
@@ -67,8 +67,8 @@ export const openBeautySalonKorea: EnPage = {
       caption: 'Where the money goes — a one-person nail studio example',
       head: ['Item', 'KRW', 'Note'],
       rows: [
-        ['Deposit (보증금)', '5,000,000 - 20,000,000', 'Refundable; varies hugely by area'],
-        ['Key money (권리금)', '0 - 30,000,000+', 'Not refundable. Avoidable in a new unit'],
+        ['Deposit', '5,000,000 - 20,000,000', 'Refundable; varies hugely by area'],
+        ['Key money', '0 - 30,000,000+', 'Not refundable. Avoidable in a new unit'],
         ['Interior fit-out', '3,000,000 - 15,000,000', 'Depends on the state of the unit'],
         ['Equipment and furniture', '2,000,000 - 5,000,000', 'Table, lamps, dust collector, sterilizer'],
         ['Initial product stock', '1,500,000 - 4,000,000', 'Gels, tools, consumables'],
@@ -83,7 +83,7 @@ export const openBeautySalonKorea: EnPage = {
       t: 'note',
       title: 'Deposit and key money — the two-part Korean lease',
       text:
-        'Korean commercial leases run on a large refundable **deposit (보증금)** plus monthly rent. Separately, an existing tenant may demand **key money (권리금)** — a non-refundable payment for the location, fit-out and existing customer base. Key money is not legally required and is negotiable, but it is customary and can exceed the entire rest of your budget. Taking a raw unit avoids it at the cost of a bigger fit-out.',
+        'Korean commercial leases run on a large refundable **deposit** plus monthly rent. Separately, an existing tenant may demand **key money** — a non-refundable payment for the location, fit-out and existing customer base. Key money is not legally required and is negotiable, but it is customary and can exceed the entire rest of your budget. Taking a raw unit avoids it at the cost of a bigger fit-out.',
     },
     {
       t: 'h2',
@@ -98,8 +98,8 @@ export const openBeautySalonKorea: EnPage = {
         '**Sign the lease.** Deposit and any key money settled here.',
         '**Complete the fit-out** to the facility and equipment standards for your discipline, including sanitation provisions.',
         '**Complete hygiene education.** Required before commencing business.',
-        '**Register the business (사업자등록)** with the tax office, usually online through Hometax.',
-        '**File the beauty business report (미용업 신고)** with the district office hygiene division, submitting the licence certificate, lease, facility documents and hygiene training record.',
+        '**Register the business** with the tax office, usually online through Hometax.',
+        '**File the beauty business report** with the district office hygiene division, submitting the licence certificate, lease, facility documents and hygiene training record.',
         '**Open.** Registration for card payment processing, the Naver Place listing and a booking channel are what actually bring customers.',
       ],
     },
@@ -180,7 +180,7 @@ export const openBeautySalonKorea: EnPage = {
     },
     {
       q: 'What is key money and do I have to pay it?',
-      a: 'Key money (권리금) is a non-refundable payment to an existing tenant for the location, fit-out and customer base. It is customary but not legally required, and it is negotiable — it can also exceed your entire remaining budget. Taking a raw unit avoids it, at the cost of a larger fit-out spend.',
+      a: 'Key money is a non-refundable payment to an existing tenant for the location, fit-out and customer base. It is customary but not legally required, and it is negotiable — it can also exceed your entire remaining budget. Taking a raw unit avoids it, at the cost of a larger fit-out spend.',
     },
     {
       q: 'What do I need to file to open legally?',

@@ -69,7 +69,7 @@ export default function EnPrivacy() {
         <p className="text-[15.5px] leading-[1.8] text-stone-700">
           Personal information is destroyed without delay once the purpose of processing has been achieved. Access
           logs, cookies and IP information are retained for <strong>three months</strong> under the Protection of
-          Communications Secrets Act (통신비밀보호법).
+          Communications Secrets Act.
         </p>
       </section>
 
@@ -145,7 +145,7 @@ export default function EnPrivacy() {
       <section>
         <h2 className="text-[20px] font-bold text-stone-900 mb-3">7. Operator</h2>
         <p className="text-[15.5px] leading-[1.8] text-stone-700">
-          Waya Media Inc. (주식회사 와야미디어)
+          Waya Media Inc.
           <br />
           Business registration number: 105-87-55780
           <br />

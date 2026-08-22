@@ -34,14 +34,14 @@ export const koreanPermGuide: EnPage = {
     {
       t: 'table',
       caption: 'Perm menu at a glance, Seoul 2026',
-      head: ['Perm', 'Korean', 'Result', 'KRW', 'Time'],
+      head: ['Perm', 'Korean (romanised)', 'Result', 'KRW', 'Time'],
       rows: [
-        ['Setting perm', '셋팅펌', 'Defined springy curls', '100,000 - 250,000', '2 - 3 hrs'],
-        ['Digital perm', '디지털펌', 'Loose curls, best when dry', '120,000 - 280,000', '2.5 - 3.5 hrs'],
-        ['Volume magic', '볼륨매직', 'Straight lengths, lifted roots', '120,000 - 280,000', '3 - 4 hrs'],
-        ['Magic straight', '매직', 'Poker straight', '120,000 - 250,000', '3 - 5 hrs'],
-        ['Down perm', '다운펌', 'Flattens sticking-out hair', '10,000 - 40,000', '20 - 30 min'],
-        ['Bangs perm', '앞머리펌', 'Shapes the fringe only', '20,000 - 40,000', '20 - 30 min'],
+        ['Setting perm', 'Setting-peom', 'Defined springy curls', '100,000 - 250,000', '2 - 3 hrs'],
+        ['Digital perm', 'Dijiteol-peom', 'Loose curls, best when dry', '120,000 - 280,000', '2.5 - 3.5 hrs'],
+        ['Volume magic', 'Bollyum-maejik', 'Straight lengths, lifted roots', '120,000 - 280,000', '3 - 4 hrs'],
+        ['Magic straight', 'Maejik', 'Poker straight', '120,000 - 250,000', '3 - 5 hrs'],
+        ['Down perm', 'Daun-peom', 'Flattens sticking-out hair', '10,000 - 40,000', '20 - 30 min'],
+        ['Bangs perm', 'Apmeori-peom', 'Shapes the fringe only', '20,000 - 40,000', '20 - 30 min'],
       ],
       note: FX_NOTE,
     },
@@ -55,7 +55,7 @@ export const koreanPermGuide: EnPage = {
     {
       t: 'h2',
       id: 'setting',
-      text: 'Setting perm (셋팅펌) — the default',
+      text: 'Setting perm — the default',
     },
     {
       t: 'p',
@@ -73,7 +73,7 @@ export const koreanPermGuide: EnPage = {
     {
       t: 'h2',
       id: 'digital',
-      text: 'Digital perm (디지털펌) — softer, dry-set',
+      text: 'Digital perm — softer, dry-set',
     },
     {
       t: 'p',
@@ -91,7 +91,7 @@ export const koreanPermGuide: EnPage = {
     {
       t: 'h2',
       id: 'volume-magic',
-      text: 'Volume magic (볼륨매직) — the specifically Korean one',
+      text: 'Volume magic — the specifically Korean one',
     },
     {
       t: 'p',
@@ -125,11 +125,11 @@ export const koreanPermGuide: EnPage = {
     {
       t: 'ul',
       items: [
-        '**Down perm (다운펌)** — chemically flattens hair that sticks out sideways, especially above the ears and at the nape. Twenty minutes, 10,000-40,000 KRW, often added onto a cut. The single most common men’s chemical service in Korea.',
-        '**Shadow / see-through perm (쉐도우펌)** — light texture through the top and fringe for movement without obvious curl.',
-        '**Swing perm (스윙펌)** — directional wave through the fringe, the standard "Korean boy" look.',
-        '**Volume perm (볼륨펌)** — root lift for thinning or flat hair on top.',
-        '**Iron perm (아이롱펌)** — straight-iron perm, used to straighten or to create a defined side-swept fringe.',
+        '**Down perm** — chemically flattens hair that sticks out sideways, especially above the ears and at the nape. Twenty minutes, 10,000-40,000 KRW, often added onto a cut. The single most common men’s chemical service in Korea.',
+        '**Shadow / see-through perm** — light texture through the top and fringe for movement without obvious curl.',
+        '**Swing perm** — directional wave through the fringe, the standard "Korean boy" look.',
+        '**Volume perm** — root lift for thinning or flat hair on top.',
+        '**Iron perm** — straight-iron perm, used to straighten or to create a defined side-swept fringe.',
       ],
     },
     {

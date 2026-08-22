@@ -57,7 +57,7 @@ export const eyelashExtensionsKorea: EnPage = {
     },
     {
       t: 'h3',
-      text: 'Classic (1D) — 내추럴',
+      text: 'Classic (1D) — Naechureol',
     },
     {
       t: 'p',
@@ -65,7 +65,7 @@ export const eyelashExtensionsKorea: EnPage = {
     },
     {
       t: 'h3',
-      text: 'Volume (2D-4D) — 볼륨',
+      text: 'Volume (2D-4D) — Bollyum',
     },
     {
       t: 'p',
@@ -73,7 +73,7 @@ export const eyelashExtensionsKorea: EnPage = {
     },
     {
       t: 'h3',
-      text: 'Russian volume (5D and above) — 러시안 볼륨',
+      text: 'Russian volume (5D and above) — Reosian bollyum',
     },
     {
       t: 'p',
@@ -81,7 +81,7 @@ export const eyelashExtensionsKorea: EnPage = {
     },
     {
       t: 'h3',
-      text: 'YY and hybrid — 와이(Y)래쉬',
+      text: 'YY and hybrid — Wai(Y)Raesi',
     },
     {
       t: 'p',
@@ -100,7 +100,7 @@ export const eyelashExtensionsKorea: EnPage = {
     },
     {
       t: 'p',
-      text: 'Lash perming (속눈썹 펌) is far more popular in Korea than in most Western markets, and for a lot of people it is the better option. A perming solution curls your own lashes upward from the root; nothing is glued on.',
+      text: 'Lash perming is far more popular in Korea than in most Western markets, and for a lot of people it is the better option. A perming solution curls your own lashes upward from the root; nothing is glued on.',
     },
     {
       t: 'table',
@@ -169,11 +169,11 @@ export const eyelashExtensionsKorea: EnPage = {
     },
     {
       t: 'p',
-      text: 'Search 속눈썹 연장 (lash extensions) or 속눈썹 펌 (lash perm) plus the neighbourhood on Naver Map — for example 속눈썹 홍대. Instagram DM works for most studios, and specifying the set type, curl and length in your first message saves a round trip.',
+      text: 'Search Songnunsseop yeonjang (lash extensions) or Songnunsseop peom (lash perm) plus the neighbourhood on Naver Map — for example Songnunsseop Hongdae. Instagram DM works for most studios, and specifying the set type, curl and length in your first message saves a round trip.',
     },
     {
       t: 'p',
-      text: 'Useful terms: 속눈썹 연장 (extensions), 내추럴 (classic), 볼륨 (volume), 러시안 볼륨 (Russian volume), 리터치 (refill), 제거 (removal), 속눈썹 펌 (lash perm), 컬 (curl), 길이 (length).',
+      text: 'Useful terms: Songnunsseop yeonjang (extensions), Naechureol (classic), Bollyum (volume), Reosian bollyum (Russian volume), Riteochi (refill), Jegeo (removal), Songnunsseop peom (lash perm), Keol (curl), Giri (length).',
     },
   ],
   faq: [

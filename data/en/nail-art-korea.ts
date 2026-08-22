@@ -47,7 +47,7 @@ export const nailArtKorea: EnPage = {
       t: 'note',
       title: 'Ask for the total, not the tier',
       text:
-        'Send your reference photo when you book and ask: "How much in total, including the base?" (전체 얼마인가요?). Any established studio will quote a full figure before you arrive. The awkward conversations happen when the design is decided in the chair.',
+        'Send your reference photo when you book and ask: "How much in total, including the base?". Any established studio will quote a full figure before you arrive. The awkward conversations happen when the design is decided in the chair.',
     },
     {
       t: 'h2',
@@ -60,7 +60,7 @@ export const nailArtKorea: EnPage = {
     },
     {
       t: 'h3',
-      text: 'Syrup / jelly gel (시럽 네일, 젤리 네일)',
+      text: 'Syrup / jelly gel',
     },
     {
       t: 'p',
@@ -68,7 +68,7 @@ export const nailArtKorea: EnPage = {
     },
     {
       t: 'h3',
-      text: 'Magnetic / cat-eye (마그네틱, 캣아이)',
+      text: 'Magnetic / cat-eye',
     },
     {
       t: 'p',
@@ -76,7 +76,7 @@ export const nailArtKorea: EnPage = {
     },
     {
       t: 'h3',
-      text: 'Glazed and chrome (글레이즈드, 크롬)',
+      text: 'Glazed and chrome',
     },
     {
       t: 'p',
@@ -84,7 +84,7 @@ export const nailArtKorea: EnPage = {
     },
     {
       t: 'h3',
-      text: 'Blooming gel (블루밍)',
+      text: 'Blooming gel',
     },
     {
       t: 'p',
@@ -92,7 +92,7 @@ export const nailArtKorea: EnPage = {
     },
     {
       t: 'h3',
-      text: 'Hand-painted detail (수작업 아트)',
+      text: 'Hand-painted detail',
     },
     {
       t: 'p',
@@ -100,7 +100,7 @@ export const nailArtKorea: EnPage = {
     },
     {
       t: 'h3',
-      text: 'Parts and 3D (파츠, 입체 아트)',
+      text: 'Parts and 3D',
     },
     {
       t: 'p',
@@ -116,7 +116,7 @@ export const nailArtKorea: EnPage = {
       items: [
         '**Bring photos, not descriptions.** Three or four reference images beat any amount of explanation across a language gap. Save them to your phone before you go.',
         '**Say which parts matter.** Technicians will adapt a design to your nail length and shape. Point at the one element you care about most — the colour, the linework, the finish — so the adaptation keeps it.',
-        '**Name your nail length and shape.** 라운드 (round), 스퀘어 (square), 스퀘어오프 (squoval), 아몬드 (almond), 스틸레토 (stiletto). Length as 짧게 (short) or 길게 (long).',
+        '**Name your nail length and shape.** Raundeu (round), Seukweeo (square), Seukweeo-opeu (squoval), Amondeu (almond), Seutilleto (stiletto). Length as Jjalpge (short) or Gilge (long).',
         '**Send the reference at booking time.** This lets the studio price it, order any parts, and block enough time. Same-day design changes are the main cause of rushed work.',
         '**Ask how long it will last.** Heavy 3D and long extensions have real trade-offs. A good technician will tell you honestly if a design will not survive two weeks of typing.',
       ],
@@ -125,7 +125,7 @@ export const nailArtKorea: EnPage = {
       t: 'note',
       title: 'A useful search trick',
       text:
-        'Search the Korean style name plus 네일 on Instagram (for example 캣아이 네일, 블루밍 네일) and look at the geotags. Studios that specialise in a technique post it constantly. That is a far better filter than any English-language "best nail salon in Seoul" list.',
+        'Search the Korean style name plus Neil on Instagram and look at the geotags. Studios that specialise in a technique post it constantly. That is a far better filter than any English-language "best nail salon in Seoul" list.',
     },
     {
       t: 'h2',
@@ -194,7 +194,7 @@ export const nailArtKorea: EnPage = {
     },
     {
       q: 'How do I ask for a specific design if I do not speak Korean?',
-      a: 'Send reference photos when you book rather than describing anything. Add your preferred length and shape using the Korean terms — 짧게 or 길게 for length, 라운드, 스퀘어, 아몬드 for shape — and ask for a total price including the base set. Sending the reference in advance also lets the studio block enough time and order any parts.',
+      a: 'Send reference photos when you book rather than describing anything. Add your preferred length and shape using the Korean terms — Jjalpge or Gilge for length, Raundeu, Seukweeo, Amondeu for shape — and ask for a total price including the base set. Sending the reference in advance also lets the studio block enough time and order any parts.',
     },
     {
       q: 'How long does Korean gel last?',

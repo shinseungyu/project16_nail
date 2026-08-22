@@ -87,7 +87,7 @@ export const nailSalonKorea: EnPage = {
     {
       t: 'ol',
       items: [
-        '**Naver Map.** This, not Google Maps, is where Korean salons actually keep their information. Search 네일 plus the neighbourhood name (for example 네일 성수). Listings show real prices, real photos and a booking button (예약). Naver Map has an English interface, though salon-written text stays in Korean.',
+        '**Naver Map.** This, not Google Maps, is where Korean salons actually keep their information. Search Neil plus the neighbourhood name. Listings show real prices, real photos and a booking button. Naver Map has an English interface, though salon-written text stays in Korean.',
         '**Instagram DM.** Most one-person studios run their entire business from Instagram. The bio usually links to a booking page or a KakaoTalk channel. A DM in English asking "Do you have availability on [date] for a single colour gel set?" gets answered more often than not.',
         '**KakaoTalk channel.** If the salon has one, this is where confirmations and deposit requests happen. You will need a Korean phone number or an existing Kakao account.',
       ],
@@ -96,7 +96,7 @@ export const nailSalonKorea: EnPage = {
       t: 'note',
       title: 'Deposits are normal, not a scam',
       text:
-        'Many studios ask for a 10,000-20,000 KRW deposit (예약금) by bank transfer to hold a slot, deducted from the final bill. Because a no-show costs a one-person shop an entire booking block, this is standard practice. Cancellation windows are typically 24 hours; cancelling later usually forfeits the deposit.',
+        'Many studios ask for a 10,000-20,000 KRW deposit by bank transfer to hold a slot, deducted from the final bill. Because a no-show costs a one-person shop an entire booking block, this is standard practice. Cancellation windows are typically 24 hours; cancelling later usually forfeits the deposit.',
     },
     {
       t: 'h2',

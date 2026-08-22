@@ -68,15 +68,15 @@ export const hairSalonKorea: EnPage = {
     {
       t: 'table',
       caption: 'Typical rank structure and price multiplier',
-      head: ['Rank', 'Korean', 'Relative price'],
+      head: ['Rank', 'Korean (romanised)', 'Relative price'],
       rows: [
-        ['Junior designer', '디자이너', 'Base'],
-        ['Senior designer', '실장', '1.3 - 1.6x base'],
-        ['Director', '부원장 / 원장', '1.6 - 2.5x base'],
-        ['Named / celebrity stylist', '대표원장', '2.5x and up'],
+        ['Junior designer', 'Dijaineo', 'Base'],
+        ['Senior designer', 'Siljang', '1.3 - 1.6x base'],
+        ['Director', 'Buwonjang / Wonjang', '1.6 - 2.5x base'],
+        ['Named / celebrity stylist', 'Daepyo-wonjang', '2.5x and up'],
       ],
       note:
-        'Booking a specific person rather than "whoever is free" can also carry a small designation fee (지정비). It is usually worth it: continuity matters more than rank for colour and perms.',
+        'Booking a specific person rather than "whoever is free" can also carry a small designation fee. It is usually worth it: continuity matters more than rank for colour and perms.',
     },
     {
       t: 'p',
@@ -94,12 +94,12 @@ export const hairSalonKorea: EnPage = {
     {
       t: 'ul',
       items: [
-        '**Setting perm (셋팅펌)** — heat rods, produces defined springy curls that hold their shape when dry. The most common women’s perm.',
-        '**Digital perm (디지털펌)** — temperature-controlled rods; loose curls that show most when the hair is dry, low maintenance.',
-        '**Volume magic (볼륨매직)** — straightens the mid-lengths and ends while lifting the roots. Extremely popular and specifically Korean.',
-        '**Magic straight (매직)** — full chemical straightening, poker straight.',
-        '**Down perm (다운펌)** — flattens hair that sticks out, especially around the ears. A men’s staple, often added to a cut for 10,000-30,000 KRW.',
-        '**Bangs perm (앞머리펌)** — a 20-minute service just for the fringe, around 20,000-40,000 KRW.',
+        '**Setting perm** — heat rods, produces defined springy curls that hold their shape when dry. The most common women’s perm.',
+        '**Digital perm** — temperature-controlled rods; loose curls that show most when the hair is dry, low maintenance.',
+        '**Volume magic** — straightens the mid-lengths and ends while lifting the roots. Extremely popular and specifically Korean.',
+        '**Magic straight** — full chemical straightening, poker straight.',
+        '**Down perm** — flattens hair that sticks out, especially around the ears. A men’s staple, often added to a cut for 10,000-30,000 KRW.',
+        '**Bangs perm** — a 20-minute service just for the fringe, around 20,000-40,000 KRW.',
       ],
     },
     {
@@ -118,13 +118,13 @@ export const hairSalonKorea: EnPage = {
     {
       t: 'ul',
       items: [
-        '**Beauty business (미용업)** — the standard salon, licensed under the cosmetology (hair) national licence. Cuts, colour, perms for all customers.',
-        '**Barber business (이용업)** — a separate licence and a separate business category, historically men’s grooming, and the only category permitted to offer a traditional razor shave.',
+        '**Beauty business** — the standard salon, licensed under the cosmetology (hair) national licence. Cuts, colour, perms for all customers.',
+        '**Barber business** — a separate licence and a separate business category, historically men’s grooming, and the only category permitted to offer a traditional razor shave.',
       ],
     },
     {
       t: 'p',
-      text: 'The two are not interchangeable: a cosmetology licence does not authorise operating a barber business, and vice versa. In practice this means a barbershop (바버샵) is where you go for a straight-razor shave, and a standard salon is where you go for chemical services.',
+      text: 'The two are not interchangeable: a cosmetology licence does not authorise operating a barber business, and vice versa. In practice this means a barbershop is where you go for a straight-razor shave, and a standard salon is where you go for chemical services.',
     },
     {
       t: 'h2',
@@ -158,7 +158,7 @@ export const hairSalonKorea: EnPage = {
         '**Shampooing is a separate step with its own charge** at some salons, and the head massage that comes with it is genuinely good.',
         '**Treatments are pushed, but they are also cheap.** A 50,000 KRW clinic treatment after bleach is a reasonable purchase, not a scam.',
         '**Sessions run long.** A perm plus colour is a half-day. Bring something to do.',
-        '**Products are sold, not forced.** A simple "괜찮아요" (I am fine) closes the conversation.',
+        '**Products are sold, not forced.** A simple "Gwaenchanayo" (I am fine) closes the conversation.',
         '**Membership and prepaid cards** are common and offer real discounts — only relevant if you live here.',
       ],
     },
@@ -182,7 +182,7 @@ export const hairSalonKorea: EnPage = {
     },
     {
       q: 'Can I get a razor shave at a Korean hair salon?',
-      a: 'Not at a standard salon. Korea licenses barber businesses (이용업) separately from beauty businesses (미용업), and the traditional razor shave belongs to the barber category. A cosmetology licence does not authorise it, so go to a barbershop for a shave.',
+      a: 'Not at a standard salon. Korea licenses barber businesses separately from beauty businesses, and the traditional razor shave belongs to the barber category. A cosmetology licence does not authorise it, so go to a barbershop for a shave.',
     },
     {
       q: 'Should I tip at a Korean hair salon?',

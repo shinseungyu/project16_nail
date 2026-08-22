@@ -73,6 +73,45 @@ export const personalColorKorea: EnPage = {
     },
     {
       t: 'h2',
+      id: 'vs-western',
+      text: 'If you know the Western 12-season system',
+    },
+    {
+      t: 'p',
+      text: 'Seasonal colour analysis is not a Korean invention — versions have existed in the West since the 1980s. What Korea did was systematise and commercialise it: dedicated studios, standardised lighting, printed palette cards, and follow-on services are all normal here.',
+    },
+    {
+      t: 'table',
+      caption: 'Same theory, different product',
+      head: ['', 'Korea', 'Western 12-season'],
+      rows: [
+        ['Base framework', 'Four seasons, often subdivided', 'Four seasons x three variations'],
+        ['Format', 'Usually an in-person studio session', 'In-person or online'],
+        ['Typical duration', '40 min - 2 hrs', 'Varies'],
+        ['Follow-on services', 'Makeup, shopping, hair colour advice', 'Less standardised'],
+      ],
+    },
+    {
+      t: 'h3',
+      text: 'Why app results are unreliable',
+    },
+    {
+      t: 'table',
+      head: ['Factor', 'Problem'],
+      rows: [
+        ['Lighting', 'Colour temperature changes apparent skin tone dramatically'],
+        ['Camera processing', 'Phones apply automatic colour correction'],
+        ['Filters', 'Even switched off, often not fully off'],
+        ['Makeup', 'Impossible to assess accurately over foundation'],
+        ['Screen calibration', 'Every display renders colour differently'],
+      ],
+    },
+    {
+      t: 'p',
+      text: 'Treat app results as entertainment. If you want a usable answer, an in-person session under controlled lighting is the only reliable route.',
+    },
+    {
+      t: 'h2',
       id: 'price',
       text: 'Prices and formats',
     },
@@ -106,7 +145,7 @@ export const personalColorKorea: EnPage = {
     {
       t: 'ul',
       items: [
-        '**Search 퍼스널컬러 plus the neighbourhood on Naver Map** for the full local list, or search "personal color consultation Seoul English" on Instagram for studios that market to visitors explicitly.',
+        '**Search Peoseoneol keolleo plus the neighbourhood on Naver Map** for the full local list, or search "personal color consultation Seoul English" on Instagram for studios that market to visitors explicitly.',
         '**Confirm English before booking, not on arrival.** Ask directly in your first message. Many studios that say "English OK" mean a printed English result sheet rather than an English session.',
         '**Ask what you leave with.** A swatch fan, a written report, a makeup shade list, photos — this varies more between studios than the diagnosis itself does.',
         '**Book a weekday.** Weekend slots in popular studios fill weeks ahead.',
@@ -117,7 +156,7 @@ export const personalColorKorea: EnPage = {
       t: 'note',
       title: 'Useful terms',
       text:
-        '퍼스널컬러 (personal colour), 진단 (diagnosis), 웜톤 (warm tone), 쿨톤 (cool tone), 봄 (spring), 여름 (summer), 가을 (autumn), 겨울 (winter), 예약 (booking), 영어 가능한가요? (do you speak English?).',
+        'Peoseoneol keolleo (personal colour), Jindan (diagnosis), Womton (warm tone), Kulton (cool tone), Bom (spring), Yeoreum (summer), Gaeul (autumn), Gyeoul (winter), Yeyak (booking), Yeongeo ganeunghangayo? (do you speak English?).',
     },
     {
       t: 'h2',
@@ -178,6 +217,14 @@ export const personalColorKorea: EnPage = {
     {
       q: 'What do I actually get out of it?',
       a: 'The most practical return is foundation and lipstick shopping, where knowing your undertone eliminates most of the shelf. After that: hair colour decisions, choosing metals for glasses and jewellery, and building a coherent wardrobe. It is descriptive rather than prescriptive — a consultant issuing prohibitions rather than showing you differences has drifted into sales.',
+    },
+      {
+      q: 'Are free app diagnoses accurate?',
+      a: 'Not particularly. Lighting, camera colour correction, filters and screen calibration all distort the result, and none of that is fixable in software. Use them for fun, not for decisions.',
+    },
+    {
+      q: 'Why did two studios give me different results?',
+      a: 'Different classification systems and different lighting conditions. Treat the outcome as guidance about which colour families tend to flatter you, not as a fixed fact about yourself.',
     },
   ],
   related: [

@@ -53,7 +53,7 @@ export const waxingKorea: EnPage = {
       t: 'note',
       title: 'Packages change the maths',
       text:
-        'Most studios sell 5- or 10-session packages (정액권) at 20-30% off the single-session price, because hair removal only works across a full growth cycle anyway. If you live in Korea, the package is almost always the right purchase. If you are visiting, it is not.',
+        'Most studios sell 5- or 10-session packages at 20-30% off the single-session price, because hair removal only works across a full growth cycle anyway. If you live in Korea, the package is almost always the right purchase. If you are visiting, it is not.',
     },
     {
       t: 'h2',
@@ -112,14 +112,14 @@ export const waxingKorea: EnPage = {
     {
       t: 'ol',
       items: [
-        '**Naver Map.** Search 왁싱 plus the neighbourhood (for example 왁싱 강남). Listings carry the full menu and price list. Naver Place reviews are attached to real bookings and are the most reliable signal available.',
+        '**Naver Map.** Search Waksing plus the neighbourhood. Listings carry the full menu and price list. Naver Place reviews are attached to real bookings and are the most reliable signal available.',
         '**Instagram DM.** Most studios post their menu in the bio link. A DM specifying the area you want and your preferred date usually gets a reply within a day.',
         '**KakaoTalk channel.** Where confirmations and deposit requests happen. Some studios operate entirely through it.',
       ],
     },
     {
       t: 'p',
-      text: 'Useful terms: 왁싱 (waxing), 브라질리언 (Brazilian), 겨드랑이 (underarms), 다리 전체 (full leg), 남성 왁싱 (male waxing), 예약 (booking), 여성 전용 (women only), 남성 전용 (men only).',
+      text: 'Useful terms: Waksing (waxing), Beurajillieon (Brazilian), Gyeodeurangi (underarms), Dari jeonche (full leg), Namseong waksing (male waxing), Yeyak (booking), Yeoseong jeonyong (women only), Namseong jeonyong (men only).',
     },
     {
       t: 'h2',

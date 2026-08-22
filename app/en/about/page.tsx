@@ -74,7 +74,7 @@ export default function EnAbout() {
           <li className="relative pl-5">
             <span className="absolute left-0 top-[13px] w-1.5 h-1.5 rounded-full bg-rose-400" aria-hidden />
             <strong>Legal statements</strong> cite the governing Korean statute by name and article — most often the
-            Public Health Control Act (공중위생관리법) and, for semi-permanent makeup, the Tattooist Act (문신사법).
+            Public Health Control Act and, for semi-permanent makeup, the Tattooist Act.
             Where a law has been passed but is not yet in force, that is stated explicitly rather than glossed over.
           </li>
           <li className="relative pl-5">
@@ -137,7 +137,7 @@ export default function EnAbout() {
       <section>
         <h2 className="text-[21px] font-bold text-stone-900 mb-3">Publisher</h2>
         <p className="text-[15.5px] leading-[1.8] text-stone-700">
-          Waya Media Inc. (주식회사 와야미디어)
+          Waya Media Inc.
           <br />
           Business registration number: 105-87-55780
           <br />
