@@ -1,0 +1,146 @@
+import type { EnPage } from './types'
+import { EN_UPDATED, EN_UPDATED_ISO } from './common'
+
+export const builderGelRemoval: EnPage = {
+  path: '/en/builder-gel-removal',
+  title: 'Builder Gel Removal: Soak Off vs File Down',
+  h1: 'How to Remove Builder Gel',
+  description:
+    'Whether builder gel soaks off depends on the product. How to tell, the correct removal method, and why prying causes damage.',
+  keywords: ['builder gel removal', 'does builder gel soak off', 'remove builder gel at home'],
+  category: 'Nails',
+  stage: 6,
+  updated: EN_UPDATED,
+  updatedIso: EN_UPDATED_ISO,
+  lead:
+    '**Some builder gels soak off in acetone; others must be filed down.** Check which product was used — attempting to soak a non-soak-off gel means long acetone exposure with no result, followed by the temptation to force it.',
+  blocks: [
+    { t: 'h2', id: 'two-types', text: 'Two product types' },
+    {
+      t: 'table',
+      head: ['Type', 'Removal', 'How to tell'],
+      rows: [
+        ['Soak-off builder gel', 'Acetone, 20 - 30 min', 'Product label; ask your technician'],
+        ['Non-soak-off, hard gel', 'Filed down', 'Will not soften with acetone'],
+      ],
+    },
+    { t: 'p', text: '**Ask your technician which was applied.** This is the single most useful thing to know before attempting removal, and it takes one question at the appointment where it was put on.' },
+    { t: 'h2', id: 'soak-off', text: 'The soak-off method' },
+    {
+      t: 'ol',
+      items: [
+        '**File the surface until fully matte** — acetone cannot penetrate a sealed top coat.',
+        'Reduce the length first if the nails were extended.',
+        'Saturate cotton in **100% acetone** and wrap in foil.',
+        '**Wait 20 to 30 minutes.**',
+        'Check; the product should look soft and lifted.',
+        'Push off gently with a wooden stick.',
+        '**Re-wrap if resistant. Never force.**',
+        'Buff lightly, oil generously.',
+      ],
+    },
+    { t: 'h2', id: 'file-off', text: 'Non-soak-off products' },
+    { t: 'p', text: 'Filing down requires skill and ideally an e-file. **This is a salon job.** Attempting it with hand files risks over-thinning the natural nail, and attempting it with an e-file without training risks worse.' },
+    { t: 'h2', id: 'never', text: 'Never' },
+    {
+      t: 'ul',
+      items: [
+        'Pry, pop, or lever product off.',
+        'Use clippers to snap extensions.',
+        'Force resistant product.',
+        '**Skip the surface filing**, which is what lets acetone in.',
+      ],
+    },
+    { t: 'note', tone: 'warn', title: 'Prying takes nail plate with it', text: 'This is the origin of nearly all "builder gel ruined my nails" reports. The product did not do it; the way it came off did.' },
+    { t: 'h2', id: 'timing', text: 'How long to allow' },
+    {
+      t: 'table',
+      head: ['Stage', 'Time'],
+      rows: [
+        ['Shortening and filing the surface', '10 - 15 min'],
+        ['Wrapping', '5 min'],
+        ['Soaking', '20 - 30 min'],
+        ['Pushing off and any re-soak', '10 - 15 min'],
+        ['Buffing and oiling', '5 min'],
+        ['Total', 'About an hour'],
+      ],
+    },
+    { t: 'p', text: '**Allow the full hour.** Most at-home removal damage happens to people who budgeted twenty minutes and started forcing product at minute twenty-five.' },
+    { t: 'h2', id: 'when-to-stop', text: 'When to stop and get help' },
+    {
+      t: 'table',
+      head: ['Sign', 'What to do'],
+      rows: [
+        ['Will not soften after two cycles', 'Stop - it may be a file-off product'],
+        ['Tenderness while pushing', 'Stop and re-soak'],
+        ['The nail feels hot while filing', 'Stop filing immediately'],
+        ['Broken skin at the sidewall', 'Stop, clean, and see a professional'],
+        ['A nail is cracked underneath', 'Salon removal'],
+      ],
+    },
+    { t: 'h2', id: 'aftercare', text: 'Aftercare' },
+    { t: 'p', text: 'Dryness immediately afterwards is acetone dehydration rather than damage. Cuticle oil twice daily for several days is the whole routine, and it resolves within a couple of days.' },
+    { t: 'h2', id: 'tools', text: 'What you need, and what to avoid' },
+    {
+      t: 'table',
+      head: ['Use', 'Avoid'],
+      rows: [
+        ['100% acetone', 'Acetone-free remover - it will not work'],
+        ['Coarse file to break the seal', 'Filing through into the natural nail'],
+        ['Foil and saturated cotton', 'Damp cotton'],
+        ['Wooden or rubber-tipped pusher', 'Metal levered under the product'],
+        ['Time', 'Force, in any form'],
+      ],
+    },
+    { t: 'p', text: 'A metal pusher is not forbidden, but it magnifies impatience. Held flat against the product it is fine; dug underneath it takes nail plate with whatever it lifts.' },
+    { t: 'h2', id: 'skin', text: 'Protecting your skin' },
+    {
+      t: 'ul',
+      items: [
+        '**Wrap rather than soaking your whole hand**, which limits acetone to the nail.',
+        '**Barrier balm on the surrounding skin** if you remove sets regularly.',
+        '**Ventilate**, and keep acetone away from heat.',
+        '**Moisturise immediately afterwards**, not later in the day.',
+      ],
+    },
+    { t: 'h2', id: 'between-sets', text: 'Between one set and the next' },
+    { t: 'p', text: 'Reapplying straight away is common and usually fine. There is a case for pausing that has nothing to do with damage from wearing it.' },
+    {
+      t: 'table',
+      head: ['Situation', 'Reasonable approach'],
+      rows: [
+        ['Nails look and feel normal', 'Reapply if you want to'],
+        ['Nails feel thin or tender', 'Wait a few days, oil daily'],
+        ['White patches on the surface', 'A break, and gentler removal next time'],
+        ['Itching or redness around the nail', 'Stop, and see a doctor'],
+      ],
+    },
+    { t: 'h2', id: 'salon-removal', text: 'What salon removal should look like' },
+    { t: 'p', text: 'Knowing the normal sequence helps you notice when a salon is rushing, which is where most professional-side damage comes from.' },
+    {
+      t: 'table',
+      head: ['Step', 'What should happen'],
+      rows: [
+        ['Shorten', 'Length reduced first if extended'],
+        ['Break the seal', 'Filed to matte, not filed through'],
+        ['Soak or file', 'Matched to the product used'],
+        ['Removal', 'Product pushed off, not scraped'],
+        ['Assessment', 'A look at the natural nail before reapplying'],
+        ['Oil', 'Applied at the end'],
+      ],
+    },
+    { t: 'p', text: 'An e-file is not the problem in itself — many technicians use one safely to remove bulk. Taking it down to the natural nail rather than stopping at the product layer is the part that thins nails.' },
+  ],
+  faq: [
+    { q: 'Does builder gel soak off?', a: 'Some products do and some do not. Ask which was used before attempting removal.' },
+    { q: 'How long does removal take?', a: '20 to 30 minutes of soaking for soak-off types, plus filing and prep — about an hour in total.' },
+    { q: 'Can I remove it at home?', a: 'Soak-off types, yes, with patience. File-off types are a salon job.' },
+    { q: 'Why will mine not soften?', a: 'Either it is a non-soak-off product, or the surface was not filed enough to let acetone in.' },
+    { q: 'Can I pop it off?', a: 'No. That is what damages nails, and it is entirely avoidable.' },
+  ],
+  related: [
+    { href: '/en/what-is-builder-gel', label: 'What Is Builder Gel?' },
+    { href: '/en/gel-nail-removal-at-home', label: 'Gel Nail Removal at Home' },
+    { href: '/en/builder-gel-damage', label: 'Does Builder Gel Damage Nails?' },
+  ],
+}

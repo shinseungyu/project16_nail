@@ -1,0 +1,125 @@
+import type { EnPage } from './types'
+import { EN_UPDATED, EN_UPDATED_ISO } from './common'
+
+export const builderGelDamage: EnPage = {
+  path: '/en/builder-gel-damage',
+  title: 'Does Builder Gel Damage Nails? Honest Answer',
+  h1: 'Does Builder Gel Damage Your Nails?',
+  description:
+    'Application rarely damages nails; removal and over-prep do. What the real risk factors are and how to avoid them.',
+  keywords: ['builder gel damage', 'is builder gel bad for nails', 'gel allergy nails'],
+  category: 'Nails',
+  stage: 6,
+  updated: EN_UPDATED,
+  updatedIso: EN_UPDATED_ISO,
+  lead:
+    '**Correctly applied and correctly removed, damage risk is low.** The two things that cause damage are aggressive prep and improper removal — neither of which is inherent to the product.',
+  blocks: [
+    { t: 'h2', id: 'risk-factors', text: 'Risk factors ranked' },
+    {
+      t: 'table',
+      head: ['Cause', 'Risk'],
+      rows: [
+        ['Prying or popping product off', 'Highest'],
+        ['Aggressive e-file use at removal', 'High'],
+        ['Over-buffing during prep', 'Moderate'],
+        ['Under-curing, skin contact with uncured gel', 'Moderate - sensitisation risk'],
+        ['Wearing continuously for many months', 'Mild'],
+        ['Application itself', 'Low'],
+      ],
+    },
+    { t: 'h2', id: 'signs', text: 'Signs of damage' },
+    {
+      t: 'table',
+      head: ['Sign', 'Meaning'],
+      rows: [
+        ['Thin, flexible nails', 'Plate layers removed'],
+        ['White surface patches', 'Surface damage'],
+        ['Peeling in layers', 'Same'],
+        ['Sensitivity to pressure', 'Same'],
+        ['Itching, redness, rash around the nails', 'Possible allergy - see a doctor'],
+      ],
+    },
+    { t: 'p', text: 'The last row is different in kind from the others. The first four are mechanical and grow out; that one is a reaction and needs a different response.' },
+    { t: 'h2', id: 'allergy', text: 'Gel allergy, worth knowing about' },
+    { t: 'p', text: 'Repeated skin contact with **uncured** gel can lead to sensitisation over time. This affects both consumers and professionals, and it is more common than most product marketing suggests.' },
+    { t: 'p', text: 'Symptoms include itching, redness, swelling, or a rash around the nails or fingertips, and sometimes elsewhere on the body.' },
+    { t: 'note', tone: 'warn', title: 'Sensitisation does not resolve by pushing through', text: '**If this develops, stop using gel products and see a doctor.** It can extend to other acrylate-containing products, including some dental and medical materials, which is why it is worth taking seriously early.' },
+    { t: 'p', text: 'Prevention is straightforward: avoid skin contact with uncured product, cure fully, and use an adequate lamp. Most sensitisation cases trace back to repeated exposure to product that never cured properly.' },
+    { t: 'h2', id: 'reducing', text: 'Reducing risk' },
+    {
+      t: 'ol',
+      items: [
+        '**Always soak off, or have it professionally filed. Never pry.**',
+        'Light buffing only at prep.',
+        'Ensure full curing, with a lamp matched to the product.',
+        '**Avoid skin contact with uncured gel.**',
+        'Cuticle oil daily.',
+        'Take a break between sets if nails feel thin.',
+      ],
+    },
+    { t: 'h2', id: 'recovery', text: 'Recovery' },
+    { t: 'p', text: 'Surface damage grows out over several months. **Nothing repairs existing nail plate** — products reduce breakage while it grows, which is genuinely useful but is a different claim.' },
+    {
+      t: 'table',
+      head: ['Timeframe', 'What to expect'],
+      rows: [
+        ['Weeks 1 - 4', 'Thin, may split'],
+        ['Months 2 - 3', 'New growth looks normal'],
+        ['Months 4 - 6', 'Damage reaches the free edge and is filed off'],
+      ],
+    },
+    { t: 'h2', id: 'prep', text: 'Over-prep, the quiet contributor' },
+    { t: 'p', text: 'Removal gets the blame and deserves most of it. Prep is the one that accumulates invisibly, because it happens at the start of every single set.' },
+    {
+      t: 'table',
+      head: ['', 'Appropriate', 'Excessive'],
+      rows: [
+        ['Purpose', 'Remove shine, create grip', 'Remove nail plate'],
+        ['Tool', 'Fine buffer, light pressure', 'Coarse grit, pressure'],
+        ['Result', 'Slightly matte', 'Thinned, sometimes warm'],
+        ['Time per nail', 'A few seconds', 'Working at it'],
+        ['Across a year', 'Negligible', 'Cumulative and visible'],
+      ],
+    },
+    { t: 'note', title: 'Warmth means stop', text: 'Friction heat during buffing or filing is a reliable signal that the work has moved from product into nail. Saying so at the time is easier than noticing the result weeks later.' },
+    { t: 'h2', id: 'signals', text: 'What to watch for at the salon' },
+    {
+      t: 'table',
+      head: ['Good sign', 'Worth asking about'],
+      rows: [
+        ['Soaks product off', 'Files everything off quickly'],
+        ['Light buffing at prep', 'Aggressive filing of the natural nail'],
+        ['Checks the nail before reapplying', 'Reapplies without looking'],
+        ['Keeps product off the skin', 'Floods the cuticle and files it back'],
+        ['Cures each layer fully', 'Rushes the lamp'],
+      ],
+    },
+    { t: 'p', text: 'None of these require you to know the craft. They are visible from the chair, and a technician who does all five is unlikely to be the reason your nails end up thin.' },
+    { t: 'h2', id: 'breaks', text: 'Taking a break, and what it does' },
+    { t: 'p', text: 'Breaks get recommended constantly and explained rarely. The mechanism is simply that nail plate grows out while nothing is being done to the new growth.' },
+    {
+      t: 'table',
+      head: ['Break length', 'What it achieves'],
+      rows: [
+        ['A week', 'Little structurally - mostly a look at the nail'],
+        ['A month', 'Visible new growth, better feel'],
+        ['3 months', 'Most of the visible nail is new'],
+        ['6 months', 'Essentially fully replaced'],
+      ],
+    },
+    { t: 'p', text: '**A break is not required if the process is right.** Correct prep and soak-off removal do not create damage that needs recovering from. If you consistently need breaks, something in the cycle is too aggressive and it is worth identifying rather than working around.' },
+  ],
+  faq: [
+    { q: 'Is builder gel bad for nails?', a: 'Not inherently. Removal technique is the main variable, followed by how aggressively the nail is prepped.' },
+    { q: 'How long to recover?', a: 'Several months to fully grow out, with new growth looking normal well before that.' },
+    { q: 'Can I be allergic to builder gel?', a: 'Sensitisation from repeated contact with uncured gel is possible. See a doctor if symptoms appear rather than continuing.' },
+    { q: 'Should I take breaks?', a: 'If nails feel thin or sore, yes. Continuous wear is mild on its own but hides the state of the nail.' },
+    { q: 'Is it safer than acrylic?', a: 'Removal is generally more forgiving. Application risk is comparable.' },
+  ],
+  related: [
+    { href: '/en/builder-gel-removal', label: 'How to Remove Builder Gel' },
+    { href: '/en/builder-gel-for-weak-nails', label: 'Builder Gel for Weak Nails' },
+    { href: '/en/builder-gel-at-home', label: 'Can You Do Builder Gel at Home?' },
+  ],
+}

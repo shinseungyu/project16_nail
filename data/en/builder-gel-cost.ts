@@ -1,0 +1,135 @@
+import type { EnPage } from './types'
+import { EN_UPDATED, EN_UPDATED_ISO } from './common'
+
+export const builderGelCost: EnPage = {
+  path: '/en/builder-gel-cost',
+  title: 'Builder Gel Cost: Sets, Fills and Yearly Total',
+  h1: 'How Much Does Builder Gel Cost?',
+  description:
+    'Builder gel sets run $55 to $110 with fills at $45 to $85. What is included, what is extra, and how the annual cost compares.',
+  keywords: ['builder gel cost', 'builder gel price', 'builder gel fill cost'],
+  category: 'Nails',
+  stage: 6,
+  updated: EN_UPDATED,
+  updatedIso: EN_UPDATED_ISO,
+  lead:
+    '**A builder gel set runs $55 to $110, with fills at $45 to $85 every two to three weeks.** Overlay only, with no extension, sits at the lower end of both ranges.',
+  blocks: [
+    { t: 'h2', id: 'pricing', text: 'Pricing' },
+    {
+      t: 'table',
+      head: ['Service', 'Typical'],
+      rows: [
+        ['Overlay only, natural length', '$50 - 85'],
+        ['Overlay with colour', '$60 - 100'],
+        ['Extension set', '$70 - 130'],
+        ['Fill or rebalance', '$45 - 85'],
+        ['Removal only', '$20 - 40'],
+        ['Single nail repair', '$8 - 20'],
+        ['Nail art', '+$10 - 60'],
+      ],
+    },
+    { t: 'h2', id: 'annual', text: 'Annual cost' },
+    {
+      t: 'table',
+      head: ['Pattern', 'Annual'],
+      rows: [
+        ['Fill every 2 weeks', 'approx. $1,250 - 2,300'],
+        ['Fill every 3 weeks', 'approx. $850 - 1,550'],
+        ['Overlay only, every 3 weeks', 'approx. $800 - 1,400'],
+      ],
+    },
+    { t: 'p', text: 'Overlay is the cheaper habit and it stretches slightly further between visits, because there is no extension weight putting stress on the regrowth area.' },
+    { t: 'h2', id: 'drivers', text: 'What drives the price' },
+    {
+      t: 'table',
+      head: ['Factor', 'Effect'],
+      rows: [
+        ['Extension vs overlay', 'Extension costs more'],
+        ['Length', 'Longer needs more product and time'],
+        ['Art', 'Adds meaningfully'],
+        ['Technician level', 'Experience premium'],
+        ['Region', 'Metro premiums'],
+      ],
+    },
+    { t: 'h2', id: 'vs-others', text: 'How it compares with other services' },
+    { t: 'p', text: 'Builder gel sits between a gel manicure and a full extension set on price, which reflects what it is — more product and more structure than polish, less than a sculpted extension.' },
+    {
+      t: 'table',
+      head: ['Service', 'Per visit', 'Interval'],
+      rows: [
+        ['Gel polish manicure', '$30 - 60', '2 - 3 weeks'],
+        ['Builder gel overlay', '$50 - 85', '3 - 4 weeks'],
+        ['Builder gel extensions', '$70 - 130', '2 - 3 weeks'],
+        ['Gel X extensions', '$60 - 120', '2 - 3 weeks'],
+        ['Acrylic set', '$45 - 90', '2 - 3 weeks'],
+      ],
+    },
+    { t: 'p', text: '**Per week of wear, an overlay is often close to a gel manicure** because it stretches further, which surprises people looking only at the per-visit figure.' },
+    { t: 'h2', id: 'asking', text: 'What to confirm when booking' },
+    {
+      t: 'ol',
+      items: [
+        '**Is this quote for an overlay or an extension?** They are different services at different prices.',
+        '**Is removal of my current product included?**',
+        '**Is colour included, or is that extra?**',
+        '**What does a fill cost**, since that is what you will pay most often.',
+        '**What is the repair policy** if a nail chips in the first week?',
+      ],
+    },
+    { t: 'note', title: 'The fill price is the number that matters', text: 'A cheap first set with an expensive fill costs more over a year than the reverse. The set is once; the fill is twenty times.' },
+    { t: 'h2', id: 'first-visit', text: 'Budgeting a first visit' },
+    { t: 'p', text: 'The first appointment usually runs above the headline price, for reasons that are predictable rather than surprising.' },
+    {
+      t: 'table',
+      head: ['Item', 'Typical'],
+      rows: [
+        ['The set itself', '$55 - 110'],
+        ['Removal of existing product', '$20 - 40'],
+        ['Colour, if not included', '$0 - 20'],
+        ['Any art', '$10 - 60'],
+        ['Tip where customary', '15 - 20%'],
+        ['Realistic first-visit total', '$90 - 200'],
+      ],
+    },
+    { t: 'p', text: 'Subsequent visits settle toward the fill price, because removal is folded into a rebooking. Budgeting from the first-visit number makes the service look more expensive than it actually runs.' },
+    { t: 'h2', id: 'saving', text: 'Where you can save, and where you cannot' },
+    {
+      t: 'table',
+      head: ['Reasonable saving', 'False economy'],
+      rows: [
+        ['Overlay instead of extensions', 'Stretching fills past four weeks'],
+        ['Plain rather than art each time', 'Skipping removal and applying over lifting'],
+        ['A junior technician for a simple overlay', 'Prying it off yourself'],
+        ['Booking fills on schedule', 'Letting it grow out and paying for a new set'],
+        ['Natural length', 'Cheap kits with no removal supplies'],
+      ],
+    },
+    { t: 'p', text: '**The most expensive pattern is letting a set grow out and starting fresh each time.** A new set every four weeks costs more than a fill every three, and it is harder on the nail.' },
+    { t: 'h2', id: 'over-a-year', text: 'What a realistic year looks like' },
+    { t: 'p', text: 'The pattern you actually keep matters more than any single price, and most people settle into one of these.' },
+    {
+      t: 'table',
+      head: ['Pattern', 'Visits', 'Annual'],
+      rows: [
+        ['Continuous overlay, fills every 3 weeks', '17', 'approx. $850 - 1,400'],
+        ['Continuous extensions, fills every 2 - 3 weeks', '20', 'approx. $1,000 - 1,900'],
+        ['On for six months, off for six', '9', 'approx. $500 - 800'],
+        ['Occasions only', '4 - 6', 'approx. $300 - 600'],
+      ],
+    },
+    { t: 'p', text: '**Removals belong in the budget.** Each time you take a set off between cycles it is a paid appointment, and two a year is $40 to $80 that never appears in a price comparison.' },
+  ],
+  faq: [
+    { q: 'How much is builder gel?', a: '$55 to $110 for a set, and $45 to $85 for fills.' },
+    { q: 'Is overlay cheaper than extensions?', a: 'Yes, usually $20 to $40 less, and it often stretches a week further between appointments.' },
+    { q: 'How often do I need fills?', a: 'Every two to three weeks for extensions, and often three to four for an overlay.' },
+    { q: 'Is it more than gel polish?', a: 'Yes, because it uses more product and takes more time. Per week of wear the gap narrows.' },
+    { q: 'Can I do it at home?', a: 'Kits exist, but application and especially safe removal need practice.' },
+  ],
+  related: [
+    { href: '/en/what-is-builder-gel', label: 'What Is Builder Gel?' },
+    { href: '/en/builder-gel-vs-acrylic', label: 'Builder Gel vs Acrylic' },
+    { href: '/en/builder-gel-at-home', label: 'Can You Do Builder Gel at Home?' },
+  ],
+}

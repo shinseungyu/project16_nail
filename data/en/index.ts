@@ -77,6 +77,14 @@ import { howLongDoesARussianManicureLast } from './how-long-does-a-russian-manic
 import { russianManicureAftercare } from './russian-manicure-aftercare'
 import { russianManicureTraining } from './russian-manicure-training'
 
+import { whatIsBuilderGel } from './what-is-builder-gel'
+import { builderGelVsAcrylic } from './builder-gel-vs-acrylic'
+import { builderGelCost } from './builder-gel-cost'
+import { builderGelRemoval } from './builder-gel-removal'
+import { builderGelForWeakNails } from './builder-gel-for-weak-nails'
+import { builderGelAtHome } from './builder-gel-at-home'
+import { builderGelDamage } from './builder-gel-damage'
+
 /**
  * 영문 콘텐츠 페이지 전체 목록.
  * 허브의 섹션 카드와 sitemap이 여기서 파생되므로, 페이지를 추가하면 이 파일만 갱신하면 된다.
@@ -231,6 +239,22 @@ export const EN_SECTIONS: EnSection[] = [
       howLongDoesARussianManicureLast,
       russianManicureAftercare,
       russianManicureTraining,
+    ],
+  },
+  {
+    key: 'builder-gel',
+    title: 'Builder gel and overlays',
+    blurb:
+      'The system people reach for when they want their own nails to survive long enough to grow. What it does, what it costs, and why it protects rather than strengthens.',
+    icon: '🧴',
+    pages: [
+      whatIsBuilderGel,
+      builderGelVsAcrylic,
+      builderGelCost,
+      builderGelForWeakNails,
+      builderGelRemoval,
+      builderGelAtHome,
+      builderGelDamage,
     ],
   },
 ]

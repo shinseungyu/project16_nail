@@ -1,0 +1,136 @@
+import type { EnPage } from './types'
+import { EN_UPDATED, EN_UPDATED_ISO } from './common'
+
+export const builderGelAtHome: EnPage = {
+  path: '/en/builder-gel-at-home',
+  title: 'Builder Gel at Home: What You Need and What to Watch',
+  h1: 'Can You Do Builder Gel at Home?',
+  description:
+    'A home builder gel kit costs $50 to $150. What is in it, the learning curve, and why removal is the part that goes wrong.',
+  keywords: ['builder gel at home', 'builder gel kit', 'diy builder gel'],
+  category: 'Nails',
+  stage: 6,
+  updated: EN_UPDATED,
+  updatedIso: EN_UPDATED_ISO,
+  lead:
+    '**Yes, and kits are widely available for $50 to $150.** Application is learnable. **Removal is where home users damage their nails** — and that is the part worth taking seriously before you start.',
+  blocks: [
+    { t: 'h2', id: 'kit', text: 'What a kit needs' },
+    {
+      t: 'table',
+      head: ['Item', 'Note'],
+      rows: [
+        ['UV/LED lamp', 'Wattage matters for proper curing'],
+        ['Builder gel', 'Soak-off types are more forgiving for beginners'],
+        ['Base and top coat', ''],
+        ['Prep - dehydrator, primer', ''],
+        ['Files, buffer', ''],
+        ['Cuticle pusher', ''],
+        ['100% acetone, foil, cotton', 'For removal'],
+        ['Lint-free wipes, cleanser', ''],
+      ],
+    },
+    { t: 'p', text: '**Buy the removal supplies at the same time as the application supplies.** People who buy a kit without acetone and foil are the people who end up prying, because the alternative at that moment is doing nothing.' },
+    { t: 'h2', id: 'learning-curve', text: 'The learning curve' },
+    {
+      t: 'table',
+      head: ['Skill', 'Difficulty'],
+      rows: [
+        ['Prep', 'Moderate - most skipped, most important'],
+        ['Apex placement', 'Hardest - determines strength and appearance'],
+        ['Even application', 'Moderate'],
+        ['Avoiding skin contact', 'Moderate - causes immediate lifting'],
+        ['Curing correctly', 'Easy if the lamp is adequate'],
+        ['Safe removal', 'Where damage happens'],
+      ],
+    },
+    { t: 'h2', id: 'mistakes', text: 'Common home mistakes' },
+    {
+      t: 'table',
+      head: ['Mistake', 'Result'],
+      rows: [
+        ['Under-curing', 'Product stays tacky, lifts, can irritate skin'],
+        ['Too thick in one layer', 'Uneven cure, heat spike, weak structure'],
+        ['Product on the cuticle', 'Immediate lifting'],
+        ['Over-buffing the natural nail', 'Thinning'],
+        ['Prying it off', 'Nail damage'],
+      ],
+    },
+    { t: 'note', title: 'What a heat spike is', text: 'A sharp burning sensation during curing usually means the layer is too thick. **Remove your hand from the lamp, wait, and cure again more slowly.** Apply thinner layers next time — it is a signal rather than a normal part of the process.' },
+    { t: 'h2', id: 'safety', text: 'Safety' },
+    {
+      t: 'ul',
+      items: [
+        'Work in a ventilated space.',
+        'Follow the manufacturer’s cure times exactly.',
+        '**Avoid skin contact with uncured gel** — repeated exposure can cause sensitisation.',
+        '**If you develop itching, redness, or a rash around the nails, stop and see a doctor.** Gel allergy is a real consumer and occupational issue.',
+      ],
+    },
+    { t: 'h2', id: 'realistic', text: 'A realistic first attempt' },
+    { t: 'p', text: 'Expectations help here. A first home set will not look like salon work, and that is not a reason to conclude the product is bad.' },
+    {
+      t: 'table',
+      head: ['Attempt', 'Typical result'],
+      rows: [
+        ['First', 'Uneven, thick in places, may lift within a week'],
+        ['Second or third', 'More even; apex still developing'],
+        ['After several', 'Consistent, lasting two to three weeks'],
+        ['Removal, first time', 'The step to take slowest'],
+      ],
+    },
+    { t: 'p', text: 'Practising on one hand at a time is worth doing. It is slower, and it means a failed attempt does not leave you with ten nails you cannot use.' },
+    { t: 'h2', id: 'lamp', text: 'The lamp is the part not to economise on' },
+    { t: 'p', text: 'Most home problems trace back to curing, and curing depends on the lamp matching the product. This is the one component where a cheap choice creates a safety issue rather than just a cosmetic one.' },
+    {
+      t: 'table',
+      head: ['Issue', 'Cause', 'Consequence'],
+      rows: [
+        ['Product still tacky after curing', 'Under-powered or aged lamp', 'Lifting, and uncured product on skin'],
+        ['Cures on top but soft underneath', 'Layer too thick', 'Weak structure, heat spike'],
+        ['Some nails cure, others do not', 'Hand position in the lamp', 'Uneven wear'],
+        ['Bulbs dimming over time', 'Normal ageing', 'Gradual under-curing'],
+      ],
+    },
+    { t: 'p', text: '**Uncured product on skin is the sensitisation risk**, so under-curing is not only a durability problem. Match the lamp to the product line and follow the stated cure times rather than estimating.' },
+    { t: 'h2', id: 'when-salon', text: 'When to use a salon instead' },
+    {
+      t: 'table',
+      head: ['Situation', 'Why'],
+      rows: [
+        ['You want extensions rather than an overlay', 'Sculpting on a form is a genuine skill'],
+        ['Your nails are already damaged', 'Assessment first'],
+        ['You have had any reaction to gel', 'Stop, and see a doctor'],
+        ['Removal has gone wrong before', 'Watch how a professional does it once'],
+        ['An important event soon', 'Not the moment for a first attempt'],
+      ],
+    },
+    { t: 'p', text: 'Many people do both — salon sets when it matters, home sets in between. Watching a technician prep and remove once is worth more than several videos.' },
+    { t: 'h2', id: 'cost-compare', text: 'Does it actually save money?' },
+    { t: 'p', text: 'The kit pays for itself quickly on paper. Whether it does in practice depends on how many sets you get out of it and how the removals go.' },
+    {
+      t: 'table',
+      head: ['', 'Home', 'Salon'],
+      rows: [
+        ['Upfront', '$50 - 150 kit', '$0'],
+        ['Per set', 'Product only, a few dollars', '$55 - 110'],
+        ['Your time per set', '1 - 2 hrs', 'None of your labour'],
+        ['Removal', 'Your time and acetone', '$20 - 40'],
+        ['If it goes wrong', 'Your nails', 'Their responsibility'],
+      ],
+    },
+    { t: 'p', text: '**The saving is real if you keep at it.** People who buy a kit, do two sets, and go back to the salon have spent more than if they had never bought it, which is worth knowing before ordering.' },
+  ],
+  faq: [
+    { q: 'Can I do builder gel myself?', a: 'Yes, with practice. Application is learnable; removal is the part that needs care.' },
+    { q: 'What does a kit cost?', a: '$50 to $150 for a reasonable starting set, including removal supplies.' },
+    { q: 'Is the lamp important?', a: 'Yes. Under-curing causes lifting and can contribute to skin sensitisation.' },
+    { q: 'What is a heat spike?', a: 'A burning sensation during curing, usually from applying too thick a layer. Remove your hand, wait, and cure more slowly.' },
+    { q: 'Can I develop an allergy to gel?', a: 'Sensitisation from repeated skin contact with uncured product is possible. Avoid skin contact and see a doctor if symptoms appear.' },
+  ],
+  related: [
+    { href: '/en/builder-gel-removal', label: 'How to Remove Builder Gel' },
+    { href: '/en/what-is-builder-gel', label: 'What Is Builder Gel?' },
+    { href: '/en/builder-gel-damage', label: 'Does Builder Gel Damage Nails?' },
+  ],
+}

@@ -1,0 +1,126 @@
+import type { EnPage } from './types'
+import { EN_UPDATED, EN_UPDATED_ISO } from './common'
+
+export const builderGelForWeakNails: EnPage = {
+  path: '/en/builder-gel-for-weak-nails',
+  title: 'Builder Gel for Weak Nails: Does It Actually Help?',
+  h1: 'Does Builder Gel Help Weak Nails?',
+  description:
+    'Builder gel overlay protects weak nails while they grow, but it does not repair them. What it can and cannot do, and how to use it properly.',
+  keywords: ['builder gel weak nails', 'builder gel strengthen nails', 'overlay for weak nails'],
+  category: 'Nails',
+  stage: 6,
+  updated: EN_UPDATED,
+  updatedIso: EN_UPDATED_ISO,
+  lead:
+    '**It protects them while they grow, which often produces the result people want — but it does not repair or strengthen the nail itself.** The overlay bears the stress instead of your nail. That is genuinely useful, and it is not the same as fixing anything.',
+  blocks: [
+    { t: 'h2', id: 'does-doesnt', text: 'What it does and does not do' },
+    {
+      t: 'table',
+      head: ['Does', 'Does not'],
+      rows: [
+        ['Provides a protective layer', 'Repair existing damage'],
+        ['Prevents bending and splitting', 'Change nail plate structure'],
+        ['Lets nails grow without breaking', 'Make nails biologically stronger'],
+        ['Reduces snagging and tearing', 'Address underlying causes'],
+      ],
+    },
+    { t: 'p', text: '**The mechanism is protection, not repair.** Understanding that prevents disappointment when the overlay comes off and the nail underneath is the same as before, just longer.' },
+    { t: 'p', text: 'For most people that is still the outcome they wanted. If your nails break at the point where they would start to look good, a protective layer bridges exactly that gap.' },
+    { t: 'h2', id: 'using-well', text: 'Using it well for weak nails' },
+    {
+      t: 'ol',
+      items: [
+        '**Overlay at natural length**, not extensions — length adds leverage and stress.',
+        '**Thin application**, properly apexed rather than thick and flat.',
+        '**Fills on schedule** — a lifted overlay traps moisture underneath.',
+        '**Soak-off removal only.**',
+        'Cuticle oil daily.',
+        'Consider a break between sets if nails feel compromised.',
+      ],
+    },
+    { t: 'p', text: 'The first point is the one people get wrong. Adding length to weak nails puts the new leverage on the weakest possible foundation, which is how an overlay meant to protect ends up causing breaks.' },
+    { t: 'h2', id: 'causes', text: 'What actually causes weak nails' },
+    { t: 'p', text: 'Overlays address the symptom. The underlying factors are worth knowing, because several are within your control.' },
+    {
+      t: 'table',
+      head: ['Factor', 'Note'],
+      rows: [
+        ['Repeated improper removal', 'Very common, and entirely avoidable'],
+        ['Frequent water exposure', 'Wetting and drying cycles'],
+        ['Harsh cleaning products', 'Gloves help more than any product'],
+        ['Over-buffing', 'Accumulates across sets'],
+        ['Medical or nutritional factors', 'Worth discussing with a doctor if persistent'],
+      ],
+    },
+    { t: 'note', tone: 'warn', title: 'Persistent nail changes warrant a medical opinion', text: 'Changes in colour, texture, thickness, or shape that do not resolve are not a salon question. A doctor is the right place for those, and an overlay over them delays rather than helps.' },
+    { t: 'h2', id: 'timeline', text: 'What to expect over months' },
+    {
+      t: 'table',
+      head: ['Stage', 'What you will see'],
+      rows: [
+        ['First set', 'Nails stop breaking; length starts to hold'],
+        ['2 - 3 months', 'Noticeable length that would not have survived'],
+        ['At removal', 'The plate underneath is unchanged, just longer'],
+        ['After a break', 'Nails behave as they did before, at the new length'],
+      ],
+    },
+    { t: 'p', text: 'That third row is the one that surprises people. **The nail did not get stronger; it got the chance to grow.** For most people wanting longer nails, that distinction matters less than the result.' },
+    { t: 'h2', id: 'alternatives', text: 'What else people try' },
+    { t: 'p', text: 'An overlay is one approach among several, and it is worth knowing what the alternatives actually do before deciding.' },
+    {
+      t: 'table',
+      head: ['Approach', 'What it does', 'Honest assessment'],
+      rows: [
+        ['Builder gel overlay', 'Physical protection', 'Works, while it is on'],
+        ['Strengthener polish', 'Surface coating', 'Reduces breakage; does not repair'],
+        ['Cuticle oil daily', 'Flexibility and moisture', 'Genuinely useful, and free-ish'],
+        ['Gloves for wet work', 'Removes a main cause', 'The highest-return habit'],
+        ['Keeping nails short', 'Less leverage', 'Works, if you can live with it'],
+        ['Supplements', 'Variable', 'Discuss with a doctor first'],
+      ],
+    },
+    { t: 'p', text: '**Gloves and oil are the two that cost almost nothing and address causes rather than symptoms.** They are also the two people skip, because neither feels like doing something.' },
+    { t: 'h2', id: 'combining', text: 'Using an overlay alongside the basics' },
+    { t: 'p', text: 'The overlay protects while the nail grows; the habits determine what the nail is like when the overlay comes off. Doing both is what produces a lasting change rather than a temporary one.' },
+    {
+      t: 'ol',
+      items: [
+        '**Overlay at natural length** for protection.',
+        '**Gloves** for washing up and cleaning, every time.',
+        '**Cuticle oil daily**, including over the overlay.',
+        '**Fills on schedule**, so nothing lifts and traps moisture.',
+        '**Soak-off removal**, without exception.',
+        '**A break between sets** if the nail looks thin at removal.',
+      ],
+    },
+    { t: 'h2', id: 'when-not', text: 'When an overlay is not the answer' },
+    { t: 'p', text: 'It solves one specific problem. Several things that look like weak nails are something else, and covering them delays the actual fix.' },
+    {
+      t: 'table',
+      head: ['If you have', 'The overlay is'],
+      rows: [
+        ['Nails that bend and split at length', 'The right tool'],
+        ['Peeling in layers after past removals', 'Reasonable, with gentle removal'],
+        ['Discolouration or thickening', 'Not the answer - see a doctor'],
+        ['Separation from the nail bed', 'Not the answer - see a doctor'],
+        ['Pain or swelling around the nail', 'Not the answer - see a doctor'],
+        ['A recent reaction to gel products', 'Not the answer - stop and see a doctor'],
+      ],
+    },
+    { t: 'p', text: 'The bottom four are not salon questions, and applying product over them makes assessment harder later. Persistent changes to a nail are worth a medical opinion rather than a cover.' },
+  ],
+  faq: [
+    { q: 'Does builder gel strengthen nails?', a: 'It protects them. It does not biologically strengthen the nail plate, which is not living tissue and cannot be repaired.' },
+    { q: 'Will my nails be better after?', a: 'They will be longer if they did not break. The plate itself is unchanged.' },
+    { q: 'How long should I keep it on?', a: 'Many people run continuously with fills. Take a break if nails feel sore or thin.' },
+    { q: 'Is it better than a strengthener polish?', a: 'A different approach — physical protection versus a coating. Neither repairs the nail.' },
+    { q: 'When should I see a doctor?', a: 'Persistent discolouration, thickening, separation, or pain. Those are not salon questions.' },
+  ],
+  related: [
+    { href: '/en/what-is-builder-gel', label: 'What Is Builder Gel?' },
+    { href: '/en/builder-gel-damage', label: 'Does Builder Gel Damage Nails?' },
+    { href: '/en/builder-gel-removal', label: 'How to Remove Builder Gel' },
+  ],
+}
