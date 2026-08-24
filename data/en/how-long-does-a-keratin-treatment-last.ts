@@ -1,0 +1,125 @@
+import type { EnPage } from './types'
+import { EN_UPDATED, EN_UPDATED_ISO, SMOOTHING_CHEM_NOTE } from './common'
+
+export const howLongDoesAKeratinTreatmentLast: EnPage = {
+  path: '/en/how-long-does-a-keratin-treatment-last',
+  title: 'How Long Does a Keratin Treatment Last?',
+  h1: 'How Long Does a Keratin Treatment Last?',
+  description:
+    'Keratin treatments last three to five months and fade gradually rather than growing out. What shortens them and how to extend the result.',
+  keywords: ['how long does a keratin treatment last', 'keratin treatment duration', 'keratin fading', 'make keratin last longer'],
+  category: 'Hair Treatments',
+  stage: 11,
+  updated: EN_UPDATED,
+  updatedIso: EN_UPDATED_ISO,
+  lead:
+    '**Three to five months, fading gradually rather than growing out with a line.** Sulphate shampoos, salt water and chlorine are the fastest ways to shorten it, and the first of those is by far the most common reason a treatment ends early.',
+  blocks: [
+    { t: 'note', tone: 'warn', text: SMOOTHING_CHEM_NOTE },
+    { t: 'h2', id: 'timeline', text: 'Month by month' },
+    {
+      t: 'table',
+      head: ['Month', 'What you will see'],
+      rows: [
+        ['1', 'Smoothest, fastest drying'],
+        ['2', 'Still very smooth'],
+        ['3', 'Frizz beginning to return, usually at the hairline first'],
+        ['4', 'Noticeably diminished'],
+        ['5', 'Largely faded'],
+      ],
+    },
+    { t: 'p', text: 'Because it fades rather than growing out, there is no point at which your hair looks half-treated in a visible line. **That gradual ending is the practical advantage over chemical straightening** and it means rebooking is a choice rather than a repair.' },
+    { t: 'h2', id: 'what-shortens-it', text: 'What shortens it' },
+    {
+      t: 'table',
+      head: ['Factor', 'Effect'],
+      rows: [
+        ['Sulphate shampoos', 'The biggest single factor by a distance'],
+        ['Salt water', 'Significant'],
+        ['Chlorine', 'Significant'],
+        ['Washing very frequently', 'Cumulative'],
+        ['Hard water', 'Mineral deposits build up'],
+        ['Clarifying shampoo', 'Strips it directly — avoid entirely'],
+      ],
+    },
+    { t: 'p', text: 'The top row explains most cases of "mine only lasted two months". A sulphate shampoo is doing exactly what it is designed to do — removing what is coating the hair — and the treatment is part of what it removes.' },
+    { t: 'h2', id: 'extending-it', text: 'Extending it' },
+    {
+      t: 'ol',
+      items: [
+        '**Sulphate-free shampoo. Non-negotiable**, and it does not have to be an expensive one.',
+        'Wash less frequently, and use dry shampoo between washes.',
+        '**Rinse your hair with clean water before swimming** — hair that is already saturated absorbs less pool or sea water.',
+        'Avoid clarifying shampoos entirely for the life of the treatment.',
+        'Consider a shower filter if you have hard water.',
+        'Use a sulphate-free conditioner too, not just shampoo.',
+        'Keep heat styling moderate — you should need much less of it anyway.',
+      ],
+    },
+    { t: 'h2', id: 'first-72-hours', text: 'The first 72 hours decide a lot' },
+    { t: 'p', text: 'Protocols vary by product, so **ask your stylist for the specific rules for what they used** rather than applying a rule you read somewhere. Many products require:' },
+    {
+      t: 'ul',
+      items: [
+        'No washing for 48 to 72 hours.',
+        '**No tying up, clipping, or tucking behind the ears** — creases can set.',
+        'No headbands, hats or sunglasses pushed back into the hair.',
+        'Hair kept straight and loose, including overnight.',
+      ],
+    },
+    { t: 'note', tone: 'warn', title: 'A ponytail on day one can leave a bend for months', text: 'This is the single most common self-inflicted problem with keratin treatments. The hair is still setting, and a crease made in that window does not brush out.' },
+    { t: 'h2', id: 'why-yours-faded', text: 'Why yours faded early' },
+    { t: 'p', text: 'If a treatment ended well short of three months, the cause is usually identifiable and usually fixable next time.' },
+    {
+      t: 'table',
+      head: ['Symptom', 'Most likely cause'],
+      rows: [
+        ['Faded evenly in six to eight weeks', 'Sulphate shampoo, or washing daily'],
+        ['Faded fastest at the ends', 'Existing damage or porosity'],
+        ['Faded after a holiday', 'Salt water or chlorine'],
+        ['Never looked smooth from the start', 'Product, technique or hair condition — talk to the salon'],
+        ['Went patchy', 'Uneven application or uneven porosity'],
+        ['Gradually stiffer and duller', 'Hard water mineral buildup'],
+      ],
+    },
+    { t: 'p', text: 'The fourth row is worth raising with the salon rather than absorbing. A result that never appeared at all is different from one that faded, and most salons would rather hear about it within the first two weeks.' },
+    { t: 'h2', id: 'rebooking', text: 'When to rebook' },
+    { t: 'p', text: 'Most people rebook somewhere between months three and five, when frizz has returned enough to be annoying. There is no requirement to rebook on a schedule, and stretching the interval is not a problem in itself.' },
+    {
+      t: 'table',
+      head: ['Interval', 'Note'],
+      rows: [
+        ['3 - 5 months', 'The usual rhythm'],
+        ['Longer', 'Fine — the treatment simply fades out completely'],
+        ['Shorter than 3 months', 'Not generally advisable — repeated heat processing accumulates'],
+        ['After colour', 'Ask your stylist about sequencing rather than booking independently'],
+      ],
+    },
+    { t: 'p', text: 'The third row is the one to respect. **The flat-iron stage is high heat repeated over the whole head**, and doing it more often than the product interval is how a smoothing habit turns into a damage problem.' },
+    { t: 'h2', id: 'what-fading-looks-like', text: 'What fading actually looks like' },
+    { t: 'p', text: 'Knowing the sequence stops month three feeling like a failure. It ends the same way for almost everyone, in roughly this order.' },
+    {
+      t: 'ul',
+      items: [
+        '**Drying time creeps up first.** Usually the earliest signal, before anything is visible in the mirror.',
+        '**Frizz reappears at the hairline and crown** before the lengths do.',
+        '**Humidity starts affecting your hair again** on days it previously did not.',
+        '**Texture returns evenly**, with no line and no patchiness.',
+        'If it goes patchy rather than fading evenly, that is worth raising with the salon.',
+      ],
+    },
+    { t: 'p', text: 'None of that requires action. **A treatment ending on schedule is not a treatment that failed**, and a break between rounds gives your hair a rest from repeated heat processing.' },
+  ],
+  faq: [
+    { q: 'How long does a keratin treatment last?', a: 'Three to five months, fading gradually rather than growing out with a line.' },
+    { q: 'Does it grow out with a line?', a: 'No. It fades, which is one of its advantages over chemical straightening.' },
+    { q: 'Why did mine fade in two months?', a: 'Usually sulphate shampoo or frequent washing, and sometimes swimming. Existing damage at the ends also fades faster.' },
+    { q: 'Can I swim?', a: 'Yes, with precautions. Wet your hair with clean water first so it absorbs less pool or sea water, and rinse immediately afterwards.' },
+    { q: 'How soon can I wash it?', a: 'Follow the protocol for the specific product used — commonly 48 to 72 hours, but it genuinely varies.' },
+  ],
+  related: [
+    { href: '/en/keratin-treatment-cost', label: 'How Much Does a Keratin Treatment Cost?' },
+    { href: '/en/keratin-treatment-aftercare', label: 'Keratin Treatment Aftercare' },
+    { href: '/en/what-is-a-keratin-treatment', label: 'What Is a Keratin Treatment?' },
+  ],
+}

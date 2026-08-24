@@ -1,0 +1,117 @@
+import type { EnPage } from './types'
+import { EN_UPDATED, EN_UPDATED_ISO, SMOOTHING_CHEM_NOTE } from './common'
+
+export const brazilianBlowoutAftercare: EnPage = {
+  path: '/en/brazilian-blowout-aftercare',
+  title: 'Brazilian Blowout Aftercare: Getting Full Wear',
+  h1: 'Brazilian Blowout Aftercare',
+  description:
+    'What to do after a Brazilian Blowout — product requirements, washing schedule, swimming precautions and colour timing.',
+  keywords: ['brazilian blowout aftercare', 'after brazilian blowout', 'brazilian blowout washing', 'brazilian blowout products'],
+  category: 'Hair Treatments',
+  stage: 12,
+  updated: EN_UPDATED,
+  updatedIso: EN_UPDATED_ISO,
+  lead:
+    '**Sulphate-free products are the requirement. Everything else is optimisation.** Protocols vary by product — some allow washing much sooner than keratin treatments do — so follow your stylist’s specific instruction rather than a general rule.',
+  blocks: [
+    { t: 'note', tone: 'warn', text: SMOOTHING_CHEM_NOTE },
+    { t: 'h2', id: 'immediately-after', text: 'Immediately after' },
+    { t: 'p', text: '**Ask your stylist for the exact protocol for the product used.** Unlike keratin treatments with their commonly quoted 48 to 72 hour rule, protocols in this category often differ, and applying the wrong rule either wastes three days or costs you wear.' },
+    { t: 'p', text: 'Common guidance includes:' },
+    {
+      t: 'ul',
+      items: [
+        'Follow the **specified wash-wait for your specific product**, whatever it is.',
+        '**Avoid creasing the hair** with ties, clips or headbands during the initial period.',
+        'Do not tuck hair behind your ears in that window.',
+        'Use the recommended aftercare products, or an equivalent sulphate-free pair.',
+        'Sleep with hair loose, ideally on a silk pillowcase.',
+      ],
+    },
+    { t: 'h2', id: 'ongoing', text: 'The ongoing routine' },
+    {
+      t: 'table',
+      head: ['Do', 'Do not'],
+      rows: [
+        ['Sulphate-free shampoo', 'Sulphate shampoo'],
+        ['Sulphate-free conditioner', 'Clarifying shampoo'],
+        ['Wash 2 - 3 times weekly', 'Wash daily'],
+        ['Cool to lukewarm water', 'Very hot water'],
+        ['Heat protectant when styling', 'Daily high-heat styling'],
+        ['Rinse before and after swimming', 'Swim without rinsing'],
+      ],
+    },
+    { t: 'p', text: 'You do not have to buy the branded aftercare range. **You do have to buy something sulphate-free** — and reading one ingredient list is cheaper than losing a month of wear.' },
+    { t: 'h2', id: 'swimming', text: 'Swimming' },
+    {
+      t: 'table',
+      head: ['Step', 'Why'],
+      rows: [
+        ['Wet hair with clean water first', 'Saturated hair absorbs less pool or sea water'],
+        ['Apply a leave-in conditioner', 'Acts as a physical barrier'],
+        ['Rinse immediately afterwards', 'Do not let chlorine or salt dry in'],
+        ['Avoid prolonged salt water', 'Cumulative and harsh'],
+      ],
+    },
+    { t: 'h2', id: 'colouring', text: 'Colour timing' },
+    { t: 'p', text: '**Sequencing matters.** Many stylists colour before the smoothing service, or wait a period afterwards. Smoothing changes how hair takes colour, and colour changes the hair that smoothing then heats.' },
+    { t: 'p', text: '**Do not book colour independently without telling both stylists.** Overlapping chemical services on the same hair, with nobody holding the full picture, is where damage happens — and it is entirely avoidable with one sentence at booking.' },
+    { t: 'h2', id: 'styling', text: 'Styling afterwards' },
+    { t: 'p', text: 'The treatment is supposed to reduce how much you do. Keeping the old routine out of habit is how people arrive at week ten with hair that feels over-processed.' },
+    {
+      t: 'table',
+      head: ['Change', 'Why'],
+      rows: [
+        ['Try air-drying first', 'Drying time should have dropped substantially'],
+        ['Lower heat, fewer passes', 'You need less of both now'],
+        ['Skip the flat iron unless you want it', 'The treatment already did that once'],
+        ['Microfibre towel, not terry cloth', 'Friction is a frizz source in itself'],
+        ['Less product', 'Smoothed hair needs less to behave'],
+      ],
+    },
+    { t: 'h2', id: 'signs-of-fading', text: 'Signs it is fading' },
+    { t: 'p', text: 'Frizz returning, hair taking longer to dry, texture reappearing. **That is normal at 8 to 10 weeks** — it is fading, not failing, and there is nothing to fix.' },
+    { t: 'p', text: 'What is not normal is a patchy result, a result that never appeared at all, or scalp irritation that persists. The first two are worth raising with the salon in the first couple of weeks, while they can still be distinguished from ordinary fading. The third is a question for a doctor.' },
+    { t: 'h2', id: 'products', text: 'Choosing products without buying the branded range' },
+    { t: 'p', text: 'The requirement is a property of the formula, not the label. Once you know what to look for, a supermarket bottle can do the job as well as a salon one.' },
+    {
+      t: 'table',
+      head: ['Look for', 'Avoid'],
+      rows: [
+        ['"Sulphate-free" stated on the bottle', 'Sodium lauryl sulphate'],
+        ['A short, boring ingredient list', 'Sodium laureth sulphate'],
+        ['Sulphate-free conditioner from the same logic', 'Anything sold as clarifying or deep-cleansing'],
+        ['A leave-in conditioner if you swim', 'Weekly "reset" or detox washes'],
+        ['Heat protectant for the days you style', 'Heavy silicone build-up you then need to clarify off'],
+      ],
+    },
+    { t: 'p', text: 'The last row is a trap worth naming. **Heavy build-up creates the urge to clarify**, and clarifying strips the treatment — so a product habit that seems unrelated can quietly end your treatment a month early.' },
+    { t: 'h2', id: 'week-by-week', text: 'What a normal wear cycle looks like' },
+    { t: 'p', text: 'Knowing the arc in advance stops week eight feeling like something went wrong.' },
+    {
+      t: 'table',
+      head: ['Period', 'What to expect', 'What to do'],
+      rows: [
+        ['First few days', 'Follow the product protocol exactly', 'No creasing, no ties'],
+        ['Weeks 1 - 3', 'Smoothest, drying fastest', 'Enjoy it and wash less than you think you need to'],
+        ['Weeks 4 - 7', 'Holding well', 'Keep the routine consistent'],
+        ['Weeks 8 - 10', 'Frizz gradually returning', 'Normal — nothing to fix'],
+        ['Weeks 11 - 12', 'Largely faded', 'Decide whether to rebook'],
+      ],
+    },
+    { t: 'p', text: 'You are not obliged to rebook at twelve weeks. **The treatment fading out completely is a perfectly good outcome**, and taking a break between rounds gives hair a rest from repeated heat processing.' },
+  ],
+  faq: [
+    { q: 'When can I wash my hair?', a: 'Follow your stylist’s product-specific protocol. Some products in this category allow washing considerably sooner than keratin treatments do.' },
+    { q: 'Do I need the branded products?', a: 'No, but you do need sulphate-free shampoo and conditioner of some kind, or the treatment fades much faster.' },
+    { q: 'Can I colour my hair?', a: 'Ask about sequencing — usually colour goes before the smoothing service, or after a wait. Tell both stylists if two salons are involved.' },
+    { q: 'Can I swim?', a: 'Yes, with clean-water rinsing before and after, and a leave-in conditioner as a barrier.' },
+    { q: 'Why is my hair frizzy again at week nine?', a: 'That is normal fading. The treatment lasts around 10 to 12 weeks and ends gradually rather than abruptly.' },
+  ],
+  related: [
+    { href: '/en/how-long-does-a-brazilian-blowout-last', label: 'How Long Does a Brazilian Blowout Last?' },
+    { href: '/en/what-is-a-brazilian-blowout', label: 'What Is a Brazilian Blowout?' },
+    { href: '/en/keratin-treatment-aftercare', label: 'Keratin Treatment Aftercare' },
+  ],
+}

@@ -1,0 +1,116 @@
+import type { EnPage } from './types'
+import { EN_UPDATED, EN_UPDATED_ISO, SMOOTHING_CHEM_NOTE } from './common'
+
+export const whatIsAKeratinTreatment: EnPage = {
+  path: '/en/what-is-a-keratin-treatment',
+  title: 'What Is a Keratin Treatment? How It Works',
+  h1: 'What Is a Keratin Treatment?',
+  description:
+    'Keratin treatments smooth hair semi-permanently using a product sealed in with heat. What is involved, what it costs, and what to ask about ingredients.',
+  keywords: ['what is a keratin treatment', 'keratin smoothing treatment', 'keratin treatment process', 'does keratin straighten hair'],
+  category: 'Hair Treatments',
+  stage: 11,
+  updated: EN_UPDATED,
+  updatedIso: EN_UPDATED_ISO,
+  lead:
+    '**A smoothing treatment where a solution is applied to the hair and sealed in with a flat iron, reducing frizz and cutting drying time.** It lasts three to five months and fades out gradually. **Formulations vary considerably — ask what is being used.**',
+  blocks: [
+    { t: 'note', tone: 'warn', text: SMOOTHING_CHEM_NOTE },
+    { t: 'h2', id: 'process', text: 'The process, step by step' },
+    { t: 'p', text: 'It is a long appointment, and most of the length is the flat-iron stage. Knowing the sequence in advance makes it easier to tell whether you are being rushed.' },
+    {
+      t: 'table',
+      head: ['Step', 'Detail', 'Rough time'],
+      rows: [
+        ['1. Clarifying wash', 'Removes buildup so the product can bind', '15 min'],
+        ['2. Blow dry', 'Hair has to be fully dry', '20 min'],
+        ['3. Product application', 'Section by section', '30 - 45 min'],
+        ['4. Processing', 'The product sits', '20 - 30 min'],
+        ['5. Flat iron sealing', 'High heat, many passes', '45 - 90 min'],
+        ['6. Finish', 'Rinse or style, depending on the product', '15 min'],
+        ['Total', '', '2.5 - 4 hrs'],
+      ],
+    },
+    { t: 'h2', id: 'key-facts', text: 'Key facts' },
+    {
+      t: 'table',
+      head: ['Attribute', 'Detail'],
+      rows: [
+        ['Appointment length', '2.5 - 4 hrs'],
+        ['Cost', '$150 - 400, varies by salon and region'],
+        ['Lasts', '3 - 5 months'],
+        ['How it ends', 'Fades gradually, no harsh regrowth line'],
+        ['Straightens?', 'Smooths — it does not fully straighten'],
+        ['Curl pattern', 'Loosened, not eliminated'],
+      ],
+    },
+    { t: 'h2', id: 'expectations', text: 'Setting expectations' },
+    { t: 'p', text: '**A keratin treatment is not a straightening treatment.** It reduces frizz, loosens curl, and cuts blow-dry time substantially — but curly hair remains wavy, and it is supposed to.' },
+    { t: 'p', text: 'If you want poker-straight hair with no styling, that is a different service with different chemistry and different permanence. Booking a keratin treatment expecting that outcome is the most common way people end up disappointed by a treatment that worked exactly as intended.' },
+    {
+      t: 'table',
+      head: ['You want', 'Keratin will'],
+      rows: [
+        ['Less frizz in humidity', 'Deliver, and this is its strongest use'],
+        ['Shorter blow-dry time', 'Deliver, often dramatically'],
+        ['To keep some wave', 'Deliver'],
+        ['Poker-straight hair with no styling', 'Not deliver'],
+        ['A permanent change', 'Not deliver — it fades'],
+        ['Repair of damaged hair', 'Not deliver — it smooths, it does not rebuild'],
+      ],
+    },
+    { t: 'h2', id: 'ingredients', text: 'Ingredients — what to ask' },
+    { t: 'p', text: 'Formulations vary. **Some contain formaldehyde or ingredients that release it when heated**, which is why ventilation and product transparency matter in this specific service more than in most salon treatments.' },
+    { t: 'p', text: 'These are reasonable questions, and asking them is not an accusation:' },
+    {
+      t: 'ol',
+      items: [
+        '**What product are you using?**',
+        '**Can I see the safety data sheet?**',
+        'How is the space ventilated during the service?',
+        'Is there an alternative formulation you offer?',
+        'Do stylists here use any protective equipment for this service?',
+      ],
+    },
+    { t: 'p', text: '**A good salon answers these directly.** The answers themselves matter less than the willingness — a stylist who knows their product line and can point at an SDS is telling you something useful about how the rest of the appointment will go.' },
+    { t: 'h2', id: 'who-it-suits', text: 'Who it suits, and who it does not' },
+    { t: 'p', text: 'Suitability is partly about hair and partly about routine. The treatment is at its best for people whose current styling routine is the problem it solves.' },
+    {
+      t: 'table',
+      head: ['Good fit', 'Poor fit'],
+      rows: [
+        ['Blow-drying most days already', 'Happy with your natural texture'],
+        ['Frizz is the main complaint', 'Want a permanent change'],
+        ['Live somewhere humid', 'Cannot commit to sulphate-free products'],
+        ['Willing to change shampoo', 'Swim in chlorine several times a week'],
+        ['Hair in reasonable condition', 'Recently bleached and fragile'],
+        ['Comfortable with a 3-4 hour appointment', 'Pregnant or breastfeeding — speak to your doctor first'],
+      ],
+    },
+    { t: 'p', text: 'The bleached-hair row deserves emphasis. Smoothing involves repeated high-heat passes, and hair that has already been chemically lightened tolerates that less well. **A stylist who declines, or who wants to do a strand test first, is doing their job.**' },
+    { t: 'h2', id: 'after', text: 'What happens afterwards' },
+    { t: 'p', text: 'The first 48 to 72 hours are the part people get wrong, and the protocol varies by product rather than being universal.' },
+    {
+      t: 'ul',
+      items: [
+        '**Ask for the specific protocol for the product used** rather than assuming a standard rule.',
+        'Many products require no washing for 48 to 72 hours.',
+        '**No hair ties, clips, headbands or tucking behind ears** in that window — creases can set.',
+        '**Sulphate-free shampoo afterwards is not optional.** Sulphates strip the treatment and shorten it considerably.',
+        'Expect gradual fading rather than an abrupt end.',
+      ],
+    },
+  ],
+  faq: [
+    { q: 'What is a keratin treatment?', a: 'A smoothing treatment applied to the hair and sealed in with a flat iron, reducing frizz and drying time for around three to five months.' },
+    { q: 'Does it straighten hair?', a: 'It smooths and loosens curl. It does not fully straighten — curly hair typically remains wavy.' },
+    { q: 'How long does the appointment take?', a: 'Usually 2.5 to 4 hours, most of which is the flat-iron sealing stage.' },
+    { q: 'Does it grow out with a line?', a: 'No. It fades gradually, which is one of its practical advantages over chemical straightening.' },
+    { q: 'Are the ingredients safe?', a: 'Formulations vary, and some contain formaldehyde or ingredients that release it when heated. Ask which product is used, ask to see the safety data sheet, and ask about ventilation.' },
+  ],
+  related: [
+    { href: '/en/keratin-treatment-cost', label: 'How Much Does a Keratin Treatment Cost?' },
+    { href: '/en/keratin-treatment-safety', label: 'Keratin Treatments and Formaldehyde' },
+    { href: '/en/how-long-does-a-keratin-treatment-last', label: 'How Long Does a Keratin Treatment Last?' },
+  ],
+}

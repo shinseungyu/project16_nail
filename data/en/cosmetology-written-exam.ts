@@ -1,0 +1,125 @@
+import type { EnPage } from './types'
+import { EN_UPDATED, EN_UPDATED_ISO, SCHOOL_NOTE } from './common'
+
+export const cosmetologyWrittenExam: EnPage = {
+  path: '/en/cosmetology-written-exam',
+  title: 'Cosmetology Written Exam: Content and Strategy',
+  h1: 'Cosmetology Written Exam: What to Study',
+  description:
+    'What the written state board exam covers, how it is structured, and a study approach that targets the highest-yield areas first.',
+  keywords: ['cosmetology written exam', 'state board written test', 'cosmetology exam study guide', 'what is on the cosmetology exam'],
+  category: 'Licensing & Training',
+  stage: 13,
+  updated: EN_UPDATED,
+  updatedIso: EN_UPDATED_ISO,
+  lead:
+    '**A multiple-choice exam covering scientific concepts, safety and infection control, and state law.** Infection control and safety typically carry more weight than candidates expect, and they are the most reliably scorable sections on the paper.',
+  blocks: [
+    { t: 'note', tone: 'warn', text: SCHOOL_NOTE },
+    { t: 'h2', id: 'content-areas', text: 'Common content areas' },
+    {
+      t: 'table',
+      head: ['Area', 'Note'],
+      rows: [
+        ['Infection control and safety', 'High yield, with consistent question patterns'],
+        ['Anatomy and physiology', 'Skin, hair and nails'],
+        ['Chemistry basics', 'Product interactions and pH'],
+        ['Hair, skin and nail services', 'Procedures and theory'],
+        ['State laws and regulations', 'Specific to your jurisdiction'],
+        ['Client consultation', 'Smaller, but reliably present'],
+      ],
+    },
+    { t: 'p', text: 'Weighting varies by state, and your candidate bulletin publishes the content outline. **That outline is the syllabus** — studying without it means guessing at proportions that are already written down.' },
+    { t: 'h2', id: 'study-strategy', text: 'Study strategy' },
+    {
+      t: 'ol',
+      items: [
+        '**Start with infection control and safety.** Patterns are consistent and it is the most reliable place to bank points.',
+        '**Then state law.** It is memorisation, it is specific to you, and it cannot be reasoned out.',
+        'Anatomy next — heavier going, but it underpins several other areas.',
+        'Chemistry after that, focusing on what appears repeatedly rather than depth.',
+        '**Practice tests over re-reading.** Recall beats recognition, and re-reading produces a false sense of knowing.',
+      ],
+    },
+    { t: 'p', text: 'The ordering is deliberate. **Two of the first three areas are pure reliable points**, and getting them secure early makes the rest of the study period much less stressful.' },
+    { t: 'h2', id: 'resources', text: 'What to use' },
+    {
+      t: 'table',
+      head: ['Resource', 'Note'],
+      rows: [
+        ['Your state candidate bulletin', 'The authoritative content outline'],
+        ['Your programme textbook', 'Aligned to the exam framework'],
+        ['Practice question banks', 'For recall practice, not for content'],
+        ['The state law section', 'Read the actual regulations, not a summary'],
+      ],
+    },
+    { t: 'note', tone: 'warn', title: 'Avoid outdated materials', text: 'Content outlines are periodically revised, and second-hand study guides can be several revisions behind. Check the date on anything you did not get from the board or your school.' },
+    { t: 'h2', id: 'how-to-use-practice-tests', text: 'How to use practice tests properly' },
+    { t: 'p', text: 'Most people use practice tests as a score check. Used properly they are a study method, and the difference is what you do after the score appears.' },
+    {
+      t: 'table',
+      head: ['Do', 'Instead of'],
+      rows: [
+        ['Review every wrong answer until you know why', 'Noting the score and moving on'],
+        ['Review right answers you guessed', 'Counting them as known'],
+        ['Group errors by topic', 'Treating them as unrelated'],
+        ['Retest the weak topic specifically', 'Retaking the whole test'],
+        ['Take one under timed conditions near the end', 'Only ever practising untimed'],
+      ],
+    },
+    { t: 'p', text: '**A guessed correct answer is a wrong answer that got lucky.** Marking your confidence as you go, and reviewing everything you were not sure about, finds the gaps that scores hide.' },
+    { t: 'h2', id: 'on-the-day', text: 'On the day' },
+    {
+      t: 'ul',
+      items: [
+        '**Read every question fully.** Negatives — "which is NOT" — catch out people who are moving quickly.',
+        '**Flag and return** rather than stalling on one item.',
+        'Do not second-guess a correct instinct without an actual reason to.',
+        'Watch your pace against the clock, roughly at the quarter points.',
+        'Answer everything. An unanswered question scores nothing regardless of format.',
+      ],
+    },
+    { t: 'p', text: 'If you finish early, spend the time on flagged questions rather than re-reading answered ones. **Changing answers you were confident about is where scores usually go down**, not up.' },
+    { t: 'h2', id: 'study-schedule', text: 'A study schedule that actually fits' },
+    { t: 'p', text: 'Most candidates are studying around a full programme, clinic floor hours and often a job. A schedule that assumes long uninterrupted evenings will be abandoned in week two.' },
+    {
+      t: 'table',
+      head: ['Weeks out', 'Focus'],
+      rows: [
+        ['6 - 5', 'Infection control and safety, until it is reliable'],
+        ['4', 'State law — read the actual regulations'],
+        ['3', 'Anatomy and physiology'],
+        ['2', 'Chemistry, plus practice tests by topic'],
+        ['1', 'Full timed practice tests and reviewing errors'],
+        ['Final days', 'Light review only — no new material'],
+      ],
+    },
+    { t: 'p', text: '**Short daily sessions beat long weekly ones** for this kind of recall-heavy material. Twenty minutes of practice questions six days a week outperforms a three-hour Sunday, and it survives a bad week far better.' },
+    { t: 'h2', id: 'common-mistakes', text: 'Common study mistakes' },
+    { t: 'p', text: 'These are the patterns that produce a lot of study time and a disappointing score.' },
+    {
+      t: 'ul',
+      items: [
+        '**Re-reading the textbook and calling it studying.** Recognition feels like knowledge and is not.',
+        '**Skipping state law** because it is dull. It is memorisation, it is specific to you, and it reliably appears.',
+        '**Studying only the topics you enjoy**, which are rarely the high-yield ones.',
+        '**Using out-of-date practice material** from several revisions ago.',
+        '**Never practising under time pressure** until the exam itself.',
+        'Treating infection control as beneath attention because you do it every day.',
+      ],
+    },
+    { t: 'p', text: 'The last one is the most expensive. **Doing something correctly and answering questions about it are different skills**, and the exam is testing the second.' },
+  ],
+  faq: [
+    { q: 'What is on the cosmetology written exam?', a: 'Safety and infection control, anatomy, chemistry, services, and state law. Weighting varies by state and is published in your candidate bulletin.' },
+    { q: 'What should I study first?', a: 'Infection control and safety — high yield with consistent question patterns — and then state law, which is memorisation specific to your jurisdiction.' },
+    { q: 'How many questions are there?', a: 'It varies by state. Your candidate bulletin gives the format and count.' },
+    { q: 'Are practice tests useful?', a: 'Yes, if you review every wrong answer and every lucky guess. Recall practice is far more effective than re-reading.' },
+    { q: 'Is state law on the exam?', a: 'Typically yes, and it is specific to your state, so general study guides will not cover it adequately.' },
+  ],
+  related: [
+    { href: '/en/cosmetology-practical-exam', label: 'Cosmetology Practical Exam: How to Prepare' },
+    { href: '/en/cosmetology-license-requirements', label: 'Cosmetology License Requirements' },
+    { href: '/en/esthetician-state-board-exam', label: 'Esthetician State Board Exam' },
+  ],
+}

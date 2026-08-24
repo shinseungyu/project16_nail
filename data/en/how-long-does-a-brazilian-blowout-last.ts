@@ -1,0 +1,138 @@
+import type { EnPage } from './types'
+import { EN_UPDATED, EN_UPDATED_ISO, SMOOTHING_CHEM_NOTE } from './common'
+
+export const howLongDoesABrazilianBlowoutLast: EnPage = {
+  path: '/en/how-long-does-a-brazilian-blowout-last',
+  title: 'How Long Does a Brazilian Blowout Last?',
+  h1: 'How Long Does a Brazilian Blowout Last?',
+  description:
+    'Typically 10 to 12 weeks, fading gradually. What shortens it, how to extend it, and when rebooking stops being a good idea.',
+  keywords: ['how long does a brazilian blowout last', 'brazilian blowout duration', 'brazilian blowout fading'],
+  category: 'Hair Treatments',
+  stage: 12,
+  updated: EN_UPDATED,
+  updatedIso: EN_UPDATED_ISO,
+  lead:
+    '**Around 10 to 12 weeks, fading gradually rather than growing out with a line.** Sulphate shampoos and chlorine are the two things that most reliably cut that short.',
+  blocks: [
+    { t: 'note', tone: 'warn', text: SMOOTHING_CHEM_NOTE },
+    { t: 'h2', id: 'timeline', text: 'Week by week' },
+    {
+      t: 'table',
+      head: ['Week', 'What you will see'],
+      rows: [
+        ['1 - 3', 'Smoothest, fastest drying'],
+        ['4 - 7', 'Still holding well'],
+        ['8 - 10', 'Frizz gradually returning'],
+        ['11 - 12', 'Largely faded'],
+      ],
+    },
+    { t: 'p', text: 'Because it fades rather than growing out, there is no point where your hair looks half-done in a visible line. **Frizz returning at week nine is the treatment ending on schedule, not failing.**' },
+    { t: 'h2', id: 'what-shortens-it', text: 'What shortens it' },
+    {
+      t: 'table',
+      head: ['Factor', 'Effect'],
+      rows: [
+        ['Sulphate shampoos', 'The biggest single factor'],
+        ['Chlorine', 'Significant'],
+        ['Salt water', 'Significant'],
+        ['Frequent washing', 'Cumulative'],
+        ['Clarifying shampoo', 'Strips it directly'],
+        ['Hard water', 'Mineral buildup over weeks'],
+      ],
+    },
+    { t: 'p', text: 'A treatment that ended at six weeks almost always has one of the first two rows behind it. Checking the ingredient list on a bottle you already own is the cheapest diagnostic available.' },
+    { t: 'h2', id: 'extending-it', text: 'Extending it' },
+    {
+      t: 'ol',
+      items: [
+        '**Sulphate-free shampoo and conditioner.** This is most of the answer.',
+        'Wash two to three times a week rather than daily.',
+        '**Rinse your hair with clean water before swimming** so it absorbs less pool or sea water.',
+        'Avoid clarifying shampoos entirely.',
+        'Cool to lukewarm water rather than hot.',
+        'Consider a shower filter if you have hard water.',
+        'Use a leave-in conditioner as a barrier before swimming.',
+      ],
+    },
+    { t: 'h2', id: 'rebooking', text: 'Rebooking' },
+    {
+      t: 'table',
+      head: ['Interval', 'Note'],
+      rows: [
+        ['Every 10 - 12 weeks', 'The standard rhythm'],
+        ['Every 12 - 16 weeks', 'Some people stretch it comfortably'],
+        ['Longer', 'Fine — it simply fades out completely'],
+        ['More frequently', 'Not generally advisable — repeated heat processing accumulates'],
+      ],
+    },
+    { t: 'note', tone: 'warn', title: 'Do not rebook early to chase a stronger result', text: 'If the result was weaker than you wanted, the answer is a conversation with your stylist about the product and your hair — not the same treatment sooner. Frequency is the variable that damages hair.' },
+    { t: 'h2', id: 'what-affects-duration', text: 'Why yours may last longer or shorter than average' },
+    { t: 'p', text: 'The 10 to 12 week figure is an average across a lot of different heads of hair. Several things move it in either direction before you have done anything at all.' },
+    {
+      t: 'table',
+      head: ['Factor', 'Effect on duration'],
+      rows: [
+        ['Hair porosity', 'Porous hair often holds it less well'],
+        ['Existing damage', 'Faded results appear at the ends first'],
+        ['How curly your hair is', 'Tighter curl patterns show returning texture sooner'],
+        ['Wash frequency', 'Daily washing can halve it'],
+        ['Swimming habit', 'Regular chlorine exposure is a large factor'],
+        ['Water hardness', 'Mineral buildup shortens and dulls'],
+      ],
+    },
+    { t: 'p', text: 'If your stylist tells you at the consultation to expect closer to eight weeks than twelve, that is a useful piece of honesty rather than a sales problem. **A prediction that turns out right is worth more than an optimistic one.**' },
+    { t: 'h2', id: 'signs-of-fading', text: 'What fading actually looks like' },
+    { t: 'p', text: 'Knowing the sequence stops people concluding something went wrong at week eight.' },
+    {
+      t: 'ul',
+      items: [
+        '**Drying time creeps up first.** Usually the earliest signal, before anything is visible.',
+        '**Frizz reappears at the hairline and crown** before the lengths.',
+        '**Humidity starts affecting your hair again** on days it previously did not.',
+        '**Texture returns evenly**, with no line and no patchiness.',
+        'If it goes patchy rather than evenly fading, that is worth raising with the salon.',
+      ],
+    },
+    { t: 'h2', id: 'stretching-it', text: 'Getting to twelve weeks rather than eight' },
+    { t: 'p', text: 'The difference between the short end and the long end of the range is mostly a handful of habits, and none of them are demanding.' },
+    {
+      t: 'table',
+      head: ['Habit', 'Effect on wear'],
+      rows: [
+        ['Switching to a sulphate-free shampoo', 'The single largest gain available'],
+        ['Washing three times a week instead of daily', 'Substantial'],
+        ['Rinsing before and after swimming', 'Substantial if you swim regularly'],
+        ['Lukewarm instead of hot water', 'Modest but free'],
+        ['A shower filter on hard water', 'Modest, and helps colour too'],
+        ['Dropping clarifying washes entirely', 'Prevents an abrupt ending'],
+      ],
+    },
+    { t: 'p', text: '**None of these require buying the salon’s range.** They require reading one ingredient list and changing one habit, which is a good return for roughly a month of extra wear.' },
+    { t: 'h2', id: 'when-not-to-rebook', text: 'When not to rebook' },
+    { t: 'p', text: 'Rebooking on schedule is normal. There are situations where waiting, or skipping a round, is the better call.' },
+    {
+      t: 'ul',
+      items: [
+        '**You are having colour or bleach done soon.** Sequence it with your stylist rather than stacking services.',
+        '**Your hair is breaking mid-strand.** That is a stop sign, not a scheduling question.',
+        '**The last result underperformed** and you have not yet worked out why with the salon.',
+        '**You are pregnant or breastfeeding** — speak to your doctor first.',
+        'You simply want a break. Fading out completely is not a problem to fix.',
+      ],
+    },
+    { t: 'p', text: 'A stylist who suggests waiting is giving you their assessment of your hair, which is what you are paying them for. **Repeated heat processing is cumulative**, and the interval exists for that reason rather than as a sales rhythm.' },
+  ],
+  faq: [
+    { q: 'How long does a Brazilian Blowout last?', a: 'Around 10 to 12 weeks, fading gradually rather than growing out with a line.' },
+    { q: 'Does it grow out with a line?', a: 'No. It fades, so there is no visible boundary between treated and untreated hair.' },
+    { q: 'Why did mine fade faster?', a: 'Usually sulphate shampoo, daily washing or swimming. Porosity and existing damage also shorten it.' },
+    { q: 'How often can I get one?', a: 'Every 10 to 12 weeks is standard. More frequently is not advisable because repeated heat processing accumulates.' },
+    { q: 'Can I swim?', a: 'Yes, with precautions. Rinse with clean water before and immediately after, and use a leave-in conditioner as a barrier.' },
+  ],
+  related: [
+    { href: '/en/brazilian-blowout-aftercare', label: 'Brazilian Blowout Aftercare' },
+    { href: '/en/brazilian-blowout-cost', label: 'How Much Does a Brazilian Blowout Cost?' },
+    { href: '/en/brazilian-blowout-vs-keratin', label: 'Brazilian Blowout vs Keratin Treatment' },
+  ],
+}

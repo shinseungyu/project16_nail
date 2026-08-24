@@ -1,0 +1,118 @@
+import type { EnPage } from './types'
+import { EN_UPDATED, EN_UPDATED_ISO, SMOOTHING_CHEM_NOTE } from './common'
+
+export const whatIsABrazilianBlowout: EnPage = {
+  path: '/en/what-is-a-brazilian-blowout',
+  title: 'What Is a Brazilian Blowout? Process and Results',
+  h1: 'What Is a Brazilian Blowout?',
+  description:
+    'Brazilian Blowout is a branded smoothing treatment. How the process works, what it costs, and how it differs from keratin treatments.',
+  keywords: ['what is a brazilian blowout', 'brazilian blowout process', 'brazilian blowout results', 'smoothing treatment'],
+  category: 'Hair Treatments',
+  stage: 12,
+  updated: EN_UPDATED,
+  updatedIso: EN_UPDATED_ISO,
+  lead:
+    '**A branded professional smoothing treatment applied to the hair and sealed with heat, reducing frizz while retaining more volume than some alternatives.** It lasts around 10 to 12 weeks. The term is often used loosely to mean any salon smoothing service, but it refers to a specific branded system.',
+  blocks: [
+    { t: 'note', tone: 'warn', text: SMOOTHING_CHEM_NOTE },
+    { t: 'h2', id: 'terminology', text: 'Terminology first' },
+    { t: 'p', text: 'This is the source of most confusion when booking, and it is worth getting straight before anything else.' },
+    {
+      t: 'table',
+      head: ['Term', 'What it means'],
+      rows: [
+        ['Brazilian Blowout (registered trademark)', 'A specific branded treatment system'],
+        ['"brazilian blowout", lowercase and colloquial', 'Often used loosely for any smoothing service'],
+        ['Keratin treatment', 'A broader category of smoothing treatments'],
+        ['Smoothing treatment', 'The general category all of these sit inside'],
+      ],
+    },
+    { t: 'p', text: '**When booking, ask which specific product will be used.** Salons vary in what they mean by the term, and two appointments described identically on two websites can be different services with different protocols, different durations and different aftercare.' },
+    { t: 'h2', id: 'process', text: 'The process' },
+    {
+      t: 'table',
+      head: ['Step', 'Detail'],
+      rows: [
+        ['1. Clarifying wash', 'Removes buildup'],
+        ['2. Blow dry', 'Hair must be dry before application'],
+        ['3. Product application', 'Section by section'],
+        ['4. Flat iron sealing', 'High heat, multiple passes'],
+        ['5. Rinse and finish', 'Depends on the protocol'],
+        ['Total', '90 min - 2.5 hrs'],
+      ],
+    },
+    { t: 'p', text: '**Typically a shorter appointment than a full keratin treatment**, and many protocols allow washing sooner afterwards. Both of those are practical advantages if a four-hour appointment and a three-day wash ban are what has been putting you off.' },
+    { t: 'h2', id: 'key-facts', text: 'Key facts' },
+    {
+      t: 'table',
+      head: ['Attribute', 'Detail'],
+      rows: [
+        ['Appointment length', '90 min - 2.5 hrs'],
+        ['Cost', '$200 - 400, varies by salon and region'],
+        ['Lasts', '10 - 12 weeks'],
+        ['Wash wait', 'Often shorter than keratin — check the protocol'],
+        ['Result', 'Smoothed, frizz reduced, volume retained'],
+        ['How it ends', 'Fades gradually'],
+      ],
+    },
+    { t: 'h2', id: 'what-it-does', text: 'What it does and does not do' },
+    { t: 'p', text: 'Like every treatment in this category, it smooths. **It does not straighten**, and retaining volume is specifically part of the appeal rather than a shortcoming.' },
+    {
+      t: 'table',
+      head: ['You want', 'Realistic'],
+      rows: [
+        ['Less frizz, hair still has body', 'Yes — this is the main use case'],
+        ['To keep your curl pattern', 'Yes, more so than with keratin'],
+        ['Faster drying', 'Yes'],
+        ['Poker-straight hair', 'No'],
+        ['A permanent change', 'No — it fades over 10 to 12 weeks'],
+        ['Repair of damaged hair', 'No — smoothing is not repair'],
+      ],
+    },
+    { t: 'h2', id: 'ingredients', text: 'Ingredients' },
+    { t: 'p', text: 'The same considerations apply across this whole treatment category. **Some smoothing products contain formaldehyde or ingredients that release it when heated**, which is why the category has drawn regulatory attention and why workplace safety guidance exists for salons.' },
+    { t: 'p', text: '**Ask what product is being used, ask to see its safety data sheet, and ask how the space is ventilated.** These questions apply whatever the service is called on the menu, and a salon doing these regularly should be able to answer without going to look something up.' },
+    { t: 'h2', id: 'booking', text: 'What to sort out when booking' },
+    { t: 'p', text: 'Because the term is used loosely, a five-minute conversation at booking prevents most of the mismatch between what you expected and what you got.' },
+    {
+      t: 'ol',
+      items: [
+        '**Which specific product are you using?**',
+        '**How long is the appointment?** 90 minutes and 4 hours are both possible answers under this name.',
+        '**What is the wash-wait protocol for that product?**',
+        'How long does it typically last on hair like mine?',
+        'Is a cut or blow-dry included, or extra?',
+        'What aftercare products will I need, and do I have to buy them here?',
+      ],
+    },
+    { t: 'p', text: 'The second and third questions are the ones that catch people out. **Do not assume the keratin 48 to 72 hour rule applies**, and do not assume it does not — protocols genuinely differ, and the only reliable source is the stylist holding the bottle.' },
+    { t: 'h2', id: 'who-it-suits', text: 'Who it tends to suit' },
+    { t: 'p', text: 'The volume-retention point is not marketing language. It is the practical reason people choose this over a full keratin treatment, and it maps onto specific kinds of hair and specific complaints.' },
+    {
+      t: 'table',
+      head: ['Good fit', 'Consider something else'],
+      rows: [
+        ['Fine hair you do not want flattened', 'You want maximum smoothing'],
+        ['Curly hair you want to keep curly', 'You want the longest-lasting result'],
+        ['Frizz is the complaint, not volume', 'You want poker-straight hair'],
+        ['You cannot spare a four-hour appointment', 'You are on a tight budget per month of wear'],
+        ['You need to wash your hair often', 'You cannot commit to sulphate-free products'],
+        ['Hair in reasonable condition', 'Recently bleached and fragile'],
+      ],
+    },
+    { t: 'p', text: 'As with any treatment in this category, **a stylist who wants to assess your hair first, or who suggests waiting, is doing their job.** Bleached or already-damaged hair tolerates repeated high-heat passes less well, and that is a conversation worth having before booking rather than after.' },
+  ],
+  faq: [
+    { q: 'What is a Brazilian Blowout?', a: 'A branded smoothing treatment sealed into the hair with heat, typically lasting around 10 to 12 weeks.' },
+    { q: 'Is it the same as a keratin treatment?', a: 'No. It is a specific branded system, though the term is often used loosely for smoothing services in general. Ask which product a salon actually uses.' },
+    { q: 'How long does the appointment take?', a: 'Usually 90 minutes to 2.5 hours, which is shorter than a full keratin treatment.' },
+    { q: 'Can I wash my hair right after?', a: 'Protocols vary, and some allow washing sooner than keratin treatments do. Ask for the protocol for the specific product used.' },
+    { q: 'Does it straighten hair?', a: 'No. It smooths and reduces frizz while retaining volume. Curl is loosened rather than removed.' },
+  ],
+  related: [
+    { href: '/en/brazilian-blowout-vs-keratin', label: 'Brazilian Blowout vs Keratin Treatment' },
+    { href: '/en/brazilian-blowout-cost', label: 'How Much Does a Brazilian Blowout Cost?' },
+    { href: '/en/keratin-treatment-safety', label: 'Keratin Treatments and Formaldehyde' },
+  ],
+}

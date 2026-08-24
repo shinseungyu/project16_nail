@@ -1,0 +1,116 @@
+import type { EnPage } from './types'
+import { EN_UPDATED, EN_UPDATED_ISO, MED_DISCLAIMER } from './common'
+
+export const chemicalPeelAftercare: EnPage = {
+  path: '/en/chemical-peel-aftercare',
+  title: 'Chemical Peel Aftercare: What to Do and Avoid',
+  h1: 'Chemical Peel Aftercare',
+  description:
+    'Aftercare depends heavily on peel depth. General guidance for superficial and medium peels, plus the signs that need medical attention.',
+  keywords: ['chemical peel aftercare', 'after a chemical peel', 'chemical peel peeling skin', 'chemical peel recovery care'],
+  category: 'Skin Treatments',
+  stage: 10,
+  updated: EN_UPDATED,
+  updatedIso: EN_UPDATED_ISO,
+  lead:
+    '**Keep it simple, keep it out of the sun, and do not pick.** Those three things cover most of what goes wrong after a peel. Your provider’s protocol is specific to your peel depth and overrides general guidance, including this page.',
+  blocks: [
+    { t: 'note', tone: 'warn', text: MED_DISCLAIMER },
+    { t: 'h2', id: 'by-depth', text: 'What to expect, by depth' },
+    { t: 'p', text: 'Aftercare is not one routine. What is trivial after a superficial peel is a genuine planning problem after a medium one.' },
+    {
+      t: 'table',
+      head: ['', 'Superficial', 'Medium'],
+      rows: [
+        ['Visible peeling', 'Light flaking, days 2 - 4', 'Significant, days 3 - 7'],
+        ['Makeup', 'Often the next day', 'Typically after peeling completes'],
+        ['Return to work', 'Same or next day', 'Plan several days'],
+        ['Actives resume', 'Around a week', 'Per provider, longer'],
+        ['Sun protection', 'Essential', 'Critical'],
+      ],
+      note: 'Deep peels are managed by the performing physician and follow a dedicated protocol.',
+    },
+    { t: 'h2', id: 'universal-rules', text: 'The universal rules' },
+    { t: 'p', text: 'Whatever the depth, freshly peeled skin wants to be left alone. The instinct to help it along is the source of most complications.' },
+    {
+      t: 'table',
+      head: ['Do', 'Do not'],
+      rows: [
+        ['Use a gentle cleanser only', 'Exfoliate, physically or chemically'],
+        ['Use a bland moisturiser', 'Use actives — retinoids, AHA, BHA, vitamin C'],
+        ['Wear broad-spectrum sunscreen daily', 'Get sun exposure'],
+        ['Let flaking shed naturally', 'Pick, peel or pull at skin'],
+        ['Follow your provider’s product list', 'Introduce new products'],
+        ['Keep the skin comfortable and hydrated', 'Use hot water or steam'],
+      ],
+    },
+    { t: 'h2', id: 'picking', text: 'Picking is the main cause of scarring' },
+    { t: 'p', text: 'Skin that is mid-shed looks untidy, and a half-attached flake is almost designed to be pulled. **Pulling skin that is not ready removes living tissue underneath**, and it is the leading cause of scarring and pigmentation problems after peels.' },
+    { t: 'p', text: 'The practical trick is to make it harder to do absent-mindedly. Keep a moisturiser within reach and apply it when you notice yourself touching your face, keep your hands busy in the evening, and accept a few untidy days. **Nothing you do speeds up shedding; you can only slow it down or damage it.**' },
+    { t: 'note', tone: 'warn', title: 'Trimming is not a compromise', text: 'Cutting a hanging flake with scissors, rubbing with a towel, or "just helping the loose bit" all count as picking. Let it come off in the shower on its own.' },
+    { t: 'h2', id: 'sun-protection', text: 'Sun protection is the highest-stakes item' },
+    { t: 'p', text: 'Freshly peeled skin is significantly more photosensitive, and sun exposure during healing raises the risk of post-inflammatory hyperpigmentation — **which is far harder to resolve than it is to avoid.**' },
+    {
+      t: 'ul',
+      items: [
+        '**Broad-spectrum sunscreen daily**, reapplied through the day rather than applied once in the morning.',
+        '**Physical shade where practical** — a hat outdoors does more than another layer of product.',
+        'Avoid deliberate sun exposure entirely during the peeling phase.',
+        'Remember that windows and overcast days are not protection.',
+        'Continue past the point where the skin looks normal, particularly after a medium peel.',
+      ],
+    },
+    { t: 'h2', id: 'products', text: 'What to actually put on your face' },
+    { t: 'p', text: 'The goal for the first week is boring. A routine with three items is easier to follow than one with eight, and there is nothing a serum can do during shedding that a bland moisturiser cannot do better.' },
+    {
+      t: 'table',
+      head: ['Stage', 'Routine'],
+      rows: [
+        ['Days 0 - 2', 'Gentle cleanser, bland moisturiser, sunscreen. Nothing else'],
+        ['Days 3 - 7', 'Same, applied more often if skin feels tight'],
+        ['After peeling completes', 'Reintroduce one product at a time, several days apart'],
+        ['Actives', 'Only when your provider says, and one at a time'],
+      ],
+    },
+    { t: 'p', text: 'Reintroducing everything at once is how people conclude a peel "ruined" their skin when what actually happened is that four actives went back on a barrier that was not ready.' },
+    { t: 'h2', id: 'see-a-doctor', text: 'See a doctor if' },
+    { t: 'p', text: 'Most peels are uneventful. These are the signs that are not part of normal healing and warrant contacting your provider or a doctor.' },
+    {
+      t: 'ul',
+      items: [
+        '**Increasing pain** rather than pain that is settling.',
+        '**Spreading redness, warmth or swelling.**',
+        '**Pus or discharge.**',
+        '**Fever.**',
+        'Blistering beyond what your provider described.',
+        'A cold sore outbreak — tell your provider beforehand if you are prone to them.',
+      ],
+    },
+    { t: 'h2', id: 'first-week-plan', text: 'Planning the first week' },
+    { t: 'p', text: 'After a medium peel, the awkward window is predictable enough to schedule around. Treating it as a known week rather than a surprise is most of the difference between a manageable recovery and a miserable one.' },
+    {
+      t: 'table',
+      head: ['Day', 'What to plan for'],
+      rows: [
+        ['0 - 1', 'Redness and tightness. Nothing social'],
+        ['2', 'Skin may darken and feel tight before anything sheds'],
+        ['3 - 7', 'Visible peeling. Work from home if you can'],
+        ['7 - 10', 'Peeling completes, pink skin underneath'],
+        ['2 - 4 weeks', 'Pinkness gradually settles. Sunscreen throughout'],
+      ],
+    },
+    { t: 'p', text: 'If you have to be seen during the peeling phase, ask your provider what you can wear on your face. The answer is usually "nothing yet", and hearing that from them beats finding out from a foundation that clings to every flake.' },
+  ],
+  faq: [
+    { q: 'How long until I can wear makeup?', a: 'After a superficial peel, often the next day. After a medium peel, usually once peeling has completed. Ask your provider for your specific protocol.' },
+    { q: 'When can I use retinol again?', a: 'Per your provider — typically around a week after a superficial peel, and longer after a medium one. Reintroduce one active at a time.' },
+    { q: 'Can I pick the flaking skin?', a: 'No. Pulling skin that is not ready removes living tissue underneath and is the main cause of scarring and pigmentation problems after peels.' },
+    { q: 'Do I really need sunscreen?', a: 'Yes. It is the single most important aftercare step, because sun exposure during healing raises the risk of hyperpigmentation.' },
+    { q: 'What if I get a cold sore?', a: 'Tell your provider beforehand if you are prone to them, so prophylaxis can be discussed, and contact them if one develops afterwards.' },
+  ],
+  related: [
+    { href: '/en/chemical-peel-healing-time', label: 'How Long Does a Chemical Peel Take to Heal?' },
+    { href: '/en/what-is-a-chemical-peel', label: 'What Is a Chemical Peel?' },
+    { href: '/en/chemical-peel-side-effects', label: 'Chemical Peel Side Effects' },
+  ],
+}

@@ -1,0 +1,116 @@
+import type { EnPage } from './types'
+import { EN_UPDATED, EN_UPDATED_ISO, SMOOTHING_CHEM_NOTE } from './common'
+
+export const keratinVsMagicStraight: EnPage = {
+  path: '/en/keratin-vs-magic-straight',
+  title: 'Keratin Treatment vs Permanent Straightening',
+  h1: 'Keratin Treatment vs Chemical Straightening',
+  description:
+    'Keratin smooths and fades out; chemical straightening restructures hair and grows out with a line. Which suits your hair and commitment level.',
+  keywords: ['keratin vs straightening', 'keratin treatment vs magic straight', 'chemical straightening vs keratin', 'which smoothing treatment'],
+  category: 'Hair Treatments',
+  stage: 11,
+  updated: EN_UPDATED,
+  updatedIso: EN_UPDATED_ISO,
+  lead:
+    '**Keratin smooths and fades out over months. Chemical straightening restructures the hair and grows out with a visible line.** Keratin is reversible by attrition; straightening is not reversible at all. That asymmetry decides most cases.',
+  blocks: [
+    { t: 'note', tone: 'warn', text: SMOOTHING_CHEM_NOTE },
+    { t: 'h2', id: 'comparison', text: 'Side by side' },
+    {
+      t: 'table',
+      head: ['', 'Keratin treatment', 'Chemical straightening'],
+      rows: [
+        ['Result', 'Smoothed, curl loosened', 'Straight'],
+        ['Permanence', 'Fades in 3 - 5 months', 'Stays on the hair that was treated'],
+        ['Grow-out', 'No line', 'Visible line at the roots'],
+        ['Retouch', 'Whole head, every 3 - 5 months', 'Roots only, every 4 - 8 months'],
+        ['Appointment', '2.5 - 4 hrs', '3 - 5 hrs'],
+        ['Cost', '$150 - 400', '$200 - 600'],
+        ['Stress on the hair', 'Moderate', 'Higher'],
+        ['Reversible', 'Fades naturally', 'No'],
+      ],
+      note: 'Typical US pricing. Varies by salon, hair length and region.',
+    },
+    { t: 'h2', id: 'which-suits-you', text: 'Which suits you' },
+    {
+      t: 'table',
+      head: ['You want', 'Choose'],
+      rows: [
+        ['Less frizz and faster drying', 'Keratin'],
+        ['To keep some wave', 'Keratin'],
+        ['To try smoothing without committing', 'Keratin'],
+        ['No visible regrowth line', 'Keratin'],
+        ['Genuinely straight hair', 'Chemical straightening'],
+        ['Very curly hair that you want straight', 'Chemical straightening'],
+      ],
+    },
+    { t: 'h2', id: 'commitment', text: 'The commitment difference' },
+    { t: 'p', text: '**Keratin fades.** If you do not like it, you wait a few months and it is gone. Nothing has to be cut off, and there is no awkward stage.' },
+    { t: 'p', text: '**Chemical straightening does not.** The treated hair stays straight until it is cut off. If you dislike it, you are growing it out, and in the meantime you have straight lengths and your natural texture at the roots.' },
+    { t: 'p', text: '**That asymmetry is the main decision factor for anyone unsure.** It is not that one is better — it is that one of them has a cheap exit and the other does not, and uncertainty is exactly the situation where a cheap exit is worth paying for.' },
+    { t: 'h2', id: 'damage', text: 'How they stress the hair differently' },
+    { t: 'p', text: 'Both involve chemistry and heat. They put stress on the hair in different places, which matters if your hair is already compromised.' },
+    {
+      t: 'table',
+      head: ['', 'Where the stress comes from'],
+      rows: [
+        ['Keratin', 'Repeated high-heat flat-iron passes over the whole head'],
+        ['Chemical straightening', 'Restructuring the hair’s internal bonds, plus heat'],
+        ['Both', 'Compounded significantly by bleach or existing damage'],
+        ['Both', 'Cumulative — frequency matters more than any single service'],
+      ],
+    },
+    { t: 'p', text: 'The third row is the one that ends conversations in salons. **Neither is a good idea on recently bleached hair**, and a stylist who wants to do a strand test, or who declines outright, is giving you information rather than losing your business.' },
+    { t: 'h2', id: 'switching', text: 'Can you switch between them?' },
+    { t: 'p', text: 'Yes, but not casually, and not without telling the stylist everything.' },
+    {
+      t: 'ul',
+      items: [
+        '**Keratin to chemical straightening:** usually wait until the keratin has faded, so the straightener works on the hair rather than on a coating.',
+        '**Chemical straightening to keratin:** possible, but the straightened sections are already straight — the treatment mainly benefits the newer growth.',
+        '**Either to colour:** sequencing matters, and your stylist should decide the order.',
+        '**Tell your stylist everything you have had done**, including services from other salons and anything you did at home. Overlapping chemical services on the same hair is how damage happens.',
+      ],
+    },
+    { t: 'h2', id: 'cost-over-time', text: 'What each costs over two years' },
+    { t: 'p', text: 'Per-service prices are misleading here, because the retouch patterns are completely different. Keratin repeats over the whole head; straightening repeats only at the roots.' },
+    {
+      t: 'table',
+      head: ['Pattern', 'Two-year rough total'],
+      rows: [
+        ['Keratin every 4 months at $300', 'Around $1,800'],
+        ['Keratin every 6 months at $300', 'Around $1,200'],
+        ['Straightening, then root retouches every 6 months at $250', 'Around $1,400'],
+        ['One keratin treatment, not repeated', '$300'],
+      ],
+      note: 'Illustrative arithmetic at typical prices, not quotes.',
+    },
+    { t: 'p', text: 'The last row is a real option people forget. **You are allowed to have one and never repeat it.** It fades, your hair returns to itself, and you have learned something about which routine you actually want.' },
+    { t: 'h2', id: 'grow-out', text: 'The grow-out is the part to picture' },
+    { t: 'p', text: 'Deciding between these is easier if you imagine month six rather than the day after the appointment, because that is when the two paths look least alike.' },
+    {
+      t: 'table',
+      head: ['At month six', 'Keratin', 'Chemical straightening'],
+      rows: [
+        ['What your hair looks like', 'Back to your own texture', 'Straight lengths, natural roots'],
+        ['Visible boundary', 'None', 'Yes, and it grows more visible'],
+        ['Your options', 'Repeat, or do nothing', 'Retouch the roots, or grow it out'],
+        ['Cost of changing your mind', 'Nothing — it already faded', 'A long grow-out or a cut'],
+      ],
+    },
+    { t: 'p', text: '**Nobody regrets a treatment that fades.** The regret in this category almost always belongs to the permanent option, chosen while unsure — which is why the standard advice is to start with the reversible one.' },
+  ],
+  faq: [
+    { q: 'Which lasts longer?', a: 'Chemical straightening — it stays on the hair that was treated until that hair is cut off. Keratin fades in three to five months.' },
+    { q: 'Which is harder on the hair?', a: 'Chemical straightening generally, because it restructures the hair. Both are compounded by bleach or existing damage.' },
+    { q: 'Which is cheaper?', a: 'Keratin per service, but it repeats over the whole head, so over two years the totals end up closer than the price list suggests.' },
+    { q: 'Can I do keratin over straightened hair?', a: 'Discuss it with your stylist. The straightened sections are already straight, so the benefit is mainly to newer growth.' },
+    { q: 'Which should I try first?', a: 'Keratin, if you are unsure. It fades if you do not like it, and that cheap exit is worth a lot when you are undecided.' },
+  ],
+  related: [
+    { href: '/en/what-is-a-keratin-treatment', label: 'What Is a Keratin Treatment?' },
+    { href: '/en/volume-magic-perm', label: 'Volume Magic Perm Explained' },
+    { href: '/en/brazilian-blowout-vs-keratin', label: 'Brazilian Blowout vs Keratin Treatment' },
+  ],
+}

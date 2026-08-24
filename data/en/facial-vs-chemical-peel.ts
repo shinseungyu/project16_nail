@@ -1,0 +1,117 @@
+import type { EnPage } from './types'
+import { EN_UPDATED, EN_UPDATED_ISO, MED_DISCLAIMER } from './common'
+
+export const facialVsChemicalPeel: EnPage = {
+  path: '/en/facial-vs-chemical-peel',
+  title: 'Facial vs Chemical Peel: Which Do You Need?',
+  h1: 'Facial vs Chemical Peel',
+  description:
+    'A facial cleans and maintains; a peel removes skin layers. Downtime, cost, frequency and purpose compared side by side.',
+  keywords: ['facial vs chemical peel', 'chemical peel or facial', 'difference between facial and peel'],
+  category: 'Skin Treatments',
+  stage: 10,
+  updated: EN_UPDATED,
+  updatedIso: EN_UPDATED_ISO,
+  lead:
+    '**A facial cleanses, extracts and hydrates. A chemical peel removes layers of skin.** A facial is maintenance; a peel is an intervention. They are not really alternatives to each other, which is why "which is better" has no answer.',
+  blocks: [
+    { t: 'note', tone: 'warn', text: MED_DISCLAIMER },
+    { t: 'h2', id: 'comparison', text: 'Side by side' },
+    {
+      t: 'table',
+      head: ['', 'Facial', 'Chemical peel'],
+      rows: [
+        ['Purpose', 'Cleanse and maintain', 'Remove layers of skin'],
+        ['Downtime', 'None', 'Hours to weeks, by depth'],
+        ['Cost', '$75 - 200', '$100 - 6,000+'],
+        ['Frequency', 'Every 3 - 4 weeks', 'Varies by depth'],
+        ['Performed by', 'Esthetician', 'Depends on depth and state'],
+        ['Peeling afterwards', 'No', 'Yes'],
+        ['Intensity', 'Gentle', 'Controlled injury to the skin'],
+      ],
+    },
+    { t: 'p', text: 'The last row is the honest summary. A peel works by doing controlled damage that the skin then repairs; a facial works by cleaning and hydrating what is already there. Those are different categories of thing, and the downtime column follows directly from it.' },
+    { t: 'h2', id: 'which-to-book', text: 'Which to book' },
+    {
+      t: 'table',
+      head: ['You want', 'Book'],
+      rows: [
+        ['Routine upkeep', 'Facial'],
+        ['Deep cleansing and extractions', 'Facial'],
+        ['No downtime at all', 'Facial'],
+        ['Relaxation', 'Facial'],
+        ['Surface texture change', 'Superficial peel'],
+        ['A more significant intervention', 'Medium peel, with a clinician'],
+      ],
+    },
+    { t: 'p', text: 'If you are not sure which category your concern falls into, a consultation with an esthetician is the cheap way to find out. **Describing what bothers you is more useful than naming a treatment**, because the treatment is their job to select.' },
+    { t: 'h2', id: 'combining', text: 'Can you combine them?' },
+    { t: 'p', text: 'Many facials **include a superficial peel step**, and that is common and reasonable. It is one appointment, one provider, and the acid step is mild by design.' },
+    { t: 'p', text: 'Combining a facial with a medium or deep peel is a different matter. Those need dedicated management, and stacking extractions or massage onto skin that is about to shed is not doing you a favour. **Do not book a facial in the days after a medium peel** — wait until your provider says the skin has recovered.' },
+    { t: 'h2', id: 'frequency', text: 'Frequency' },
+    {
+      t: 'table',
+      head: ['Treatment', 'Typical interval'],
+      rows: [
+        ['Facial', 'Every 3 - 4 weeks'],
+        ['Superficial peel', 'Every 2 - 4 weeks within a series'],
+        ['Medium peel', 'Months apart'],
+        ['Deep peel', 'Typically once'],
+      ],
+    },
+    { t: 'p', text: 'Facial intervals are loosely tied to the skin cell turnover cycle, which is where the four-week rhythm comes from. Peel intervals are tied to recovery, and recovering fully between sessions is not optional — **more often is not better, and the interval is the safety margin.**' },
+    { t: 'h2', id: 'cost-over-time', text: 'What each actually costs over a year' },
+    { t: 'p', text: 'Per-appointment prices make facials look cheap and peels look expensive. Over a year the picture flattens out, because facials repeat indefinitely and a peel series ends.' },
+    {
+      t: 'table',
+      head: ['Pattern', 'Rough annual cost'],
+      rows: [
+        ['Monthly facial at $120', 'Around $1,440'],
+        ['Six superficial peels at $150', 'Around $900, then it stops'],
+        ['One medium peel at $400', '$400, plus aftercare products'],
+        ['Quarterly facial plus one peel series', 'Around $1,300'],
+      ],
+      note: 'Illustrative arithmetic at typical US prices, not quotes.',
+    },
+    { t: 'p', text: 'The last row is what a lot of people actually end up doing: maintenance at a comfortable interval, with an intervention when there is something specific to address.' },
+    { t: 'h2', id: 'what-a-facial-is-not', text: 'What a facial is not' },
+    { t: 'p', text: 'Facials are pleasant and useful, and they are also routinely oversold. Being clear about the limits protects you from the upsell as much as from disappointment.' },
+    {
+      t: 'ul',
+      items: [
+        '**A facial is not a peel with better marketing.** If there is no downtime, no layers were removed.',
+        '**Extractions are not unlimited.** Aggressive extraction leaves marks, and a good esthetician stops.',
+        '**One facial does not fix anything.** Like peels, the value is in the pattern, not the appointment.',
+        '**A "medical" name on the menu does not change the scope** of the person performing it. Ask what licence they hold.',
+      ],
+    },
+    { t: 'p', text: 'The reverse also holds. If a menu describes something as a facial but the consent form mentions peeling and days of recovery, you are booking a peel and should be told the depth.' },
+    { t: 'h2', id: 'how-to-decide', text: 'Deciding without naming a treatment' },
+    { t: 'p', text: 'The most useful thing you can do at a consultation is describe the problem rather than prescribe the solution. Selecting the treatment is the provider’s job, and they will do it better with the information below.' },
+    {
+      t: 'table',
+      head: ['Tell them', 'Why it changes the answer'],
+      rows: [
+        ['What actually bothers you, in plain words', 'Congestion, texture and dullness point different directions'],
+        ['How many days of visible peeling you can accept', 'This often settles the whole question'],
+        ['Anything coming up in the next two months', 'Timing constrains depth more than anything else'],
+        ['Your full routine, including actives', 'Retinoids and acids change what is safe today'],
+        ['Medication and recent procedures', 'Several are contraindications'],
+        ['Your budget for a plan, not one appointment', 'A series and a single treatment are different decisions'],
+      ],
+    },
+    { t: 'p', text: '**If the answer comes back "a facial, for now", that is a real recommendation** rather than a soft sell. Starting with maintenance and escalating later is how most sensible treatment plans are built.' },
+  ],
+  faq: [
+    { q: 'Which is better, a facial or a chemical peel?', a: 'Neither. They do different things — a facial cleanses and maintains, a peel removes layers of skin.' },
+    { q: 'Does a facial include a peel?', a: 'Some do, at superficial strength. That combination is common and reasonable in a single appointment.' },
+    { q: 'Which one has downtime?', a: 'Peels do, ranging from hours to weeks by depth. Facials generally do not.' },
+    { q: 'Which is cheaper?', a: 'Facials per appointment, though a monthly facial habit costs more over a year than a single peel series.' },
+    { q: 'Can I get both?', a: 'Yes, spaced appropriately. Do not book a facial in the days after a medium peel — wait until your provider says the skin has recovered.' },
+  ],
+  related: [
+    { href: '/en/what-is-a-chemical-peel', label: 'What Is a Chemical Peel?' },
+    { href: '/en/microneedling-vs-chemical-peel', label: 'Microneedling vs Chemical Peel' },
+    { href: '/en/what-is-dermaplaning', label: 'What Is Dermaplaning?' },
+  ],
+}

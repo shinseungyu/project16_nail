@@ -1,0 +1,125 @@
+import type { EnPage } from './types'
+import { EN_UPDATED, EN_UPDATED_ISO, SCHOOL_NOTE } from './common'
+
+export const cosmetologyPracticalExam: EnPage = {
+  path: '/en/cosmetology-practical-exam',
+  title: 'Cosmetology Practical Exam: What to Expect',
+  h1: 'Cosmetology Practical Exam: How to Prepare',
+  description:
+    'How the practical exam is structured, the most common reasons candidates fail, and how to prepare for a timed, observed format.',
+  keywords: ['cosmetology practical exam', 'state board practical exam', 'cosmetology exam preparation', 'why people fail practical exam'],
+  category: 'Licensing & Training',
+  stage: 13,
+  updated: EN_UPDATED,
+  updatedIso: EN_UPDATED_ISO,
+  lead:
+    '**A timed, observed hands-on assessment where you perform required services on a mannequin or model.** Most failures come from **timing and sanitation procedure**, not from technical ability — which is good news, because both are entirely trainable.',
+  blocks: [
+    { t: 'note', tone: 'warn', text: SCHOOL_NOTE },
+    { t: 'h2', id: 'format', text: 'The format' },
+    { t: 'p', text: 'Structures vary by state, but the common elements are consistent enough to prepare for.' },
+    {
+      t: 'table',
+      head: ['Element', 'Detail'],
+      rows: [
+        ['Setup and sanitation', 'Observed and scored, not a preliminary'],
+        ['Required services', 'Performed in sequence, timed'],
+        ['Mannequin or live model', 'Depends on your state'],
+        ['Your own kit', 'You bring specified supplies'],
+        ['Scoring', 'Often deduction-based'],
+      ],
+    },
+    { t: 'p', text: '**Check your state’s candidate bulletin.** It specifies exactly what is tested, what to bring, and how scoring works. It is the actual test specification, it is free, and a surprising number of candidates never read it end to end.' },
+    { t: 'h2', id: 'why-candidates-fail', text: 'Why candidates fail' },
+    {
+      t: 'table',
+      head: ['Reason', 'Note'],
+      rows: [
+        ['Timing', 'Running over on one section wrecks the ones after it'],
+        ['Sanitation procedure', 'Skipped steps score deductions, and they accumulate'],
+        ['Missing supplies', 'You may be unable to perform a section at all'],
+        ['Not following the stated procedure', 'Doing it "your way" loses points even if the result is good'],
+        ['Nerves affecting sequence', 'Steps done out of order or forgotten'],
+      ],
+    },
+    { t: 'p', text: '**Technical skill is rarely the issue.** Candidates who fail usually know how to do the work — they run out of time, or they skip procedural steps that are being scored as carefully as the haircut. That distinction should change how you practise.' },
+    { t: 'h2', id: 'preparing', text: 'Preparing' },
+    {
+      t: 'ol',
+      items: [
+        '**Read the candidate bulletin cover to cover.** It is the specification you are being marked against.',
+        '**Practise the full sequence timed**, not section by section. Section-by-section practice hides exactly the problem that fails people.',
+        '**Rehearse sanitation as a scored step**, out loud, not as a formality you do while thinking about the next thing.',
+        'Prepare and check your kit twice, against the official list.',
+        'Practise verbalising steps if your state requires it.',
+        'Do a full dress rehearsal at least twice, in the clothes you will wear.',
+      ],
+    },
+    { t: 'h2', id: 'timing', text: 'How to fix a timing problem' },
+    { t: 'p', text: 'Timing failures are not really speed problems. They are pacing problems, and pacing is measurable.' },
+    {
+      t: 'table',
+      head: ['Do this', 'Why'],
+      rows: [
+        ['Time each section separately, once', 'Find which section is actually over'],
+        ['Set a target time per section', 'You need a checkpoint, not a total'],
+        ['Practise moving on when the time is up', 'An unfinished section scores better than an unstarted one'],
+        ['Rehearse the transitions', 'Time disappears between sections, not inside them'],
+        ['Lay out your kit in working order', 'Searching for an implement is pure lost time'],
+      ],
+    },
+    { t: 'p', text: '**The transition point is where most time is lost** — putting one thing away, finding the next, re-reading the instruction. Practise the joins, not just the sections.' },
+    { t: 'h2', id: 'kit-preparation', text: 'Kit preparation' },
+    {
+      t: 'ul',
+      items: [
+        '**Check the required supply list line by line**, ticking each item physically.',
+        '**Bring backups of small items** — the things that go missing are always small.',
+        'Label and organise for fast access under pressure.',
+        '**Set up exactly as you will set up on the day**, every time you practise.',
+        'Check nothing is expired, damaged or visibly used where it should not be.',
+        'Pack the night before, not the morning of.',
+      ],
+    },
+    { t: 'h2', id: 'on-the-day', text: 'On the day' },
+    { t: 'p', text: 'Most of the work is already done by this point. What remains is not undoing it.' },
+    {
+      t: 'table',
+      head: ['Do', 'Do not'],
+      rows: [
+        ['Arrive early enough to settle', 'Arrive at the last minute'],
+        ['Follow the stated procedure exactly', 'Improve on it'],
+        ['Keep sanitation visible and deliberate', 'Rush it because you are behind'],
+        ['Move on when a section time is up', 'Try to perfect one section'],
+        ['Keep working if you make a mistake', 'Stop and apologise at length'],
+      ],
+    },
+    { t: 'p', text: 'If something goes wrong mid-exam, **the recovery matters more than the error.** Deduction-based scoring means one imperfect section is survivable; losing the following two sections to panic is not.' },
+    { t: 'h2', id: 'sanitation', text: 'Treating sanitation as a scored performance' },
+    { t: 'p', text: 'This is the single change that moves most candidates from borderline to comfortable. Sanitation is not the thing you do before the exam starts — it is part of the exam, and it is scored while you do it.' },
+    {
+      t: 'table',
+      head: ['Habit to build', 'Why'],
+      rows: [
+        ['Do every step deliberately, not quickly', 'The examiner has to see it happen'],
+        ['Follow the same order every time', 'Order is how you stop skipping steps under pressure'],
+        ['Handle implements as if being watched', 'You are'],
+        ['Never skip a step because you are behind', 'The deduction costs more than the seconds'],
+        ['Practise it at full speed with the rest of the sequence', 'Isolated practice hides the timing problem'],
+      ],
+    },
+    { t: 'p', text: '**Candidates who practise services and rehearse sanitation separately fail on the join.** Run the whole thing together, every time, and the procedure stops competing with the clock for your attention.' },
+  ],
+  faq: [
+    { q: 'What is on the cosmetology practical exam?', a: 'Required services performed under timed observation, plus scored setup and sanitation. The specifics vary by state — check your candidate bulletin.' },
+    { q: 'Why do people fail?', a: 'Mostly timing and sanitation procedure rather than technical skill. Both are trainable if you practise the full sequence rather than individual sections.' },
+    { q: 'Do I bring my own supplies?', a: 'Yes. Check the required list line by line and bring backups of small items.' },
+    { q: 'Mannequin or live model?', a: 'It depends on your state. Your candidate bulletin will specify which.' },
+    { q: 'How should I practise?', a: 'The full sequence, timed, including setup and sanitation — and rehearse the transitions between sections, where most time is lost.' },
+  ],
+  related: [
+    { href: '/en/cosmetology-written-exam', label: 'Cosmetology Written Exam: What to Study' },
+    { href: '/en/esthetician-state-board-exam', label: 'Esthetician State Board Exam' },
+    { href: '/en/cosmetology-license-requirements', label: 'Cosmetology License Requirements' },
+  ],
+}

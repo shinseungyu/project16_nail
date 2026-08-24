@@ -1,0 +1,135 @@
+import type { EnPage } from './types'
+import { EN_UPDATED, EN_UPDATED_ISO, SMOOTHING_CHEM_NOTE } from './common'
+
+export const brazilianBlowoutCost: EnPage = {
+  path: '/en/brazilian-blowout-cost',
+  title: 'Brazilian Blowout Cost and Value Per Month',
+  h1: 'How Much Does a Brazilian Blowout Cost?',
+  description:
+    'Brazilian Blowout runs $200 to $400 depending on hair length. Cost per month of wear, maintenance products, and what is included.',
+  keywords: ['brazilian blowout cost', 'how much is a brazilian blowout', 'brazilian blowout price'],
+  category: 'Hair Treatments',
+  stage: 12,
+  updated: EN_UPDATED,
+  updatedIso: EN_UPDATED_ISO,
+  lead:
+    '**Typically $200 to $400 depending on hair length and density, with high-end salons running higher.** At 10 to 12 weeks of wear, that works out at roughly $70 to $130 a month. Prices vary by salon and region.',
+  blocks: [
+    { t: 'note', tone: 'warn', text: SMOOTHING_CHEM_NOTE },
+    { t: 'h2', id: 'pricing', text: 'Typical pricing' },
+    {
+      t: 'table',
+      head: ['Situation', 'Typical'],
+      rows: [
+        ['Short hair', '$180 - 280'],
+        ['Medium length', '$230 - 350'],
+        ['Long, thick hair', '$300 - 500'],
+        ['High-end salon', '$400 - 650'],
+      ],
+      note: 'Typical US pricing. Varies by salon and region.',
+    },
+    { t: 'p', text: 'Length and density drive both product use and chair time, which is why the range is wide and why a quote based on your actual hair is worth asking for at booking rather than discovering at the till.' },
+    { t: 'h2', id: 'whats-included', text: 'What is included' },
+    {
+      t: 'table',
+      head: ['Usually included', 'Often extra'],
+      rows: [
+        ['The treatment itself', 'Haircut'],
+        ['Blow-dry finish', 'Take-home aftercare products'],
+        ['Styling advice', 'Colour service'],
+        ['', 'Toner or gloss'],
+      ],
+    },
+    { t: 'p', text: '**Salons often recommend the matching aftercare products.** They are not mandatory, but sulphate-free products of some kind genuinely are — so the honest version of this line item is that you need to buy something, not necessarily what is on the shelf by the till.' },
+    { t: 'h2', id: 'per-month', text: 'Cost per month of wear' },
+    {
+      t: 'table',
+      head: ['Price', 'Lasts', 'Per month'],
+      rows: [
+        ['$250', '10 weeks', 'Around $108'],
+        ['$300', '12 weeks', 'Around $100'],
+        ['$400', '12 weeks', 'Around $133'],
+        ['$220', '12 weeks', 'Around $73'],
+      ],
+    },
+    { t: 'p', text: 'Compare that against what you currently spend on styling time, and against the cost of the shampoo you will be switching to anyway. **For daily blow-dryers the real comparison is hours, not dollars.**' },
+    { t: 'h2', id: 'compared', text: 'Compared with alternatives' },
+    {
+      t: 'table',
+      head: ['Treatment', 'Cost', 'Lasts', 'Per month'],
+      rows: [
+        ['Brazilian Blowout', '$300', '3 months', 'Around $100'],
+        ['Keratin treatment', '$300', '4.5 months', 'Around $67'],
+        ['Gloss treatment', '$50', '1 month', 'Around $50'],
+        ['Chemical straightening', '$400', 'Plus root retouches', 'Varies'],
+      ],
+      note: 'Illustrative arithmetic at typical prices, not quotes.',
+    },
+    { t: 'p', text: 'A gloss looks cheapest per month and does the least; chemical straightening is hardest to compare because it never fully ends. **The like-for-like comparison is the first two rows**, and there keratin wins on arithmetic while Brazilian Blowout wins on appointment length and volume retention.' },
+    { t: 'h2', id: 'maintenance', text: 'The running costs' },
+    { t: 'p', text: 'These are small, predictable, and not optional if you want the full 10 to 12 weeks.' },
+    {
+      t: 'table',
+      head: ['Item', 'Cost'],
+      rows: [
+        ['Sulphate-free shampoo', '$15 - 40'],
+        ['Sulphate-free conditioner', '$15 - 40'],
+        ['Leave-in conditioner, if you swim', '$15 - 30'],
+        ['Shower filter, for hard water', '$30 - 80 one-off'],
+      ],
+    },
+    { t: 'h2', id: 'getting-a-quote', text: 'Getting a quote that holds' },
+    { t: 'p', text: 'Because the term is used loosely across salons, price comparisons between two places can be comparing different services. A few questions make the numbers mean the same thing.' },
+    {
+      t: 'ol',
+      items: [
+        '**Which specific product is included at this price?**',
+        'What is the price for **my length and density**, not the menu range?',
+        'Is a **cut or blow-dry** included?',
+        'How long does the appointment take? (A large price gap often reflects a large time gap.)',
+        'Are aftercare products required, and can I use my own?',
+      ],
+    },
+    { t: 'p', text: 'If one salon quotes $200 for 90 minutes and another quotes $380 for three hours, those are probably two different services rather than one being overpriced. **Compare the product and the time, not just the number.**' },
+    { t: 'h2', id: 'is-it-worth-it', text: 'Working out whether it is worth it for you' },
+    { t: 'p', text: 'The honest calculation is not against other treatments. It is against what you currently spend — in time as much as money — to get your hair to an acceptable state.' },
+    {
+      t: 'table',
+      head: ['Work out', 'Example'],
+      rows: [
+        ['Minutes styling per day', '30 minutes'],
+        ['Days per week you do it', '5'],
+        ['Hours over 12 weeks', 'Around 30 hours'],
+        ['Cost of the treatment', '$300'],
+        ['What an hour of your morning is worth', 'Only you can answer this'],
+      ],
+    },
+    { t: 'p', text: 'For someone who already air-dries and rarely fights their hair, the arithmetic rarely justifies it. **For someone blow-drying every morning to get the same result, it usually does** — and that is the honest dividing line, not hair type.' },
+    { t: 'h2', id: 'discounts', text: 'Deals, packages and when to be careful' },
+    { t: 'p', text: 'Smoothing services are frequently discounted, and a discount is not a warning sign on its own. What matters is what is being discounted.' },
+    {
+      t: 'table',
+      head: ['Offer', 'What to check'],
+      rows: [
+        ['New-client introductory price', 'Reasonable — ask what the repeat price will be'],
+        ['Deep discount on a named brand system', 'Confirm which product is actually being used'],
+        ['Package of two, prepaid', 'You are committing before knowing if you like it'],
+        ['Price that excludes the blow-dry', 'You cannot leave without one after this service'],
+        ['Trainee or apprentice pricing', 'Fine if disclosed and supervised — ask'],
+      ],
+    },
+    { t: 'p', text: 'The prepaid package is the one to think twice about. **You do not yet know how your hair responds**, and a second appointment is worth committing to after the first result rather than before it.' },
+  ],
+  faq: [
+    { q: 'How much is a Brazilian Blowout?', a: 'Typically $200 to $400, more for long hair or at high-end salons. Prices vary by region.' },
+    { q: 'Is it cheaper than a keratin treatment?', a: 'Similar per service, but usually more per month of wear because it lasts around 10 to 12 weeks rather than three to five months.' },
+    { q: 'Do I have to buy the salon products?', a: 'Not necessarily, but sulphate-free products of some kind are needed to get the full wear out of it.' },
+    { q: 'Is a haircut included?', a: 'Usually not. Ask when booking, since it is a common add-on.' },
+    { q: 'Why is the price range so wide?', a: 'Hair length and density drive both how much product is used and how long the appointment takes, and chair time is most of the cost.' },
+  ],
+  related: [
+    { href: '/en/brazilian-blowout-vs-keratin', label: 'Brazilian Blowout vs Keratin Treatment' },
+    { href: '/en/how-long-does-a-brazilian-blowout-last', label: 'How Long Does a Brazilian Blowout Last?' },
+    { href: '/en/what-is-a-brazilian-blowout', label: 'What Is a Brazilian Blowout?' },
+  ],
+}

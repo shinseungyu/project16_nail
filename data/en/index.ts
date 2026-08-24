@@ -109,6 +109,39 @@ import { browLaminationVsMicroblading } from './brow-lamination-vs-microblading'
 import { browLaminationDamage } from './brow-lamination-damage'
 import { browLaminationTraining } from './brow-lamination-training'
 
+import { whatIsAChemicalPeel } from './what-is-a-chemical-peel'
+import { chemicalPeelCost } from './chemical-peel-cost'
+import { chemicalPeelAftercare } from './chemical-peel-aftercare'
+import { chemicalPeelHealingTime } from './chemical-peel-healing-time'
+import { facialVsChemicalPeel } from './facial-vs-chemical-peel'
+import { chemicalPeelSideEffects } from './chemical-peel-side-effects'
+import { chemicalPeelAtHome } from './chemical-peel-at-home'
+import { whoCanPerformChemicalPeels } from './who-can-perform-chemical-peels'
+
+import { whatIsAKeratinTreatment } from './what-is-a-keratin-treatment'
+import { keratinTreatmentCost } from './keratin-treatment-cost'
+import { howLongDoesAKeratinTreatmentLast } from './how-long-does-a-keratin-treatment-last'
+import { keratinTreatmentSafety } from './keratin-treatment-safety'
+import { keratinTreatmentAftercare } from './keratin-treatment-aftercare'
+import { keratinVsMagicStraight } from './keratin-vs-magic-straight'
+import { keratinTreatmentAlternatives } from './keratin-treatment-alternatives'
+
+import { whatIsABrazilianBlowout } from './what-is-a-brazilian-blowout'
+import { brazilianBlowoutVsKeratin } from './brazilian-blowout-vs-keratin'
+import { brazilianBlowoutCost } from './brazilian-blowout-cost'
+import { howLongDoesABrazilianBlowoutLast } from './how-long-does-a-brazilian-blowout-last'
+import { brazilianBlowoutAftercare } from './brazilian-blowout-aftercare'
+import { smoothingTreatmentDamage } from './smoothing-treatment-damage'
+
+import { howToChooseACosmetologySchool } from './how-to-choose-a-cosmetology-school'
+import { cosmetologySchoolCosts } from './cosmetology-school-costs'
+import { cosmetologySchoolLength } from './cosmetology-school-length'
+import { cosmetologyPracticalExam } from './cosmetology-practical-exam'
+import { cosmetologyWrittenExam } from './cosmetology-written-exam'
+import { estheticianStateBoardExam } from './esthetician-state-board-exam'
+import { cosmetologyApprenticeship } from './cosmetology-apprenticeship'
+import { beautySchoolWorthIt } from './beauty-school-worth-it'
+
 /**
  * 영문 콘텐츠 페이지 전체 목록.
  * 허브의 섹션 카드와 sitemap이 여기서 파생되므로, 페이지를 추가하면 이 파일만 갱신하면 된다.
@@ -329,6 +362,71 @@ export const EN_SECTIONS: EnSection[] = [
       browLaminationVsMicroblading,
       browLaminationDamage,
       browLaminationTraining,
+    ],
+  },
+  {
+    key: 'chemical-peel',
+    title: 'Chemical peels',
+    blurb:
+      'One word covering everything from a lunchtime treatment to a medical procedure. Depth is the variable that decides the downtime, the cost, the risk and who is even allowed to perform it.',
+    icon: '🧪',
+    pages: [
+      whatIsAChemicalPeel,
+      chemicalPeelCost,
+      chemicalPeelAftercare,
+      chemicalPeelHealingTime,
+      chemicalPeelSideEffects,
+      facialVsChemicalPeel,
+      chemicalPeelAtHome,
+      whoCanPerformChemicalPeels,
+    ],
+  },
+  {
+    key: 'keratin',
+    title: 'Keratin treatments',
+    blurb:
+      'Smoothing, not straightening. What the appointment involves, how long it really lasts, and the formaldehyde question handled properly rather than avoided.',
+    icon: '💨',
+    pages: [
+      whatIsAKeratinTreatment,
+      keratinTreatmentCost,
+      howLongDoesAKeratinTreatmentLast,
+      keratinTreatmentSafety,
+      keratinTreatmentAftercare,
+      keratinVsMagicStraight,
+      keratinTreatmentAlternatives,
+    ],
+  },
+  {
+    key: 'brazilian-blowout',
+    title: 'Brazilian Blowout and smoothing',
+    blurb:
+      'A branded system that half the industry uses as a generic term. What it actually is, how it differs from keratin, and what repeated high-heat processing does to hair.',
+    icon: '🌀',
+    pages: [
+      whatIsABrazilianBlowout,
+      brazilianBlowoutVsKeratin,
+      brazilianBlowoutCost,
+      howLongDoesABrazilianBlowoutLast,
+      brazilianBlowoutAftercare,
+      smoothingTreatmentDamage,
+    ],
+  },
+  {
+    key: 'beauty-school',
+    title: 'Beauty school and state board exams',
+    blurb:
+      'How to judge a school rather than be sold one, what the all-in cost really is, why candidates fail the practical, and whether the whole thing is worth it.',
+    icon: '🎓',
+    pages: [
+      howToChooseACosmetologySchool,
+      cosmetologySchoolCosts,
+      cosmetologySchoolLength,
+      cosmetologyPracticalExam,
+      cosmetologyWrittenExam,
+      estheticianStateBoardExam,
+      cosmetologyApprenticeship,
+      beautySchoolWorthIt,
     ],
   },
 ]

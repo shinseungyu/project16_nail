@@ -1,0 +1,115 @@
+import type { EnPage } from './types'
+import { EN_UPDATED, EN_UPDATED_ISO, SCHOOL_NOTE } from './common'
+
+export const cosmetologyApprenticeship: EnPage = {
+  path: '/en/cosmetology-apprenticeship',
+  title: 'Cosmetology Apprenticeship: An Alternative Path',
+  h1: 'Cosmetology Apprenticeship: How It Works',
+  description:
+    'Some states allow licensure through apprenticeship instead of school. How it works, the trade-offs, and how to find out whether yours does.',
+  keywords: ['cosmetology apprenticeship', 'become a cosmetologist without school', 'salon apprenticeship licensure', 'apprentice hairstylist'],
+  category: 'Licensing & Training',
+  stage: 13,
+  updated: EN_UPDATED,
+  updatedIso: EN_UPDATED_ISO,
+  lead:
+    '**Some states permit licensure through a supervised apprenticeship in a salon instead of attending school.** Where it is available it usually requires more total hours but costs far less, because you earn rather than pay. **Not all states offer it — check your state board first.**',
+  blocks: [
+    { t: 'note', tone: 'warn', text: SCHOOL_NOTE },
+    { t: 'h2', id: 'how-it-works', text: 'How it typically works' },
+    {
+      t: 'table',
+      head: ['Element', 'Detail'],
+      rows: [
+        ['Where', 'A licensed salon, under a qualified supervising licensee'],
+        ['Hours required', 'Usually more than the school route'],
+        ['Cost', 'Substantially lower — you often earn while training'],
+        ['Structure', 'Varies; some states require a formal training plan'],
+        ['Exams', 'The same state board exams as school graduates'],
+        ['Registration', 'Usually must be registered with the board before you start'],
+      ],
+    },
+    { t: 'p', text: 'The registration row is the one that goes wrong most often. **Hours worked before you were formally registered may not count**, and there is no retroactive fix for that.' },
+    { t: 'h2', id: 'trade-offs', text: 'The trade-offs' },
+    {
+      t: 'table',
+      head: ['Advantage', 'Disadvantage'],
+      rows: [
+        ['Much lower cost', 'Longer — more hours are required'],
+        ['You earn while you train', 'Quality depends entirely on your supervisor'],
+        ['Real salon experience from day one', 'Less structured theory instruction'],
+        ['No student debt', 'Fewer states offer it'],
+        ['Direct client exposure', 'Harder to find a willing sponsor'],
+        ['You build a client base as you go', 'Theory gaps show up at the written exam'],
+      ],
+    },
+    { t: 'h2', id: 'the-supervisor', text: 'The supervisor question' },
+    { t: 'p', text: '**Your training quality depends almost entirely on one person.** A good sponsor teaches systematically and builds you towards the exam. A poor one uses you as inexpensive labour and hopes you pick things up.' },
+    { t: 'p', text: 'That variance is the central risk of this route, and unlike a school you cannot switch instructors. It is worth interviewing the sponsor as seriously as they interview you.' },
+    {
+      t: 'ol',
+      items: [
+        '**Have you supervised an apprentice before?** What happened to them?',
+        '**How will theory instruction be handled?**',
+        '**What services will I actually learn, and in what order?**',
+        '**How are my hours documented and submitted?**',
+        'What happens if you close, sell, or I need to move?',
+        'How much of my time will be on the floor versus assisting?',
+      ],
+    },
+    { t: 'h2', id: 'before-you-start', text: 'Before you start' },
+    {
+      t: 'ul',
+      items: [
+        '**Verify that your state permits it.** Many do not, and this is a five-minute check.',
+        '**Register with the board before beginning**, if that is required — unregistered hours may not count.',
+        '**Get the training agreement in writing**, including hours, pay and what you will be taught.',
+        '**Understand how hours are documented.** Losing records is a real and unrecoverable risk.',
+        'Confirm the exam requirements are identical to the school route.',
+        'Ask what happens to your hours if the salon closes.',
+      ],
+    },
+    { t: 'note', tone: 'warn', title: 'Document your own hours as well', text: 'Keep your own parallel record from day one, signed as you go. If the salon’s records are lost or a relationship ends badly, your copy is the only thing standing between you and starting over.' },
+    { t: 'h2', id: 'theory-gap', text: 'Closing the theory gap' },
+    { t: 'p', text: 'The most predictable weakness of the apprenticeship route is the written exam. Salon work teaches you to do things; it does not necessarily teach you the underlying science in the form the exam asks for.' },
+    {
+      t: 'table',
+      head: ['Gap', 'How to close it'],
+      rows: [
+        ['Chemistry and anatomy', 'Work through the standard programme textbook systematically'],
+        ['Infection control theory', 'Study it formally, not just by practising it'],
+        ['State law', 'Read the actual regulations, early'],
+        ['Exam format', 'Practice question banks, timed'],
+        ['Services you rarely do at that salon', 'Ask to rotate, or practise on mannequins'],
+      ],
+    },
+    { t: 'p', text: 'The last row deserves attention. **A salon that specialises will teach you its specialty**, and the exam does not care what your salon specialises in. Being deliberate about the services you are not getting exposure to is your responsibility on this route in a way it is not at school.' },
+    { t: 'h2', id: 'is-it-right-for-you', text: 'Whether this route suits you' },
+    { t: 'p', text: 'Apprenticeship rewards a particular temperament. It is not simply the cheaper version of school — it is a different arrangement with a different failure mode.' },
+    {
+      t: 'table',
+      head: ['Suits you if', 'Does not suit you if'],
+      rows: [
+        ['You learn well by doing and asking', 'You want structured instruction and a syllabus'],
+        ['You can advocate for your own training', 'You would rather be told what to study'],
+        ['You cannot take on student debt', 'You want to finish as fast as possible'],
+        ['You already have a salon willing to sponsor you', 'You have no route into a salon yet'],
+        ['You are disciplined about self-study for the written exam', 'Theory is the part you would skip'],
+        ['You intend to stay in that state', 'You may move — check portability first'],
+      ],
+    },
+    { t: 'p', text: '**The middle two rows are where most people self-select correctly.** If you have a willing sponsor and no appetite for debt, this route is often the better deal; if you have neither, school is the more reliable path.' },
+  ],
+  faq: [
+    { q: 'Can I become a cosmetologist without going to school?', a: 'In some states, through a registered apprenticeship. Many states do not offer this route, so check your state board first.' },
+    { q: 'Is it cheaper?', a: 'Substantially — you typically earn rather than pay tuition. The trade-off is that it usually takes longer.' },
+    { q: 'Does it take longer?', a: 'Usually yes, because more total hours are required than for the school route.' },
+    { q: 'Do I still take the state board exams?', a: 'Yes, the same ones. Plan deliberately for the written exam, which is where this route has the most predictable gap.' },
+    { q: 'How do I find out if my state allows it?', a: 'Check your state board of cosmetology. If it is permitted, ask about registration requirements before you start working any hours.' },
+  ],
+  related: [
+    { href: '/en/how-to-choose-a-cosmetology-school', label: 'How to Choose a Cosmetology School' },
+    { href: '/en/cosmetology-school-costs', label: 'What Does Cosmetology School Actually Cost?' },
+    { href: '/en/cosmetology-license-requirements', label: 'Cosmetology License Requirements' },
+  ],
+}
