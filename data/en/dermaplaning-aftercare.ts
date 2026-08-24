@@ -1,0 +1,131 @@
+import type { EnPage } from './types'
+import { EN_UPDATED, EN_UPDATED_ISO, MED_DISCLAIMER, MED_STATE_SCOPE } from './common'
+
+export const dermaplaningAftercare: EnPage = {
+  path: '/en/dermaplaning-aftercare',
+  title: 'Dermaplaning Aftercare: What to Do and Avoid',
+  h1: 'Dermaplaning Aftercare',
+  description:
+    'Your skin is more exposed after dermaplaning. What to use, what to skip, and how long to wait before resuming actives.',
+  keywords: ['dermaplaning aftercare', 'after dermaplaning', 'dermaplaning spf'],
+  category: 'Skin Treatments',
+  stage: 7,
+  updated: EN_UPDATED,
+  updatedIso: EN_UPDATED_ISO,
+  lead:
+    '**Keep it simple for 48 hours: gentle cleanser, bland moisturiser, and strict SPF.** Freshly dermaplaned skin has had its surface layer removed, so actives and sun exposure both hit harder than usual.',
+  blocks: [
+    { t: 'note', tone: 'warn', text: MED_DISCLAIMER },
+    { t: 'h2', id: 'timeline', text: 'Timeline' },
+    {
+      t: 'table',
+      head: ['Period', 'What to do'],
+      rows: [
+        ['0 - 24 hrs', 'Gentle cleanser, bland moisturiser, SPF. Ideally no makeup'],
+        ['24 - 48 hrs', 'Same. Skip actives'],
+        ['48 - 72 hrs', 'Reintroduce actives cautiously if skin is calm'],
+        ['Ongoing', 'SPF daily - skin is more photosensitive for a while'],
+      ],
+    },
+    { t: 'h2', id: 'avoid', text: 'What to avoid' },
+    {
+      t: 'table',
+      head: ['Item', 'How long', 'Why'],
+      rows: [
+        ['Retinoids, AHA/BHA, vitamin C', '48 - 72 hrs', 'The barrier is compromised'],
+        ['Physical scrubs', '1 week', 'Already exfoliated'],
+        ['Direct sun', 'Several days, then SPF always', 'Photosensitivity'],
+        ['Sauna, steam, hot yoga', '24 - 48 hrs', 'Heat and sweat on treated skin'],
+        ['Heavy makeup', '24 hrs', 'Brushes and sponges on fresh skin'],
+        ['Waxing on the same area', '1 - 2 weeks', 'Compounding exfoliation'],
+      ],
+    },
+    { t: 'h2', id: 'normal', text: 'What is normal' },
+    {
+      t: 'ul',
+      items: [
+        'Mild redness for a few hours.',
+        'Slight tightness.',
+        'Skin feeling notably smooth.',
+      ],
+    },
+    { t: 'h2', id: 'see-doctor', text: 'See a doctor if' },
+    {
+      t: 'ul',
+      items: [
+        'Redness spreads or the area feels warm.',
+        'There is pus or discharge.',
+        'Pain increases rather than settling.',
+        'Cuts do not heal normally.',
+        'You develop a fever.',
+      ],
+    },
+    { t: 'h2', id: 'spf', text: 'SPF specifically' },
+    { t: 'p', text: 'This is the one that matters most. **Removing the surface layer increases photosensitivity**, and sun exposure right after any exfoliating treatment raises pigmentation risk.' },
+    { t: 'p', text: 'Daily broad-spectrum SPF, reapplied through the day, for at least the first week. This is not a general skincare recommendation attached out of habit — it is the specific risk this treatment creates.' },
+    { t: 'h2', id: 'products', text: 'What to actually use' },
+    {
+      t: 'table',
+      head: ['Use', 'Skip'],
+      rows: [
+        ['Bland, fragrance-free moisturiser', 'Anything new, this week'],
+        ['Broad-spectrum SPF', 'Skipping it because you are indoors'],
+        ['Gentle non-foaming cleanser', 'Cleansing brushes or cloths'],
+        ['Nothing else', 'Actives, scrubs, masks'],
+      ],
+    },
+    { t: 'note', title: 'Simplicity is the strategy, not a compromise', text: 'Post-treatment skin needs fewer ingredients rather than more. A provider who sends you home with a short list is not withholding the good part.' },
+    { t: 'h2', id: 'reintroducing', text: 'Reintroducing your routine' },
+    { t: 'p', text: 'The common mistake is putting everything back at once on day three. If skin reacts at that point, you cannot tell which product caused it.' },
+    {
+      t: 'table',
+      head: ['Day', 'Add back'],
+      rows: [
+        ['1 - 2', 'Nothing beyond cleanser, moisturiser, SPF'],
+        ['3', 'One active, at its normal strength'],
+        ['4 - 5', 'Assess, then add a second if calm'],
+        ['6 - 7', 'Remaining products'],
+        ['Week 2', 'Physical exfoliation, if you use it'],
+      ],
+    },
+    { t: 'p', text: 'Adding one at a time costs a few days and gives you information you keep. Adding everything at once costs the same days and tells you nothing.' },
+    { t: 'h2', id: 'planning', text: 'Planning around it' },
+    {
+      t: 'table',
+      head: ['If you have', 'Book'],
+      rows: [
+        ['An event', '5 - 7 days clear'],
+        ['A beach holiday', 'Well before, or after - not just before'],
+        ['A regular retinoid routine', 'When you can pause it for a few days'],
+        ['Sensitive skin', 'When you have a quiet week to observe'],
+        ['A first session ever', 'At least 2 weeks before anything important'],
+      ],
+    },
+    { t: 'h2', id: 'common-mistakes', text: 'The mistakes that cause problems' },
+    { t: 'p', text: 'Nearly all post-treatment complaints trace back to one of five things, and all five are avoidable.' },
+    {
+      t: 'table',
+      head: ['Mistake', 'Result'],
+      rows: [
+        ['Resuming retinoids the next day', 'Irritation on a compromised barrier'],
+        ['Sun exposure without SPF', 'Pigmentation risk - the one that lasts'],
+        ['A scrub because skin feels smooth', 'Over-exfoliation'],
+        ['Gym or sauna the same day', 'Sweat on freshly treated skin'],
+        ['A new product the same week', 'You cannot tell what reacted'],
+      ],
+    },
+    { t: 'p', text: '**The sun one is the only mistake with a lasting consequence.** Irritation settles in days; pigmentation from unprotected exposure after exfoliation can take far longer to resolve.' },
+  ],
+  faq: [
+    { q: 'When can I wear makeup?', a: 'Usually after 24 hours, though giving it a full day is better if you can.' },
+    { q: 'When can I use retinol again?', a: 'Typically 48 to 72 hours, but follow your provider’s instruction over a general rule.' },
+    { q: 'Do I really need SPF?', a: 'Yes. It is the most important step afterwards, because photosensitivity is elevated for a while.' },
+    { q: 'Is redness normal?', a: 'Mild redness for a few hours is common. Increasing or spreading redness is not.' },
+    { q: 'Can I exfoliate afterwards?', a: 'Not for about a week. The treatment already exfoliated.' },
+  ],
+  related: [
+    { href: '/en/what-is-dermaplaning', label: 'What Is Dermaplaning?' },
+    { href: '/en/dermaplaning-at-home', label: 'At-Home Dermaplaning vs Professional' },
+    { href: '/en/who-can-perform-dermaplaning', label: 'Who Can Legally Perform Dermaplaning?' },
+  ],
+}

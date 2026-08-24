@@ -85,6 +85,14 @@ import { builderGelForWeakNails } from './builder-gel-for-weak-nails'
 import { builderGelAtHome } from './builder-gel-at-home'
 import { builderGelDamage } from './builder-gel-damage'
 
+import { whatIsDermaplaning } from './what-is-dermaplaning'
+import { dermaplaningCost } from './dermaplaning-cost'
+import { dermaplaningHairGrowth } from './dermaplaning-hair-growth'
+import { dermaplaningVsWaxing } from './dermaplaning-vs-waxing'
+import { dermaplaningAtHome } from './dermaplaning-at-home'
+import { dermaplaningAftercare } from './dermaplaning-aftercare'
+import { whoCanPerformDermaplaning } from './who-can-perform-dermaplaning'
+
 /**
  * 영문 콘텐츠 페이지 전체 목록.
  * 허브의 섹션 카드와 sitemap이 여기서 파생되므로, 페이지를 추가하면 이 파일만 갱신하면 된다.
@@ -255,6 +263,22 @@ export const EN_SECTIONS: EnSection[] = [
       builderGelRemoval,
       builderGelAtHome,
       builderGelDamage,
+    ],
+  },
+  {
+    key: 'dermaplaning',
+    title: 'Dermaplaning',
+    blurb:
+      'What it does and does not do, the hair-grows-back-thicker question answered properly, and who is legally allowed to hold the blade where you live.',
+    icon: '🪒',
+    pages: [
+      whatIsDermaplaning,
+      dermaplaningCost,
+      dermaplaningHairGrowth,
+      dermaplaningVsWaxing,
+      dermaplaningAftercare,
+      dermaplaningAtHome,
+      whoCanPerformDermaplaning,
     ],
   },
 ]

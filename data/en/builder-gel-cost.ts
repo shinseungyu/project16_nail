@@ -119,6 +119,20 @@ export const builderGelCost: EnPage = {
       ],
     },
     { t: 'p', text: '**Removals belong in the budget.** Each time you take a set off between cycles it is a paid appointment, and two a year is $40 to $80 that never appears in a price comparison.' },
+    { t: 'h2', id: 'art-pricing', text: 'What art adds' },
+    { t: 'p', text: 'Art pricing is the least standardised part of any nail menu, and it explains most of the gap between two quotes for what sounds like the same service.' },
+    {
+      t: 'table',
+      head: ['Art', 'Typical extra'],
+      rows: [
+        ['Single accent nail', '$3 - 10'],
+        ['French tips across ten', '$10 - 25'],
+        ['Chrome or cat-eye finish', '$10 - 20'],
+        ['Hand-painted detail per nail', '$5 - 20'],
+        ['Embellishments', '$5 - 25 per nail'],
+      ],
+    },
+    { t: 'p', text: '**Send your reference photo when booking and ask for a total.** Art quoted per nail adds up faster than people expect, and it is often the whole difference between an $80 set and a $150 one.' },
   ],
   faq: [
     { q: 'How much is builder gel?', a: '$55 to $110 for a set, and $45 to $85 for fills.' },

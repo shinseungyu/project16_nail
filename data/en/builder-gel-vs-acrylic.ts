@@ -124,6 +124,20 @@ export const builderGelVsAcrylic: EnPage = {
       ],
     },
     { t: 'p', text: 'Asking to see healed work at two or three weeks tells you more than a fresh photo. A set that looks perfect on day one and lifts by day five looks identical in the salon.' },
+    { t: 'h2', id: 'longevity', text: 'Which holds up over a year' },
+    { t: 'p', text: 'Both systems wear similarly per set. Where they diverge is what a year of continuous wear does to the nail underneath.' },
+    {
+      t: 'table',
+      head: ['', 'Builder gel', 'Acrylic'],
+      rows: [
+        ['Wear per set', '3 - 4 weeks', '3 - 4 weeks'],
+        ['Fill interval', '2 - 3 weeks', '2 - 3 weeks'],
+        ['Removals per year, typical', '2 - 4', '2 - 4'],
+        ['Damage risk per removal', 'Lower, if soaked', 'Higher, filing-dependent'],
+        ['Cumulative effect', 'Depends on prep discipline', 'Depends on removal skill'],
+      ],
+    },
+    { t: 'p', text: 'Over a year the difference is mostly about who is doing the removals. With a careful technician the two are close; with a rushed one, the soak-off system forgives more.' },
   ],
   faq: [
     { q: 'Which is stronger?', a: 'Acrylic is more rigid; builder gel is more flexible. Rigid is not always better, because a flexible product cracks less on a flexible nail.' },

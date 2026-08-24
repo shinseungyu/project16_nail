@@ -1,0 +1,132 @@
+import type { EnPage } from './types'
+import { EN_UPDATED, EN_UPDATED_ISO, MED_DISCLAIMER, MED_STATE_SCOPE } from './common'
+
+export const dermaplaningCost: EnPage = {
+  path: '/en/dermaplaning-cost',
+  title: 'Dermaplaning Cost: Per Session and With Add-Ons',
+  h1: 'How Much Does Dermaplaning Cost?',
+  description:
+    'Dermaplaning runs $75 to $200 per session, often bundled into a facial. What changes the price and whether packages make sense.',
+  keywords: ['dermaplaning cost', 'dermaplaning price', 'dermaplaning facial cost'],
+  category: 'Skin Treatments',
+  stage: 7,
+  updated: EN_UPDATED,
+  updatedIso: EN_UPDATED_ISO,
+  lead:
+    '**$75 to $200 per session standalone.** Bundled into a facial or paired with a peel, expect $120 to $300. Most providers recommend every three to four weeks if you are maintaining rather than treating an occasion.',
+  blocks: [
+    { t: 'note', tone: 'warn', text: MED_DISCLAIMER },
+    { t: 'h2', id: 'pricing', text: 'Pricing' },
+    {
+      t: 'table',
+      head: ['Format', 'Typical'],
+      rows: [
+        ['Standalone', '$75 - 200'],
+        ['Added to a facial', '+$40 - 90'],
+        ['Dermaplaning facial, combined', '$120 - 250'],
+        ['With a chemical peel', '$150 - 300'],
+        ['Medical setting', 'Often higher'],
+        ['Package of 3 - 6', 'Usually 10 - 20% off'],
+      ],
+    },
+    { t: 'p', text: 'Adding it to a facial is usually cheaper than booking it standalone, because the cleanse and finish steps are shared. If you were having a facial anyway, that is the efficient way to buy it.' },
+    { t: 'h2', id: 'what-changes', text: 'What changes the price' },
+    {
+      t: 'table',
+      head: ['Factor', 'Effect'],
+      rows: [
+        ['Standalone vs combined', 'Combined costs more and does more'],
+        ['Provider setting', 'Medspa vs day spa vs clinic'],
+        ['Region', 'Metro premiums'],
+        ['Products used afterwards', 'Serums and masks add up'],
+        ['Practitioner experience', 'Experience premium'],
+      ],
+    },
+    { t: 'h2', id: 'annual', text: 'Annual cost' },
+    {
+      t: 'table',
+      head: ['Frequency', 'Annual'],
+      rows: [
+        ['Every 3 weeks', 'approx. $1,300 - 3,400'],
+        ['Every 4 weeks', 'approx. $975 - 2,600'],
+        ['Every 6 weeks', 'approx. $650 - 1,750'],
+        ['Occasionally, before events', '$150 - 600'],
+      ],
+    },
+    { t: 'p', text: '**Many people use it situationally** — before a wedding or an event — rather than on a standing schedule. That is a legitimate approach, and it is dramatically cheaper than maintaining a monthly rhythm.' },
+    { t: 'h2', id: 'packages', text: 'Packages, and when to commit' },
+    {
+      t: 'table',
+      head: ['Situation', 'Sensible approach'],
+      rows: [
+        ['First time with this provider', 'Pay for one session'],
+        ['You know it suits your skin', 'A package is reasonable'],
+        ['Pressed to buy at consultation', 'Treat as a signal, not an offer'],
+        ['You only want it for one event', 'Single session, booked a week ahead'],
+      ],
+    },
+    { t: 'h2', id: 'value', text: 'Is it worth it?' },
+    { t: 'p', text: 'The honest framing is that this is a short-effect cosmetic treatment. Whether $150 a month is worth smoother texture and easier makeup application is a personal judgement rather than a technical one.' },
+    {
+      t: 'table',
+      head: ['Probably worth it if', 'Probably not if'],
+      rows: [
+        ['You wear makeup daily and notice texture', 'You rarely wear makeup'],
+        ['You have an event coming up', 'You are hoping it treats a condition'],
+        ['Fine facial hair bothers you', 'You want permanent hair removal'],
+        ['You already book facials regularly', 'You are on a tight budget'],
+      ],
+    },
+    { t: 'h2', id: 'before-event', text: 'Timing it around an event' },
+    { t: 'p', text: 'The most common use is a one-off before something, and the timing question matters more than the price question in that case.' },
+    {
+      t: 'table',
+      head: ['Book', 'Why'],
+      rows: [
+        ['5 - 7 days before', 'Ideal - any redness has settled, skin looks its best'],
+        ['2 - 3 days before', 'Usually fine, less margin'],
+        ['The day before', 'Risky if you have not had it before'],
+        ['Same day', 'Not advisable'],
+        ['First time ever', 'At least 2 weeks before, so you know how you react'],
+      ],
+    },
+    { t: 'p', text: '**Never make an important event your first session.** Reactions are uncommon and mild, but finding out on the day is a bad time to find out.' },
+    { t: 'h2', id: 'what-to-ask', text: 'What to confirm when booking' },
+    {
+      t: 'ol',
+      items: [
+        '**Is this standalone or part of a facial?** The price difference is mostly what else is included.',
+        '**What licence does the provider hold**, and is it in scope here?',
+        '**Is a new sterile blade used?**',
+        '**What is included afterwards** — serum, mask, SPF?',
+        '**What is the policy if I react?**',
+      ],
+    },
+    { t: 'h2', id: 'compare-providers', text: 'Comparing two quotes' },
+    { t: 'p', text: 'A $90 quote and a $180 quote are usually not the same service. Three questions resolve most of the gap.' },
+    {
+      t: 'table',
+      head: ['Ask', 'Why it matters'],
+      rows: [
+        ['Is this standalone or within a facial?', 'The commonest reason for a price gap'],
+        ['What is included afterwards?', 'Serums, masks and LED add cost'],
+        ['What setting is this?', 'Medspa pricing runs above day spa'],
+        ['Who performs it?', 'Credential affects price and, in some states, legality'],
+        ['Is there a package price?', 'Only relevant once you know it suits you'],
+      ],
+    },
+    { t: 'p', text: 'On this particular treatment, the cheapest option is not automatically the wrong one. It is a short, low-complexity service, and a competent provider in a modest setting delivers the same result as an expensive one.' },
+  ],
+  faq: [
+    { q: 'How much is dermaplaning?', a: '$75 to $200 standalone, and more when combined with other treatments.' },
+    { q: 'Is it cheaper in a facial?', a: 'Usually cheaper as an add-on than as a standalone service, because the cleanse and finish steps are shared.' },
+    { q: 'How often should I get it?', a: 'Every three to four weeks if maintaining. Many people use it situationally instead.' },
+    { q: 'Are packages worth it?', a: 'Often 10 to 20% cheaper, but try one session with that provider first.' },
+    { q: 'Why is medspa pricing higher?', a: 'Setting, staffing, and often additional products or combined services.' },
+  ],
+  related: [
+    { href: '/en/what-is-dermaplaning', label: 'What Is Dermaplaning?' },
+    { href: '/en/dermaplaning-at-home', label: 'At-Home Dermaplaning vs Professional' },
+    { href: '/en/dermaplaning-aftercare', label: 'Dermaplaning Aftercare' },
+  ],
+}

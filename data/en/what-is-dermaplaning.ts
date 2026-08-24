@@ -1,0 +1,136 @@
+import type { EnPage } from './types'
+import { EN_UPDATED, EN_UPDATED_ISO, MED_DISCLAIMER, MED_STATE_SCOPE } from './common'
+
+export const whatIsDermaplaning: EnPage = {
+  path: '/en/what-is-dermaplaning',
+  title: 'What Is Dermaplaning? Benefits, Risks and Cost',
+  h1: 'What Is Dermaplaning?',
+  description:
+    'Dermaplaning uses a sterile blade to remove dead surface skin and fine facial hair. What it involves, who it suits, and what it costs.',
+  keywords: ['what is dermaplaning', 'dermaplaning facial', 'dermaplaning benefits'],
+  category: 'Skin Treatments',
+  stage: 7,
+  updated: EN_UPDATED,
+  updatedIso: EN_UPDATED_ISO,
+  lead:
+    '**A treatment using a sterile blade held at an angle to remove dead surface cells and fine facial hair.** It takes 30 to 45 minutes, costs $75 to $200, and has essentially no downtime. Who may legally perform it varies by state.',
+  blocks: [
+    { t: 'note', tone: 'warn', text: MED_DISCLAIMER },
+    { t: 'h2', id: 'what-happens', text: 'What happens' },
+    {
+      t: 'table',
+      head: ['Step', 'Detail'],
+      rows: [
+        ['1. Cleanse', 'Skin cleaned and dried thoroughly'],
+        ['2. Prep', 'Skin must be completely dry'],
+        ['3. Blade passes', 'Held at roughly 45 degrees, short strokes across the face'],
+        ['4. Soothe', 'Hydrating serum, moisturiser'],
+        ['5. SPF', 'Non-negotiable afterwards'],
+      ],
+    },
+    { t: 'p', text: 'The dryness requirement in step two is not a detail. The blade works against dry skin; on damp skin it drags rather than cutting cleanly, which is where nicks come from.' },
+    { t: 'h2', id: 'key-facts', text: 'Key facts' },
+    {
+      t: 'table',
+      head: ['Attribute', 'Detail'],
+      rows: [
+        ['Duration', '30 - 45 min'],
+        ['Cost', '$75 - 200'],
+        ['Downtime', 'Minimal'],
+        ['Interval', 'Every 3 - 4 weeks'],
+        ['Discomfort', 'Low - described as a scraping sensation'],
+      ],
+    },
+    { t: 'h2', id: 'used-for', text: 'What it is used for' },
+    {
+      t: 'ul',
+      items: [
+        'Smoother surface texture.',
+        'Removal of fine facial hair.',
+        'Smoother makeup application.',
+        'Often combined with other treatments in a facial.',
+      ],
+    },
+    { t: 'p', text: '**It is not a treatment for skin conditions.** Providers offering it as an acne or scarring treatment are overstating what it does, and inflamed skin is a reason to avoid it rather than a reason to book.' },
+    { t: 'h2', id: 'avoid', text: 'Who should avoid it' },
+    {
+      t: 'table',
+      head: ['Condition', 'Note'],
+      rows: [
+        ['Active acne, especially inflamed or cystic', 'A blade over inflamed skin is a problem'],
+        ['Open lesions, cold sores, sunburn', 'Wait until resolved'],
+        ['Certain skin conditions', 'Discuss with a provider'],
+        ['Recent isotretinoin use', 'Discuss with your doctor'],
+        ['Very sensitive or reactive skin', 'Provider assessment first'],
+        ['Keloid-prone skin', 'Discuss beforehand'],
+      ],
+    },
+    { t: 'h2', id: 'who-performs', text: 'Who can perform it' },
+    { t: 'p', text: '**This varies by state.** Some permit licensed estheticians; others restrict blade use or require medical oversight. Check your state board, and ask the provider directly what licence they hold.' },
+    { t: 'h2', id: 'expectations', text: 'What it does and does not change' },
+    {
+      t: 'table',
+      head: ['Reasonable expectation', 'Not what it does'],
+      rows: [
+        ['Smoother surface for a few weeks', 'Treat acne'],
+        ['Fine hair removed until it regrows', 'Permanently remove hair'],
+        ['Makeup sits better', 'Change skin type'],
+        ['Product absorbs into a smoother surface', 'Remove scarring'],
+        ['A visible refresh before an event', 'Produce lasting structural change'],
+      ],
+    },
+    { t: 'p', text: 'Set against those, it is a straightforward maintenance treatment with a short effect and almost no recovery. That is a reasonable thing to want, and it is what it reliably delivers.' },
+    { t: 'h2', id: 'combining', text: 'How it fits with other treatments' },
+    { t: 'p', text: 'It is frequently sold as part of a facial rather than alone, and the order matters because everything after it lands on freshly exposed skin.' },
+    {
+      t: 'table',
+      head: ['Paired with', 'Note'],
+      rows: [
+        ['A standard facial', 'Common, and usually cheaper than booking separately'],
+        ['A chemical peel', 'Provider decides depth and order - not a DIY combination'],
+        ['LED', 'Often included in a package'],
+        ['Extractions', 'Order matters; the provider sequences it'],
+        ['Waxing on the same area', 'Space them by a week or two'],
+      ],
+    },
+    { t: 'p', text: 'The pairing with a peel is the one to ask about specifically. Two exfoliating steps in one appointment is a decision for the provider based on your skin, not a bundle to choose off a menu.' },
+    { t: 'h2', id: 'frequency', text: 'How often people book it' },
+    {
+      t: 'table',
+      head: ['Pattern', 'Who it suits'],
+      rows: [
+        ['Every 3 - 4 weeks', 'Maintaining a smooth surface continuously'],
+        ['Every 6 - 8 weeks', 'Occasional refresh'],
+        ['Before events only', 'Most people, honestly'],
+        ['Weekly', 'Too often - the barrier needs recovery'],
+      ],
+    },
+    { t: 'p', text: 'Hair regrows over three to four weeks, which is where the standard interval comes from. Booking more often than that is exfoliating more often than the skin needs.' },
+    { t: 'h2', id: 'first-session', text: 'What a first session is like' },
+    { t: 'p', text: 'People are often nervous about a blade near the face. Knowing the sequence and what is normal removes most of that, and it also makes it easier to notice when something is off.' },
+    {
+      t: 'table',
+      head: ['Moment', 'Normal', 'Say something if'],
+      rows: [
+        ['During passes', 'A light scraping sound and sensation', 'It stings or catches'],
+        ['Immediately after', 'Slight warmth, mild pinkness', 'Any bleeding'],
+        ['That evening', 'Skin feels smooth and tight', 'Burning that does not settle'],
+        ['Next day', 'Back to normal, very smooth', 'Redness has increased'],
+        ['Days 3 - 7', 'Fine hair beginning to return', 'Bumps or breakouts appear'],
+      ],
+    },
+    { t: 'p', text: 'The last row is worth flagging beforehand if you are acne-prone. Removing surface skin over congested areas can bring things to the surface, and a provider who knows will work around those areas.' },
+  ],
+  faq: [
+    { q: 'What is dermaplaning?', a: 'Removal of dead surface skin and fine facial hair using a sterile blade held at an angle.' },
+    { q: 'Does it hurt?', a: 'Generally not. Most people describe a light scraping sensation.' },
+    { q: 'How long does it take?', a: '30 to 45 minutes for a standalone treatment.' },
+    { q: 'Is there downtime?', a: 'Minimal. Mild redness may occur briefly.' },
+    { q: 'Can anyone perform it?', a: 'Rules vary by state. Ask what licence your provider holds and whether it is within their scope where you live.' },
+  ],
+  related: [
+    { href: '/en/dermaplaning-cost', label: 'How Much Does Dermaplaning Cost?' },
+    { href: '/en/dermaplaning-hair-growth', label: 'Does It Make Hair Grow Back Thicker?' },
+    { href: '/en/dermaplaning-vs-waxing', label: 'Dermaplaning vs Waxing' },
+  ],
+}

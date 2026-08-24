@@ -109,6 +109,19 @@ export const builderGelDamage: EnPage = {
       ],
     },
     { t: 'p', text: '**A break is not required if the process is right.** Correct prep and soak-off removal do not create damage that needs recovering from. If you consistently need breaks, something in the cycle is too aggressive and it is worth identifying rather than working around.' },
+    { t: 'h2', id: 'talking', text: 'Raising it with your technician' },
+    { t: 'p', text: 'This conversation is easier than people expect. Technicians generally prefer to hear it than to lose a client without knowing why.' },
+    {
+      t: 'table',
+      head: ['Say', 'Rather than'],
+      rows: [
+        ['My nails felt thin after the last removal', 'You damaged my nails'],
+        ['Could we do lighter prep this time?', 'Nothing, and hoping'],
+        ['Could we soak rather than file?', 'Booking elsewhere silently'],
+        ['This one nail keeps lifting', 'Assuming it is bad luck'],
+      ],
+    },
+    { t: 'p', text: 'A technician who adjusts is worth staying with. One who dismisses it has answered a different question for you.' },
   ],
   faq: [
     { q: 'Is builder gel bad for nails?', a: 'Not inherently. Removal technique is the main variable, followed by how aggressively the nail is prepped.' },

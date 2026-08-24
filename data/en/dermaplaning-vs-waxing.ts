@@ -1,0 +1,134 @@
+import type { EnPage } from './types'
+import { EN_UPDATED, EN_UPDATED_ISO, MED_DISCLAIMER, MED_STATE_SCOPE } from './common'
+
+export const dermaplaningVsWaxing: EnPage = {
+  path: '/en/dermaplaning-vs-waxing',
+  title: 'Dermaplaning vs Waxing for Facial Hair: Which?',
+  h1: 'Dermaplaning vs Waxing for Facial Hair',
+  description:
+    'Dermaplaning cuts hair at the surface and exfoliates; waxing removes from the root. Duration, pain, cost and suitability compared.',
+  keywords: ['dermaplaning vs waxing', 'facial hair removal comparison', 'dermaplaning or waxing'],
+  category: 'Skin Treatments',
+  stage: 7,
+  updated: EN_UPDATED,
+  updatedIso: EN_UPDATED_ISO,
+  lead:
+    '**Dermaplaning cuts hair at the surface and exfoliates at the same time. Waxing pulls hair from the root and handles coarser hair better.** Dermaplaning suits fine vellus hair; waxing is the usual choice for anything darker.',
+  blocks: [
+    { t: 'note', tone: 'warn', text: MED_DISCLAIMER },
+    { t: 'h2', id: 'comparison', text: 'Comparison' },
+    {
+      t: 'table',
+      head: ['', 'Dermaplaning', 'Facial waxing'],
+      rows: [
+        ['Removes hair from', 'Surface', 'Root'],
+        ['Lasts', '3 - 4 weeks', '3 - 4 weeks'],
+        ['Also exfoliates', 'Yes', 'No'],
+        ['Discomfort', 'Minimal', 'Moderate'],
+        ['Cost', '$75 - 200', '$10 - 40 per area'],
+        ['Hair type', 'Fine vellus', 'Fine to coarse'],
+        ['Redness after', 'Minimal', 'Common, for hours'],
+        ['Ingrown risk', 'Very low', 'Present'],
+      ],
+    },
+    { t: 'h2', id: 'by-hair', text: 'Which suits your hair' },
+    {
+      t: 'table',
+      head: ['Hair type', 'Better option'],
+      rows: [
+        ['Fine, soft, peach fuzz', 'Dermaplaning'],
+        ['Darker, coarser', 'Waxing or other methods'],
+        ['Mixed across the face', 'Depends on area - discuss with a provider'],
+      ],
+    },
+    { t: 'h2', id: 'by-goal', text: 'Which suits your goal' },
+    {
+      t: 'table',
+      head: ['Goal', 'Choose'],
+      rows: [
+        ['Hair removal plus exfoliation', 'Dermaplaning'],
+        ['Hair removal only', 'Waxing, much cheaper'],
+        ['Smoother makeup application', 'Dermaplaning'],
+        ['Eyebrow or upper lip shaping', 'Waxing'],
+        ['Lowest cost', 'Waxing'],
+      ],
+    },
+    { t: 'p', text: '**On cost alone, waxing wins by a wide margin.** Dermaplaning’s premium is for the exfoliation rather than the hair removal, and if exfoliation is not what you want, you are paying for something you did not come for.' },
+    { t: 'h2', id: 'both', text: 'Can you do both?' },
+    { t: 'p', text: 'Yes, but not on the same area on the same day. Space them out, and tell each provider what else you have had done and when.' },
+    {
+      t: 'table',
+      head: ['Combination', 'Spacing'],
+      rows: [
+        ['Dermaplaning then waxing, same area', 'At least 1 - 2 weeks'],
+        ['Waxing then dermaplaning, same area', 'At least 1 - 2 weeks'],
+        ['Different areas, same day', 'Usually fine - mention it'],
+        ['Either, plus a chemical peel', 'Provider decides the order and spacing'],
+      ],
+    },
+    { t: 'note', tone: 'warn', text: 'Both remove surface skin to some degree. Stacking them without spacing compromises the barrier, which is when irritation and pigmentation problems appear.' },
+    { t: 'h2', id: 'sensitive', text: 'If your skin is sensitive' },
+    { t: 'p', text: 'Neither is automatically gentler. Dermaplaning avoids the pulling that waxing involves, while waxing avoids a blade on the skin. Which is kinder depends on what your skin reacts to.' },
+    {
+      t: 'table',
+      head: ['If you', 'Consider'],
+      rows: [
+        ['React to adhesives and pulling', 'Dermaplaning'],
+        ['Have very thin or reactive skin', 'Provider assessment for either'],
+        ['Use retinoids or acids', 'Disclose - both may be contraindicated'],
+        ['Have active breakouts', 'Neither, until settled'],
+      ],
+    },
+    { t: 'h2', id: 'cost-over-year', text: 'A year of each' },
+    { t: 'p', text: 'The per-session gap is wide and it widens further across a year, because both are done at similar intervals.' },
+    {
+      t: 'table',
+      head: ['Pattern', 'Annual'],
+      rows: [
+        ['Dermaplaning every 4 weeks', 'approx. $975 - 2,600'],
+        ['Facial waxing every 4 weeks, one area', 'approx. $130 - 520'],
+        ['Waxing two areas every 4 weeks', 'approx. $260 - 1,040'],
+        ['Dermaplaning before events only', '$150 - 600'],
+      ],
+    },
+    { t: 'p', text: '**If hair removal is the goal, waxing is several times cheaper.** The dermaplaning figure buys exfoliation as well, which is a real service — it is just not hair removal.' },
+    { t: 'h2', id: 'aftercare-differs', text: 'Aftercare differs too' },
+    {
+      t: 'table',
+      head: ['', 'Dermaplaning', 'Waxing'],
+      rows: [
+        ['Redness', 'Minimal, hours', 'Common, several hours'],
+        ['Actives afterwards', 'Pause 48 - 72 hrs', 'Pause 24 - 48 hrs'],
+        ['Sun', 'Strict SPF, photosensitive', 'Avoid for 48 hrs'],
+        ['Ingrowns', 'Not applicable', 'Exfoliate from day 3'],
+        ['Makeup', 'After 24 hrs', 'After a few hours'],
+      ],
+    },
+    { t: 'h2', id: 'deciding', text: 'A short way to decide' },
+    { t: 'p', text: 'Two questions settle it for most people without needing to weigh the full comparison.' },
+    {
+      t: 'table',
+      head: ['Question', 'If yes'],
+      rows: [
+        ['Is the hair fine and soft rather than dark?', 'Dermaplaning is an option'],
+        ['Do you also want the exfoliation?', 'Dermaplaning'],
+        ['Is cost the priority?', 'Waxing'],
+        ['Is it a specific area like the upper lip?', 'Waxing'],
+        ['Do you want both?', 'Both, spaced by a week or two'],
+      ],
+    },
+    { t: 'p', text: 'If the answer to the first question is no — the hair is dark and coarse — dermaplaning is not really the comparison you want, and the honest recommendation is a root-removal method.' },
+  ],
+  faq: [
+    { q: 'Which lasts longer?', a: 'Similar in practice, at three to four weeks for both, though the regrowth feels different.' },
+    { q: 'Which hurts more?', a: 'Waxing, generally. Dermaplaning is usually described as a scraping sensation.' },
+    { q: 'Which is cheaper?', a: 'Waxing, substantially. The dermaplaning premium is for the exfoliation.' },
+    { q: 'Which is better for peach fuzz?', a: 'Dermaplaning, since it targets fine vellus hair and exfoliates at the same time.' },
+    { q: 'Can I do both?', a: 'Yes, spaced out. Do not combine them on the same area on the same day.' },
+  ],
+  related: [
+    { href: '/en/dermaplaning-cost', label: 'How Much Does Dermaplaning Cost?' },
+    { href: '/en/how-long-does-waxing-last', label: 'How Long Does Waxing Last?' },
+    { href: '/en/what-is-dermaplaning', label: 'What Is Dermaplaning?' },
+  ],
+}
