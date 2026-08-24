@@ -104,6 +104,21 @@ export const whoCanPerformDermaplaning: EnPage = {
       ],
     },
     { t: 'p', text: 'None of this is about the treatment being dangerous — it is generally uneventful. It is about who answers for it if something goes wrong, and that question only has a good answer if the scope question was settled beforehand.' },
+    { t: 'h2', id: 'training', text: 'What good training covers' },
+    { t: 'p', text: 'Assuming scope is settled, the training itself matters. Courses vary widely, and the ones worth taking cover more than blade handling.' },
+    {
+      t: 'table',
+      head: ['Area', 'Why'],
+      rows: [
+        ['Blade angle and pressure', 'The core skill'],
+        ['Skin assessment and contraindications', 'Knowing who to decline'],
+        ['Sharps handling and disposal', 'A regulated requirement'],
+        ['What to do if you nick the skin', 'It should not happen; you need a protocol'],
+        ['Aftercare instruction for clients', 'Where most complaints originate'],
+        ['Hands-on with live models', 'Not learnable from video'],
+      ],
+    },
+    { t: 'p', text: 'A course that covers only technique and sells a starter kit is not preparing you for the parts that create liability. Screening and aftercare are where the avoidable problems sit.' },
   ],
   faq: [
     { q: 'Can estheticians do dermaplaning?', a: 'In some states yes, in others no or only with supervision. Check your state board rather than assuming from practice elsewhere.' },

@@ -45,3 +45,38 @@ export const MED_DISCLAIMER =
 /** 시술자 스코프가 쟁점인 페이지용 */
 export const MED_STATE_SCOPE =
   'General information, not legal advice. Scope of practice is set by your state board, and in some cases your state medical board as well. Verify with both before offering or booking a treatment.'
+
+/**
+ * 반영구 화장(microblading 등) 전용 고지.
+ * 기획서 필수: 미국 다수 주에서 문신으로 규제되며, 미용사 면허만으로는 부족하다.
+ * 금지: "cosmetology license is enough" / "semi-permanent so it's not a tattoo" /
+ *       "completely fades away" / "risk-free" / "painless"
+ */
+export const PMU_TATTOO_NOTE =
+  'General information, not medical or legal advice. In many US states microblading is regulated as tattooing, administered by health departments rather than cosmetology boards. A cosmetology or esthetics licence alone is generally not sufficient. Check both your state or county health department and your state board, and seek medical care for any sign of infection.'
+
+/**
+ * 브로우 라미네이션 전용 고지.
+ * 기획서 필수: 패치테스트 24-48h, 6-8주 간격(과처리 방지), 눈 부위 반응은 병원.
+ * 금지: "damage-free" / "완전 무해" / "수료증이 업무범위를 넓혀준다"
+ */
+export const BROW_CHEM_NOTE =
+  'General information, not medical advice. Brow lamination is a chemical treatment applied near the eye. A patch test 24 to 48 hours beforehand is standard, sessions should be spaced at least six to eight weeks apart to avoid over-processing, and any swelling, persistent irritation or symptom involving the eye itself needs medical attention.'
+
+/**
+ * 모발 스무딩 시술(keratin treatment, Brazilian Blowout 등) 전용 고지.
+ * 기획서 필수: 일부 제품이 포름알데하이드를 함유하거나 가열 시 방출한다는 사실을
+ * 겁주지도, 감추지도 말고 정확히. 미국 OSHA가 살롱 대상 안내를 낸 바 있다.
+ * 금지: "모든 제품이 안전" / "완전 무포름알데하이드 보장" / 특정 브랜드 지목 비난 /
+ *       "straightens your hair"(스무딩이지 스트레이트닝이 아님)
+ */
+export const SMOOTHING_CHEM_NOTE =
+  'General information, not medical or occupational safety advice. Some smoothing products contain formaldehyde or ingredients that release it when heated, which is why US workplace safety authorities have issued guidance for salons. Ask which product is being used, ask to see its safety data sheet, and ask how the space is ventilated. If you are pregnant, breastfeeding or have a respiratory condition, speak to your doctor first.'
+
+/**
+ * 미용학교·주 시험 페이지 전용 고지.
+ * 기획서 필수: 특정 학교 추천 절대 금지 — 고르는 기준만 제공한다.
+ * 시험 내용은 주 candidate bulletin 이 권위 있는 출처임을 항상 병기.
+ */
+export const SCHOOL_NOTE =
+  'General information, not legal or educational advice. Required hours, fees and exam formats are set state by state and change over time. Verify programme approval on your state board of cosmetology website rather than the school website, and treat your state candidate bulletin as the authoritative source for what is tested.'

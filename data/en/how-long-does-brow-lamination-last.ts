@@ -1,0 +1,125 @@
+import type { EnPage } from './types'
+import { EN_UPDATED, EN_UPDATED_ISO, BROW_CHEM_NOTE, MED_DISCLAIMER } from './common'
+
+export const howLongDoesBrowLaminationLast: EnPage = {
+  path: '/en/how-long-does-brow-lamination-last',
+  title: 'How Long Does Brow Lamination Last? Six to Eight Weeks',
+  h1: 'How Long Does Brow Lamination Last?',
+  description:
+    'Brow lamination lasts six to eight weeks. What shortens it, why the six-week minimum between sessions matters, and what to expect as it grows out.',
+  keywords: ['how long does brow lamination last', 'brow lamination longevity', 'brow lamination grow out'],
+  category: 'Brows',
+  stage: 9,
+  updated: EN_UPDATED,
+  updatedIso: EN_UPDATED_ISO,
+  lead:
+    '**Six to eight weeks, ending as new hair grows through rather than as the treatment wears off.** Rebooking sooner than six weeks risks over-processing, which is the main way this treatment causes damage.',
+  blocks: [
+    { t: 'note', tone: 'warn', text: BROW_CHEM_NOTE },
+    { t: 'h2', id: 'timeline', text: 'What the weeks look like' },
+    {
+      t: 'table',
+      head: ['Period', 'Appearance'],
+      rows: [
+        ['Days 1 - 2', 'Set and slightly stiff; keep dry for the first 24 hrs'],
+        ['Week 1', 'The look at its strongest'],
+        ['Weeks 2 - 4', 'Still holding well; daily brushing helps'],
+        ['Weeks 5 - 6', 'New growth at the root starts to show'],
+        ['Weeks 6 - 8', 'Mixed - laminated lengths with natural regrowth'],
+        ['Week 8+', 'Largely grown out'],
+      ],
+    },
+    { t: 'p', text: '**It grows out rather than falling off.** The treated hair keeps its shape until it is trimmed or shed, so what changes is the new growth arriving underneath it.' },
+    { t: 'h2', id: 'factors', text: 'What affects how long it holds' },
+    {
+      t: 'table',
+      head: ['Factor', 'Effect'],
+      rows: [
+        ['Your hair growth rate', 'The main variable'],
+        ['Oily skin', 'Can soften the hold somewhat'],
+        ['Heavy cleansing or scrubbing on the brows', 'Shortens it'],
+        ['Oil-based products on the brows', 'Shortens it'],
+        ['Swimming and saunas', 'Shortens it'],
+        ['Daily brushing and conditioning', 'Helps it look good longer'],
+      ],
+    },
+    { t: 'h2', id: 'spacing', text: 'Why six weeks is a minimum, not a suggestion' },
+    { t: 'p', text: 'The treatment works by chemically softening the hair. Repeating it before the hair has recovered means processing hair that is already processed.' },
+    {
+      t: 'table',
+      head: ['Interval', 'Result'],
+      rows: [
+        ['6 - 8 weeks', 'The standard, and what most technicians will book'],
+        ['Under 6 weeks', 'Risk of over-processing - brittleness, frizz, breakage'],
+        ['Repeatedly under 6 weeks', 'Cumulative damage; hair may need a long break'],
+        ['Longer than 8 weeks', 'Fine - it simply grows out'],
+      ],
+    },
+    { t: 'note', tone: 'warn', text: '**A technician who declines to rebook you early is protecting your brows.** Over-processing is the most common cause of the damage people attribute to lamination generally.' },
+    { t: 'h2', id: 'making-it-last', text: 'Making it last' },
+    {
+      t: 'ol',
+      items: [
+        '**Keep them dry for the first 24 hours** — this is the one that matters most.',
+        '**Brush them daily** with a clean spoolie.',
+        '**Use a conditioning brow oil or serum** if your technician recommends one.',
+        '**Keep oil-based cleansers and makeup removers off the brows.**',
+        '**Avoid scrubbing the area** when washing your face.',
+        '**Book the next appointment at six weeks or later**, not sooner.',
+      ],
+    },
+    { t: 'h2', id: 'first-time', text: 'The first time often lasts differently' },
+    { t: 'p', text: 'People frequently report that their first lamination held better or worse than later ones, and there are ordinary reasons for that rather than anything going wrong.' },
+    {
+      t: 'table',
+      head: ['Observation', 'Usual explanation'],
+      rows: [
+        ['The first one held best', 'Completely unprocessed hair takes the treatment well'],
+        ['Later ones hold less', 'Previously processed hair responds differently'],
+        ['It held less after a short gap', 'The interval was too short'],
+        ['It varies by season', 'Swimming, sweat and sun exposure change'],
+        ['One brow holds better', 'Growth direction and density differ side to side'],
+      ],
+    },
+    { t: 'p', text: '**The second row is the one to watch.** If each round holds noticeably less than the last, that is a sign to extend the interval and condition rather than to book sooner.' },
+    { t: 'h2', id: 'growing-out', text: 'Growing it out deliberately' },
+    {
+      t: 'ul',
+      items: [
+        '**Nothing needs to be done** - it grows out on its own.',
+        '**Keep conditioning** through the grow-out if the hair feels dry.',
+        '**Expect a mixed look** for a few weeks as new growth arrives underneath.',
+        '**Trimming can tidy the transition**, but take very little off.',
+        '**Brow gel bridges the gap** if you want the shape held meanwhile.',
+      ],
+    },
+    { t: 'h2', id: 'scheduling', text: 'Scheduling across the year' },
+    { t: 'p', text: 'At six to eight week intervals the appointments land at predictable points, which makes planning around holidays and events straightforward.' },
+    {
+      t: 'table',
+      head: ['Interval', 'Appointments per year'],
+      rows: [
+        ['Every 6 weeks', 'About 8'],
+        ['Every 8 weeks', 'About 6'],
+        ['Every 10 weeks', 'About 5'],
+        ['Before events only', '2 - 4'],
+      ],
+    },
+    { t: 'p', text: '**Eight to ten weeks is kinder to the hair than six**, and the difference in how the brows look during the last fortnight is smaller than most people expect.' },
+    { t: 'h2', id: 'summary', text: 'The short version' },
+    { t: 'p', text: 'Six to eight weeks, ending as new growth arrives rather than as the treatment wears off. Keeping them dry for the first day and brushing them daily afterwards does most of the work.' },
+    { t: 'p', text: '**Do not rebook inside six weeks, whatever the salon offers.** Over-processing is the main way this treatment causes damage, and the interval is the part entirely within your control.' },
+  ],
+  faq: [
+    { q: 'How long does brow lamination last?', a: 'Six to eight weeks, ending as new hair grows through.' },
+    { q: 'Can I get it redone sooner?', a: 'Not advisable. Under six weeks risks over-processing, which causes brittleness and breakage.' },
+    { q: 'Why did mine only last four weeks?', a: 'Fast hair growth, oily skin, or heavy cleansing on the brow area are the usual reasons.' },
+    { q: 'Does it fall out or grow out?', a: 'It grows out. The treated hairs keep their shape while new growth arrives underneath.' },
+    { q: 'What if I stop getting it done?', a: 'Your brows return to their natural growth direction as the treated hair grows out. Nothing needs to be undone.' },
+  ],
+  related: [
+    { href: '/en/what-is-brow-lamination', label: 'What Is Brow Lamination?' },
+    { href: '/en/brow-lamination-damage', label: 'Does Brow Lamination Damage Your Brows?' },
+    { href: '/en/brow-lamination-aftercare', label: 'Brow Lamination Aftercare' },
+  ],
+}

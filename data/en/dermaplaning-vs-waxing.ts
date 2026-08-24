@@ -118,6 +118,23 @@ export const dermaplaningVsWaxing: EnPage = {
       ],
     },
     { t: 'p', text: 'If the answer to the first question is no — the hair is dark and coarse — dermaplaning is not really the comparison you want, and the honest recommendation is a root-removal method.' },
+    { t: 'h2', id: 'trying-both', text: 'If you want to try both' },
+    { t: 'p', text: 'Many people end up using each for different areas, which is a sensible outcome rather than an inconsistency.' },
+    {
+      t: 'table',
+      head: ['Area', 'Common choice'],
+      rows: [
+        ['Cheeks and forehead', 'Dermaplaning - fine hair, large area'],
+        ['Upper lip', 'Waxing - often coarser'],
+        ['Chin', 'Depends on the hair'],
+        ['Brows', 'Waxing or threading - shaping needed'],
+        ['Jawline', 'Either'],
+      ],
+    },
+    { t: 'p', text: 'Tell each provider what you are having done elsewhere and when. The spacing rules apply per area rather than to your face as a whole.' },
+    { t: 'h2', id: 'summary', text: 'The short version' },
+    { t: 'p', text: 'Dermaplaning removes fine surface hair and exfoliates; waxing removes hair from the root and does not. If hair removal alone is the goal, waxing is cheaper and lasts longer on coarser hair.' },
+    { t: 'p', text: 'Most people end up using both, on different areas, at different intervals. Tell each provider what you are having done elsewhere and when, since the spacing guidance applies per area rather than to your face as a whole.' },
   ],
   faq: [
     { q: 'Which lasts longer?', a: 'Similar in practice, at three to four weeks for both, though the regrowth feels different.' },

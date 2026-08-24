@@ -1,0 +1,127 @@
+import type { EnPage } from './types'
+import { EN_UPDATED, EN_UPDATED_ISO, BROW_CHEM_NOTE, MED_DISCLAIMER, US_STATE_NOTE } from './common'
+
+export const browLaminationTraining: EnPage = {
+  path: '/en/brow-lamination-training',
+  title: 'Brow Lamination Training and Licensing in the US',
+  h1: 'Brow Lamination Training and Licensing',
+  description:
+    'A course certificate is not a licence. What US states typically require to offer brow lamination, and what good training covers.',
+  keywords: ['brow lamination training', 'brow lamination certification', 'brow lamination license', 'lash and brow training'],
+  category: 'Brows',
+  stage: 9,
+  updated: EN_UPDATED,
+  updatedIso: EN_UPDATED_ISO,
+  lead:
+    '**A training certificate documents that you took a course; it does not authorise you to practise.** Brow lamination usually falls under esthetics or cosmetology licensing, and your state board decides whether it is in scope.',
+  blocks: [
+    { t: 'note', tone: 'warn', text: US_STATE_NOTE },
+    { t: 'h2', id: 'certificate-vs-licence', text: 'Certificate vs licence' },
+    { t: 'p', text: 'This distinction causes more confusion in the lash and brow field than anywhere else, largely because course marketing blurs it.' },
+    {
+      t: 'table',
+      head: ['', 'Course certificate', 'State licence'],
+      rows: [
+        ['Issued by', 'A private academy or brand', 'Your state board'],
+        ['What it proves', 'You attended training', 'You are authorised to practise'],
+        ['Legally required', 'Usually no', 'Usually yes'],
+        ['Expands your scope', '**No**', 'It defines your scope'],
+        ['Insurers may ask for', 'Both', 'Both'],
+      ],
+    },
+    { t: 'note', tone: 'warn', text: '**A certificate does not expand what you are licensed to do.** If brow lamination is outside your licence category in your state, completing a course does not change that — only the board does.' },
+    { t: 'h2', id: 'typical-requirements', text: 'What is typically required' },
+    {
+      t: 'table',
+      head: ['Item', 'Notes'],
+      rows: [
+        ['An esthetics or cosmetology licence', 'The usual baseline'],
+        ['Confirmation it is in scope', 'Ask your board in writing'],
+        ['Product-specific training', 'Often required by the brand or your insurer'],
+        ['Salon or establishment licence', 'Premises are regulated separately'],
+        ['Liability insurance', 'Not always legally required, but standard practice'],
+        ['Patch test protocol and records', 'Expected practice; sometimes a requirement'],
+      ],
+    },
+    { t: 'p', text: 'Some states address lash and brow chemical services explicitly; others do not name them, in which case the scope of the licence category governs. **Ask in writing and keep the reply.**' },
+    { t: 'h2', id: 'good-training', text: 'What good training covers' },
+    {
+      t: 'table',
+      head: ['Area', 'Why it matters'],
+      rows: [
+        ['Processing times on different hair types', 'The core skill - and the main damage risk'],
+        ['Recognising already-processed hair', 'When to decline or shorten timing'],
+        ['Patch testing protocol', 'Standard practice, and a record you keep'],
+        ['Contraindications', 'Knowing who to turn away'],
+        ['What to do if a client reacts', 'You need a protocol before you need it'],
+        ['Aftercare instruction', 'Where most complaints originate'],
+        ['Hands-on with live models', 'Not learnable from video'],
+      ],
+    },
+    { t: 'p', text: '**A one-day course that covers technique and sells you a kit is not preparing you for the parts that create liability.** Contraindications, patch testing and reaction protocol are where the avoidable problems sit.' },
+    { t: 'h2', id: 'checking', text: 'Checking your state' },
+    {
+      t: 'ol',
+      items: [
+        '**Search your state board site** for esthetics scope of practice.',
+        '**Search for the service by name** — some boards address lash and brow chemical services directly.',
+        '**Write to the board and ask specifically**, then keep the reply on file.',
+        '**Check establishment requirements** for the premises.',
+        '**Confirm with your insurer** what training they require.',
+        '**Re-check periodically** — scope rules in this area have been revised in several states.',
+      ],
+    },
+    { t: 'note', tone: 'warn', text: MED_DISCLAIMER },
+    { t: 'h2', id: 'choosing-course', text: 'Choosing between courses' },
+    { t: 'p', text: 'Course marketing tends to compete on length and kit contents, neither of which predicts whether you will be competent afterwards.' },
+    {
+      t: 'table',
+      head: ['Ask', 'Why'],
+      rows: [
+        ['How many live models will I work on?', 'The single best indicator'],
+        ['Is aftercare and reaction protocol covered?', 'Where liability actually sits'],
+        ['Is there support after the course?', 'You will have questions in week three'],
+        ['Is it tied to one product brand?', 'Not disqualifying, but worth knowing'],
+        ['Does it claim to expand my scope?', 'It cannot - treat that claim as a warning'],
+      ],
+    },
+    { t: 'p', text: '**The last row is the one to take seriously.** Any course advertising that it lets you offer services your licence does not cover is describing something the academy has no authority to grant.' },
+    { t: 'h2', id: 'records', text: 'Records worth keeping' },
+    {
+      t: 'ul',
+      items: [
+        '**Your board correspondence** confirming scope, with the date.',
+        '**Patch test records** for every client, signed and dated.',
+        '**Consent forms** including disclosed conditions and previous reactions.',
+        '**Product batch details** for the solutions used.',
+        '**Your certificate and any renewals**, alongside your licence.',
+      ],
+    },
+    { t: 'h2', id: 'insurance', text: 'Insurance and practical setup' },
+    { t: 'p', text: 'Beyond licensing, a few practical requirements decide whether you can actually offer the service commercially.' },
+    {
+      t: 'table',
+      head: ['Item', 'Note'],
+      rows: [
+        ['Liability insurance', 'Insurers usually want proof of training'],
+        ['Product-specific certification', 'Some brands and insurers require it'],
+        ['Establishment or salon licence', 'For the premises'],
+        ['Consent and patch test forms', 'Keep them; they are your record'],
+        ['Renewal dates', 'Both licence and any certifications'],
+      ],
+    },
+    { t: 'p', text: '**Insurers ask different questions from regulators.** Meeting your state requirement does not automatically mean a claim would be covered, so confirm both before taking your first client.' },
+  ],
+  faq: [
+    { q: 'Do I need a licence to do brow lamination?', a: 'In most states yes, usually an esthetics or cosmetology licence. Confirm scope with your state board.' },
+    { q: 'Is a certificate enough on its own?', a: 'No. A certificate documents training; a state licence authorises practice. They are separate.' },
+    { q: 'Does a course expand my scope of practice?', a: 'No. Only your state board defines scope. A certificate does not change what your licence permits.' },
+    { q: 'How long is training?', a: 'Courses commonly run one to three days, though length varies and is not itself a measure of quality.' },
+    { q: 'How do I check my state rules?', a: 'Contact your state board in writing, ask about the service by name, and keep the reply.' },
+  ],
+  related: [
+    { href: '/en/what-is-brow-lamination', label: 'What Is Brow Lamination?' },
+    { href: '/en/brow-lamination-damage', label: 'Does Brow Lamination Damage Your Brows?' },
+    { href: '/en/microblading-licensing', label: 'Microblading Licensing Requirements' },
+  ],
+}

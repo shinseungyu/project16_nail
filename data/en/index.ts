@@ -92,6 +92,22 @@ import { dermaplaningVsWaxing } from './dermaplaning-vs-waxing'
 import { dermaplaningAtHome } from './dermaplaning-at-home'
 import { dermaplaningAftercare } from './dermaplaning-aftercare'
 import { whoCanPerformDermaplaning } from './who-can-perform-dermaplaning'
+import { whatIsMicroblading } from './what-is-microblading'
+import { microbladingCost } from './microblading-cost'
+import { microbladingAftercare } from './microblading-aftercare'
+import { microbladingHealingProcess } from './microblading-healing-process'
+import { howLongDoesMicrobladingLast } from './how-long-does-microblading-last'
+import { microbladingVsPowderBrows } from './microblading-vs-powder-brows'
+import { microbladingLicensing } from './microblading-licensing'
+import { choosingAMicrobladingArtist } from './choosing-a-microblading-artist'
+import { microbladingRemoval } from './microblading-removal'
+import { whatIsBrowLamination } from './what-is-brow-lamination'
+import { howLongDoesBrowLaminationLast } from './how-long-does-brow-lamination-last'
+import { browLaminationCost } from './brow-lamination-cost'
+import { browLaminationAftercare } from './brow-lamination-aftercare'
+import { browLaminationVsMicroblading } from './brow-lamination-vs-microblading'
+import { browLaminationDamage } from './brow-lamination-damage'
+import { browLaminationTraining } from './brow-lamination-training'
 
 /**
  * 영문 콘텐츠 페이지 전체 목록.
@@ -279,6 +295,40 @@ export const EN_SECTIONS: EnSection[] = [
       dermaplaningAftercare,
       dermaplaningAtHome,
       whoCanPerformDermaplaning,
+    ],
+  },
+  {
+    key: 'microblading',
+    title: 'Microblading',
+    blurb:
+      'Cosmetic tattooing for brows. What it costs including the touch-up nobody mentions, how healing actually looks, why healed photos are the only ones worth judging, and which agency licenses it where you live.',
+    icon: '✏️',
+    pages: [
+      whatIsMicroblading,
+      microbladingCost,
+      microbladingAftercare,
+      microbladingHealingProcess,
+      howLongDoesMicrobladingLast,
+      microbladingVsPowderBrows,
+      microbladingLicensing,
+      choosingAMicrobladingArtist,
+      microbladingRemoval,
+    ],
+  },
+  {
+    key: 'brow-lamination',
+    title: 'Brow lamination',
+    blurb:
+      'A chemical treatment that redirects the hair you already have. What it can and cannot do, why the six-week gap is not negotiable, and what a course certificate does not give you.',
+    icon: '🧴',
+    pages: [
+      whatIsBrowLamination,
+      howLongDoesBrowLaminationLast,
+      browLaminationCost,
+      browLaminationAftercare,
+      browLaminationVsMicroblading,
+      browLaminationDamage,
+      browLaminationTraining,
     ],
   },
 ]

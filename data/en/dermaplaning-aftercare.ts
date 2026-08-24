@@ -115,6 +115,23 @@ export const dermaplaningAftercare: EnPage = {
       ],
     },
     { t: 'p', text: '**The sun one is the only mistake with a lasting consequence.** Irritation settles in days; pigmentation from unprotected exposure after exfoliation can take far longer to resolve.' },
+    { t: 'h2', id: 'seasonal', text: 'Sun, seasons and timing' },
+    { t: 'p', text: 'Photosensitivity is the aftercare point with the longest tail, and it makes timing worth thinking about beyond the week after.' },
+    {
+      t: 'table',
+      head: ['Situation', 'Consideration'],
+      rows: [
+        ['Summer, high UV', 'Strict SPF; some people space sessions out'],
+        ['Before a beach holiday', 'Leave a clear gap, or book after instead'],
+        ['Winter', 'Still SPF - UV does not stop'],
+        ['Working outdoors', 'Hat and SPF, reapplied'],
+        ['Mostly indoors', 'SPF anyway for the first week'],
+      ],
+    },
+    { t: 'p', text: 'None of this makes the treatment seasonal. It makes the sun protection non-optional in a way people often treat as advisory.' },
+    { t: 'h2', id: 'summary', text: 'The short version' },
+    { t: 'p', text: 'Keep it simple for two days: cleanser, moisturiser, SPF. Then reintroduce your actives one at a time rather than all at once, so you can tell what caused a reaction if one happens.' },
+    { t: 'p', text: 'Sun protection is the part with the longest consequence. Irritation settles within days, but pigmentation from unprotected exposure on freshly exfoliated skin can take far longer to resolve.' },
   ],
   faq: [
     { q: 'When can I wear makeup?', a: 'Usually after 24 hours, though giving it a full day is better if you can.' },

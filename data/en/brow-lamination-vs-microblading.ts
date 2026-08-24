@@ -1,0 +1,126 @@
+import type { EnPage } from './types'
+import { EN_UPDATED, EN_UPDATED_ISO, BROW_CHEM_NOTE, MED_DISCLAIMER, US_STATE_NOTE } from './common'
+
+export const browLaminationVsMicroblading: EnPage = {
+  path: '/en/brow-lamination-vs-microblading',
+  title: 'Brow Lamination vs Microblading: Which One Do You Need?',
+  h1: 'Brow Lamination vs Microblading',
+  description:
+    'Lamination reshapes the hair you have for six to eight weeks. Microblading tattoos pigment into skin for one to three years. How to choose.',
+  keywords: ['brow lamination vs microblading', 'lamination or microblading', 'brow treatment comparison'],
+  category: 'Brows',
+  stage: 9,
+  updated: EN_UPDATED,
+  updatedIso: EN_UPDATED_ISO,
+  lead:
+    '**Lamination reshapes existing hair and lasts six to eight weeks. Microblading deposits pigment into skin and lasts one to three years.** If you have hair that misbehaves, lamination. If you have gaps, microblading.',
+  blocks: [
+    { t: 'note', tone: 'warn', text: BROW_CHEM_NOTE },
+    { t: 'h2', id: 'comparison', text: 'Side by side' },
+    {
+      t: 'table',
+      head: ['', 'Brow lamination', 'Microblading'],
+      rows: [
+        ['What it does', 'Reshapes existing hair', 'Adds pigment to skin'],
+        ['Lasts', '6 - 8 weeks', '1 - 3 years'],
+        ['Cost', '$50 - 150', '$400 - 1,200'],
+        ['Annual cost', '$325 - 975', '$150 - 400 after year one'],
+        ['Appointment', '45 - 60 min', '2 - 3 hrs plus a touch-up'],
+        ['Downtime', '24 hrs dry', '7 - 14 days healing'],
+        ['Reversible', 'Grows out on its own', 'Fades; removal is difficult and costly'],
+        ['Regulation', 'Usually under cosmetology or esthetics', 'Often under tattoo or body art rules'],
+      ],
+    },
+    { t: 'h2', id: 'which', text: 'Which solves your problem' },
+    {
+      t: 'table',
+      head: ['If your issue is', 'Choose'],
+      rows: [
+        ['Hairs that will not stay in place', 'Lamination'],
+        ['Downward-growing hair', 'Lamination'],
+        ['Needing brow gel every morning', 'Lamination'],
+        ['Genuine gaps with no hair', 'Microblading'],
+        ['Very sparse brows overall', 'Microblading'],
+        ['Wanting to skip brow makeup for years', 'Microblading'],
+        ['Wanting to try a fuller look first', 'Lamination - it grows out'],
+      ],
+    },
+    { t: 'p', text: '**Lamination is the low-commitment option**, and that makes it a reasonable way to see whether you like a fuller brow before considering anything permanent.' },
+    { t: 'h2', id: 'commitment', text: 'The commitment difference' },
+    { t: 'p', text: 'This is the part worth thinking about hardest. Lamination that you dislike is gone in six to eight weeks with no intervention. **Microblading you dislike is a removal process** that costs more than the original and takes months.' },
+    {
+      t: 'table',
+      head: ['If you regret it', 'Lamination', 'Microblading'],
+      rows: [
+        ['Time to resolve', '6 - 8 weeks', 'Months'],
+        ['Cost to resolve', 'Nothing', '$600 - 3,000'],
+        ['Guaranteed to resolve', 'Yes', 'No - residue is common'],
+        ['Action needed', 'None', 'Laser or saline sessions'],
+      ],
+    },
+    { t: 'h2', id: 'both', text: 'Can you have both?' },
+    { t: 'p', text: 'Yes, and some people do — microblading fills gaps while lamination directs the real hair growing through it. **Space them apart and tell each technician what else you have had done.**' },
+    {
+      t: 'ul',
+      items: [
+        '**Do not laminate during microblading healing** — wait until it has fully settled, generally at least six to eight weeks after the touch-up.',
+        '**Tell your lamination technician** about the pigment work.',
+        '**Tell your PMU artist** that you laminate, since it affects how they see your natural brow shape.',
+      ],
+    },
+    { t: 'note', tone: 'warn', text: MED_DISCLAIMER },
+    { t: 'h2', id: 'regulation', text: 'The regulatory difference matters too' },
+    { t: 'p', text: 'This rarely enters the decision, but it explains why the two services are offered in different places and why the questions you ask should differ.' },
+    {
+      t: 'table',
+      head: ['', 'Brow lamination', 'Microblading'],
+      rows: [
+        ['Breaks the skin', 'No', 'Yes'],
+        ['Typically regulated by', 'Cosmetology or esthetics board', 'Often a health department under body art rules'],
+        ['Usual credential', 'Esthetics or cosmetology licence', 'Body art registration, often plus training hours'],
+        ['Facility rules', 'Salon or establishment licence', 'Body art facility registration and inspection'],
+        ['Key question to ask', 'Is a patch test done?', 'Are you registered for body art here?'],
+      ],
+    },
+    { t: 'p', text: '**Requirements vary by state in both cases**, and a certificate from a course does not settle either one. The board or health department does.' },
+    { t: 'h2', id: 'cost-over-time', text: 'What each costs over three years' },
+    {
+      t: 'table',
+      head: ['', 'Three-year total'],
+      rows: [
+        ['Lamination every 8 weeks with tint', 'approx. $1,365 - 2,925'],
+        ['Lamination every 8 weeks, no tint', 'approx. $975 - 2,145'],
+        ['Microblading plus two colour boosts', 'approx. $700 - 2,000'],
+      ],
+    },
+    { t: 'h2', id: 'trying-first', text: 'Using one to test the other' },
+    { t: 'p', text: 'If you are drawn to microblading but unsure about the commitment, lamination is a low-cost way to see whether the fuller brow suits your face.' },
+    {
+      t: 'table',
+      head: ['Step', 'What it tells you'],
+      rows: [
+        ['Laminate once', 'Whether you like a fuller, brushed-up brow'],
+        ['Live with it for 6 weeks', 'Whether it suits your daily look'],
+        ['Add a tint', 'Whether you want more depth of colour'],
+        ['Let it grow out', 'Whether you missed it'],
+        ['Then decide', 'With actual information rather than a mockup'],
+      ],
+    },
+    { t: 'p', text: '**Around $70 to $150 and eight weeks buys real information** about a decision that otherwise costs several hundred dollars and lasts years.' },
+    { t: 'h2', id: 'summary', text: 'The short version' },
+    { t: 'p', text: 'Lamination reshapes hair you already have for six to eight weeks. Microblading places pigment in skin for one to three years. Hair that misbehaves points to the first; gaps with no hair point to the second.' },
+    { t: 'p', text: '**If you are undecided, start with lamination.** It grows out on its own at no cost, which makes it the cheapest way to find out whether a fuller brow is what you actually wanted.' },
+  ],
+  faq: [
+    { q: 'Which is better?', a: 'Neither. Lamination reshapes hair you have; microblading adds pigment where hair is missing. They solve different problems.' },
+    { q: 'Which lasts longer?', a: 'Microblading, by a large margin — one to three years against six to eight weeks.' },
+    { q: 'Which is cheaper?', a: 'Lamination per session, but the annual cost is comparable once microblading is only being maintained.' },
+    { q: 'Can I have both?', a: 'Yes, spaced apart. Do not laminate while microblading is still healing.' },
+    { q: 'Which should I try first?', a: 'Lamination, if you are unsure. It grows out on its own, so there is nothing to undo.' },
+  ],
+  related: [
+    { href: '/en/what-is-brow-lamination', label: 'What Is Brow Lamination?' },
+    { href: '/en/what-is-microblading', label: 'What Is Microblading?' },
+    { href: '/en/microblading-cost', label: 'How Much Does Microblading Cost?' },
+  ],
+}

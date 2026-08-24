@@ -116,6 +116,19 @@ export const dermaplaningCost: EnPage = {
       ],
     },
     { t: 'p', text: 'On this particular treatment, the cheapest option is not automatically the wrong one. It is a short, low-complexity service, and a competent provider in a modest setting delivers the same result as an expensive one.' },
+    { t: 'h2', id: 'medical-settings', text: 'Why medical settings charge more' },
+    { t: 'p', text: 'The same treatment can cost twice as much depending on where it is performed, and the difference is not only overhead.' },
+    {
+      t: 'table',
+      head: ['Setting', 'Typical', 'What differs'],
+      rows: [
+        ['Day spa', '$75 - 130', 'Esthetician, cosmetic setting'],
+        ['Medspa', '$120 - 200', 'Medical oversight, often combined services'],
+        ['Dermatology clinic', '$150 - 250', 'Physician setting'],
+        ['Mobile or home-based', '$60 - 110', 'Lower overhead - verify credentials'],
+      ],
+    },
+    { t: 'p', text: 'For a straightforward dermaplaning session on healthy skin, the setting affects price more than outcome. Where it starts to matter is if you have a skin condition, in which case assessment capability is worth paying for.' },
   ],
   faq: [
     { q: 'How much is dermaplaning?', a: '$75 to $200 standalone, and more when combined with other treatments.' },

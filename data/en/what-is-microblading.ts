@@ -1,0 +1,128 @@
+import type { EnPage } from './types'
+import { EN_UPDATED, EN_UPDATED_ISO, MED_DISCLAIMER, PMU_TATTOO_NOTE } from './common'
+
+export const whatIsMicroblading: EnPage = {
+  path: '/en/what-is-microblading',
+  title: 'What Is Microblading? Process, Cost and Longevity',
+  h1: 'What Is Microblading?',
+  description:
+    'Microblading deposits pigment into the skin with a hand tool to create hair-like brow strokes. What is involved, what it costs, and how it is regulated.',
+  keywords: ['what is microblading', 'microblading process', 'microblading explained', 'eyebrow microblading'],
+  category: 'Brows',
+  stage: 8,
+  updated: EN_UPDATED,
+  updatedIso: EN_UPDATED_ISO,
+  lead:
+    '**A cosmetic tattooing technique that deposits pigment into the upper skin layers using a hand-held blade of fine needles, creating hair-like strokes.** It lasts one to three years and costs $400 to $1,200 including the required touch-up. In many US states it is regulated as tattooing.',
+  blocks: [
+    { t: 'note', tone: 'warn', text: PMU_TATTOO_NOTE },
+    { t: 'h2', id: 'process', text: 'The process' },
+    {
+      t: 'table',
+      head: ['Stage', 'What happens'],
+      rows: [
+        ['1. Consultation', 'Shape mapping, pigment selection, patch test discussion'],
+        ['2. Numbing', 'Topical anaesthetic'],
+        ['3. Mapping', 'Brow shape drawn and approved before any pigment'],
+        ['4. Strokes', 'Pigment deposited stroke by stroke'],
+        ['5. Aftercare briefing', 'Written instructions'],
+        ['6. Touch-up', '4 - 8 weeks later - part of the process, not optional'],
+      ],
+    },
+    { t: 'p', text: '**The touch-up is not a correction of a mistake.** Pigment settles unevenly as skin heals, and the second session evens it out. Any quoted price that excludes it is incomplete rather than cheaper.' },
+    { t: 'h2', id: 'key-facts', text: 'Key facts' },
+    {
+      t: 'table',
+      head: ['Attribute', 'Detail'],
+      rows: [
+        ['Duration', '2 - 3 hrs for the first session'],
+        ['Cost', '$400 - 1,200 including touch-up'],
+        ['Lasts', '1 - 3 years'],
+        ['Healing', '7 - 14 days visible; longer to settle'],
+        ['Touch-ups after', 'Every 1 - 2 years to maintain'],
+      ],
+    },
+    { t: 'h2', id: 'regulation', text: 'How it is regulated' },
+    { t: 'p', text: 'In many US states microblading falls under **tattoo regulation**, administered by health departments rather than cosmetology boards. Requirements commonly include bloodborne pathogen training, facility registration, and inspection.' },
+    { t: 'p', text: '**A cosmetology or esthetics licence alone is generally not sufficient.** Requirements vary, so check both your state health department and your state board — the answer often lives with the former rather than the latter.' },
+    { t: 'h2', id: 'semi-permanent', text: 'On the phrase "semi-permanent"' },
+    { t: 'p', text: 'The term describes how it fades rather than what it is. Pigment is deposited into the skin, which is what tattooing means, and that is why regulators treat it the way they do.' },
+    {
+      t: 'table',
+      head: ['What "semi-permanent" means', 'What it does not mean'],
+      rows: [
+        ['It fades over 1 - 3 years', 'It is not a tattoo'],
+        ['It usually needs refreshing', 'It disappears completely'],
+        ['It is shallower than body tattooing', 'It is regulated differently everywhere'],
+        ['Colour softens over time', 'It can be undone easily'],
+      ],
+    },
+    { t: 'note', tone: 'warn', text: 'Residual pigment often remains after fading, and removal is a separate procedure that typically costs more than the original. That is worth knowing before rather than after.' },
+    { t: 'h2', id: 'who-suits', text: 'Who it suits' },
+    {
+      t: 'table',
+      head: ['Reasonable fit', 'Discuss carefully first'],
+      rows: [
+        ['Sparse brows with some existing hair', 'Very oily skin - strokes may blur'],
+        ['Dry to normal skin', 'Active skin conditions in the brow area'],
+        ['Wanting to skip daily brow makeup', 'Keloid-prone skin'],
+        ['Comfortable with a 1 - 3 year commitment', 'Recent isotretinoin use'],
+        ['Willing to attend the touch-up', 'Pregnancy - many artists decline'],
+      ],
+    },
+    { t: 'h2', id: 'pain-and-risk', text: 'Discomfort and risk' },
+    { t: 'p', text: 'Topical numbing is standard, and most people describe the sensation as scratching rather than sharp pain. It is not painless, and any provider describing it that way is overselling.' },
+    {
+      t: 'table',
+      head: ['Consideration', 'What to know'],
+      rows: [
+        ['Discomfort', 'Managed with topical numbing; varies by person'],
+        ['Swelling and redness', 'Common for a day or two'],
+        ['Infection', 'Uncommon but possible - the skin is broken'],
+        ['Allergic reaction to pigment', 'Rare; some artists patch test'],
+        ['Scarring', 'Possible with poor technique or picking'],
+        ['Unsatisfactory result', 'The most common complaint, and the hardest to fix'],
+      ],
+    },
+    { t: 'p', text: '**The last row is worth sitting with.** Infection is uncommon and treatable; a shape or colour you dislike is a months-long, expensive problem. That is why artist selection matters more than any other decision here.' },
+    { t: 'h2', id: 'before-booking', text: 'Before you book' },
+    {
+      t: 'ol',
+      items: [
+        '**Look at healed photos**, not fresh ones - they show completely different things.',
+        '**Confirm registration** with your state or county health department.',
+        '**Ask whether the touch-up is included** in the quoted price.',
+        '**Discuss your skin type**, particularly if it is oily.',
+        '**Check the timing** - allow two weeks of healing before any event.',
+        '**Ask about medications and conditions** that may affect suitability.',
+      ],
+    },
+    { t: 'h2', id: 'terms', text: 'The terms you will hear' },
+    { t: 'p', text: 'The vocabulary around brow tattooing is inconsistent between studios, which makes comparing services harder than it should be.' },
+    {
+      t: 'table',
+      head: ['Term', 'What it usually means'],
+      rows: [
+        ['Microblading', 'Hand tool, hair-like strokes'],
+        ['Powder or ombre brows', 'Machine, soft shaded fill'],
+        ['Combo brows', 'Strokes at the front, shading through the body'],
+        ['Nano brows', 'Machine-made strokes rather than blade-made'],
+        ['PMU', 'Permanent makeup - the umbrella term'],
+        ['Colour boost', 'A maintenance refresh of existing work'],
+      ],
+    },
+    { t: 'p', text: '**Ask which technique is being quoted**, since studios use these names loosely and the healing, longevity and suitability differ between them.' },
+  ],
+  faq: [
+    { q: 'What is microblading?', a: 'Cosmetic tattooing that creates hair-like brow strokes using a hand tool to deposit pigment into the upper skin layers.' },
+    { q: 'Is it a tattoo?', a: 'It deposits pigment into skin, and many states regulate it as tattooing. "Semi-permanent" refers to how it fades rather than to it being a different procedure.' },
+    { q: 'How long does it last?', a: 'One to three years, varying mainly by skin type and sun exposure.' },
+    { q: 'How much does it cost?', a: '$400 to $1,200 including the required touch-up.' },
+    { q: 'Is the touch-up necessary?', a: 'Yes. It is part of the standard process rather than a correction, because pigment settles unevenly as skin heals.' },
+  ],
+  related: [
+    { href: '/en/microblading-cost', label: 'How Much Does Microblading Cost?' },
+    { href: '/en/microblading-aftercare', label: 'Microblading Aftercare Day by Day' },
+    { href: '/en/microblading-licensing', label: 'Microblading Licensing Requirements' },
+  ],
+}

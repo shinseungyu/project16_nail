@@ -1,0 +1,126 @@
+import type { EnPage } from './types'
+import { EN_UPDATED, EN_UPDATED_ISO, MED_DISCLAIMER, PMU_TATTOO_NOTE, US_STATE_NOTE } from './common'
+
+export const choosingAMicrobladingArtist: EnPage = {
+  path: '/en/choosing-a-microblading-artist',
+  title: 'How to Choose a Microblading Artist: What to Check',
+  h1: 'How to Choose a Microblading Artist',
+  description:
+    'Healed photos, registration, sterilisation practice and consultation quality matter more than price. A practical checklist before you book.',
+  keywords: ['choosing a microblading artist', 'microblading consultation questions', 'microblading red flags'],
+  category: 'Brows',
+  stage: 8,
+  updated: EN_UPDATED,
+  updatedIso: EN_UPDATED_ISO,
+  lead:
+    '**Ask for healed photos, not fresh ones - that is the single most useful filter.** Then verify registration, sterilisation practice, and whether the quote includes the touch-up.',
+  blocks: [
+    { t: 'note', tone: 'warn', text: PMU_TATTOO_NOTE },
+    { t: 'h2', id: 'healed-photos', text: 'Healed photos, not fresh photos' },
+    { t: 'p', text: 'Almost every portfolio looks excellent immediately after the procedure. **Fresh work is bold, crisp and dark; it is not what you will live with.** Healed photos taken four to eight weeks later show retention, colour settling, and how the strokes actually hold.' },
+    {
+      t: 'table',
+      head: ['Photo type', 'What it shows'],
+      rows: [
+        ['Immediately after', 'Drawing ability - and little else'],
+        ['Healed at 4 - 8 weeks', 'Retention, colour, stroke definition - what matters'],
+        ['Healed at 1 year', 'How the work ages'],
+        ['On skin like yours', 'The most relevant evidence of all'],
+      ],
+    },
+    { t: 'p', text: '**Ask specifically: do you have healed photos?** An artist who only shows fresh work either has no healed results to show or does not follow up with clients. Either is worth knowing before you book.' },
+    { t: 'h2', id: 'verify', text: 'What to verify' },
+    {
+      t: 'table',
+      head: ['Check', 'Why'],
+      rows: [
+        ['Body art registration in your state or county', 'Often a legal requirement'],
+        ['Facility registration and inspection', 'The premises are regulated too'],
+        ['Current bloodborne pathogen certification', 'Widely required'],
+        ['Single-use needles and blades', 'Non-negotiable'],
+        ['Insurance', 'Reasonable to ask about'],
+      ],
+    },
+    { t: 'h2', id: 'consultation', text: 'What a good consultation looks like' },
+    { t: 'p', text: 'The consultation tells you more than the portfolio, because it shows how the artist thinks rather than what they can photograph.' },
+    {
+      t: 'table',
+      head: ['Good sign', 'Concerning sign'],
+      rows: [
+        ['Assesses your skin type and says so', 'No mention of skin type at all'],
+        ['Discusses whether microblading suits you', 'Sells the same service to everyone'],
+        ['May recommend powder or combo instead', 'Never recommends against'],
+        ['Maps and shows the shape before starting', 'Starts without your approval of the shape'],
+        ['Explains healing including the ghosting stage', 'Promises it will look perfect immediately'],
+        ['Clear on what the price includes', 'Vague about the touch-up'],
+      ],
+    },
+    { t: 'note', title: 'An artist who talks you out of it may be the right one', text: 'On oily skin, strokes often blur. An artist who says so and suggests powder brows is giving you a better outcome rather than turning down work.' },
+    { t: 'h2', id: 'red-flags', text: 'Red flags' },
+    {
+      t: 'ul',
+      items: [
+        '**Prices far below the local range** - ask what is different.',
+        '**No healed photos available.**',
+        '**Reluctance to discuss registration or sterilisation.**',
+        '**"Painless" or "risk-free"** - no procedure that breaks skin is either.',
+        '**Pressure to book immediately**, or same-day discounts.',
+        '**No written aftercare instructions.**',
+        '**Vague about whether the touch-up is included.**',
+      ],
+    },
+    { t: 'h2', id: 'questions', text: 'Questions worth asking' },
+    {
+      t: 'ol',
+      items: [
+        '**Can I see healed photos, ideally on skin like mine?**',
+        '**How long have you been doing this, and where did you train?**',
+        '**Are you registered for body art here?**',
+        '**Does the price include the touch-up?**',
+        '**Given my skin, do you recommend microblading or powder?**',
+        '**What happens if I am unhappy after the touch-up heals?**',
+      ],
+    },
+    { t: 'p', text: 'The last one matters more than it sounds. Correction costs more than the original, so knowing the policy beforehand is worth the slightly awkward question.' },
+    { t: 'h2', id: 'before-you-sit', text: 'On the day, before any pigment' },
+    { t: 'p', text: 'A few things should happen before work begins, and their absence is the clearest signal you have to act on while you can still leave.' },
+    {
+      t: 'table',
+      head: ['Should happen', 'If it does not'],
+      rows: [
+        ['The shape is drawn and shown to you', 'Ask for it - do not proceed without approving the shape'],
+        ['You sign a consent form', 'Ask why there is not one'],
+        ['Fresh gloves and sealed single-use tools', 'Leave'],
+        ['Your questions are answered without impatience', 'A poor sign for the follow-up too'],
+        ['Aftercare is explained before, not after', 'Ask for it in writing'],
+      ],
+    },
+    { t: 'p', text: '**The mapped shape is your last easy decision point.** Once pigment goes in, changing your mind becomes a removal question rather than a conversation, so take the time to look properly in a mirror.' },
+    { t: 'h2', id: 'reviews', text: 'Reading reviews usefully' },
+    { t: 'p', text: 'Review scores for this service are inflated by the timing of when people leave them, which makes the text more useful than the star rating.' },
+    {
+      t: 'table',
+      head: ['Look for', 'Why'],
+      rows: [
+        ['Reviews written weeks or months later', 'Written after healing, not after the appointment'],
+        ['Mentions of the touch-up', 'They completed the full process'],
+        ['Mentions of the consultation', 'Suggests proper screening'],
+        ['How the artist handled a problem', 'The most informative kind of review'],
+        ['Repeat clients returning for maintenance', 'The strongest signal there is'],
+      ],
+    },
+    { t: 'p', text: '**A five-star review posted the same day says the appointment went pleasantly.** It says nothing about how the work healed, which is the only thing you are actually buying.' },
+  ],
+  faq: [
+    { q: 'What is the most important thing to check?', a: 'Healed photos taken four to eight weeks after the work, ideally on skin similar to yours.' },
+    { q: 'Why are fresh photos misleading?', a: 'Fresh work is bold and crisp for everyone. Healed work shows retention and colour settling, which is what you will live with.' },
+    { q: 'Should I choose the cheapest option?', a: 'Correction and removal both cost more than the original, so the cheapest quote can become the most expensive outcome.' },
+    { q: 'What if they recommend powder brows instead?', a: 'That is usually a good sign, particularly on oily skin where fine strokes tend to blur.' },
+    { q: 'How do I check they are registered?', a: 'Ask directly, and verify with your state or county health department body art programme.' },
+  ],
+  related: [
+    { href: '/en/microblading-licensing', label: 'Microblading Licensing Requirements' },
+    { href: '/en/microblading-vs-powder-brows', label: 'Microblading vs Powder Brows' },
+    { href: '/en/microblading-cost', label: 'How Much Does Microblading Cost?' },
+  ],
+}

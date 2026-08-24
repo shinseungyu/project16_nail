@@ -123,6 +123,19 @@ export const dermaplaningAtHome: EnPage = {
       ],
     },
     { t: 'p', text: 'The cost case is straightforward: $10 to $40 for a tool and blades against $75 to $200 a session. **The saving is real for hair removal and illusory for exfoliation**, because the two versions are not doing the same thing.' },
+    { t: 'h2', id: 'stop-signs', text: 'When to stop using it' },
+    { t: 'p', text: 'Home use is low risk until it is not, and the signals are easy to recognise if you know to look.' },
+    {
+      t: 'ul',
+      items: [
+        '**Persistent redness** that has not settled by the next day.',
+        '**Breakouts that started** after you began using it.',
+        '**Any sign of infection** — spreading redness, warmth, pus, fever.',
+        '**Texture changes** you did not have before.',
+        '**Stinging** when you apply your normal products.',
+      ],
+    },
+    { t: 'p', text: 'Continuing through those is how a cosmetic habit becomes a skin problem. Stopping for a few weeks costs nothing, and a doctor is the right call for anything in the third bullet.' },
   ],
   faq: [
     { q: 'Is at-home dermaplaning safe?', a: 'Home tools are guarded and less sharp, but cuts and infection are still possible. Use a new blade every time.' },
