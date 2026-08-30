@@ -146,9 +146,17 @@ export default function BoardPostPage({ params }: { params: { id: string } }) {
         <section className="mt-12">
           <h2 className="mb-5 text-lg font-bold text-stone-800">이런 글은 어떠세요?</h2>
           <div className="flex flex-col gap-3">
-            {allPosts
-              .filter((p) => p.id !== post.id)
-              .slice(0, 4)
+            {/*
+              관련 글은 "현재 글 다음 4개"를 순환해서 고른다.
+              예전에는 slice(0, 4) 라 모든 글이 같은 4개만 가리켰고, 그 결과
+              /board/6 이후 글들은 내부링크가 목록 페이지 1개뿐이라 GSC 에서
+              "발견됨 - 색인 생성 안 됨" 으로 남았다. 순환시키면 모든 글이
+              형제 글로부터 정확히 4개씩 링크를 받는다.
+            */}
+            {Array.from({ length: Math.min(4, allPosts.length - 1) }, (_, k) => {
+              const self = allPosts.findIndex((p) => p.id === post.id)
+              return allPosts[(self + 1 + k) % allPosts.length]
+            })
               .map((p) => {
                 const c = categoryColor[p.category] ?? "bg-stone-100 text-stone-600";
                 return (

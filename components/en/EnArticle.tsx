@@ -2,6 +2,27 @@ import Link from 'next/link'
 import AdUnit from '@/components/AdUnit'
 import { SITE_URL } from '@/lib/hreflang'
 import type { EnBlock, EnPage } from '@/data/en/types'
+import { EN_SECTIONS, isReleased } from '@/data/en'
+
+/**
+ * 같은 클러스터의 형제 글.
+ *
+ * related 3개만으로는 클러스터 안쪽 글이 내부링크 1~2개에 그쳐서 크롤러가
+ * 잘 도달하지 못한다(GSC "발견됨 - 색인 생성 안 됨"). 섹션 전체를 걸어주면
+ * 모든 글이 형제 수만큼 링크를 받고 클러스터가 실제로 하나의 사일로가 된다.
+ *
+ * 공개된 글에서 미공개(noindex) 글로는 링크하지 않는다 — 크롤 예산을
+ * 색인되지 않을 URL 로 흘려보내지 않기 위해서다.
+ */
+function clusterSiblings(page: EnPage) {
+  const section = EN_SECTIONS.find((s) => s.pages.some((p) => p.path === page.path))
+  if (!section) return null
+  const alreadyLinked = new Set(page.related.map((r) => r.href))
+  const siblings = section.pages.filter(
+    (p) => p.path !== page.path && !alreadyLinked.has(p.path) && (isReleased(p) || !isReleased(page))
+  )
+  return siblings.length > 0 ? { title: section.title, siblings } : null
+}
 
 /** **bold** 마크다운만 지원. 한국어 ServiceDetail과 같은 규칙이다. */
 function rich(text: string): React.ReactNode {
@@ -259,6 +280,31 @@ export default function EnArticle({ page }: { page: EnPage }) {
             </div>
           </section>
         ) : null}
+
+        {(() => {
+          const cluster = clusterSiblings(page)
+          if (!cluster) return null
+          return (
+            <nav className="mt-12 pt-10 border-t border-stone-200" aria-label="More in this series">
+              <p className="text-[12px] font-bold text-stone-500 uppercase tracking-widest mb-4">
+                More on {cluster.title.toLowerCase()}
+              </p>
+              <ul className="grid sm:grid-cols-2 gap-x-6 gap-y-2.5">
+                {cluster.siblings.map((p) => (
+                  <li key={p.path} className="relative pl-5">
+                    <span className="absolute left-0 top-[10px] w-1.5 h-1.5 rounded-full bg-stone-300" aria-hidden />
+                    <Link
+                      href={p.path}
+                      className="text-[15px] leading-[1.7] text-stone-600 hover:text-rose-700 transition-colors"
+                    >
+                      {p.h1}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </nav>
+          )
+        })()}
 
         <AdUnit slot="3291145762" />
       </article>

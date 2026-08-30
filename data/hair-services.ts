@@ -375,7 +375,7 @@ export const hairServices: NailService[] = [
       { q: '얼마나 유지되나요?', a: '제품과 모질에 따라 다르지만 대체로 하루 정도입니다.' },
       { q: '제품을 살 수 있나요?', a: '대부분의 바버샵에서 사용 제품을 판매합니다.' },
     ],
-    related: ['/hair/service/cut', '/hair/service/perm', '/hair'],
+    related: ['/hair/service/cut', '/hair/service/perm', '/hair/service/scalp'],
   },
   {
     id: 'bleach',
