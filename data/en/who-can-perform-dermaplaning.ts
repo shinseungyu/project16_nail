@@ -1,5 +1,5 @@
 import type { EnPage } from './types'
-import { EN_UPDATED, EN_UPDATED_ISO, MED_DISCLAIMER, MED_STATE_SCOPE } from './common'
+import { EN_UPDATED_BATCH4, EN_UPDATED_BATCH4_ISO, MED_DISCLAIMER, MED_STATE_SCOPE } from './common'
 
 export const whoCanPerformDermaplaning: EnPage = {
   path: '/en/who-can-perform-dermaplaning',
@@ -10,8 +10,8 @@ export const whoCanPerformDermaplaning: EnPage = {
   keywords: ['who can perform dermaplaning', 'dermaplaning scope of practice', 'can estheticians dermaplane'],
   category: 'Skin Treatments',
   stage: 7,
-  updated: EN_UPDATED,
-  updatedIso: EN_UPDATED_ISO,
+  updated: EN_UPDATED_BATCH4,
+  updatedIso: EN_UPDATED_BATCH4_ISO,
   lead:
     '**Rules vary significantly.** Some states permit licensed estheticians to perform dermaplaning; others restrict blade use, require medical supervision, or do not address it clearly. Check your state board of cosmetology, and where relevant your state medical board.',
   blocks: [

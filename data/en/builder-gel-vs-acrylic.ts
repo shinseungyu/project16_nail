@@ -1,5 +1,5 @@
 import type { EnPage } from './types'
-import { EN_UPDATED, EN_UPDATED_ISO } from './common'
+import { EN_UPDATED_BATCH4, EN_UPDATED_BATCH4_ISO } from './common'
 
 export const builderGelVsAcrylic: EnPage = {
   path: '/en/builder-gel-vs-acrylic',
@@ -10,8 +10,8 @@ export const builderGelVsAcrylic: EnPage = {
   keywords: ['builder gel vs acrylic', 'builder gel or acrylic', 'gel overlay vs acrylic'],
   category: 'Nails',
   stage: 6,
-  updated: EN_UPDATED,
-  updatedIso: EN_UPDATED_ISO,
+  updated: EN_UPDATED_BATCH4,
+  updatedIso: EN_UPDATED_BATCH4_ISO,
   lead:
     '**Builder gel is lighter, has minimal odour and often soaks off. Acrylic is more rigid, cheaper, and better for extreme lengths.** For natural nail overlays, builder gel is generally the better fit.',
   blocks: [

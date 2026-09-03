@@ -1,5 +1,5 @@
 import type { EnPage } from './types'
-import { EN_UPDATED, EN_UPDATED_ISO, BROW_CHEM_NOTE, MED_DISCLAIMER, US_STATE_NOTE } from './common'
+import { EN_UPDATED_BATCH4, EN_UPDATED_BATCH4_ISO, BROW_CHEM_NOTE, MED_DISCLAIMER, US_STATE_NOTE } from './common'
 
 export const browLaminationDamage: EnPage = {
   path: '/en/brow-lamination-damage',
@@ -10,8 +10,8 @@ export const browLaminationDamage: EnPage = {
   keywords: ['brow lamination damage', 'brow lamination side effects', 'over processed brows', 'brow lamination risks'],
   category: 'Brows',
   stage: 9,
-  updated: EN_UPDATED,
-  updatedIso: EN_UPDATED_ISO,
+  updated: EN_UPDATED_BATCH4,
+  updatedIso: EN_UPDATED_BATCH4_ISO,
   lead:
     '**It can, and the usual cause is over-processing from sessions spaced too closely.** Done at six to eight week intervals by a trained technician, problems are uncommon — but this is a chemical treatment and it is not risk-free.',
   blocks: [

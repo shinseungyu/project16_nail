@@ -1,5 +1,5 @@
 import type { EnPage } from './types'
-import { EN_UPDATED, EN_UPDATED_ISO, BROW_CHEM_NOTE, MED_DISCLAIMER } from './common'
+import { EN_UPDATED_BATCH4, EN_UPDATED_BATCH4_ISO, BROW_CHEM_NOTE, MED_DISCLAIMER } from './common'
 
 export const browLaminationCost: EnPage = {
   path: '/en/brow-lamination-cost',
@@ -10,8 +10,8 @@ export const browLaminationCost: EnPage = {
   keywords: ['brow lamination cost', 'brow lamination price', 'eyebrow lamination cost'],
   category: 'Brows',
   stage: 9,
-  updated: EN_UPDATED,
-  updatedIso: EN_UPDATED_ISO,
+  updated: EN_UPDATED_BATCH4,
+  updatedIso: EN_UPDATED_BATCH4_ISO,
   lead:
     '**$50 to $150 in most US markets, with $70 to $110 the common range.** A tint usually adds $15 to $30, and most people repeat it every six to eight weeks.',
   blocks: [

@@ -1,5 +1,5 @@
 import type { EnPage } from './types'
-import { EN_UPDATED, EN_UPDATED_ISO, SCHOOL_NOTE, US_PAY_NOTE } from './common'
+import { EN_UPDATED_BATCH4, EN_UPDATED_BATCH4_ISO, SCHOOL_NOTE, US_PAY_NOTE } from './common'
 
 export const beautySchoolWorthIt: EnPage = {
   path: '/en/beauty-school-worth-it',
@@ -10,8 +10,8 @@ export const beautySchoolWorthIt: EnPage = {
   keywords: ['is beauty school worth it', 'cosmetology career worth it', 'beauty school return on investment', 'should I go to beauty school'],
   category: 'Licensing & Training',
   stage: 13,
-  updated: EN_UPDATED,
-  updatedIso: EN_UPDATED_ISO,
+  updated: EN_UPDATED_BATCH4,
+  updatedIso: EN_UPDATED_BATCH4_ISO,
   lead:
     '**It depends on which licence, what it costs where you are, and whether you understand that early-career income is low.** The training is comparatively short and the path to independent work is real — but the first two years are the hard part, and that is the part people underestimate.',
   blocks: [

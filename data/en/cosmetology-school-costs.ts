@@ -1,5 +1,5 @@
 import type { EnPage } from './types'
-import { EN_UPDATED, EN_UPDATED_ISO, SCHOOL_NOTE } from './common'
+import { EN_UPDATED_BATCH4, EN_UPDATED_BATCH4_ISO, SCHOOL_NOTE } from './common'
 
 export const cosmetologySchoolCosts: EnPage = {
   path: '/en/cosmetology-school-costs',
@@ -10,8 +10,8 @@ export const cosmetologySchoolCosts: EnPage = {
   keywords: ['cosmetology school cost', 'beauty school tuition', 'cosmetology kit cost', 'cosmetology financial aid'],
   category: 'Licensing & Training',
   stage: 13,
-  updated: EN_UPDATED,
-  updatedIso: EN_UPDATED_ISO,
+  updated: EN_UPDATED_BATCH4,
+  updatedIso: EN_UPDATED_BATCH4_ISO,
   lead:
     '**Tuition varies widely by state, programme length and school type — and it is rarely the whole cost.** Kit, books, exam fees and licence fees commonly add substantially on top. Always request an all-in written estimate before you commit.',
   blocks: [

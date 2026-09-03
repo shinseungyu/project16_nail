@@ -1,5 +1,5 @@
 import type { EnPage } from './types'
-import { EN_UPDATED, EN_UPDATED_ISO, MED_DISCLAIMER, MED_STATE_SCOPE } from './common'
+import { EN_UPDATED_BATCH4, EN_UPDATED_BATCH4_ISO, MED_DISCLAIMER, MED_STATE_SCOPE } from './common'
 
 export const dermaplaningCost: EnPage = {
   path: '/en/dermaplaning-cost',
@@ -10,8 +10,8 @@ export const dermaplaningCost: EnPage = {
   keywords: ['dermaplaning cost', 'dermaplaning price', 'dermaplaning facial cost'],
   category: 'Skin Treatments',
   stage: 7,
-  updated: EN_UPDATED,
-  updatedIso: EN_UPDATED_ISO,
+  updated: EN_UPDATED_BATCH4,
+  updatedIso: EN_UPDATED_BATCH4_ISO,
   lead:
     '**$75 to $200 per session standalone.** Bundled into a facial or paired with a peel, expect $120 to $300. Most providers recommend every three to four weeks if you are maintaining rather than treating an occasion.',
   blocks: [

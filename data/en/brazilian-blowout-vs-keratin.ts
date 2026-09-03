@@ -1,5 +1,5 @@
 import type { EnPage } from './types'
-import { EN_UPDATED, EN_UPDATED_ISO, SMOOTHING_CHEM_NOTE } from './common'
+import { EN_UPDATED_BATCH4, EN_UPDATED_BATCH4_ISO, SMOOTHING_CHEM_NOTE } from './common'
 
 export const brazilianBlowoutVsKeratin: EnPage = {
   path: '/en/brazilian-blowout-vs-keratin',
@@ -10,8 +10,8 @@ export const brazilianBlowoutVsKeratin: EnPage = {
   keywords: ['brazilian blowout vs keratin', 'keratin or brazilian blowout', 'smoothing treatment comparison'],
   category: 'Hair Treatments',
   stage: 12,
-  updated: EN_UPDATED,
-  updatedIso: EN_UPDATED_ISO,
+  updated: EN_UPDATED_BATCH4,
+  updatedIso: EN_UPDATED_BATCH4_ISO,
   lead:
     '**Keratin treatments generally last longer — three to five months against 10 to 12 weeks — and smooth more assertively. Brazilian Blowout typically retains more volume and often has a shorter wash-wait.** Which is better depends on how much of your natural texture you want to keep.',
   blocks: [

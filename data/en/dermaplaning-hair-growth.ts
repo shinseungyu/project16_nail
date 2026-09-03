@@ -1,5 +1,5 @@
 import type { EnPage } from './types'
-import { EN_UPDATED, EN_UPDATED_ISO, MED_DISCLAIMER, MED_STATE_SCOPE } from './common'
+import { EN_UPDATED_BATCH4, EN_UPDATED_BATCH4_ISO, MED_DISCLAIMER, MED_STATE_SCOPE } from './common'
 
 export const dermaplaningHairGrowth: EnPage = {
   path: '/en/dermaplaning-hair-growth',
@@ -10,8 +10,8 @@ export const dermaplaningHairGrowth: EnPage = {
   keywords: ['dermaplaning hair growth', 'does dermaplaning make hair thicker', 'facial hair regrowth'],
   category: 'Skin Treatments',
   stage: 7,
-  updated: EN_UPDATED,
-  updatedIso: EN_UPDATED_ISO,
+  updated: EN_UPDATED_BATCH4,
+  updatedIso: EN_UPDATED_BATCH4_ISO,
   lead:
     '**Cutting hair at the surface does not change the follicle, and it does not change how the hair grows.** What changes is the end of the hair — a cut end feels blunter than a tapered one, which is why regrowth can feel coarser even when nothing about the hair has actually changed.',
   blocks: [

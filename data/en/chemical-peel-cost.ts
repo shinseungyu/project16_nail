@@ -1,5 +1,5 @@
 import type { EnPage } from './types'
-import { EN_UPDATED, EN_UPDATED_ISO, MED_DISCLAIMER } from './common'
+import { EN_UPDATED_BATCH4, EN_UPDATED_BATCH4_ISO, MED_DISCLAIMER } from './common'
 
 export const chemicalPeelCost: EnPage = {
   path: '/en/chemical-peel-cost',
@@ -10,8 +10,8 @@ export const chemicalPeelCost: EnPage = {
   keywords: ['chemical peel cost', 'how much is a chemical peel', 'chemical peel price', 'deep peel cost'],
   category: 'Skin Treatments',
   stage: 10,
-  updated: EN_UPDATED,
-  updatedIso: EN_UPDATED_ISO,
+  updated: EN_UPDATED_BATCH4,
+  updatedIso: EN_UPDATED_BATCH4_ISO,
   lead:
     '**Roughly $100 to $250 for superficial peels, $250 to $600 for medium, and $1,500 to $6,000 or more for deep peels.** That spread reflects genuinely different procedures rather than different pricing of the same thing. Prices vary by provider and region.',
   blocks: [

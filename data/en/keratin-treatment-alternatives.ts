@@ -1,5 +1,5 @@
 import type { EnPage } from './types'
-import { EN_UPDATED, EN_UPDATED_ISO, SMOOTHING_CHEM_NOTE } from './common'
+import { EN_UPDATED_BATCH4, EN_UPDATED_BATCH4_ISO, SMOOTHING_CHEM_NOTE } from './common'
 
 export const keratinTreatmentAlternatives: EnPage = {
   path: '/en/keratin-treatment-alternatives',
@@ -10,8 +10,8 @@ export const keratinTreatmentAlternatives: EnPage = {
   keywords: ['keratin treatment alternatives', 'frizz treatment without keratin', 'formaldehyde free smoothing', 'reduce frizz salon'],
   category: 'Hair Treatments',
   stage: 11,
-  updated: EN_UPDATED,
-  updatedIso: EN_UPDATED_ISO,
+  updated: EN_UPDATED_BATCH4,
+  updatedIso: EN_UPDATED_BATCH4_ISO,
   lead:
     '**Nothing else gives three to five months of smoothing in a single service.** But if the chemistry concerns you or the cost does not fit, several options reduce frizz meaningfully with much lower commitment — and one of them is free.',
   blocks: [

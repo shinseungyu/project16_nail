@@ -1,5 +1,5 @@
 import type { EnPage } from './types'
-import { EN_UPDATED, EN_UPDATED_ISO, SMOOTHING_CHEM_NOTE } from './common'
+import { EN_UPDATED_BATCH4, EN_UPDATED_BATCH4_ISO, SMOOTHING_CHEM_NOTE } from './common'
 
 export const keratinTreatmentAftercare: EnPage = {
   path: '/en/keratin-treatment-aftercare',
@@ -10,8 +10,8 @@ export const keratinTreatmentAftercare: EnPage = {
   keywords: ['keratin treatment aftercare', 'after keratin treatment', 'keratin 72 hours', 'keratin treatment washing'],
   category: 'Hair Treatments',
   stage: 11,
-  updated: EN_UPDATED,
-  updatedIso: EN_UPDATED_ISO,
+  updated: EN_UPDATED_BATCH4,
+  updatedIso: EN_UPDATED_BATCH4_ISO,
   lead:
     '**The first 48 to 72 hours decide how well it sets: no washing, no tying up, nothing that creases the hair.** After that, sulphate-free products decide how long it lasts. Protocols vary by product, so ask your stylist for theirs.',
   blocks: [

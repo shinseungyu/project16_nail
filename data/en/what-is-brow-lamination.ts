@@ -1,5 +1,5 @@
 import type { EnPage } from './types'
-import { EN_UPDATED, EN_UPDATED_ISO, BROW_CHEM_NOTE, MED_DISCLAIMER } from './common'
+import { EN_UPDATED_BATCH4, EN_UPDATED_BATCH4_ISO, BROW_CHEM_NOTE, MED_DISCLAIMER } from './common'
 
 export const whatIsBrowLamination: EnPage = {
   path: '/en/what-is-brow-lamination',
@@ -10,8 +10,8 @@ export const whatIsBrowLamination: EnPage = {
   keywords: ['what is brow lamination', 'brow lamination process', 'eyebrow lamination', 'laminated brows'],
   category: 'Brows',
   stage: 9,
-  updated: EN_UPDATED,
-  updatedIso: EN_UPDATED_ISO,
+  updated: EN_UPDATED_BATCH4,
+  updatedIso: EN_UPDATED_BATCH4_ISO,
   lead:
     '**A chemical treatment that softens the bonds in brow hairs so they can be reshaped and set in a brushed-up direction.** It lasts six to eight weeks and costs $50 to $150. It is a chemical process on the hair, so a patch test matters.',
   blocks: [

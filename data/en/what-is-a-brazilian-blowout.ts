@@ -1,5 +1,5 @@
 import type { EnPage } from './types'
-import { EN_UPDATED, EN_UPDATED_ISO, SMOOTHING_CHEM_NOTE } from './common'
+import { EN_UPDATED_BATCH4, EN_UPDATED_BATCH4_ISO, SMOOTHING_CHEM_NOTE } from './common'
 
 export const whatIsABrazilianBlowout: EnPage = {
   path: '/en/what-is-a-brazilian-blowout',
@@ -10,8 +10,8 @@ export const whatIsABrazilianBlowout: EnPage = {
   keywords: ['what is a brazilian blowout', 'brazilian blowout process', 'brazilian blowout results', 'smoothing treatment'],
   category: 'Hair Treatments',
   stage: 12,
-  updated: EN_UPDATED,
-  updatedIso: EN_UPDATED_ISO,
+  updated: EN_UPDATED_BATCH4,
+  updatedIso: EN_UPDATED_BATCH4_ISO,
   lead:
     '**A branded professional smoothing treatment applied to the hair and sealed with heat, reducing frizz while retaining more volume than some alternatives.** It lasts around 10 to 12 weeks. The term is often used loosely to mean any salon smoothing service, but it refers to a specific branded system.',
   blocks: [

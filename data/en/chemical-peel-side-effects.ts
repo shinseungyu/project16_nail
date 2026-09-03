@@ -1,5 +1,5 @@
 import type { EnPage } from './types'
-import { EN_UPDATED, EN_UPDATED_ISO, MED_DISCLAIMER } from './common'
+import { EN_UPDATED_BATCH4, EN_UPDATED_BATCH4_ISO, MED_DISCLAIMER } from './common'
 
 export const chemicalPeelSideEffects: EnPage = {
   path: '/en/chemical-peel-side-effects',
@@ -10,8 +10,8 @@ export const chemicalPeelSideEffects: EnPage = {
   keywords: ['chemical peel side effects', 'chemical peel risks', 'chemical peel contraindications', 'is a chemical peel safe'],
   category: 'Skin Treatments',
   stage: 10,
-  updated: EN_UPDATED,
-  updatedIso: EN_UPDATED_ISO,
+  updated: EN_UPDATED_BATCH4,
+  updatedIso: EN_UPDATED_BATCH4_ISO,
   lead:
     '**Redness, tightness and peeling are expected. Less common risks include pigmentation changes, scarring and infection.** Risk rises with depth. Several conditions and medications are contraindications, and a provider has to assess you rather than the other way round.',
   blocks: [

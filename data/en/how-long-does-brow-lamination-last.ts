@@ -1,5 +1,5 @@
 import type { EnPage } from './types'
-import { EN_UPDATED, EN_UPDATED_ISO, BROW_CHEM_NOTE, MED_DISCLAIMER } from './common'
+import { EN_UPDATED_BATCH4, EN_UPDATED_BATCH4_ISO, BROW_CHEM_NOTE, MED_DISCLAIMER } from './common'
 
 export const howLongDoesBrowLaminationLast: EnPage = {
   path: '/en/how-long-does-brow-lamination-last',
@@ -10,8 +10,8 @@ export const howLongDoesBrowLaminationLast: EnPage = {
   keywords: ['how long does brow lamination last', 'brow lamination longevity', 'brow lamination grow out'],
   category: 'Brows',
   stage: 9,
-  updated: EN_UPDATED,
-  updatedIso: EN_UPDATED_ISO,
+  updated: EN_UPDATED_BATCH4,
+  updatedIso: EN_UPDATED_BATCH4_ISO,
   lead:
     '**Six to eight weeks, ending as new hair grows through rather than as the treatment wears off.** Rebooking sooner than six weeks risks over-processing, which is the main way this treatment causes damage.',
   blocks: [

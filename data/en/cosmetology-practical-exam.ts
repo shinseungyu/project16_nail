@@ -1,5 +1,5 @@
 import type { EnPage } from './types'
-import { EN_UPDATED, EN_UPDATED_ISO, SCHOOL_NOTE } from './common'
+import { EN_UPDATED_BATCH4, EN_UPDATED_BATCH4_ISO, SCHOOL_NOTE } from './common'
 
 export const cosmetologyPracticalExam: EnPage = {
   path: '/en/cosmetology-practical-exam',
@@ -10,8 +10,8 @@ export const cosmetologyPracticalExam: EnPage = {
   keywords: ['cosmetology practical exam', 'state board practical exam', 'cosmetology exam preparation', 'why people fail practical exam'],
   category: 'Licensing & Training',
   stage: 13,
-  updated: EN_UPDATED,
-  updatedIso: EN_UPDATED_ISO,
+  updated: EN_UPDATED_BATCH4,
+  updatedIso: EN_UPDATED_BATCH4_ISO,
   lead:
     '**A timed, observed hands-on assessment where you perform required services on a mannequin or model.** Most failures come from **timing and sanitation procedure**, not from technical ability — which is good news, because both are entirely trainable.',
   blocks: [

@@ -1,5 +1,5 @@
 import type { EnPage } from './types'
-import { EN_UPDATED, EN_UPDATED_ISO, SMOOTHING_CHEM_NOTE } from './common'
+import { EN_UPDATED_BATCH4, EN_UPDATED_BATCH4_ISO, SMOOTHING_CHEM_NOTE } from './common'
 
 export const keratinTreatmentCost: EnPage = {
   path: '/en/keratin-treatment-cost',
@@ -10,8 +10,8 @@ export const keratinTreatmentCost: EnPage = {
   keywords: ['keratin treatment cost', 'how much is a keratin treatment', 'keratin treatment price', 'keratin cost per month'],
   category: 'Hair Treatments',
   stage: 11,
-  updated: EN_UPDATED,
-  updatedIso: EN_UPDATED_ISO,
+  updated: EN_UPDATED_BATCH4,
+  updatedIso: EN_UPDATED_BATCH4_ISO,
   lead:
     '**Typically $150 to $400, depending on hair length, density and the product used.** Long thick hair at a high-end salon runs higher. Spread over three to five months, that is roughly $40 to $100 a month. Prices vary by salon and region.',
   blocks: [

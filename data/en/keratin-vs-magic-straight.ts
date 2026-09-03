@@ -1,5 +1,5 @@
 import type { EnPage } from './types'
-import { EN_UPDATED, EN_UPDATED_ISO, SMOOTHING_CHEM_NOTE } from './common'
+import { EN_UPDATED_BATCH4, EN_UPDATED_BATCH4_ISO, SMOOTHING_CHEM_NOTE } from './common'
 
 export const keratinVsMagicStraight: EnPage = {
   path: '/en/keratin-vs-magic-straight',
@@ -10,8 +10,8 @@ export const keratinVsMagicStraight: EnPage = {
   keywords: ['keratin vs straightening', 'keratin treatment vs magic straight', 'chemical straightening vs keratin', 'which smoothing treatment'],
   category: 'Hair Treatments',
   stage: 11,
-  updated: EN_UPDATED,
-  updatedIso: EN_UPDATED_ISO,
+  updated: EN_UPDATED_BATCH4,
+  updatedIso: EN_UPDATED_BATCH4_ISO,
   lead:
     '**Keratin smooths and fades out over months. Chemical straightening restructures the hair and grows out with a visible line.** Keratin is reversible by attrition; straightening is not reversible at all. That asymmetry decides most cases.',
   blocks: [

@@ -1,5 +1,5 @@
 import type { EnPage } from './types'
-import { EN_UPDATED, EN_UPDATED_ISO, MED_DISCLAIMER } from './common'
+import { EN_UPDATED_BATCH4, EN_UPDATED_BATCH4_ISO, MED_DISCLAIMER } from './common'
 
 export const chemicalPeelAftercare: EnPage = {
   path: '/en/chemical-peel-aftercare',
@@ -10,8 +10,8 @@ export const chemicalPeelAftercare: EnPage = {
   keywords: ['chemical peel aftercare', 'after a chemical peel', 'chemical peel peeling skin', 'chemical peel recovery care'],
   category: 'Skin Treatments',
   stage: 10,
-  updated: EN_UPDATED,
-  updatedIso: EN_UPDATED_ISO,
+  updated: EN_UPDATED_BATCH4,
+  updatedIso: EN_UPDATED_BATCH4_ISO,
   lead:
     '**Keep it simple, keep it out of the sun, and do not pick.** Those three things cover most of what goes wrong after a peel. Your provider’s protocol is specific to your peel depth and overrides general guidance, including this page.',
   blocks: [

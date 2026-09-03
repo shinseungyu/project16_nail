@@ -1,5 +1,5 @@
 import type { EnPage } from './types'
-import { EN_UPDATED, EN_UPDATED_ISO, SCHOOL_NOTE } from './common'
+import { EN_UPDATED_BATCH4, EN_UPDATED_BATCH4_ISO, SCHOOL_NOTE } from './common'
 
 export const cosmetologyApprenticeship: EnPage = {
   path: '/en/cosmetology-apprenticeship',
@@ -10,8 +10,8 @@ export const cosmetologyApprenticeship: EnPage = {
   keywords: ['cosmetology apprenticeship', 'become a cosmetologist without school', 'salon apprenticeship licensure', 'apprentice hairstylist'],
   category: 'Licensing & Training',
   stage: 13,
-  updated: EN_UPDATED,
-  updatedIso: EN_UPDATED_ISO,
+  updated: EN_UPDATED_BATCH4,
+  updatedIso: EN_UPDATED_BATCH4_ISO,
   lead:
     '**Some states permit licensure through a supervised apprenticeship in a salon instead of attending school.** Where it is available it usually requires more total hours but costs far less, because you earn rather than pay. **Not all states offer it — check your state board first.**',
   blocks: [

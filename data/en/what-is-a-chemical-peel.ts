@@ -1,5 +1,5 @@
 import type { EnPage } from './types'
-import { EN_UPDATED, EN_UPDATED_ISO, MED_DISCLAIMER } from './common'
+import { EN_UPDATED_BATCH4, EN_UPDATED_BATCH4_ISO, MED_DISCLAIMER } from './common'
 
 export const whatIsAChemicalPeel: EnPage = {
   path: '/en/what-is-a-chemical-peel',
@@ -10,8 +10,8 @@ export const whatIsAChemicalPeel: EnPage = {
   keywords: ['what is a chemical peel', 'chemical peel types', 'chemical peel depths', 'superficial vs deep peel'],
   category: 'Skin Treatments',
   stage: 10,
-  updated: EN_UPDATED,
-  updatedIso: EN_UPDATED_ISO,
+  updated: EN_UPDATED_BATCH4,
+  updatedIso: EN_UPDATED_BATCH4_ISO,
   lead:
     '**A chemical peel applies an acid solution to remove layers of skin in a controlled way.** The term covers an enormous range, from superficial peels with essentially no downtime to deep peels that are significant medical procedures. **Depth is the variable that matters most**, and almost every disagreement about peels comes from two people meaning different depths.',
   blocks: [

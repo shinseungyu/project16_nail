@@ -1,5 +1,5 @@
 import type { EnPage } from './types'
-import { EN_UPDATED, EN_UPDATED_ISO, MED_DISCLAIMER, PMU_TATTOO_NOTE, US_STATE_NOTE } from './common'
+import { EN_UPDATED_BATCH4, EN_UPDATED_BATCH4_ISO, MED_DISCLAIMER, PMU_TATTOO_NOTE, US_STATE_NOTE } from './common'
 
 export const choosingAMicrobladingArtist: EnPage = {
   path: '/en/choosing-a-microblading-artist',
@@ -10,8 +10,8 @@ export const choosingAMicrobladingArtist: EnPage = {
   keywords: ['choosing a microblading artist', 'microblading consultation questions', 'microblading red flags'],
   category: 'Brows',
   stage: 8,
-  updated: EN_UPDATED,
-  updatedIso: EN_UPDATED_ISO,
+  updated: EN_UPDATED_BATCH4,
+  updatedIso: EN_UPDATED_BATCH4_ISO,
   lead:
     '**Ask for healed photos, not fresh ones - that is the single most useful filter.** Then verify registration, sterilisation practice, and whether the quote includes the touch-up.',
   blocks: [

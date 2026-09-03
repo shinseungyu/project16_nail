@@ -1,5 +1,5 @@
 import type { EnPage } from './types'
-import { EN_UPDATED, EN_UPDATED_ISO, SCHOOL_NOTE } from './common'
+import { EN_UPDATED_BATCH4, EN_UPDATED_BATCH4_ISO, SCHOOL_NOTE } from './common'
 
 export const estheticianStateBoardExam: EnPage = {
   path: '/en/esthetician-state-board-exam',
@@ -10,8 +10,8 @@ export const estheticianStateBoardExam: EnPage = {
   keywords: ['esthetician state board exam', 'esthetics practical exam', 'esthetician exam preparation', 'esthetics written exam'],
   category: 'Licensing & Training',
   stage: 13,
-  updated: EN_UPDATED,
-  updatedIso: EN_UPDATED_ISO,
+  updated: EN_UPDATED_BATCH4,
+  updatedIso: EN_UPDATED_BATCH4_ISO,
   lead:
     '**Written and practical components, with the practical focused on facial services, sanitation and client safety.** As with cosmetology, **sanitation procedure and timing** are where candidates most often lose points — not technique.',
   blocks: [

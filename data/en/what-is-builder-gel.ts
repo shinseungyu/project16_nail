@@ -1,5 +1,5 @@
 import type { EnPage } from './types'
-import { EN_UPDATED, EN_UPDATED_ISO } from './common'
+import { EN_UPDATED_BATCH4, EN_UPDATED_BATCH4_ISO } from './common'
 
 export const whatIsBuilderGel: EnPage = {
   path: '/en/what-is-builder-gel',
@@ -10,8 +10,8 @@ export const whatIsBuilderGel: EnPage = {
   keywords: ['what is builder gel', 'builder gel overlay', 'builder gel vs hard gel', 'builder gel nails'],
   category: 'Nails',
   stage: 6,
-  updated: EN_UPDATED,
-  updatedIso: EN_UPDATED_ISO,
+  updated: EN_UPDATED_BATCH4,
+  updatedIso: EN_UPDATED_BATCH4_ISO,
   lead:
     '**Builder gel is a thicker, structural gel applied over natural nails for strength, or sculpted to add length.** Unlike gel polish it builds an apex and provides support. Unlike acrylic it cures under a lamp and has minimal odour.',
   blocks: [

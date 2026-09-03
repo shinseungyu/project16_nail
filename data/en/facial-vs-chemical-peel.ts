@@ -1,5 +1,5 @@
 import type { EnPage } from './types'
-import { EN_UPDATED, EN_UPDATED_ISO, MED_DISCLAIMER } from './common'
+import { EN_UPDATED_BATCH4, EN_UPDATED_BATCH4_ISO, MED_DISCLAIMER } from './common'
 
 export const facialVsChemicalPeel: EnPage = {
   path: '/en/facial-vs-chemical-peel',
@@ -10,8 +10,8 @@ export const facialVsChemicalPeel: EnPage = {
   keywords: ['facial vs chemical peel', 'chemical peel or facial', 'difference between facial and peel'],
   category: 'Skin Treatments',
   stage: 10,
-  updated: EN_UPDATED,
-  updatedIso: EN_UPDATED_ISO,
+  updated: EN_UPDATED_BATCH4,
+  updatedIso: EN_UPDATED_BATCH4_ISO,
   lead:
     '**A facial cleanses, extracts and hydrates. A chemical peel removes layers of skin.** A facial is maintenance; a peel is an intervention. They are not really alternatives to each other, which is why "which is better" has no answer.',
   blocks: [

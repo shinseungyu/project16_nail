@@ -1,5 +1,5 @@
 import type { EnPage } from './types'
-import { EN_UPDATED, EN_UPDATED_ISO, MED_DISCLAIMER, PMU_TATTOO_NOTE } from './common'
+import { EN_UPDATED_BATCH4, EN_UPDATED_BATCH4_ISO, MED_DISCLAIMER, PMU_TATTOO_NOTE } from './common'
 
 export const microbladingVsPowderBrows: EnPage = {
   path: '/en/microblading-vs-powder-brows',
@@ -10,8 +10,8 @@ export const microbladingVsPowderBrows: EnPage = {
   keywords: ['microblading vs powder brows', 'powder brows', 'combo brows', 'ombre brows comparison'],
   category: 'Brows',
   stage: 8,
-  updated: EN_UPDATED,
-  updatedIso: EN_UPDATED_ISO,
+  updated: EN_UPDATED_BATCH4,
+  updatedIso: EN_UPDATED_BATCH4_ISO,
   lead:
     '**Microblading creates individual hair-like strokes with a hand tool. Powder brows use a machine to create a soft, filled, makeup-like effect.** Powder brows generally last longer and suit oily skin better.',
   blocks: [

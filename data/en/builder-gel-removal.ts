@@ -1,5 +1,5 @@
 import type { EnPage } from './types'
-import { EN_UPDATED, EN_UPDATED_ISO } from './common'
+import { EN_UPDATED_BATCH4, EN_UPDATED_BATCH4_ISO } from './common'
 
 export const builderGelRemoval: EnPage = {
   path: '/en/builder-gel-removal',
@@ -10,8 +10,8 @@ export const builderGelRemoval: EnPage = {
   keywords: ['builder gel removal', 'does builder gel soak off', 'remove builder gel at home'],
   category: 'Nails',
   stage: 6,
-  updated: EN_UPDATED,
-  updatedIso: EN_UPDATED_ISO,
+  updated: EN_UPDATED_BATCH4,
+  updatedIso: EN_UPDATED_BATCH4_ISO,
   lead:
     '**Some builder gels soak off in acetone; others must be filed down.** Check which product was used — attempting to soak a non-soak-off gel means long acetone exposure with no result, followed by the temptation to force it.',
   blocks: [

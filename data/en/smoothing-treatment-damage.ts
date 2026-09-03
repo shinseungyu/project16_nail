@@ -1,5 +1,5 @@
 import type { EnPage } from './types'
-import { EN_UPDATED, EN_UPDATED_ISO, SMOOTHING_CHEM_NOTE } from './common'
+import { EN_UPDATED_BATCH4, EN_UPDATED_BATCH4_ISO, SMOOTHING_CHEM_NOTE } from './common'
 
 export const smoothingTreatmentDamage: EnPage = {
   path: '/en/smoothing-treatment-damage',
@@ -10,8 +10,8 @@ export const smoothingTreatmentDamage: EnPage = {
   keywords: ['do smoothing treatments damage hair', 'keratin treatment damage', 'brazilian blowout damage', 'smoothing treatment hair breakage'],
   category: 'Hair Treatments',
   stage: 12,
-  updated: EN_UPDATED,
-  updatedIso: EN_UPDATED_ISO,
+  updated: EN_UPDATED_BATCH4,
+  updatedIso: EN_UPDATED_BATCH4_ISO,
   lead:
     '**The high-heat flat-iron step is the main variable.** Smoothing treatments involve repeated passes at high temperature, which affects hair structure. Risk rises with frequency, existing hair condition, and overlapping chemical services — and the last of those is the big one.',
   blocks: [

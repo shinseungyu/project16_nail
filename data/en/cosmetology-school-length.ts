@@ -1,5 +1,5 @@
 import type { EnPage } from './types'
-import { EN_UPDATED, EN_UPDATED_ISO, SCHOOL_NOTE } from './common'
+import { EN_UPDATED_BATCH4, EN_UPDATED_BATCH4_ISO, SCHOOL_NOTE } from './common'
 
 export const cosmetologySchoolLength: EnPage = {
   path: '/en/cosmetology-school-length',
@@ -10,8 +10,8 @@ export const cosmetologySchoolLength: EnPage = {
   keywords: ['how long is cosmetology school', 'cosmetology hours required', 'beauty school length', 'nail tech school length'],
   category: 'Licensing & Training',
   stage: 13,
-  updated: EN_UPDATED,
-  updatedIso: EN_UPDATED_ISO,
+  updated: EN_UPDATED_BATCH4,
+  updatedIso: EN_UPDATED_BATCH4_ISO,
   lead:
     '**It depends on your state’s required hours and which licence you are pursuing.** Cosmetology requires substantially more hours than esthetics or nail technology, and full-time programmes finish in a fraction of the time part-time ones do.',
   blocks: [

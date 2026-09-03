@@ -4,7 +4,7 @@ export const EN_UPDATED = 'August 20, 2026'
 export const EN_UPDATED_ISO = '2026-08-20'
 
 /**
- * 4차 배치(dip powder · nail strengthener · wax warmer · lip blush · facial steamer) 공개일.
+ * 2026-09-03 공개분의 날짜 — 4차 배치 29편 + 같은 날 함께 연 8/24 대기열 59편(stage 6~13).
  * lastmod 가 실제 공개일이어야 크롤러와 IndexNow(--since 기본 7일)가 새 글로 인식한다.
  * 이후 배치도 같은 식으로 배치별 날짜 상수를 따로 둘 것.
  */
@@ -40,11 +40,11 @@ export const US_PAY_NOTE =
  * 원고를 더 쓰는 것과 공개하는 것을 분리하기 위한 스위치다.
  * 기획서 지정 페이스: 주 10~15페이지를 넘기지 말 것.
  *
- * 2026-09-03: 4차 배치 29편(dip powder·nail strengthener·wax warmer·lip blush·facial steamer)은
- * 운영자 결정으로 대기열을 건너뛰고 즉시 공개 — 각 페이지 stage: 0. 이 값과 무관하게 항상 공개된다.
- * stage 6~13(60편)은 여전히 이 값을 올려야 열린다.
+ * 2026-09-03: 운영자 결정으로 대기열 전부 공개. 4차 배치 29편은 stage: 0(항상 공개),
+ * 8/24 대기열 stage 6~13(59편)은 이 값을 13으로 올려 공개. 현재 미공개 페이지 없음.
+ * 다음 배치부터는 새 stage(14~)를 부여하고 이 값을 올리는 방식으로 계속 쓰면 된다.
  */
-export const EN_RELEASED_STAGE = 5
+export const EN_RELEASED_STAGE = 13
 
 /**
  * 의료 인접 시술(microneedling, chemical peel 등) 공통 고지.

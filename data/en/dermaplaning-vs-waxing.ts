@@ -1,5 +1,5 @@
 import type { EnPage } from './types'
-import { EN_UPDATED, EN_UPDATED_ISO, MED_DISCLAIMER, MED_STATE_SCOPE } from './common'
+import { EN_UPDATED_BATCH4, EN_UPDATED_BATCH4_ISO, MED_DISCLAIMER, MED_STATE_SCOPE } from './common'
 
 export const dermaplaningVsWaxing: EnPage = {
   path: '/en/dermaplaning-vs-waxing',
@@ -10,8 +10,8 @@ export const dermaplaningVsWaxing: EnPage = {
   keywords: ['dermaplaning vs waxing', 'facial hair removal comparison', 'dermaplaning or waxing'],
   category: 'Skin Treatments',
   stage: 7,
-  updated: EN_UPDATED,
-  updatedIso: EN_UPDATED_ISO,
+  updated: EN_UPDATED_BATCH4,
+  updatedIso: EN_UPDATED_BATCH4_ISO,
   lead:
     '**Dermaplaning cuts hair at the surface and exfoliates at the same time. Waxing pulls hair from the root and handles coarser hair better.** Dermaplaning suits fine vellus hair; waxing is the usual choice for anything darker.',
   blocks: [

@@ -1,5 +1,5 @@
 import type { EnPage } from './types'
-import { EN_UPDATED, EN_UPDATED_ISO, SCHOOL_NOTE } from './common'
+import { EN_UPDATED_BATCH4, EN_UPDATED_BATCH4_ISO, SCHOOL_NOTE } from './common'
 
 export const cosmetologyWrittenExam: EnPage = {
   path: '/en/cosmetology-written-exam',
@@ -10,8 +10,8 @@ export const cosmetologyWrittenExam: EnPage = {
   keywords: ['cosmetology written exam', 'state board written test', 'cosmetology exam study guide', 'what is on the cosmetology exam'],
   category: 'Licensing & Training',
   stage: 13,
-  updated: EN_UPDATED,
-  updatedIso: EN_UPDATED_ISO,
+  updated: EN_UPDATED_BATCH4,
+  updatedIso: EN_UPDATED_BATCH4_ISO,
   lead:
     '**A multiple-choice exam covering scientific concepts, safety and infection control, and state law.** Infection control and safety typically carry more weight than candidates expect, and they are the most reliably scorable sections on the paper.',
   blocks: [

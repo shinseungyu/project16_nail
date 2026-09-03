@@ -1,5 +1,5 @@
 import type { EnPage } from './types'
-import { EN_UPDATED, EN_UPDATED_ISO, MED_DISCLAIMER, PMU_TATTOO_NOTE } from './common'
+import { EN_UPDATED_BATCH4, EN_UPDATED_BATCH4_ISO, MED_DISCLAIMER, PMU_TATTOO_NOTE } from './common'
 
 export const microbladingHealingProcess: EnPage = {
   path: '/en/microblading-healing-process',
@@ -10,8 +10,8 @@ export const microbladingHealingProcess: EnPage = {
   keywords: ['microblading healing process', 'microblading healing stages', 'microblading week by week'],
   category: 'Brows',
   stage: 8,
-  updated: EN_UPDATED,
-  updatedIso: EN_UPDATED_ISO,
+  updated: EN_UPDATED_BATCH4,
+  updatedIso: EN_UPDATED_BATCH4_ISO,
   lead:
     '**Surface healing takes seven to fourteen days; the final result settles over four to six weeks.** The stage that alarms people most — colour looking faded or patchy around week two — is a normal part of it.',
   blocks: [

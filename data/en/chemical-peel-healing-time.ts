@@ -1,5 +1,5 @@
 import type { EnPage } from './types'
-import { EN_UPDATED, EN_UPDATED_ISO, MED_DISCLAIMER } from './common'
+import { EN_UPDATED_BATCH4, EN_UPDATED_BATCH4_ISO, MED_DISCLAIMER } from './common'
 
 export const chemicalPeelHealingTime: EnPage = {
   path: '/en/chemical-peel-healing-time',
@@ -10,8 +10,8 @@ export const chemicalPeelHealingTime: EnPage = {
   keywords: ['chemical peel healing time', 'chemical peel recovery', 'how long does a chemical peel take to heal', 'chemical peel peeling days'],
   category: 'Skin Treatments',
   stage: 10,
-  updated: EN_UPDATED,
-  updatedIso: EN_UPDATED_ISO,
+  updated: EN_UPDATED_BATCH4,
+  updatedIso: EN_UPDATED_BATCH4_ISO,
   lead:
     '**Superficial: 1 to 3 days. Medium: 5 to 10 days. Deep: several weeks, with redness lasting well beyond that.** Plan around the depth you are actually getting, not the depth you read about.',
   blocks: [

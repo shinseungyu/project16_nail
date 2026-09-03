@@ -1,5 +1,5 @@
 import type { EnPage } from './types'
-import { EN_UPDATED, EN_UPDATED_ISO, SMOOTHING_CHEM_NOTE } from './common'
+import { EN_UPDATED_BATCH4, EN_UPDATED_BATCH4_ISO, SMOOTHING_CHEM_NOTE } from './common'
 
 export const brazilianBlowoutCost: EnPage = {
   path: '/en/brazilian-blowout-cost',
@@ -10,8 +10,8 @@ export const brazilianBlowoutCost: EnPage = {
   keywords: ['brazilian blowout cost', 'how much is a brazilian blowout', 'brazilian blowout price'],
   category: 'Hair Treatments',
   stage: 12,
-  updated: EN_UPDATED,
-  updatedIso: EN_UPDATED_ISO,
+  updated: EN_UPDATED_BATCH4,
+  updatedIso: EN_UPDATED_BATCH4_ISO,
   lead:
     '**Typically $200 to $400 depending on hair length and density, with high-end salons running higher.** At 10 to 12 weeks of wear, that works out at roughly $70 to $130 a month. Prices vary by salon and region.',
   blocks: [

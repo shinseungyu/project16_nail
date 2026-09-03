@@ -1,5 +1,5 @@
 import type { EnPage } from './types'
-import { EN_UPDATED, EN_UPDATED_ISO, MED_DISCLAIMER, PMU_TATTOO_NOTE } from './common'
+import { EN_UPDATED_BATCH4, EN_UPDATED_BATCH4_ISO, MED_DISCLAIMER, PMU_TATTOO_NOTE } from './common'
 
 export const whatIsMicroblading: EnPage = {
   path: '/en/what-is-microblading',
@@ -10,8 +10,8 @@ export const whatIsMicroblading: EnPage = {
   keywords: ['what is microblading', 'microblading process', 'microblading explained', 'eyebrow microblading'],
   category: 'Brows',
   stage: 8,
-  updated: EN_UPDATED,
-  updatedIso: EN_UPDATED_ISO,
+  updated: EN_UPDATED_BATCH4,
+  updatedIso: EN_UPDATED_BATCH4_ISO,
   lead:
     '**A cosmetic tattooing technique that deposits pigment into the upper skin layers using a hand-held blade of fine needles, creating hair-like strokes.** It lasts one to three years and costs $400 to $1,200 including the required touch-up. In many US states it is regulated as tattooing.',
   blocks: [

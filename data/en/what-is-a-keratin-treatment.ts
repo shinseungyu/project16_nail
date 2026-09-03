@@ -1,5 +1,5 @@
 import type { EnPage } from './types'
-import { EN_UPDATED, EN_UPDATED_ISO, SMOOTHING_CHEM_NOTE } from './common'
+import { EN_UPDATED_BATCH4, EN_UPDATED_BATCH4_ISO, SMOOTHING_CHEM_NOTE } from './common'
 
 export const whatIsAKeratinTreatment: EnPage = {
   path: '/en/what-is-a-keratin-treatment',
@@ -10,8 +10,8 @@ export const whatIsAKeratinTreatment: EnPage = {
   keywords: ['what is a keratin treatment', 'keratin smoothing treatment', 'keratin treatment process', 'does keratin straighten hair'],
   category: 'Hair Treatments',
   stage: 11,
-  updated: EN_UPDATED,
-  updatedIso: EN_UPDATED_ISO,
+  updated: EN_UPDATED_BATCH4,
+  updatedIso: EN_UPDATED_BATCH4_ISO,
   lead:
     '**A smoothing treatment where a solution is applied to the hair and sealed in with a flat iron, reducing frizz and cutting drying time.** It lasts three to five months and fades out gradually. **Formulations vary considerably — ask what is being used.**',
   blocks: [

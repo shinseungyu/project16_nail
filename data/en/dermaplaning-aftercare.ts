@@ -1,5 +1,5 @@
 import type { EnPage } from './types'
-import { EN_UPDATED, EN_UPDATED_ISO, MED_DISCLAIMER, MED_STATE_SCOPE } from './common'
+import { EN_UPDATED_BATCH4, EN_UPDATED_BATCH4_ISO, MED_DISCLAIMER, MED_STATE_SCOPE } from './common'
 
 export const dermaplaningAftercare: EnPage = {
   path: '/en/dermaplaning-aftercare',
@@ -10,8 +10,8 @@ export const dermaplaningAftercare: EnPage = {
   keywords: ['dermaplaning aftercare', 'after dermaplaning', 'dermaplaning spf'],
   category: 'Skin Treatments',
   stage: 7,
-  updated: EN_UPDATED,
-  updatedIso: EN_UPDATED_ISO,
+  updated: EN_UPDATED_BATCH4,
+  updatedIso: EN_UPDATED_BATCH4_ISO,
   lead:
     '**Keep it simple for 48 hours: gentle cleanser, bland moisturiser, and strict SPF.** Freshly dermaplaned skin has had its surface layer removed, so actives and sun exposure both hit harder than usual.',
   blocks: [

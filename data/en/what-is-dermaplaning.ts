@@ -1,5 +1,5 @@
 import type { EnPage } from './types'
-import { EN_UPDATED, EN_UPDATED_ISO, MED_DISCLAIMER, MED_STATE_SCOPE } from './common'
+import { EN_UPDATED_BATCH4, EN_UPDATED_BATCH4_ISO, MED_DISCLAIMER, MED_STATE_SCOPE } from './common'
 
 export const whatIsDermaplaning: EnPage = {
   path: '/en/what-is-dermaplaning',
@@ -10,8 +10,8 @@ export const whatIsDermaplaning: EnPage = {
   keywords: ['what is dermaplaning', 'dermaplaning facial', 'dermaplaning benefits'],
   category: 'Skin Treatments',
   stage: 7,
-  updated: EN_UPDATED,
-  updatedIso: EN_UPDATED_ISO,
+  updated: EN_UPDATED_BATCH4,
+  updatedIso: EN_UPDATED_BATCH4_ISO,
   lead:
     '**A treatment using a sterile blade held at an angle to remove dead surface cells and fine facial hair.** It takes 30 to 45 minutes, costs $75 to $200, and has essentially no downtime. Who may legally perform it varies by state.',
   blocks: [

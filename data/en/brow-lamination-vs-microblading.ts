@@ -1,5 +1,5 @@
 import type { EnPage } from './types'
-import { EN_UPDATED, EN_UPDATED_ISO, BROW_CHEM_NOTE, MED_DISCLAIMER, US_STATE_NOTE } from './common'
+import { EN_UPDATED_BATCH4, EN_UPDATED_BATCH4_ISO, BROW_CHEM_NOTE, MED_DISCLAIMER, US_STATE_NOTE } from './common'
 
 export const browLaminationVsMicroblading: EnPage = {
   path: '/en/brow-lamination-vs-microblading',
@@ -10,8 +10,8 @@ export const browLaminationVsMicroblading: EnPage = {
   keywords: ['brow lamination vs microblading', 'lamination or microblading', 'brow treatment comparison'],
   category: 'Brows',
   stage: 9,
-  updated: EN_UPDATED,
-  updatedIso: EN_UPDATED_ISO,
+  updated: EN_UPDATED_BATCH4,
+  updatedIso: EN_UPDATED_BATCH4_ISO,
   lead:
     '**Lamination reshapes existing hair and lasts six to eight weeks. Microblading deposits pigment into skin and lasts one to three years.** If you have hair that misbehaves, lamination. If you have gaps, microblading.',
   blocks: [

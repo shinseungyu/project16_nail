@@ -1,5 +1,5 @@
 import type { EnPage } from './types'
-import { EN_UPDATED, EN_UPDATED_ISO, MED_DISCLAIMER, PMU_TATTOO_NOTE } from './common'
+import { EN_UPDATED_BATCH4, EN_UPDATED_BATCH4_ISO, MED_DISCLAIMER, PMU_TATTOO_NOTE } from './common'
 
 export const microbladingAftercare: EnPage = {
   path: '/en/microblading-aftercare',
@@ -10,8 +10,8 @@ export const microbladingAftercare: EnPage = {
   keywords: ['microblading aftercare', 'after microblading', 'microblading healing instructions'],
   category: 'Brows',
   stage: 8,
-  updated: EN_UPDATED,
-  updatedIso: EN_UPDATED_ISO,
+  updated: EN_UPDATED_BATCH4,
+  updatedIso: EN_UPDATED_BATCH4_ISO,
   lead:
     '**Keep the area clean and dry, avoid water and sweat for the first week, and do not pick at flaking.** Your artist’s specific instructions override general guidance including this page, because protocols differ between practitioners.',
   blocks: [

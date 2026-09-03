@@ -1,5 +1,5 @@
 import type { EnPage } from './types'
-import { EN_UPDATED, EN_UPDATED_ISO, MED_DISCLAIMER, MED_STATE_SCOPE } from './common'
+import { EN_UPDATED_BATCH4, EN_UPDATED_BATCH4_ISO, MED_DISCLAIMER, MED_STATE_SCOPE } from './common'
 
 export const dermaplaningAtHome: EnPage = {
   path: '/en/dermaplaning-at-home',
@@ -10,8 +10,8 @@ export const dermaplaningAtHome: EnPage = {
   keywords: ['at home dermaplaning', 'dermaplaning tool', 'face razor dermaplaning'],
   category: 'Skin Treatments',
   stage: 7,
-  updated: EN_UPDATED,
-  updatedIso: EN_UPDATED_ISO,
+  updated: EN_UPDATED_BATCH4,
+  updatedIso: EN_UPDATED_BATCH4_ISO,
   lead:
     '**Home tools are much less sharp and work far more superficially than professional blades.** They are generally lower risk for that reason, and they also do considerably less. They are not a cheaper version of the same treatment.',
   blocks: [

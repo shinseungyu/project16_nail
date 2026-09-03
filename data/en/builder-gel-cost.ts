@@ -1,5 +1,5 @@
 import type { EnPage } from './types'
-import { EN_UPDATED, EN_UPDATED_ISO } from './common'
+import { EN_UPDATED_BATCH4, EN_UPDATED_BATCH4_ISO } from './common'
 
 export const builderGelCost: EnPage = {
   path: '/en/builder-gel-cost',
@@ -10,8 +10,8 @@ export const builderGelCost: EnPage = {
   keywords: ['builder gel cost', 'builder gel price', 'builder gel fill cost'],
   category: 'Nails',
   stage: 6,
-  updated: EN_UPDATED,
-  updatedIso: EN_UPDATED_ISO,
+  updated: EN_UPDATED_BATCH4,
+  updatedIso: EN_UPDATED_BATCH4_ISO,
   lead:
     '**A builder gel set runs $55 to $110, with fills at $45 to $85 every two to three weeks.** Overlay only, with no extension, sits at the lower end of both ranges.',
   blocks: [

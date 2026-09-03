@@ -1,5 +1,5 @@
 import type { EnPage } from './types'
-import { EN_UPDATED, EN_UPDATED_ISO, MED_DISCLAIMER, PMU_TATTOO_NOTE } from './common'
+import { EN_UPDATED_BATCH4, EN_UPDATED_BATCH4_ISO, MED_DISCLAIMER, PMU_TATTOO_NOTE } from './common'
 
 export const howLongDoesMicrobladingLast: EnPage = {
   path: '/en/how-long-does-microblading-last',
@@ -10,8 +10,8 @@ export const howLongDoesMicrobladingLast: EnPage = {
   keywords: ['how long does microblading last', 'microblading longevity', 'microblading fading'],
   category: 'Brows',
   stage: 8,
-  updated: EN_UPDATED,
-  updatedIso: EN_UPDATED_ISO,
+  updated: EN_UPDATED_BATCH4,
+  updatedIso: EN_UPDATED_BATCH4_ISO,
   lead:
     '**One to three years, with most people booking a colour boost every twelve to eighteen months.** Oily skin, sun exposure, and certain skincare actives all shorten it.',
   blocks: [

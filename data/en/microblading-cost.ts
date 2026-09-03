@@ -1,5 +1,5 @@
 import type { EnPage } from './types'
-import { EN_UPDATED, EN_UPDATED_ISO, MED_DISCLAIMER, PMU_TATTOO_NOTE } from './common'
+import { EN_UPDATED_BATCH4, EN_UPDATED_BATCH4_ISO, MED_DISCLAIMER, PMU_TATTOO_NOTE } from './common'
 
 export const microbladingCost: EnPage = {
   path: '/en/microblading-cost',
@@ -10,8 +10,8 @@ export const microbladingCost: EnPage = {
   keywords: ['microblading cost', 'microblading price', 'microblading touch up cost'],
   category: 'Brows',
   stage: 8,
-  updated: EN_UPDATED,
-  updatedIso: EN_UPDATED_ISO,
+  updated: EN_UPDATED_BATCH4,
+  updatedIso: EN_UPDATED_BATCH4_ISO,
   lead:
     '**$400 to $1,200 in most US markets, and that figure should include the four to eight week touch-up.** If a quote does not mention the touch-up, ask — it is typically $100 to $300 separately.',
   blocks: [

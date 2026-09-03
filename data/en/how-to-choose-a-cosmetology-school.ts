@@ -1,5 +1,5 @@
 import type { EnPage } from './types'
-import { EN_UPDATED, EN_UPDATED_ISO, SCHOOL_NOTE } from './common'
+import { EN_UPDATED_BATCH4, EN_UPDATED_BATCH4_ISO, SCHOOL_NOTE } from './common'
 
 export const howToChooseACosmetologySchool: EnPage = {
   path: '/en/how-to-choose-a-cosmetology-school',
@@ -10,8 +10,8 @@ export const howToChooseACosmetologySchool: EnPage = {
   keywords: ['how to choose a cosmetology school', 'cosmetology school near me', 'beauty school checklist', 'is a cosmetology school accredited'],
   category: 'Licensing & Training',
   stage: 13,
-  updated: EN_UPDATED,
-  updatedIso: EN_UPDATED_ISO,
+  updated: EN_UPDATED_BATCH4,
+  updatedIso: EN_UPDATED_BATCH4_ISO,
   lead:
     '**Verify state board approval on the board’s website, not the school’s. Ask for licensure exam pass rates and completion rates in writing. Get an all-in cost figure including kit, books and exam fees.** Those three steps eliminate most bad decisions before you sign anything.',
   blocks: [

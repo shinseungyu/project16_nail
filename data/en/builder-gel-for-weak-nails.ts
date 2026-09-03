@@ -1,5 +1,5 @@
 import type { EnPage } from './types'
-import { EN_UPDATED, EN_UPDATED_ISO } from './common'
+import { EN_UPDATED_BATCH4, EN_UPDATED_BATCH4_ISO } from './common'
 
 export const builderGelForWeakNails: EnPage = {
   path: '/en/builder-gel-for-weak-nails',
@@ -10,8 +10,8 @@ export const builderGelForWeakNails: EnPage = {
   keywords: ['builder gel weak nails', 'builder gel strengthen nails', 'overlay for weak nails'],
   category: 'Nails',
   stage: 6,
-  updated: EN_UPDATED,
-  updatedIso: EN_UPDATED_ISO,
+  updated: EN_UPDATED_BATCH4,
+  updatedIso: EN_UPDATED_BATCH4_ISO,
   lead:
     '**It protects them while they grow, which often produces the result people want — but it does not repair or strengthen the nail itself.** The overlay bears the stress instead of your nail. That is genuinely useful, and it is not the same as fixing anything.',
   blocks: [

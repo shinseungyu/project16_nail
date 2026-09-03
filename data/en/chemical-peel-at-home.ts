@@ -1,5 +1,5 @@
 import type { EnPage } from './types'
-import { EN_UPDATED, EN_UPDATED_ISO, MED_DISCLAIMER } from './common'
+import { EN_UPDATED_BATCH4, EN_UPDATED_BATCH4_ISO, MED_DISCLAIMER } from './common'
 
 export const chemicalPeelAtHome: EnPage = {
   path: '/en/chemical-peel-at-home',
@@ -10,8 +10,8 @@ export const chemicalPeelAtHome: EnPage = {
   keywords: ['at home chemical peel', 'diy chemical peel', 'home peel vs professional', 'at home peel safety'],
   category: 'Skin Treatments',
   stage: 10,
-  updated: EN_UPDATED,
-  updatedIso: EN_UPDATED_ISO,
+  updated: EN_UPDATED_BATCH4,
+  updatedIso: EN_UPDATED_BATCH4_ISO,
   lead:
     '**Consumer products are formulated at much lower strengths than professional peels. That is a safety feature, not a shortcoming.** The serious injuries come from professional-strength acids bought online and applied by someone with no training.',
   blocks: [

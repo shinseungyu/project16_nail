@@ -1,5 +1,5 @@
 import type { EnPage } from './types'
-import { EN_UPDATED, EN_UPDATED_ISO } from './common'
+import { EN_UPDATED_BATCH4, EN_UPDATED_BATCH4_ISO } from './common'
 
 export const builderGelAtHome: EnPage = {
   path: '/en/builder-gel-at-home',
@@ -10,8 +10,8 @@ export const builderGelAtHome: EnPage = {
   keywords: ['builder gel at home', 'builder gel kit', 'diy builder gel'],
   category: 'Nails',
   stage: 6,
-  updated: EN_UPDATED,
-  updatedIso: EN_UPDATED_ISO,
+  updated: EN_UPDATED_BATCH4,
+  updatedIso: EN_UPDATED_BATCH4_ISO,
   lead:
     '**Yes, and kits are widely available for $50 to $150.** Application is learnable. **Removal is where home users damage their nails** — and that is the part worth taking seriously before you start.',
   blocks: [

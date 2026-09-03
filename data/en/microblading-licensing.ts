@@ -1,5 +1,5 @@
 import type { EnPage } from './types'
-import { EN_UPDATED, EN_UPDATED_ISO, MED_DISCLAIMER, PMU_TATTOO_NOTE, US_STATE_NOTE } from './common'
+import { EN_UPDATED_BATCH4, EN_UPDATED_BATCH4_ISO, MED_DISCLAIMER, PMU_TATTOO_NOTE, US_STATE_NOTE } from './common'
 
 export const microbladingLicensing: EnPage = {
   path: '/en/microblading-licensing',
@@ -10,8 +10,8 @@ export const microbladingLicensing: EnPage = {
   keywords: ['microblading licensing', 'microblading license requirements', 'microblading certification', 'permanent makeup license'],
   category: 'Brows',
   stage: 8,
-  updated: EN_UPDATED,
-  updatedIso: EN_UPDATED_ISO,
+  updated: EN_UPDATED_BATCH4,
+  updatedIso: EN_UPDATED_BATCH4_ISO,
   lead:
     '**In many US states microblading is regulated as tattooing, administered by health departments rather than cosmetology boards.** A cosmetology or esthetics licence alone is generally not sufficient. Requirements differ by state and sometimes by county.',
   blocks: [

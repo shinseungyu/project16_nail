@@ -1,5 +1,5 @@
 import type { EnPage } from './types'
-import { EN_UPDATED, EN_UPDATED_ISO, SMOOTHING_CHEM_NOTE } from './common'
+import { EN_UPDATED_BATCH4, EN_UPDATED_BATCH4_ISO, SMOOTHING_CHEM_NOTE } from './common'
 
 export const keratinTreatmentSafety: EnPage = {
   path: '/en/keratin-treatment-safety',
@@ -10,8 +10,8 @@ export const keratinTreatmentSafety: EnPage = {
   keywords: ['keratin treatment safety', 'keratin treatment formaldehyde', 'is keratin treatment safe', 'formaldehyde free keratin'],
   category: 'Hair Treatments',
   stage: 11,
-  updated: EN_UPDATED,
-  updatedIso: EN_UPDATED_ISO,
+  updated: EN_UPDATED_BATCH4,
+  updatedIso: EN_UPDATED_BATCH4_ISO,
   lead:
     '**Some keratin smoothing products contain formaldehyde, or ingredients that release it when heated.** This has been the subject of regulatory attention, including workplace safety guidance for salons in the US. **Ask what product is being used, ask about ventilation, and ask to see the safety data sheet.**',
   blocks: [

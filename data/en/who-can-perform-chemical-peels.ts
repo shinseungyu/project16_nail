@@ -1,5 +1,5 @@
 import type { EnPage } from './types'
-import { EN_UPDATED, EN_UPDATED_ISO, MED_STATE_SCOPE } from './common'
+import { EN_UPDATED_BATCH4, EN_UPDATED_BATCH4_ISO, MED_STATE_SCOPE } from './common'
 
 export const whoCanPerformChemicalPeels: EnPage = {
   path: '/en/who-can-perform-chemical-peels',
@@ -10,8 +10,8 @@ export const whoCanPerformChemicalPeels: EnPage = {
   keywords: ['who can perform chemical peels', 'can estheticians do chemical peels', 'chemical peel scope of practice'],
   category: 'Skin Treatments',
   stage: 10,
-  updated: EN_UPDATED,
-  updatedIso: EN_UPDATED_ISO,
+  updated: EN_UPDATED_BATCH4,
+  updatedIso: EN_UPDATED_BATCH4_ISO,
   lead:
     '**Superficial peels commonly fall within esthetics scope; medium and deep peels generally require medical qualification.** But the specific line — often defined by acid type and concentration rather than by the word "superficial" — **varies by state.**',
   blocks: [
