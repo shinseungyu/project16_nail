@@ -142,6 +142,40 @@ import { estheticianStateBoardExam } from './esthetician-state-board-exam'
 import { cosmetologyApprenticeship } from './cosmetology-apprenticeship'
 import { beautySchoolWorthIt } from './beauty-school-worth-it'
 
+import { whatAreDipPowderNails } from './what-are-dip-powder-nails'
+import { dipPowderVsGel } from './dip-powder-vs-gel'
+import { howLongDoesDipPowderLast } from './how-long-does-dip-powder-last'
+import { dipPowderRemoval } from './dip-powder-removal'
+import { dipPowderHygiene } from './dip-powder-hygiene'
+import { dipPowderDamage } from './dip-powder-damage'
+import { dipPowderAtHome } from './dip-powder-at-home'
+
+import { doNailStrengthenersWork } from './do-nail-strengtheners-work'
+import { nailStrengthenerVsHardener } from './nail-strengthener-vs-hardener'
+import { whyAreMyNailsPeeling } from './why-are-my-nails-peeling'
+import { nailCareAfterGel } from './nail-care-after-gel'
+import { howToGrowNailsFaster } from './how-to-grow-nails-faster'
+import { nailFungusAfterAcrylics } from './nail-fungus-after-acrylics'
+
+import { waxWarmerGuide } from './wax-warmer-guide'
+import { waxWarmerTemperature } from './wax-warmer-temperature'
+import { howToCleanAWaxWarmer } from './how-to-clean-a-wax-warmer'
+import { hardWaxVsSoftWax } from './hard-wax-vs-soft-wax'
+import { atHomeWaxingSafety } from './at-home-waxing-safety'
+
+import { whatIsLipBlush } from './what-is-lip-blush'
+import { lipBlushCost } from './lip-blush-cost'
+import { lipBlushHealing } from './lip-blush-healing'
+import { lipBlushAftercare } from './lip-blush-aftercare'
+import { howLongDoesLipBlushLast } from './how-long-does-lip-blush-last'
+import { lipBlushVsLipFiller } from './lip-blush-vs-lip-filler'
+
+import { facialSteamerGuide } from './facial-steamer-guide'
+import { howToUseAFacialSteamer } from './how-to-use-a-facial-steamer'
+import { facialSteamerBenefits } from './facial-steamer-benefits'
+import { atHomeExtractions } from './at-home-extractions'
+import { facialSteamerVsProfessionalFacial } from './facial-steamer-vs-professional-facial'
+
 /**
  * 영문 콘텐츠 페이지 전체 목록.
  * 허브의 섹션 카드와 sitemap이 여기서 파생되므로, 페이지를 추가하면 이 파일만 갱신하면 된다.
@@ -427,6 +461,80 @@ export const EN_SECTIONS: EnSection[] = [
       estheticianStateBoardExam,
       cosmetologyApprenticeship,
       beautySchoolWorthIt,
+    ],
+  },
+  {
+    key: 'dip-powder',
+    title: 'Dip powder nails',
+    blurb:
+      'Layered powder with no lamp — how it compares with gel, why removal is the part that damages nails, and the shared-jar hygiene question most guides skip.',
+    icon: '🫙',
+    pages: [
+      whatAreDipPowderNails,
+      dipPowderVsGel,
+      howLongDoesDipPowderLast,
+      dipPowderRemoval,
+      dipPowderHygiene,
+      dipPowderDamage,
+      dipPowderAtHome,
+    ],
+  },
+  {
+    key: 'nail-strengthener',
+    title: 'Nail strengtheners and nail care',
+    blurb:
+      'The nail plate is dead tissue, so nothing repairs it. What strengtheners actually do, brittle versus soft nails, and when a change in your nails needs a doctor rather than a product.',
+    icon: '💪',
+    pages: [
+      doNailStrengthenersWork,
+      nailStrengthenerVsHardener,
+      whyAreMyNailsPeeling,
+      nailCareAfterGel,
+      howToGrowNailsFaster,
+      nailFungusAfterAcrylics,
+    ],
+  },
+  {
+    key: 'wax-warmer',
+    title: 'Wax warmers and home waxing',
+    blurb:
+      'Choosing a warmer, why the display cannot be trusted on temperature, hard versus soft wax by body area, and the rules that keep home waxing out of the burns category.',
+    icon: '🕯️',
+    pages: [
+      waxWarmerGuide,
+      waxWarmerTemperature,
+      howToCleanAWaxWarmer,
+      hardWaxVsSoftWax,
+      atHomeWaxingSafety,
+    ],
+  },
+  {
+    key: 'lip-blush',
+    title: 'Lip blush',
+    blurb:
+      'Cosmetic lip tattooing, regulated as tattooing in many states. Cost with the touch-up included, the healing stage where the colour seems to vanish, and the cold-sore risk that rarely gets mentioned.',
+    icon: '👄',
+    pages: [
+      whatIsLipBlush,
+      lipBlushCost,
+      lipBlushHealing,
+      lipBlushAftercare,
+      howLongDoesLipBlushLast,
+      lipBlushVsLipFiller,
+    ],
+  },
+  {
+    key: 'facial-steamer',
+    title: 'Facial steamers and extractions',
+    blurb:
+      'Steam softens; it does not open pores. What a steamer genuinely does, how to use one without irritating skin, safe extraction limits, and where it fits alongside professional facials.',
+    icon: '♨️',
+    pages: [
+      facialSteamerGuide,
+      howToUseAFacialSteamer,
+      facialSteamerBenefits,
+      atHomeExtractions,
+      facialSteamerVsProfessionalFacial,
     ],
   },
 ]

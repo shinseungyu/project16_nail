@@ -1,0 +1,115 @@
+import type { EnPage } from './types'
+import { EN_UPDATED, EN_UPDATED_ISO, DIP_HYGIENE_NOTE } from './common'
+
+export const whatAreDipPowderNails: EnPage = {
+  path: '/en/what-are-dip-powder-nails',
+  title: 'What Are Dip Powder Nails? Process and Pros',
+  h1: 'What Are Dip Powder Nails?',
+  description:
+    'Dip powder uses adhesive and coloured powder built in layers, no lamp needed. How it works, what it costs, and the hygiene question to ask.',
+  keywords: ['what are dip powder nails', 'dip powder manicure', 'dip nails process', 'dip powder vs acrylic'],
+  category: 'Nails',
+  stage: 14,
+  updated: EN_UPDATED,
+  updatedIso: EN_UPDATED_ISO,
+  lead:
+    '**Adhesive is applied to the nail, coloured acrylic powder is layered on top, and an activator hardens it.** No UV lamp required. It lasts three to four weeks and costs $35 to $70. **Ask how the powder is applied — that matters more than most people realise.**',
+  blocks: [
+    { t: 'note', tone: 'warn', text: DIP_HYGIENE_NOTE },
+    { t: 'h2', id: 'how-it-works', text: 'How it works' },
+    { t: 'p', text: 'The system sits between gel polish and acrylic. It builds thickness in layers like acrylic, but it cures chemically rather than under a lamp, which is the practical difference people notice first.' },
+    {
+      t: 'table',
+      head: ['Step', 'Detail'],
+      rows: [
+        ['1. Prep', 'Cuticle work, light buff, dehydrate'],
+        ['2. Base coat', 'An adhesive layer'],
+        ['3. Powder application', 'Nail dipped in powder, or powder poured over the nail'],
+        ['4. Repeat', 'Usually 2 - 3 layers'],
+        ['5. Activator', 'Hardens the layers'],
+        ['6. File and shape', 'Where the finish is made'],
+        ['7. Top coat', 'Seals it'],
+      ],
+    },
+    { t: 'p', text: 'Step 3 is the one worth asking about, and the rest of this page explains why.' },
+    { t: 'h2', id: 'key-facts', text: 'Key facts' },
+    {
+      t: 'table',
+      head: ['Attribute', 'Detail'],
+      rows: [
+        ['Application', '45 - 70 min'],
+        ['Cost', '$35 - 70, varies by salon and region'],
+        ['Wear', '3 - 4 weeks'],
+        ['Lamp needed', 'No'],
+        ['Odour', 'Minimal'],
+        ['Removal', 'Soaks off in acetone'],
+        ['Strength', 'Between gel polish and acrylic'],
+      ],
+    },
+    { t: 'h2', id: 'the-dipping-question', text: 'The dipping question' },
+    { t: 'p', text: 'The traditional method involves **placing the client’s finger directly into a jar of powder** that other clients have also used. That jar is then used for the next person.' },
+    { t: 'p', text: '**This has been raised as a hygiene concern**, and some state boards restrict or prohibit it. The alternative is straightforward and costs the salon nothing.' },
+    {
+      t: 'table',
+      head: ['Method', 'Hygiene position'],
+      rows: [
+        ['Dipping into a shared jar', 'The concern'],
+        ['Pouring powder over the nail', 'Powder does not return to the jar'],
+        ['Decanting an individual portion per client', 'Also addresses it'],
+        ['A dedicated jar per regular client', 'Used by some salons'],
+      ],
+    },
+    { t: 'p', text: '**Ask your salon: "do you pour, or dip?"** A salon using the pour method will tell you readily — many advertise it, because they know clients ask. This is a normal question, not an accusation.' },
+    { t: 'h2', id: 'what-it-suits', text: 'What it suits' },
+    { t: 'p', text: 'Dip powder occupies a specific niche: more durable than gel polish, less committed than acrylic extensions, and no lamp.' },
+    {
+      t: 'table',
+      head: ['Good fit', 'Consider something else'],
+      rows: [
+        ['You want three to four weeks of wear', 'You change colour every fortnight'],
+        ['You prefer to avoid lamp exposure', 'You want the thinnest possible finish'],
+        ['Your natural nails are weak and snag', 'You want long extensions'],
+        ['You want strength without extensions', 'You dislike a slightly thicker feel'],
+        ['You are patient with removal', 'You know you will pick it off'],
+      ],
+    },
+    { t: 'p', text: 'That last row is not a joke. **Removal takes longer than gel**, and the people who end up with thin, peeling nails are almost always the ones who ran out of patience and pried a set off.' },
+    { t: 'h2', id: 'colour-and-finish', text: 'Colour and finish' },
+    { t: 'p', text: 'Because the colour is in the powder rather than a liquid, a few things work differently from polish.' },
+    {
+      t: 'ul',
+      items: [
+        '**Colours cannot be mixed** the way polish can. What is in the jar is what you get.',
+        '**The finish depends heavily on the top coat.** Dip can look slightly flat without a good one.',
+        '**Nail art is more limited** than with gel, though ombré and French are common.',
+        '**The surface is filed after application**, so the final shape is made by the technician rather than the brush.',
+        'A well-applied set looks close to gel; a rushed one looks noticeably thick at the cuticle.',
+      ],
+    },
+    { t: 'h2', id: 'before-you-book', text: 'Before you book' },
+    { t: 'p', text: 'Five short questions cover almost everything that goes wrong with this service.' },
+    {
+      t: 'ol',
+      items: [
+        '**Do you pour the powder or dip?**',
+        '**Do you do fills, or is it a full redo each time?** It affects price and appointment length.',
+        'How thin can the layers be? Ask for fewer layers if your nails are already thin.',
+        'How long does removal take here, and is it charged separately?',
+        'What is your policy if I have a cut or hangnail on the day?',
+      ],
+    },
+    { t: 'p', text: 'The last one matters more than it sounds. **Broken skin is exactly the situation the hygiene concern is about**, and a good salon will have an answer ready rather than improvising.' },
+  ],
+  faq: [
+    { q: 'What are dip powder nails?', a: 'Adhesive plus coloured acrylic powder built up in layers and sealed with an activator. No lamp is needed.' },
+    { q: 'Do they need a UV lamp?', a: 'No — that is one of the main practical differences from gel polish.' },
+    { q: 'How long do they last?', a: 'Three to four weeks, usually about a week longer than gel polish.' },
+    { q: 'Is the dipping hygienic?', a: 'Dipping into shared jars has been raised as a concern and is restricted in some states. Ask whether your salon pours the powder instead.' },
+    { q: 'Do they smell?', a: 'Minimal odour compared with acrylic, which is one reason people choose the system.' },
+  ],
+  related: [
+    { href: '/en/dip-powder-vs-gel', label: 'Dip Powder vs Gel Nails' },
+    { href: '/en/dip-powder-hygiene', label: 'Is Dip Powder Hygienic?' },
+    { href: '/en/dip-powder-removal', label: 'How to Remove Dip Powder Nails' },
+  ],
+}

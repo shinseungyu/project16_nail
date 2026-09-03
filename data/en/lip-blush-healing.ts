@@ -1,0 +1,95 @@
+import type { EnPage } from './types'
+import { EN_UPDATED, EN_UPDATED_ISO, LIP_BLUSH_HSV_NOTE } from './common'
+
+export const lipBlushHealing: EnPage = {
+  path: '/en/lip-blush-healing',
+  title: 'Lip Blush Healing Process: Day by Day',
+  h1: 'Lip Blush Healing, Day by Day',
+  description:
+    'Lip blush healing takes 7 to 14 days visibly and 4 to 6 weeks to settle. What each stage looks like, including the alarming middle phase.',
+  keywords: ['lip blush healing', 'lip blush day by day', 'lip blush peeling', 'lip blush colour gone'],
+  category: 'Permanent Makeup',
+  stage: 17,
+  updated: EN_UPDATED,
+  updatedIso: EN_UPDATED_ISO,
+  lead:
+    '**Days 1 to 3 look far darker and more swollen than the final result. Days 4 to 7 peel. Around days 8 to 14 the colour looks almost gone.** All of that is normal. The result settles over four to six weeks, and the touch-up completes it.',
+  blocks: [
+    { t: 'note', tone: 'warn', text: LIP_BLUSH_HSV_NOTE },
+    { t: 'h2', id: 'timeline', text: 'The timeline' },
+    {
+      t: 'table',
+      head: ['Day', 'What is typical'],
+      rows: [
+        ['0 - 1', 'Swollen, very dark, tight'],
+        ['2 - 3', 'Still dark; swelling reducing'],
+        ['4 - 7', 'Peeling and flaking'],
+        ['8 - 14', 'Colour looks faint or patchy — the alarming stage'],
+        ['Weeks 3 - 4', 'Colour gradually reappears'],
+        ['Weeks 4 - 6', 'Settles; touch-up scheduled'],
+      ],
+    },
+    { t: 'h2', id: 'the-its-gone-stage', text: 'The "it has gone" stage' },
+    { t: 'p', text: 'Around days 8 to 14, lip blush frequently looks **as though it barely took at all.** This is normal — the healing surface layer temporarily obscures the pigment underneath, and it clears as that layer matures.' },
+    { t: 'p', text: '**Do not book a correction at this stage.** The touch-up exists for exactly this, and a correction booked in week two is a correction to something you cannot yet see. Every experienced artist has had this conversation many times.' },
+    { t: 'h2', id: 'swelling', text: 'Swelling' },
+    { t: 'p', text: 'Lips swell more than brows because they are more vascular. **Expect noticeable swelling for the first 24 to 48 hours**, and plan around it.' },
+    { t: 'p', text: '**This is not a procedure to have the day before an event.** Between the swelling and the peeling phase, the first fortnight is visibly conspicuous. Book it on an ordinary stretch of calendar.' },
+    { t: 'h2', id: 'what-affects-healing', text: 'What affects healing' },
+    {
+      t: 'table',
+      head: ['Factor', 'Effect'],
+      rows: [
+        ['A cold sore outbreak', 'Can significantly affect retention and comfort'],
+        ['Aftercare compliance', 'Major'],
+        ['Picking at the flaking', 'Causes patchy results'],
+        ['Sun exposure', 'Fades pigment'],
+        ['Individual healing', 'Varies more than people expect'],
+        ['Lip products during healing', 'Can affect the result'],
+        ['Smoking', 'Associated with slower healing generally'],
+      ],
+    },
+    { t: 'p', text: 'The picking row deserves its own sentence. **Pulling flaking skin off lips removes pigment with it**, and the patchiness that results is exactly what people then ask to have corrected. Let it come away on its own.' },
+    { t: 'h2', id: 'normal-vs-not', text: 'Telling normal healing from a problem' },
+    { t: 'p', text: 'Almost everything in the first fortnight looks dramatic. The distinction that matters is direction of travel, not intensity.' },
+    {
+      t: 'table',
+      head: ['Pattern', 'Reading'],
+      rows: [
+        ['Very dark on day one, lightening after', 'Normal'],
+        ['Swelling peaking at 24 - 48 hours then reducing', 'Normal'],
+        ['Peeling in days 4 - 7', 'Normal'],
+        ['Colour looking almost absent at day 10', 'Normal — wait for the touch-up'],
+        ['Pain increasing rather than settling', 'Contact a doctor'],
+        ['Blistering, spreading redness, pus or fever', 'Seek medical attention'],
+      ],
+    },
+    { t: 'h2', id: 'see-a-doctor', text: 'See a doctor if' },
+    {
+      t: 'ul',
+      items: [
+        '**Increasing pain** rather than pain that is settling.',
+        '**Spreading redness or warmth.**',
+        '**Pus or unusual discharge.**',
+        '**Fever.**',
+        '**A cold sore outbreak** — contact your doctor and tell your artist.',
+        '**Swelling that worsens after day two** rather than reducing.',
+      ],
+    },
+    { t: 'h2', id: 'the-touch-up', text: 'Why the touch-up is not optional' },
+    { t: 'p', text: 'Lips take pigment unevenly on the first pass — that is normal for the tissue, not a sign of poor work. The touch-up at six to eight weeks is where the result is actually completed.' },
+    { t: 'p', text: '**Skipping it means living with the first-pass result**, which is usually lighter and less even than what you were shown at consultation. If a quote does not include the touch-up, that is a budgeting question to settle before the first appointment rather than after it.' },
+  ],
+  faq: [
+    { q: 'How long does lip blush take to heal?', a: 'Seven to fourteen days visibly, and four to six weeks to fully settle.' },
+    { q: 'Why do my lips look so dark at first?', a: 'Initial darkness is normal and lightens substantially as the surface heals.' },
+    { q: 'Why did the colour disappear at week two?', a: 'Normal — the healing surface layer temporarily obscures the pigment. It reappears over weeks three and four.' },
+    { q: 'How swollen will I be?', a: 'Noticeable for the first 24 to 48 hours. Do not schedule this before an event.' },
+    { q: 'What if I get a cold sore?', a: 'Contact your doctor and tell your artist. An outbreak during healing can affect both comfort and retention.' },
+  ],
+  related: [
+    { href: '/en/lip-blush-aftercare', label: 'Lip Blush Aftercare' },
+    { href: '/en/what-is-lip-blush', label: 'What Is Lip Blush Tattoo?' },
+    { href: '/en/how-long-does-lip-blush-last', label: 'How Long Does Lip Blush Last?' },
+  ],
+}

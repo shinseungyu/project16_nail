@@ -1,0 +1,106 @@
+import type { EnPage } from './types'
+import { EN_UPDATED, EN_UPDATED_ISO, DIP_HYGIENE_NOTE } from './common'
+
+export const dipPowderVsGel: EnPage = {
+  path: '/en/dip-powder-vs-gel',
+  title: 'Dip Powder vs Gel Nails: Which Lasts Longer?',
+  h1: 'Dip Powder vs Gel Nails',
+  description:
+    'Dip powder is thicker and lamp-free; gel is thinner with a glossier finish. Cost, wear, removal and damage risk compared.',
+  keywords: ['dip powder vs gel', 'gel or dip nails', 'dip nails vs gel polish', 'which lasts longer dip or gel'],
+  category: 'Nails',
+  stage: 14,
+  updated: EN_UPDATED,
+  updatedIso: EN_UPDATED_ISO,
+  lead:
+    '**Dip powder is thicker, stronger and needs no lamp. Gel polish is thinner, glossier and easier to remove.** Dip typically lasts about a week longer; gel usually looks more natural. Neither is inherently more damaging — removal technique decides that.',
+  blocks: [
+    { t: 'note', tone: 'warn', text: DIP_HYGIENE_NOTE },
+    { t: 'h2', id: 'comparison', text: 'Side by side' },
+    {
+      t: 'table',
+      head: ['', 'Dip powder', 'Gel polish'],
+      rows: [
+        ['Lamp needed', 'No', 'Yes'],
+        ['Thickness', 'Thicker', 'Thin'],
+        ['Finish', 'Depends on the top coat', 'Glossier'],
+        ['Strength', 'Stronger', 'Moderate'],
+        ['Wear', '3 - 4 weeks', '2 - 3 weeks'],
+        ['Cost', '$35 - 70', '$30 - 60'],
+        ['Removal', '20 - 30 min soak', '15 - 25 min soak'],
+        ['Colour options', 'Powder is pre-set, no mixing', 'Wider range and art'],
+        ['Hygiene consideration', 'The shared jar question', 'None comparable'],
+      ],
+      note: 'Typical US pricing. Varies by salon and region.',
+    },
+    { t: 'h2', id: 'which-suits-you', text: 'Which suits you' },
+    {
+      t: 'table',
+      head: ['You want', 'Pick'],
+      rows: [
+        ['Maximum wear', 'Dip'],
+        ['The most natural, thin finish', 'Gel'],
+        ['No lamp exposure', 'Dip'],
+        ['The easiest removal', 'Gel'],
+        ['Extra strength on weak nails', 'Dip'],
+        ['The widest colour and nail art options', 'Gel'],
+        ['To change colour often', 'Gel'],
+      ],
+    },
+    { t: 'p', text: 'Frequency is the underrated factor. **If you like changing colour every two weeks, dip is the wrong system** — you would be soaking off a thicker product more often, which is the exact pattern that thins nails.' },
+    { t: 'h2', id: 'damage', text: 'Which is more damaging?' },
+    { t: 'p', text: '**Neither is inherently more damaging.** Both sit on the nail plate and both soak off in acetone. What differs is how long the soak takes, and that difference has a behavioural consequence.' },
+    { t: 'p', text: 'Dip powder’s extra thickness means **removal takes longer**, which increases the temptation to speed it up by prying. That is the practical risk — not the chemistry.' },
+    {
+      t: 'table',
+      head: ['Real damage cause', 'Applies to'],
+      rows: [
+        ['Peeling or prying the product off', 'Both — the single biggest cause'],
+        ['Aggressive buffing during prep', 'Both'],
+        ['Cutting the soak short and forcing it', 'Dip more often, because it takes longer'],
+        ['Back-to-back sets with no recovery', 'Both'],
+        ['The product itself, correctly removed', 'Neither, really'],
+      ],
+    },
+    { t: 'h2', id: 'lamp-question', text: 'The lamp question' },
+    { t: 'p', text: 'Some people choose dip specifically to avoid UV lamp exposure. That is a reasonable personal preference, and it is worth stating the position honestly rather than overselling it.' },
+    { t: 'p', text: 'Lamp exposure during a manicure is brief and intermittent. If you would rather avoid it anyway, **dip gives you a comparable result without one**, and that is a legitimate reason to pick it. If lamps do not bother you, this factor should not drive the decision.' },
+    { t: 'h2', id: 'cost-over-time', text: 'Cost over a year' },
+    { t: 'p', text: 'Per-appointment prices are close. The gap opens up because of how often you go back.' },
+    {
+      t: 'table',
+      head: ['Pattern', 'Rough annual cost'],
+      rows: [
+        ['Dip every 3.5 weeks at $50', 'Around $740'],
+        ['Gel every 2.5 weeks at $45', 'Around $935'],
+        ['Dip every 4 weeks at $60', 'Around $780'],
+        ['Gel every 3 weeks at $40', 'Around $690'],
+      ],
+      note: 'Illustrative arithmetic at typical prices, not quotes.',
+    },
+    { t: 'p', text: 'The honest summary: **they cost about the same over a year**, and the choice should come down to finish, wear and how often you want to sit in a chair.' },
+    { t: 'h2', id: 'switching', text: 'Switching between them' },
+    { t: 'p', text: 'You can move between systems freely, with one condition.' },
+    {
+      t: 'ul',
+      items: [
+        '**Soak the old system off completely** before applying the other. Do not layer one over the other.',
+        '**Tell the technician what you had last**, especially if you are going somewhere new.',
+        '**If your nails feel thin at the changeover, take a break** rather than immediately applying the new system.',
+        'Expect the first dip set to feel noticeably thicker if you are coming from gel. That settles as you get used to it.',
+      ],
+    },
+  ],
+  faq: [
+    { q: 'Which lasts longer, dip or gel?', a: 'Dip powder, usually by about a week — three to four weeks against two to three.' },
+    { q: 'Which is cheaper?', a: 'Similar per appointment, and close to identical over a year once you account for how often each needs redoing.' },
+    { q: 'Which looks more natural?', a: 'Gel, because it is applied thinner.' },
+    { q: 'Which is easier to remove?', a: 'Gel — it is thinner, so it soaks off in less time.' },
+    { q: 'Is dip more damaging than gel?', a: 'Not inherently. The longer soak makes prying more tempting, and prying is what actually damages nails.' },
+  ],
+  related: [
+    { href: '/en/what-are-dip-powder-nails', label: 'What Are Dip Powder Nails?' },
+    { href: '/en/how-long-does-dip-powder-last', label: 'How Long Does Dip Powder Last?' },
+    { href: '/en/how-long-do-gel-nails-last', label: 'How Long Do Gel Nails Last?' },
+  ],
+}

@@ -80,3 +80,45 @@ export const SMOOTHING_CHEM_NOTE =
  */
 export const SCHOOL_NOTE =
   'General information, not legal or educational advice. Required hours, fees and exam formats are set state by state and change over time. Verify programme approval on your state board of cosmetology website rather than the school website, and treat your state candidate bulletin as the authoritative source for what is tested.'
+
+/**
+ * 딥 파우더 전용 고지.
+ * 기획서 필수: 고객 손가락을 공용 통에 담그는 전통 방식에 위생 문제가 지적되어 있고
+ * 일부 주 위원회가 제한·금지한다. "pour, not dip" 이 이 클러스터의 최대 차별점.
+ * 금지: "딥 파우더는 감염을 일으킨다" 같은 단정 · 특정 브랜드 비난
+ */
+export const DIP_HYGIENE_NOTE =
+  'General information, not medical advice. Dipping a client’s finger into a shared powder jar has been raised as a hygiene concern, and some state boards restrict or prohibit it. Pouring the powder over the nail avoids the issue. Ask which method your salon uses, check your state board for the rule where you live, and see a doctor for any spreading redness, swelling, pus or pain around a nail.'
+
+/**
+ * 손톱 강화제·손톱 관리 전용 고지.
+ * 기획서 필수: 손톱판은 죽은 조직이라 어떤 제품도 이미 생긴 손상을 되돌리지 못한다.
+ * 금지: repairs / heals / regrows / cures / rebuilds
+ * 쓸 것: reduces breakage / protects while it grows / improves flexibility
+ */
+export const NAIL_PLATE_NOTE =
+  'General information, not medical advice. The nail plate is dead tissue, so no product repairs damage that has already happened — existing damage grows out over months. Products reduce breakage and improve flexibility while that happens. Persistent nail changes, discolouration, thickening or separation from the nail bed warrant a doctor’s opinion rather than a product.'
+
+/**
+ * 왁스 워머 전용 고지.
+ * 기획서 필수: 화상이 이 주제의 주요 사고다. 온도를 단정적 숫자로만 제시하지 말 것
+ * (제품·왁스 타입마다 다름). 손목 테스트를 모든 관련 페이지에 반복한다.
+ */
+export const WAX_BURN_NOTE =
+  'General information, not medical advice. Safe wax temperature varies by product and wax type, so follow the range printed on your specific wax and test a small amount on your inner wrist before every application — displays can be inaccurate and wax heats unevenly. If you burn yourself, cool the area with cool running water, do not pull wax off burned skin, and seek medical attention for blistering, large areas, or burns to the face or intimate areas.'
+
+/**
+ * 립 블러시 전용 고지. PMU_TATTOO_NOTE 와 함께 쓴다.
+ * 기획서 필수: 입술 문신은 헤르페스(HSV) 재활성화 위험이 이 시술 고유의 핵심 리스크다.
+ * 금지: "semi-permanent so it's not a tattoo" / risk-free / painless / no downtime
+ */
+export const LIP_BLUSH_HSV_NOTE =
+  'General information, not medical advice. Lip tattooing can reactivate the herpes simplex virus in people who carry it, and an outbreak during healing can affect both comfort and the result. If you have ever had a cold sore, raise it at consultation — your artist may ask you to discuss antiviral prophylaxis with your doctor beforehand. Contact a doctor for blistering, spreading redness, pus, fever or increasing pain.'
+
+/**
+ * 페이셜 스티머 전용 고지.
+ * 기획서 필수: "모공을 연다"는 표현 금지 — 모공에는 근육이 없어 열리고 닫히지 않는다.
+ * 금지: clears acne / removes blackheads / detoxifies / opens pores / shrinks pores
+ */
+export const STEAM_CLAIMS_NOTE =
+  'General information, not medical advice. Steam softens the skin’s surface and the debris sitting in pores, which makes cleansing and extraction easier — it does not open pores (pores have no muscles), shrink them, detoxify skin, or treat acne. Heat can aggravate rosacea and inflamed or cystic acne, so check with a doctor or a licensed professional if either applies to you.'

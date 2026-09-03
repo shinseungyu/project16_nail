@@ -1,0 +1,130 @@
+import type { EnPage } from './types'
+import { EN_UPDATED, EN_UPDATED_ISO, STEAM_CLAIMS_NOTE } from './common'
+
+export const atHomeExtractions: EnPage = {
+  path: '/en/at-home-extractions',
+  title: 'At-Home Extractions: How to Avoid Scarring',
+  h1: 'At-Home Extractions: What Is Safe and What Is Not',
+  description:
+    'Extractions done wrong cause scarring and spread inflammation. What is reasonable to do at home, the stopping rule, and what to leave alone.',
+  keywords: ['at home extractions', 'how to extract blackheads at home', 'blackhead extraction', 'squeezing spots scarring'],
+  category: 'Skin Treatments',
+  stage: 18,
+  updated: EN_UPDATED,
+  updatedIso: EN_UPDATED_ISO,
+  lead:
+    '**Only attempt extraction on surface-level, visibly ready blackheads — and stop the moment one does not come out easily.** Anything inflamed, deep, or painful should be left alone. **Squeezing inflamed lesions is the main cause of extraction scarring.**',
+  blocks: [
+    { t: 'note', tone: 'warn', text: STEAM_CLAIMS_NOTE },
+    { t: 'h2', id: 'what-not-to-touch', text: 'What not to touch' },
+    {
+      t: 'table',
+      head: ['Type', 'Why'],
+      rows: [
+        ['Inflamed, red, painful spots', 'Squeezing pushes inflammation deeper and wider'],
+        ['Cystic lesions', 'Deep under the skin. Squeezing causes scarring and does not empty them'],
+        ['Anything under unbroken skin', 'Not ready. Forcing it ruptures the follicle below the surface'],
+        ['The area between the nose and the corners of the upper lip', 'Discussed as a higher-risk area for complications from squeezing'],
+        ['Anything you cannot clearly see', 'You cannot judge pressure or angle'],
+        ['Moles, or any lesion you are unsure about', 'See a doctor — do not squeeze'],
+      ],
+    },
+    { t: 'p', text: 'The list is long on purpose. **Most of what people squeeze at home falls into one of these rows**, and most extraction scarring comes from ignoring the first two.' },
+    { t: 'h2', id: 'what-is-reasonable', text: 'What is reasonable' },
+    { t: 'p', text: 'Surface blackheads that are **clearly visible, not inflamed, and release with gentle pressure.** That is the whole category. If a spot fails any one of those three tests, it is not a candidate.' },
+    {
+      t: 'table',
+      head: ['Sign', 'Ready?'],
+      rows: [
+        ['Dark plug visible at the surface, no redness around it', 'Yes'],
+        ['Slight raise but the skin over it is intact', 'No — leave it'],
+        ['Red ring around the spot', 'No — inflamed'],
+        ['Tender to touch', 'No'],
+        ['Same spot keeps refilling within days', 'Stop extracting it. That is a pattern for a professional or a doctor'],
+      ],
+    },
+    { t: 'h2', id: 'method', text: 'Method' },
+    {
+      t: 'ol',
+      items: [
+        '**Cleanse thoroughly.** Extracting over makeup or oil pushes debris around.',
+        'Soften with steam or a warm damp towel for about five minutes. This lowers how much pressure you need, which is the whole point.',
+        '**Wash your hands, or use clean gloves.**',
+        'Wrap your fingertips in clean tissue so nails never touch skin.',
+        '**Apply gentle pressure from the sides**, angling slightly under the plug — not straight down on top of it.',
+        '**If it does not release easily, stop.** It is not ready, and more force will not change that.',
+        'Follow with a gentle, non-irritating product. Nothing strong, nothing scented.',
+        'Do not touch the area again that day.',
+      ],
+    },
+    { t: 'p', text: 'One pass per spot. **Going back to the same blackhead a second and third time is how a small, tidy extraction becomes a bruise.**' },
+    { t: 'h2', id: 'stopping-rule', text: 'The stopping rule' },
+    {
+      t: 'note',
+      tone: 'warn',
+      title: 'If it does not come out with light pressure, stop',
+      text: 'Continuing means you are rupturing the follicle wall below the surface. That spreads its contents sideways into the surrounding tissue, which is how a blackhead becomes a red, swollen spot and how a spot becomes a scar. No amount of steam or technique makes an unready plug ready.',
+    },
+    { t: 'p', text: 'This is the rule that separates people who can safely extract at home from people who should not. **It is not about skill. It is about whether you will actually stop.**' },
+    { t: 'h2', id: 'tools', text: 'Tools' },
+    {
+      t: 'table',
+      head: ['Tool', 'Note'],
+      rows: [
+        ['Fingers wrapped in tissue', 'Most controllable. Recommended for home use'],
+        ['Metal extractor loop', 'Easy to bruise or scar with. Requires more care than the packaging implies'],
+        ['Pore strips', 'Surface debris only, and they can irritate reactive skin'],
+        ['Suction devices', 'Can cause bruising and broken capillaries if the pressure is too high or the dwell time too long'],
+        ['Nails', 'Never. Nails cut skin and carry bacteria'],
+      ],
+    },
+    { t: 'p', text: 'Professionals use loops because they have trained pressure and angle. **At home, tissue-wrapped fingers give you better feedback about how much force you are applying** — and feedback is what prevents damage.' },
+    { t: 'h2', id: 'aftercare', text: 'Aftercare' },
+    {
+      t: 'ul',
+      items: [
+        'A gentle, non-irritating product — a plain moisturiser or a soothing serum.',
+        '**No makeup immediately.** Give the skin a few hours at minimum.',
+        'No exfoliation, acids or retinoids the same day.',
+        'Do not pick at anything that scabs. A scab is the skin closing; picking it reopens the wound.',
+        'Wash your hands before touching your face for the rest of the day.',
+      ],
+    },
+    { t: 'h2', id: 'right-response', text: 'The right response by problem' },
+    {
+      t: 'table',
+      head: ['What you have', 'Sensible response'],
+      rows: [
+        ['Surface blackheads', 'Gentle extraction as above, or leave them for a professional facial'],
+        ['Closed bumps under intact skin', 'Leave them. A gentle exfoliating routine over weeks does more than squeezing'],
+        ['Red, inflamed spot', 'Leave it. Squeezing extends its life and its footprint'],
+        ['Deep, painful cyst', 'A doctor — this is a medical issue, not an extraction issue'],
+        ['Recurring congestion in one area', 'Professional assessment. Something about product, habit or skin is driving it'],
+      ],
+    },
+    { t: 'p', text: '**Cystic acne is a medical issue, not an extraction issue.** Nothing you can do with your fingers helps a cyst, and everything you can do with your fingers can scar it.' },
+    { t: 'h2', id: 'see-a-doctor', text: 'See a doctor if' },
+    {
+      t: 'ul',
+      items: [
+        'Redness, swelling or pain is increasing rather than settling.',
+        'Anything looks like it is spreading.',
+        'You have persistent cystic lesions.',
+        'You are unsure what a lesion is. Guessing and squeezing is the worst combination.',
+      ],
+    },
+    { t: 'p', text: 'A dermatologist has treatments that work on the kind of lesions extraction cannot touch. **The sooner a cystic pattern is treated properly, the less scarring it leaves** — that is the argument for not spending months squeezing first.' },
+  ],
+  faq: [
+    { q: 'Can I do extractions at home?', a: 'On surface blackheads that are visible, not inflamed, and release easily, yes. Not on inflamed or cystic lesions.' },
+    { q: 'What if it will not come out?', a: 'Stop. Forcing it ruptures the follicle below the surface, which spreads inflammation and causes scarring.' },
+    { q: 'Should I use an extractor tool?', a: 'Fingers wrapped in tissue give more control and better feedback. Metal loops bruise easily in untrained hands.' },
+    { q: 'Do pore strips work?', a: 'On surface debris only, and they can irritate reactive skin. They do nothing for anything below the surface.' },
+    { q: 'When should I see a doctor?', a: 'For cystic acne, persistent inflammation, anything spreading, or any lesion you cannot identify.' },
+  ],
+  related: [
+    { href: '/en/facial-steamer-benefits', label: 'Facial Steamer Benefits: What Is Real' },
+    { href: '/en/how-to-use-a-facial-steamer', label: 'How to Use a Facial Steamer' },
+    { href: '/en/facial-steamer-vs-professional-facial', label: 'Home Steamer vs Professional Facial' },
+  ],
+}

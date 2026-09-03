@@ -1,0 +1,96 @@
+import type { EnPage } from './types'
+import { EN_UPDATED, EN_UPDATED_ISO, DIP_HYGIENE_NOTE } from './common'
+
+export const dipPowderAtHome: EnPage = {
+  path: '/en/dip-powder-at-home',
+  title: 'Dip Powder at Home: Kit, Method and Pitfalls',
+  h1: 'Can You Do Dip Powder at Home?',
+  description:
+    'Home dip kits cost $30 to $80. How to apply hygienically, the common mistakes, and why removal is the part that matters.',
+  keywords: ['dip powder at home', 'diy dip nails', 'dip powder kit', 'how to do dip nails yourself'],
+  category: 'Nails',
+  stage: 14,
+  updated: EN_UPDATED,
+  updatedIso: EN_UPDATED_ISO,
+  lead:
+    '**Yes — kits run $30 to $80 and no lamp is required, which makes it one of the easier systems to do yourself.** Two things decide whether it goes well: **pour, do not dip** (even for your own nails), and soak it off properly at the end.',
+  blocks: [
+    { t: 'note', tone: 'warn', text: DIP_HYGIENE_NOTE },
+    { t: 'h2', id: 'kit', text: 'What is in a kit' },
+    {
+      t: 'table',
+      head: ['Item', 'Note'],
+      rows: [
+        ['Base coat / adhesive', 'The bit that clogs brushes'],
+        ['Activator', 'Hardens the layers'],
+        ['Top coat', 'Decides how glossy it looks'],
+        ['Coloured powders', 'Usually three to six shades'],
+        ['Brush saver or cleaner', 'Not optional — adhesive ruins brushes fast'],
+        ['Files and buffer', 'Included in most kits'],
+        ['Cuticle pusher', ''],
+        ['100% acetone, foil, cotton', 'For removal. Often not included — check'],
+      ],
+    },
+    { t: 'p', text: 'The last row catches people out. **A kit that does not include removal supplies is only half a kit**, and discovering that at the point you want the set off is how nails get peeled.' },
+    { t: 'h2', id: 'method', text: 'The method' },
+    {
+      t: 'ol',
+      items: [
+        '**Prep** — push cuticles back, buff lightly, wipe with a dehydrator.',
+        'Apply a thin base coat to **one nail only**.',
+        '**Pour powder over that nail** — do not dip into the jar.',
+        'Brush off the excess.',
+        'Repeat for two to three layers, one nail at a time.',
+        '**Apply activator** and wait as directed.',
+        'File and shape.',
+        'Top coat.',
+      ],
+    },
+    { t: 'p', text: '**Do one nail at a time.** The base coat sets quickly, and trying to do a whole hand before applying powder is the most common reason a first attempt looks patchy.' },
+    { t: 'h2', id: 'pour-even-at-home', text: 'Why pour even when it is only your nails' },
+    { t: 'p', text: 'The shared-jar concern is about multiple people, so it is tempting to think dipping is fine at home. It is not, for a different reason.' },
+    { t: 'p', text: 'If you dip, **the powder in the jar contacts your nail surface every time.** If you ever have a hangnail, a cut, or a nail problem you have not noticed yet, that jar is compromised for every future use — including after the problem clears.' },
+    { t: 'p', text: '**Pouring costs nothing and removes the question entirely.** There is no upside to dipping.' },
+    { t: 'h2', id: 'common-mistakes', text: 'Common mistakes' },
+    {
+      t: 'table',
+      head: ['Mistake', 'Result'],
+      rows: [
+        ['Too many layers', 'Thick, brittle, slow to remove'],
+        ['Base coat touching skin', 'Lifting within days'],
+        ['Dipping into the jar', 'Contaminates the powder — even at home'],
+        ['Activator applied too soon', 'Cloudy, uneven finish'],
+        ['Not enough prep', 'Lifting within days'],
+        ['Brush not cleaned', 'A ruined brush and a chunky base coat'],
+        ['Doing a whole hand before powdering', 'Patchy coverage'],
+      ],
+    },
+    { t: 'h2', id: 'first-attempt', text: 'What a first attempt realistically looks like' },
+    { t: 'p', text: 'Worth setting expectations, because the gap between a first home set and a salon set is real and it is mostly about the filing.' },
+    {
+      t: 'ul',
+      items: [
+        '**Expect it to look thicker at the cuticle** than a salon set. That is a filing skill, and it improves.',
+        '**Expect the first attempt to take an hour or more.** It gets much faster.',
+        '**Expect one or two nails to be noticeably better** than the rest — usually on your dominant hand’s opposite side.',
+        '**Do not judge it before the top coat.** Dip looks flat and dull until that step.',
+        'If a nail goes wrong, soak that one off rather than filing it thinner and adding more.',
+      ],
+    },
+    { t: 'h2', id: 'removal', text: 'Removal' },
+    { t: 'p', text: 'Same as the salon: file the surface until fully matte, wrap in acetone-soaked cotton and foil, wait 20 to 30 minutes, push off gently with a wooden stick.' },
+    { t: 'p', text: '**This is the step that decides whether home dip is fine or bad for your nails.** Everything else is cosmetic; this one is structural. If you know you will not sit still for half an hour, get the removal done at a salon.' },
+  ],
+  faq: [
+    { q: 'Can I do dip powder at home?', a: 'Yes. No lamp is required, which makes it one of the more accessible systems to do yourself.' },
+    { q: 'What does a kit cost?', a: 'Around $30 to $80 for a reasonable starter set. Check whether removal supplies are included.' },
+    { q: 'Should I dip or pour?', a: 'Pour, even at home. Dipping contaminates the jar for every future use if you ever have broken skin or a nail issue.' },
+    { q: 'How many layers should I do?', a: 'Two to three. More is not stronger — it is more brittle and much slower to remove.' },
+    { q: 'Is removal the same as in a salon?', a: 'Yes — file the surface matte, then a 20 to 30 minute acetone soak. Never pry it off.' },
+  ],
+  related: [
+    { href: '/en/dip-powder-removal', label: 'How to Remove Dip Powder Nails' },
+    { href: '/en/dip-powder-hygiene', label: 'Is Dip Powder Hygienic?' },
+    { href: '/en/what-are-dip-powder-nails', label: 'What Are Dip Powder Nails?' },
+  ],
+}
