@@ -1,5 +1,5 @@
 import type { EnPage } from './types'
-import { EN_UPDATED, EN_UPDATED_ISO, NAIL_PLATE_NOTE } from './common'
+import { EN_UPDATED_BATCH4, EN_UPDATED_BATCH4_ISO, NAIL_PLATE_NOTE } from './common'
 
 export const nailStrengthenerVsHardener: EnPage = {
   path: '/en/nail-strengthener-vs-hardener',
@@ -9,9 +9,9 @@ export const nailStrengthenerVsHardener: EnPage = {
     'Hardeners make nails rigid; strengtheners improve flexibility. Using the wrong one makes the problem worse. How to tell which you need.',
   keywords: ['nail strengthener vs hardener', 'brittle vs soft nails', 'nail hardener too brittle', 'which nail treatment'],
   category: 'Nail Care',
-  stage: 15,
-  updated: EN_UPDATED,
-  updatedIso: EN_UPDATED_ISO,
+  stage: 0,
+  updated: EN_UPDATED_BATCH4,
+  updatedIso: EN_UPDATED_BATCH4_ISO,
   lead:
     '**If your nails snap and split, you need flexibility — a hydrating strengthener. If they bend and tear like wet paper, you need rigidity — a hardener.** Using the wrong one actively makes things worse, and most people pick wrong.',
   blocks: [

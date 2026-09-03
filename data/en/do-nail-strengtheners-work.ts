@@ -1,5 +1,5 @@
 import type { EnPage } from './types'
-import { EN_UPDATED, EN_UPDATED_ISO, NAIL_PLATE_NOTE } from './common'
+import { EN_UPDATED_BATCH4, EN_UPDATED_BATCH4_ISO, NAIL_PLATE_NOTE } from './common'
 
 export const doNailStrengthenersWork: EnPage = {
   path: '/en/do-nail-strengtheners-work',
@@ -9,9 +9,9 @@ export const doNailStrengthenersWork: EnPage = {
     'Nail strengtheners reduce breakage while nails grow, but they do not repair damage. What they can do, what they cannot, and how to use them.',
   keywords: ['do nail strengtheners work', 'nail strengthener', 'nail hardener', 'weak nails treatment'],
   category: 'Nail Care',
-  stage: 15,
-  updated: EN_UPDATED,
-  updatedIso: EN_UPDATED_ISO,
+  stage: 0,
+  updated: EN_UPDATED_BATCH4,
+  updatedIso: EN_UPDATED_BATCH4_ISO,
   lead:
     '**They reduce breakage and improve flexibility while your nails grow out — that is genuinely useful.** But **the nail plate is dead tissue, so nothing repairs existing damage.** Any product claiming to repair or heal nails is overstating what is possible.',
   blocks: [

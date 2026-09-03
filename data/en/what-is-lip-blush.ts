@@ -1,5 +1,5 @@
 import type { EnPage } from './types'
-import { EN_UPDATED, EN_UPDATED_ISO, PMU_TATTOO_NOTE, LIP_BLUSH_HSV_NOTE } from './common'
+import { EN_UPDATED_BATCH4, EN_UPDATED_BATCH4_ISO, PMU_TATTOO_NOTE, LIP_BLUSH_HSV_NOTE } from './common'
 
 export const whatIsLipBlush: EnPage = {
   path: '/en/what-is-lip-blush',
@@ -9,9 +9,9 @@ export const whatIsLipBlush: EnPage = {
     'Lip blush is cosmetic tattooing that adds soft colour to the lips. What is involved, what it costs, and the regulation you should know about.',
   keywords: ['what is lip blush', 'lip blush tattoo', 'lip blushing procedure', 'lip tattoo cost'],
   category: 'Permanent Makeup',
-  stage: 17,
-  updated: EN_UPDATED,
-  updatedIso: EN_UPDATED_ISO,
+  stage: 0,
+  updated: EN_UPDATED_BATCH4,
+  updatedIso: EN_UPDATED_BATCH4_ISO,
   lead:
     '**A cosmetic tattoo that deposits soft pigment into the lips, enhancing colour and definition.** It lasts two to five years, costs $500 to $1,200 including the touch-up, and takes two to three weeks to heal. **In many US states it is regulated as tattooing.**',
   blocks: [

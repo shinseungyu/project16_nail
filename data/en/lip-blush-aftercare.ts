@@ -1,5 +1,5 @@
 import type { EnPage } from './types'
-import { EN_UPDATED, EN_UPDATED_ISO, LIP_BLUSH_HSV_NOTE } from './common'
+import { EN_UPDATED_BATCH4, EN_UPDATED_BATCH4_ISO, LIP_BLUSH_HSV_NOTE } from './common'
 
 export const lipBlushAftercare: EnPage = {
   path: '/en/lip-blush-aftercare',
@@ -9,9 +9,9 @@ export const lipBlushAftercare: EnPage = {
     'Keeping lips clean, moisturised and protected during healing. What to avoid eating, and the warning signs to watch for.',
   keywords: ['lip blush aftercare', 'after lip blush', 'lip blush what not to eat', 'lip tattoo healing care'],
   category: 'Permanent Makeup',
-  stage: 17,
-  updated: EN_UPDATED,
-  updatedIso: EN_UPDATED_ISO,
+  stage: 0,
+  updated: EN_UPDATED_BATCH4,
+  updatedIso: EN_UPDATED_BATCH4_ISO,
   lead:
     '**Keep lips clean and lightly moisturised with what your artist recommends, do not pick at the flaking, and avoid anything spicy, salty or acidic for the first several days.** Your artist’s protocol overrides general guidance, including this page.',
   blocks: [

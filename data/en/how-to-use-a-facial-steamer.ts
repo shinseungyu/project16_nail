@@ -1,5 +1,5 @@
 import type { EnPage } from './types'
-import { EN_UPDATED, EN_UPDATED_ISO, STEAM_CLAIMS_NOTE } from './common'
+import { EN_UPDATED_BATCH4, EN_UPDATED_BATCH4_ISO, STEAM_CLAIMS_NOTE } from './common'
 
 export const howToUseAFacialSteamer: EnPage = {
   path: '/en/how-to-use-a-facial-steamer',
@@ -9,9 +9,9 @@ export const howToUseAFacialSteamer: EnPage = {
     'Distance, duration, frequency, and what to do before and after steaming. Plus the mistakes that cause irritation.',
   keywords: ['how to use a facial steamer', 'facial steamer how long', 'steaming face routine', 'facial steamer distance'],
   category: 'Skin Treatments',
-  stage: 18,
-  updated: EN_UPDATED,
-  updatedIso: EN_UPDATED_ISO,
+  stage: 0,
+  updated: EN_UPDATED_BATCH4,
+  updatedIso: EN_UPDATED_BATCH4_ISO,
   lead:
     '**Cleanse first, steam 8 to 12 inches away for 5 to 10 minutes, then follow with your treatment step.** More time is not better — over-steaming irritates skin and compromises the barrier.',
   blocks: [

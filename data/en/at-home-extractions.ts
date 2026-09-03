@@ -1,5 +1,5 @@
 import type { EnPage } from './types'
-import { EN_UPDATED, EN_UPDATED_ISO, STEAM_CLAIMS_NOTE } from './common'
+import { EN_UPDATED_BATCH4, EN_UPDATED_BATCH4_ISO, STEAM_CLAIMS_NOTE } from './common'
 
 export const atHomeExtractions: EnPage = {
   path: '/en/at-home-extractions',
@@ -9,9 +9,9 @@ export const atHomeExtractions: EnPage = {
     'Extractions done wrong cause scarring and spread inflammation. What is reasonable to do at home, the stopping rule, and what to leave alone.',
   keywords: ['at home extractions', 'how to extract blackheads at home', 'blackhead extraction', 'squeezing spots scarring'],
   category: 'Skin Treatments',
-  stage: 18,
-  updated: EN_UPDATED,
-  updatedIso: EN_UPDATED_ISO,
+  stage: 0,
+  updated: EN_UPDATED_BATCH4,
+  updatedIso: EN_UPDATED_BATCH4_ISO,
   lead:
     '**Only attempt extraction on surface-level, visibly ready blackheads — and stop the moment one does not come out easily.** Anything inflamed, deep, or painful should be left alone. **Squeezing inflamed lesions is the main cause of extraction scarring.**',
   blocks: [

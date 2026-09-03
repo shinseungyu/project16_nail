@@ -1,5 +1,5 @@
 import type { EnPage } from './types'
-import { EN_UPDATED, EN_UPDATED_ISO, WAX_BURN_NOTE } from './common'
+import { EN_UPDATED_BATCH4, EN_UPDATED_BATCH4_ISO, WAX_BURN_NOTE } from './common'
 
 export const waxWarmerGuide: EnPage = {
   path: '/en/wax-warmer-guide',
@@ -9,9 +9,9 @@ export const waxWarmerGuide: EnPage = {
     'Single-pot, double-pot and roll-on wax warmers compared, plus the specifications that actually matter for home and salon use.',
   keywords: ['wax warmer', 'wax warmer guide', 'best type of wax warmer', 'double pot wax warmer'],
   category: 'Waxing',
-  stage: 16,
-  updated: EN_UPDATED,
-  updatedIso: EN_UPDATED_ISO,
+  stage: 0,
+  updated: EN_UPDATED_BATCH4,
+  updatedIso: EN_UPDATED_BATCH4_ISO,
   lead:
     '**Single-pot warmers ($25 to $60) suit occasional home use. Double-pot ($60 to $150) suits regular use or two wax types. Professional units ($150 to $400) offer better control and capacity.** The specification that matters most is **temperature stability** — not wattage.',
   blocks: [

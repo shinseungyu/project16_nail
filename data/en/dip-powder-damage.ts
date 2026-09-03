@@ -1,5 +1,5 @@
 import type { EnPage } from './types'
-import { EN_UPDATED, EN_UPDATED_ISO, NAIL_PLATE_NOTE } from './common'
+import { EN_UPDATED_BATCH4, EN_UPDATED_BATCH4_ISO, NAIL_PLATE_NOTE } from './common'
 
 export const dipPowderDamage: EnPage = {
   path: '/en/dip-powder-damage',
@@ -9,9 +9,9 @@ export const dipPowderDamage: EnPage = {
     'The application rarely damages nails; removal and over-buffing do. What actually causes the thinning people blame on dip powder.',
   keywords: ['does dip powder damage nails', 'dip powder thin nails', 'dip nails damage', 'nails after dip powder'],
   category: 'Nails',
-  stage: 14,
-  updated: EN_UPDATED,
-  updatedIso: EN_UPDATED_ISO,
+  stage: 0,
+  updated: EN_UPDATED_BATCH4,
+  updatedIso: EN_UPDATED_BATCH4_ISO,
   lead:
     '**Correctly applied and soaked off properly, the damage risk is low.** The thinning and peeling people attribute to dip powder is almost always caused by peeling a set off, or by aggressive buffing during prep. The product is rarely the culprit.',
   blocks: [

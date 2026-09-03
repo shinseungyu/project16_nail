@@ -1,5 +1,5 @@
 import type { EnPage } from './types'
-import { EN_UPDATED, EN_UPDATED_ISO, NAIL_PLATE_NOTE } from './common'
+import { EN_UPDATED_BATCH4, EN_UPDATED_BATCH4_ISO, NAIL_PLATE_NOTE } from './common'
 
 export const whyAreMyNailsPeeling: EnPage = {
   path: '/en/why-are-my-nails-peeling',
@@ -9,9 +9,9 @@ export const whyAreMyNailsPeeling: EnPage = {
     'Peeling nails usually come from moisture cycling, removal damage, or over-buffing. What to change, and when to see a doctor.',
   keywords: ['why are my nails peeling', 'peeling nails causes', 'nails splitting in layers', 'weak peeling nails'],
   category: 'Nail Care',
-  stage: 15,
-  updated: EN_UPDATED,
-  updatedIso: EN_UPDATED_ISO,
+  stage: 0,
+  updated: EN_UPDATED_BATCH4,
+  updatedIso: EN_UPDATED_BATCH4_ISO,
   lead:
     '**Peeling means the nail plate layers are separating, most often from repeated wetting and drying, improper polish removal, or over-buffing.** It is rarely a nutrition problem, though persistent changes are worth a doctor’s opinion.',
   blocks: [

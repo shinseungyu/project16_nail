@@ -1,5 +1,5 @@
 import type { EnPage } from './types'
-import { EN_UPDATED, EN_UPDATED_ISO, PMU_TATTOO_NOTE } from './common'
+import { EN_UPDATED_BATCH4, EN_UPDATED_BATCH4_ISO, PMU_TATTOO_NOTE } from './common'
 
 export const lipBlushCost: EnPage = {
   path: '/en/lip-blush-cost',
@@ -9,9 +9,9 @@ export const lipBlushCost: EnPage = {
     'Lip blush runs $500 to $1,200 including the required touch-up. Why quotes vary, and what correction or removal would cost.',
   keywords: ['lip blush cost', 'how much is lip blush', 'lip blush price', 'lip tattoo touch up cost'],
   category: 'Permanent Makeup',
-  stage: 17,
-  updated: EN_UPDATED,
-  updatedIso: EN_UPDATED_ISO,
+  stage: 0,
+  updated: EN_UPDATED_BATCH4,
+  updatedIso: EN_UPDATED_BATCH4_ISO,
   lead:
     '**$500 to $1,200 including the 6 to 8 week touch-up.** If a quote does not mention the touch-up, ask — it is typically $150 to $350 separately, and it explains most apparent price differences.',
   blocks: [

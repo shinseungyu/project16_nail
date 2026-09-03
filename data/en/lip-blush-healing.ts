@@ -1,5 +1,5 @@
 import type { EnPage } from './types'
-import { EN_UPDATED, EN_UPDATED_ISO, LIP_BLUSH_HSV_NOTE } from './common'
+import { EN_UPDATED_BATCH4, EN_UPDATED_BATCH4_ISO, LIP_BLUSH_HSV_NOTE } from './common'
 
 export const lipBlushHealing: EnPage = {
   path: '/en/lip-blush-healing',
@@ -9,9 +9,9 @@ export const lipBlushHealing: EnPage = {
     'Lip blush healing takes 7 to 14 days visibly and 4 to 6 weeks to settle. What each stage looks like, including the alarming middle phase.',
   keywords: ['lip blush healing', 'lip blush day by day', 'lip blush peeling', 'lip blush colour gone'],
   category: 'Permanent Makeup',
-  stage: 17,
-  updated: EN_UPDATED,
-  updatedIso: EN_UPDATED_ISO,
+  stage: 0,
+  updated: EN_UPDATED_BATCH4,
+  updatedIso: EN_UPDATED_BATCH4_ISO,
   lead:
     '**Days 1 to 3 look far darker and more swollen than the final result. Days 4 to 7 peel. Around days 8 to 14 the colour looks almost gone.** All of that is normal. The result settles over four to six weeks, and the touch-up completes it.',
   blocks: [

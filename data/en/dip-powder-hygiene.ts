@@ -1,5 +1,5 @@
 import type { EnPage } from './types'
-import { EN_UPDATED, EN_UPDATED_ISO, DIP_HYGIENE_NOTE } from './common'
+import { EN_UPDATED_BATCH4, EN_UPDATED_BATCH4_ISO, DIP_HYGIENE_NOTE } from './common'
 
 export const dipPowderHygiene: EnPage = {
   path: '/en/dip-powder-hygiene',
@@ -9,9 +9,9 @@ export const dipPowderHygiene: EnPage = {
     'Dipping fingers into shared powder jars has been raised as a hygiene concern and restricted in some states. What to ask your salon.',
   keywords: ['is dip powder sanitary', 'dip powder hygiene', 'shared dip powder jar', 'dip powder infection risk'],
   category: 'Nails',
-  stage: 14,
-  updated: EN_UPDATED,
-  updatedIso: EN_UPDATED_ISO,
+  stage: 0,
+  updated: EN_UPDATED_BATCH4,
+  updatedIso: EN_UPDATED_BATCH4_ISO,
   lead:
     '**Dipping a client’s finger into a shared powder jar has been raised as a hygiene concern, and some state boards restrict or prohibit it.** The alternative — pouring powder over the nail so it never returns to the jar — addresses it entirely. **Ask which method your salon uses.**',
   blocks: [

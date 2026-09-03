@@ -1,5 +1,5 @@
 import type { EnPage } from './types'
-import { EN_UPDATED, EN_UPDATED_ISO, DIP_HYGIENE_NOTE } from './common'
+import { EN_UPDATED_BATCH4, EN_UPDATED_BATCH4_ISO, DIP_HYGIENE_NOTE } from './common'
 
 export const dipPowderAtHome: EnPage = {
   path: '/en/dip-powder-at-home',
@@ -9,9 +9,9 @@ export const dipPowderAtHome: EnPage = {
     'Home dip kits cost $30 to $80. How to apply hygienically, the common mistakes, and why removal is the part that matters.',
   keywords: ['dip powder at home', 'diy dip nails', 'dip powder kit', 'how to do dip nails yourself'],
   category: 'Nails',
-  stage: 14,
-  updated: EN_UPDATED,
-  updatedIso: EN_UPDATED_ISO,
+  stage: 0,
+  updated: EN_UPDATED_BATCH4,
+  updatedIso: EN_UPDATED_BATCH4_ISO,
   lead:
     '**Yes — kits run $30 to $80 and no lamp is required, which makes it one of the easier systems to do yourself.** Two things decide whether it goes well: **pour, do not dip** (even for your own nails), and soak it off properly at the end.',
   blocks: [

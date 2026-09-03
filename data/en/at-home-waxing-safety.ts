@@ -1,5 +1,5 @@
 import type { EnPage } from './types'
-import { EN_UPDATED, EN_UPDATED_ISO, WAX_BURN_NOTE } from './common'
+import { EN_UPDATED_BATCH4, EN_UPDATED_BATCH4_ISO, WAX_BURN_NOTE } from './common'
 
 export const atHomeWaxingSafety: EnPage = {
   path: '/en/at-home-waxing-safety',
@@ -9,9 +9,9 @@ export const atHomeWaxingSafety: EnPage = {
     'Home waxing works with the right precautions. Temperature testing, areas to leave to professionals, and contraindications to check.',
   keywords: ['at home waxing safety', 'diy waxing tips', 'waxing at home mistakes', 'waxing contraindications'],
   category: 'Waxing',
-  stage: 16,
-  updated: EN_UPDATED,
-  updatedIso: EN_UPDATED_ISO,
+  stage: 0,
+  updated: EN_UPDATED_BATCH4,
+  updatedIso: EN_UPDATED_BATCH4_ISO,
   lead:
     '**Test the temperature every time, never double-dip, and leave certain areas to professionals.** Home waxing is manageable for arms, legs and underarms. Intimate areas and the face carry more risk when you are doing it to yourself.',
   blocks: [

@@ -1,5 +1,5 @@
 import type { EnPage } from './types'
-import { EN_UPDATED, EN_UPDATED_ISO, STEAM_CLAIMS_NOTE } from './common'
+import { EN_UPDATED_BATCH4, EN_UPDATED_BATCH4_ISO, STEAM_CLAIMS_NOTE } from './common'
 
 export const facialSteamerVsProfessionalFacial: EnPage = {
   path: '/en/facial-steamer-vs-professional-facial',
@@ -9,9 +9,9 @@ export const facialSteamerVsProfessionalFacial: EnPage = {
     'A home steamer handles one step of a facial. What professionals do that you cannot at home, and how to combine both sensibly without wasting money.',
   keywords: ['facial steamer vs facial', 'is a facial steamer worth it', 'home facial vs professional facial', 'how often to get a facial'],
   category: 'Skin Treatments',
-  stage: 18,
-  updated: EN_UPDATED,
-  updatedIso: EN_UPDATED_ISO,
+  stage: 0,
+  updated: EN_UPDATED_BATCH4,
+  updatedIso: EN_UPDATED_BATCH4_ISO,
   lead:
     '**A steamer replicates one step of a facial — the softening step.** What it does not replicate is skin assessment, professional extraction technique, and treatment selection. **Both together works better than either alone.**',
   blocks: [

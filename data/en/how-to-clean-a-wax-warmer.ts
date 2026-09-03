@@ -1,5 +1,5 @@
 import type { EnPage } from './types'
-import { EN_UPDATED, EN_UPDATED_ISO, WAX_BURN_NOTE, US_STATE_NOTE } from './common'
+import { EN_UPDATED_BATCH4, EN_UPDATED_BATCH4_ISO, WAX_BURN_NOTE, US_STATE_NOTE } from './common'
 
 export const howToCleanAWaxWarmer: EnPage = {
   path: '/en/how-to-clean-a-wax-warmer',
@@ -9,9 +9,9 @@ export const howToCleanAWaxWarmer: EnPage = {
     'Cleaning wax warmers while warm is the easy method. Step by step, plus how often and what to avoid.',
   keywords: ['how to clean a wax warmer', 'wax warmer cleaning', 'remove wax from pot', 'wax pot liners'],
   category: 'Waxing',
-  stage: 16,
-  updated: EN_UPDATED,
-  updatedIso: EN_UPDATED_ISO,
+  stage: 0,
+  updated: EN_UPDATED_BATCH4,
+  updatedIso: EN_UPDATED_BATCH4_ISO,
   lead:
     '**Clean it while the wax is still warm and soft — cold hardened wax is far harder to remove.** Wipe the pot out with paper towel, then finish the residue with oil, which dissolves wax.',
   blocks: [

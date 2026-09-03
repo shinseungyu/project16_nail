@@ -1,5 +1,5 @@
 import type { EnPage } from './types'
-import { EN_UPDATED, EN_UPDATED_ISO, WAX_BURN_NOTE } from './common'
+import { EN_UPDATED_BATCH4, EN_UPDATED_BATCH4_ISO, WAX_BURN_NOTE } from './common'
 
 export const hardWaxVsSoftWax: EnPage = {
   path: '/en/hard-wax-vs-soft-wax',
@@ -9,9 +9,9 @@ export const hardWaxVsSoftWax: EnPage = {
     'Hard wax grips hair rather than skin, suiting sensitive areas. Soft wax covers large areas faster. How to choose for each body part.',
   keywords: ['hard wax vs soft wax', 'strip wax vs hard wax', 'which wax for face', 'best wax for bikini'],
   category: 'Waxing',
-  stage: 16,
-  updated: EN_UPDATED,
-  updatedIso: EN_UPDATED_ISO,
+  stage: 0,
+  updated: EN_UPDATED_BATCH4,
+  updatedIso: EN_UPDATED_BATCH4_ISO,
   lead:
     '**Hard wax adheres mainly to hair and is peeled off without strips — generally gentler, and standard for sensitive areas. Soft wax adheres to skin as well as hair and is removed with strips — faster over large areas.**',
   blocks: [

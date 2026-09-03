@@ -1,5 +1,5 @@
 import type { EnPage } from './types'
-import { EN_UPDATED, EN_UPDATED_ISO, DIP_HYGIENE_NOTE } from './common'
+import { EN_UPDATED_BATCH4, EN_UPDATED_BATCH4_ISO, DIP_HYGIENE_NOTE } from './common'
 
 export const howLongDoesDipPowderLast: EnPage = {
   path: '/en/how-long-does-dip-powder-last',
@@ -9,9 +9,9 @@ export const howLongDoesDipPowderLast: EnPage = {
     'Dip powder lasts three to four weeks. What causes early lifting, and how to get the full wear out of a set.',
   keywords: ['how long does dip powder last', 'dip powder lifting', 'dip nails wear time', 'dip powder fills'],
   category: 'Nails',
-  stage: 14,
-  updated: EN_UPDATED,
-  updatedIso: EN_UPDATED_ISO,
+  stage: 0,
+  updated: EN_UPDATED_BATCH4,
+  updatedIso: EN_UPDATED_BATCH4_ISO,
   lead:
     '**Three to four weeks, slightly longer than gel polish.** Lifting before two weeks almost always traces back to preparation rather than the product — which is good news, because prep is fixable.',
   blocks: [

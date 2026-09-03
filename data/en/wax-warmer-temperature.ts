@@ -1,5 +1,5 @@
 import type { EnPage } from './types'
-import { EN_UPDATED, EN_UPDATED_ISO, WAX_BURN_NOTE } from './common'
+import { EN_UPDATED_BATCH4, EN_UPDATED_BATCH4_ISO, WAX_BURN_NOTE } from './common'
 
 export const waxWarmerTemperature: EnPage = {
   path: '/en/wax-warmer-temperature',
@@ -9,9 +9,9 @@ export const waxWarmerTemperature: EnPage = {
     'Wax temperature varies by type and manufacturer. Why you must wrist-test every time, and what to do if you get burned.',
   keywords: ['wax warmer temperature', 'wax too hot', 'wax burn', 'safe wax temperature'],
   category: 'Waxing',
-  stage: 16,
-  updated: EN_UPDATED,
-  updatedIso: EN_UPDATED_ISO,
+  stage: 0,
+  updated: EN_UPDATED_BATCH4,
+  updatedIso: EN_UPDATED_BATCH4_ISO,
   lead:
     '**Follow the temperature range printed on your specific wax — it varies by manufacturer and type.** Regardless of the display, **test on your inner wrist before every application.** Displays can be inaccurate and wax heats unevenly.',
   blocks: [

@@ -1,5 +1,5 @@
 import type { EnPage } from './types'
-import { EN_UPDATED, EN_UPDATED_ISO, DIP_HYGIENE_NOTE } from './common'
+import { EN_UPDATED_BATCH4, EN_UPDATED_BATCH4_ISO, DIP_HYGIENE_NOTE } from './common'
 
 export const dipPowderVsGel: EnPage = {
   path: '/en/dip-powder-vs-gel',
@@ -9,9 +9,9 @@ export const dipPowderVsGel: EnPage = {
     'Dip powder is thicker and lamp-free; gel is thinner with a glossier finish. Cost, wear, removal and damage risk compared.',
   keywords: ['dip powder vs gel', 'gel or dip nails', 'dip nails vs gel polish', 'which lasts longer dip or gel'],
   category: 'Nails',
-  stage: 14,
-  updated: EN_UPDATED,
-  updatedIso: EN_UPDATED_ISO,
+  stage: 0,
+  updated: EN_UPDATED_BATCH4,
+  updatedIso: EN_UPDATED_BATCH4_ISO,
   lead:
     '**Dip powder is thicker, stronger and needs no lamp. Gel polish is thinner, glossier and easier to remove.** Dip typically lasts about a week longer; gel usually looks more natural. Neither is inherently more damaging — removal technique decides that.',
   blocks: [

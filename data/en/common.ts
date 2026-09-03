@@ -4,6 +4,14 @@ export const EN_UPDATED = 'August 20, 2026'
 export const EN_UPDATED_ISO = '2026-08-20'
 
 /**
+ * 4차 배치(dip powder · nail strengthener · wax warmer · lip blush · facial steamer) 공개일.
+ * lastmod 가 실제 공개일이어야 크롤러와 IndexNow(--since 기본 7일)가 새 글로 인식한다.
+ * 이후 배치도 같은 식으로 배치별 날짜 상수를 따로 둘 것.
+ */
+export const EN_UPDATED_BATCH4 = 'September 3, 2026'
+export const EN_UPDATED_BATCH4_ISO = '2026-09-03'
+
+/**
  * 기획서 지정: 원화 기준 + 달러 근사치 병기.
  * 환율은 계속 움직이므로 "가정한 환산율"을 명시하고, 달러값은 어림수라고 못 박는다.
  */
@@ -31,6 +39,10 @@ export const US_PAY_NOTE =
  * sitemap·허브에 노출되고 색인이 허용된다.
  * 원고를 더 쓰는 것과 공개하는 것을 분리하기 위한 스위치다.
  * 기획서 지정 페이스: 주 10~15페이지를 넘기지 말 것.
+ *
+ * 2026-09-03: 4차 배치 29편(dip powder·nail strengthener·wax warmer·lip blush·facial steamer)은
+ * 운영자 결정으로 대기열을 건너뛰고 즉시 공개 — 각 페이지 stage: 0. 이 값과 무관하게 항상 공개된다.
+ * stage 6~13(60편)은 여전히 이 값을 올려야 열린다.
  */
 export const EN_RELEASED_STAGE = 5
 

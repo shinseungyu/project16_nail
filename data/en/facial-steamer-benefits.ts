@@ -1,5 +1,5 @@
 import type { EnPage } from './types'
-import { EN_UPDATED, EN_UPDATED_ISO, STEAM_CLAIMS_NOTE } from './common'
+import { EN_UPDATED_BATCH4, EN_UPDATED_BATCH4_ISO, STEAM_CLAIMS_NOTE } from './common'
 
 export const facialSteamerBenefits: EnPage = {
   path: '/en/facial-steamer-benefits',
@@ -9,9 +9,9 @@ export const facialSteamerBenefits: EnPage = {
     'What steaming genuinely helps with, what it does not, and who should skip it. An honest look past the marketing claims.',
   keywords: ['facial steamer benefits', 'do facial steamers work', 'is a facial steamer worth it', 'steam for blackheads'],
   category: 'Skin Treatments',
-  stage: 18,
-  updated: EN_UPDATED,
-  updatedIso: EN_UPDATED_ISO,
+  stage: 0,
+  updated: EN_UPDATED_BATCH4,
+  updatedIso: EN_UPDATED_BATCH4_ISO,
   lead:
     '**Steam softens surface skin and debris, hydrates the surface temporarily, and makes cleansing and extraction easier.** It does not treat acne, detoxify, or change pore size. Those claims are marketing rather than mechanism.',
   blocks: [

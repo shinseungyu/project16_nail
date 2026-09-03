@@ -1,5 +1,5 @@
 import type { EnPage } from './types'
-import { EN_UPDATED, EN_UPDATED_ISO, PMU_TATTOO_NOTE } from './common'
+import { EN_UPDATED_BATCH4, EN_UPDATED_BATCH4_ISO, PMU_TATTOO_NOTE } from './common'
 
 export const howLongDoesLipBlushLast: EnPage = {
   path: '/en/how-long-does-lip-blush-last',
@@ -9,9 +9,9 @@ export const howLongDoesLipBlushLast: EnPage = {
     'Lip blush lasts two to five years depending on skin, sun exposure and lifestyle. What fades it faster, and when to refresh.',
   keywords: ['how long does lip blush last', 'lip blush fading', 'lip blush refresh', 'lip tattoo longevity'],
   category: 'Permanent Makeup',
-  stage: 17,
-  updated: EN_UPDATED,
-  updatedIso: EN_UPDATED_ISO,
+  stage: 0,
+  updated: EN_UPDATED_BATCH4,
+  updatedIso: EN_UPDATED_BATCH4_ISO,
   lead:
     '**Two to five years, with most people refreshing every two to three.** Lips exfoliate naturally and are constantly exposed, so lip pigment generally fades faster than brow pigment does.',
   blocks: [

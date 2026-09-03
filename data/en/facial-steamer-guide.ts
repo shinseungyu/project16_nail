@@ -1,5 +1,5 @@
 import type { EnPage } from './types'
-import { EN_UPDATED, EN_UPDATED_ISO, STEAM_CLAIMS_NOTE } from './common'
+import { EN_UPDATED_BATCH4, EN_UPDATED_BATCH4_ISO, STEAM_CLAIMS_NOTE } from './common'
 
 export const facialSteamerGuide: EnPage = {
   path: '/en/facial-steamer-guide',
@@ -9,9 +9,9 @@ export const facialSteamerGuide: EnPage = {
     'Facial steamers soften surface skin and are used before cleansing or extractions. Types, what specifications matter, and realistic expectations.',
   keywords: ['facial steamer', 'facial steamer guide', 'nano ionic steamer', 'best facial steamer type'],
   category: 'Skin Treatments',
-  stage: 18,
-  updated: EN_UPDATED,
-  updatedIso: EN_UPDATED_ISO,
+  stage: 0,
+  updated: EN_UPDATED_BATCH4,
+  updatedIso: EN_UPDATED_BATCH4_ISO,
   lead:
     '**Steam softens the skin’s surface and loosens the debris sitting in pores, which is why it is used before cleansing or extractions.** It does not open pores — pores have no muscles — and it does not detoxify. **What it does do is make the next step easier.**',
   blocks: [

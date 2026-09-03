@@ -1,5 +1,5 @@
 import type { EnPage } from './types'
-import { EN_UPDATED, EN_UPDATED_ISO, NAIL_PLATE_NOTE } from './common'
+import { EN_UPDATED_BATCH4, EN_UPDATED_BATCH4_ISO, NAIL_PLATE_NOTE } from './common'
 
 export const dipPowderRemoval: EnPage = {
   path: '/en/dip-powder-removal',
@@ -9,9 +9,9 @@ export const dipPowderRemoval: EnPage = {
     'Dip powder takes 20 to 30 minutes to soak off. The correct method, why filing the surface matters, and what never to do.',
   keywords: ['dip powder removal', 'remove dip nails at home', 'how to soak off dip powder', 'dip powder acetone'],
   category: 'Nails',
-  stage: 14,
-  updated: EN_UPDATED,
-  updatedIso: EN_UPDATED_ISO,
+  stage: 0,
+  updated: EN_UPDATED_BATCH4,
+  updatedIso: EN_UPDATED_BATCH4_ISO,
   lead:
     '**File the top layer off, soak in acetone for 20 to 30 minutes wrapped in foil, then push the softened product away gently.** It takes longer than gel because it is thicker. **Never pry it off** — that is the whole of the damage risk.',
   blocks: [

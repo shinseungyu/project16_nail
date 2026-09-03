@@ -1,5 +1,5 @@
 import type { EnPage } from './types'
-import { EN_UPDATED, EN_UPDATED_ISO, PMU_TATTOO_NOTE } from './common'
+import { EN_UPDATED_BATCH4, EN_UPDATED_BATCH4_ISO, PMU_TATTOO_NOTE } from './common'
 
 export const lipBlushVsLipFiller: EnPage = {
   path: '/en/lip-blush-vs-lip-filler',
@@ -9,9 +9,9 @@ export const lipBlushVsLipFiller: EnPage = {
     'Lip blush adds colour; filler adds volume. Completely different procedures with different providers, costs and regulation.',
   keywords: ['lip blush vs lip filler', 'lip tattoo or filler', 'difference lip blush filler', 'which lip treatment'],
   category: 'Permanent Makeup',
-  stage: 17,
-  updated: EN_UPDATED,
-  updatedIso: EN_UPDATED_ISO,
+  stage: 0,
+  updated: EN_UPDATED_BATCH4,
+  updatedIso: EN_UPDATED_BATCH4_ISO,
   lead:
     '**Lip blush is cosmetic tattooing that adds colour. Lip filler is an injectable that adds volume.** They do entirely different things, are performed by different professionals under different regulation, and are not alternatives to each other.',
   blocks: [

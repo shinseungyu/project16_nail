@@ -1,5 +1,5 @@
 import type { EnPage } from './types'
-import { EN_UPDATED, EN_UPDATED_ISO, NAIL_PLATE_NOTE } from './common'
+import { EN_UPDATED_BATCH4, EN_UPDATED_BATCH4_ISO, NAIL_PLATE_NOTE } from './common'
 
 export const howToGrowNailsFaster: EnPage = {
   path: '/en/how-to-grow-nails-faster',
@@ -9,9 +9,9 @@ export const howToGrowNailsFaster: EnPage = {
     'You cannot meaningfully speed up nail growth, but you can stop losing length to breakage. What works, and what does not.',
   keywords: ['how to grow nails faster', 'nail growth', 'nails wont grow', 'grow long nails'],
   category: 'Nail Care',
-  stage: 15,
-  updated: EN_UPDATED,
-  updatedIso: EN_UPDATED_ISO,
+  stage: 0,
+  updated: EN_UPDATED_BATCH4,
+  updatedIso: EN_UPDATED_BATCH4_ISO,
   lead:
     '**You cannot meaningfully speed up the growth rate — but most people are not limited by growth. They are limited by breakage.** Nails grow at a fairly fixed pace; length is decided by how much of it you keep.',
   blocks: [

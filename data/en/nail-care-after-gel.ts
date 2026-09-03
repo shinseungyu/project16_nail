@@ -1,5 +1,5 @@
 import type { EnPage } from './types'
-import { EN_UPDATED, EN_UPDATED_ISO, NAIL_PLATE_NOTE } from './common'
+import { EN_UPDATED_BATCH4, EN_UPDATED_BATCH4_ISO, NAIL_PLATE_NOTE } from './common'
 
 export const nailCareAfterGel: EnPage = {
   path: '/en/nail-care-after-gel',
@@ -9,9 +9,9 @@ export const nailCareAfterGel: EnPage = {
     'What to do for thin, sensitive nails after removing gel or acrylic. A realistic recovery routine and an honest timeline.',
   keywords: ['nail care after gel', 'nails after acrylic removal', 'thin nails after gel', 'nail recovery routine'],
   category: 'Nail Care',
-  stage: 15,
-  updated: EN_UPDATED,
-  updatedIso: EN_UPDATED_ISO,
+  stage: 0,
+  updated: EN_UPDATED_BATCH4,
+  updatedIso: EN_UPDATED_BATCH4_ISO,
   lead:
     '**Cuticle oil twice daily, gloves for wet work, and keep them short.** Recovery is about protecting new growth, not repairing what is already there. Expect three to six months for a full growth-out.',
   blocks: [

@@ -1,5 +1,5 @@
 import type { EnPage } from './types'
-import { EN_UPDATED, EN_UPDATED_ISO, NAIL_PLATE_NOTE } from './common'
+import { EN_UPDATED_BATCH4, EN_UPDATED_BATCH4_ISO, NAIL_PLATE_NOTE } from './common'
 
 export const nailFungusAfterAcrylics: EnPage = {
   path: '/en/nail-fungus-after-acrylics',
@@ -9,9 +9,9 @@ export const nailFungusAfterAcrylics: EnPage = {
     'Discolouration or separation after acrylics needs medical assessment, not another set. The warning signs and what not to do.',
   keywords: ['nail fungus after acrylics', 'green nail after acrylic', 'nail infection after nails', 'nail separating from bed'],
   category: 'Nail Care',
-  stage: 15,
-  updated: EN_UPDATED,
-  updatedIso: EN_UPDATED_ISO,
+  stage: 0,
+  updated: EN_UPDATED_BATCH4,
+  updatedIso: EN_UPDATED_BATCH4_ISO,
   lead:
     '**Green, dark or white discolouration, thickening, separation from the nail bed, or pain after acrylics needs a doctor — not another set and not a home remedy.** Nail conditions are treatable, but they need proper diagnosis first.',
   blocks: [

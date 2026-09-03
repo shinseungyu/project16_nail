@@ -1,5 +1,5 @@
 import type { EnPage } from './types'
-import { EN_UPDATED, EN_UPDATED_ISO, DIP_HYGIENE_NOTE } from './common'
+import { EN_UPDATED_BATCH4, EN_UPDATED_BATCH4_ISO, DIP_HYGIENE_NOTE } from './common'
 
 export const whatAreDipPowderNails: EnPage = {
   path: '/en/what-are-dip-powder-nails',
@@ -9,9 +9,9 @@ export const whatAreDipPowderNails: EnPage = {
     'Dip powder uses adhesive and coloured powder built in layers, no lamp needed. How it works, what it costs, and the hygiene question to ask.',
   keywords: ['what are dip powder nails', 'dip powder manicure', 'dip nails process', 'dip powder vs acrylic'],
   category: 'Nails',
-  stage: 14,
-  updated: EN_UPDATED,
-  updatedIso: EN_UPDATED_ISO,
+  stage: 0,
+  updated: EN_UPDATED_BATCH4,
+  updatedIso: EN_UPDATED_BATCH4_ISO,
   lead:
     '**Adhesive is applied to the nail, coloured acrylic powder is layered on top, and an activator hardens it.** No UV lamp required. It lasts three to four weeks and costs $35 to $70. **Ask how the powder is applied — that matters more than most people realise.**',
   blocks: [
