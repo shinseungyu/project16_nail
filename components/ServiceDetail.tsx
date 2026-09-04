@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import AdUnit from '@/components/AdUnit'
+import LinkThumb from '@/components/LinkThumb'
 import RelatedQna from '@/components/RelatedQna'
 import type { SectionKey } from '@/data/qna'
 import type { NailService } from '@/data/services'
@@ -58,6 +59,12 @@ export default function ServiceDetail({ service, siblings, basePath, hubHref, hu
     href === hubHref
       ? hubLabel
       : siblings.find((s) => `${basePath}/${s.id}` === href)?.title ?? CROSS_LABELS[href] ?? href
+
+  /** 본문 중간 "이어서 읽기" 카드를 끼울 소제목 인덱스 — 뒤쪽 60% 지점. */
+  const midLinkIndex = (() => {
+    const heads = service.blocks.map((b, i) => (b.type === 'h' ? i : -1)).filter((i) => i >= 0)
+    return heads.length >= 4 ? heads[Math.floor(heads.length * 0.6)] : -1
+  })()
 
   const faqJsonLd = {
     '@context': 'https://schema.org',
@@ -119,7 +126,38 @@ export default function ServiceDetail({ service, siblings, basePath, hubHref, hu
       <div className="space-y-5">
         {service.blocks.map((block, i) => {
           if (block.type === 'h') {
-            return <h2 key={i} className="text-lg font-extrabold text-stone-900 pt-3">{block.text}</h2>
+            return (
+              <div key={i}>
+                {/*
+                  본문 중간 "이어서 읽기" 카드.
+                  하단 관련글은 끝까지 읽은 사람만 본다. 실제 이동은 한 섹션을 다 읽고
+                  다음 제목으로 넘어가는 경계에서 가장 많이 일어나므로 그 자리에 둔다.
+                */}
+                {i === midLinkIndex && service.related[0] ? (
+                  <Link
+                    href={service.related[0]}
+                    className="group mb-8 flex items-center gap-3 rounded-2xl border-2 border-rose-200 bg-rose-50/60 px-5 py-4 hover:border-rose-400 transition-colors"
+                  >
+                    <LinkThumb
+                      seed={service.related[0]}
+                      label={labelFor(service.related[0])}
+                      className="w-14 rounded-xl shrink-0"
+                      sizes="56px"
+                    />
+                    <span className="text-[15px] font-extrabold text-stone-900 leading-snug break-keep group-hover:text-rose-700 transition-colors">
+                      {labelFor(service.related[0])}
+                    </span>
+                    <span
+                      className="ml-auto shrink-0 w-8 h-8 rounded-full bg-rose-600 text-white flex items-center justify-center group-hover:bg-rose-700 group-hover:translate-x-0.5 transition-all"
+                      aria-hidden
+                    >
+                      →
+                    </span>
+                  </Link>
+                ) : null}
+                <h2 className="text-lg font-extrabold text-stone-900 pt-3">{block.text}</h2>
+              </div>
+            )
           }
           if (block.type === 'p') {
             return <p key={i} className="text-sm text-stone-600 leading-relaxed">{renderText(block.text)}</p>
@@ -193,25 +231,44 @@ export default function ServiceDetail({ service, siblings, basePath, hubHref, hu
         </div>
       </section>
 
-      {/* 내부링크 */}
-      <div className="mb-10">
-        <p className="text-xs font-bold text-stone-400 mb-3 uppercase tracking-widest">함께 보면 좋은 글</p>
-        {/* 1:1 정사각 카드 — 모바일 2열, sm 이상 3열 */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
+      {/*
+        내부링크 — 페이지에서 가장 눈에 띄어야 하는 블록.
+
+        예전에는 aspect-square 정사각 카드였는데 제목이 짧아 가운데가 텅 비고,
+        흰 배경 위 흰 카드라 페이지에 묻혔다. 블록 전체를 색이 있는 패널로 감싸
+        본문과 분리하고, 화살표를 처음부터 채워진 원형 버튼으로 만들어
+        "누를 수 있는 것"으로 읽히게 했다.
+      */}
+      <section className="mb-10 rounded-3xl border-2 border-rose-100 bg-gradient-to-br from-rose-50/80 via-white to-stone-50 p-6 md:p-8">
+        <div className="flex items-center gap-2.5">
+          <span className="w-1.5 h-6 rounded-full bg-rose-500 shrink-0" aria-hidden />
+          <h2 className="text-xl md:text-2xl font-extrabold text-stone-900">함께 보면 좋은 글</h2>
+        </div>
+        <p className="text-[13px] text-stone-500 mt-2 mb-6 pl-4">이 글을 읽은 분들이 이어서 많이 봅니다</p>
+        {/* 3열 = 각 33.33%, 이미지는 1:1 */}
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
           {service.related.map((href) => (
             <Link
               key={href}
               href={href}
-              className="group aspect-square bg-stone-50 border border-stone-200 rounded-2xl p-5 flex flex-col justify-between hover:border-stone-400 hover:bg-white hover:shadow-md transition-all"
+              className="group overflow-hidden rounded-2xl border-2 border-stone-200 bg-white hover:border-rose-400 hover:shadow-lg hover:shadow-rose-900/5 hover:-translate-y-0.5 transition-all"
             >
-              <p className="text-[15px] sm:text-base font-extrabold text-stone-800 leading-snug break-keep">
-                {labelFor(href)}
-              </p>
-              <span className="self-end text-lg text-stone-300 group-hover:text-stone-700 transition-colors">→</span>
+              <LinkThumb seed={href} label={labelFor(href)} />
+              <div className="flex items-center gap-2.5 px-4 py-3.5">
+                <span className="text-[15px] font-extrabold text-stone-900 leading-snug break-keep group-hover:text-rose-700 transition-colors">
+                  {labelFor(href)}
+                </span>
+                <span
+                  className="ml-auto shrink-0 w-7 h-7 rounded-full bg-rose-600 text-white flex items-center justify-center text-[15px] group-hover:bg-rose-700 group-hover:translate-x-0.5 transition-all"
+                  aria-hidden
+                >
+                  →
+                </span>
+              </div>
             </Link>
           ))}
         </div>
-      </div>
+      </section>
 
       {/* 멀티플렉스 광고 (관련 콘텐츠) */}
       {QNA_SECTION_BY_BASE[basePath] && (

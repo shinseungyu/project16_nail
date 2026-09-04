@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import AdUnit from '@/components/AdUnit'
+import LinkThumb from '@/components/LinkThumb'
 import { SITE_URL } from '@/lib/hreflang'
 import type { EnBlock, EnPage } from '@/data/en/types'
 import { EN_SECTIONS, isReleased } from '@/data/en'
@@ -24,11 +25,51 @@ function clusterSiblings(page: EnPage) {
   return siblings.length > 0 ? { title: section.title, siblings } : null
 }
 
-/** **bold** 마크다운만 지원. 한국어 ServiceDetail과 같은 규칙이다. */
+/** **bold** 를 노드 배열로. rich() 내부에서만 쓴다. */
+function bold(text: string, keyPrefix: string): React.ReactNode[] {
+  return text
+    .split('**')
+    .map((part, i) =>
+      i % 2 === 1 ? (
+        <strong key={`${keyPrefix}-b${i}`} className="font-bold text-stone-900">
+          {part}
+        </strong>
+      ) : (
+        <span key={`${keyPrefix}-t${i}`}>{part}</span>
+      )
+    )
+}
+
+/** 본문 안 링크: [라벨](/en/경로). 사이트 내부 경로만 허용한다. */
+const INLINE_LINK = /\[([^\]]+)\]\((\/[^)\s]+)\)/g
+
+/**
+ * **bold** 와 [라벨](/경로) 인라인 링크를 지원한다.
+ *
+ * 본문 중간 링크는 하단 관련글 블록보다 훨씬 많이 클릭된다. 문맥 안에 있어서
+ * 독자가 "지금 궁금한 것"에 바로 대응하기 때문이다. SEO 측면에서도 보일러플레이트
+ * 링크보다 문맥 링크의 가중치가 높다. 그래서 블록 모델에 링크를 넣을 수 있게 했다.
+ */
 function rich(text: string): React.ReactNode {
-  return text.split('**').map((part, i) =>
-    i % 2 === 1 ? <strong key={i} className="font-bold text-stone-900">{part}</strong> : part
-  )
+  const out: React.ReactNode[] = []
+  let last = 0
+  let m: RegExpExecArray | null
+  INLINE_LINK.lastIndex = 0
+  while ((m = INLINE_LINK.exec(text)) !== null) {
+    if (m.index > last) out.push(...bold(text.slice(last, m.index), `s${last}`))
+    out.push(
+      <Link
+        key={`l${m.index}`}
+        href={m[2]}
+        className="font-semibold text-rose-700 underline decoration-rose-300 underline-offset-2 hover:decoration-rose-600 transition-colors"
+      >
+        {bold(m[1], `l${m.index}i`)}
+      </Link>
+    )
+    last = m.index + m[0].length
+  }
+  if (last < text.length) out.push(...bold(text.slice(last), `s${last}`))
+  return out
 }
 
 function Block({ b }: { b: EnBlock }) {
@@ -157,6 +198,20 @@ export default function EnArticle({ page }: { page: EnPage }) {
     return -1
   })()
 
+  /**
+   * 본문 중간 관련글 카드 위치 — 뒤쪽 h2 직전.
+   *
+   * 하단 "Keep reading" 블록은 끝까지 읽은 사람만 본다. 실제로 다음 글로 넘어가는
+   * 클릭은 본문 중간, 그것도 한 섹션을 다 읽고 다음 제목으로 넘어가는 경계에서 나온다.
+   * 광고 자리(midIndex)와 겹치지 않도록 충분히 뒤쪽에 둔다.
+   */
+  const linkCardIndex = (() => {
+    const h2s = page.blocks.map((b, i) => (b.t === 'h2' ? i : -1)).filter((i) => i >= 0)
+    if (h2s.length < 4) return -1
+    const at = h2s[Math.floor(h2s.length * 0.6)]
+    return at > midIndex + 2 ? at : -1
+  })()
+
   const breadcrumbJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
@@ -237,6 +292,30 @@ export default function EnArticle({ page }: { page: EnPage }) {
 
         {page.blocks.map((b, i) => (
           <div key={i}>
+            {i === linkCardIndex && page.related.length > 0 ? (
+              <aside className="my-10 rounded-2xl border-2 border-rose-200 bg-rose-50/60 p-5 md:p-6">
+                <p className="text-[11.5px] font-bold text-rose-500 uppercase tracking-widest mb-2.5">
+                  Read next
+                </p>
+                <Link href={page.related[0].href} className="group flex items-center gap-3.5">
+                  <LinkThumb
+                    seed={page.related[0].href}
+                    label={page.related[0].label}
+                    className="w-14 rounded-xl shrink-0"
+                    sizes="56px"
+                  />
+                  <span className="text-[17px] md:text-[19px] font-extrabold text-stone-900 leading-snug group-hover:text-rose-700 transition-colors">
+                    {page.related[0].label}
+                  </span>
+                  <span
+                    className="ml-auto shrink-0 w-9 h-9 rounded-full bg-rose-600 text-white flex items-center justify-center text-[17px] group-hover:bg-rose-700 group-hover:translate-x-0.5 transition-all"
+                    aria-hidden
+                  >
+                    &rarr;
+                  </span>
+                </Link>
+              </aside>
+            ) : null}
             <Block b={b} />
             {i === midIndex ? <AdUnit slot="3886825955" format="fluid" layout="in-article" /> : null}
           </div>
@@ -265,16 +344,31 @@ export default function EnArticle({ page }: { page: EnPage }) {
         ) : null}
 
         {page.related.length > 0 ? (
-          <section className="mt-16 pt-10 border-t border-stone-200">
-            <p className="text-[12px] font-bold text-stone-500 uppercase tracking-widest mb-4">Keep reading</p>
-            <div className="grid sm:grid-cols-2 gap-3">
+          <section className="mt-16 rounded-3xl border-2 border-rose-100 bg-gradient-to-br from-rose-50/80 via-white to-stone-50 p-6 md:p-8">
+            <div className="flex items-center gap-2.5">
+              <span className="w-1.5 h-6 rounded-full bg-rose-500 shrink-0" aria-hidden />
+              <h2 className="text-xl md:text-2xl font-extrabold text-stone-900">Keep reading</h2>
+            </div>
+            <p className="text-[13px] text-stone-500 mt-2 mb-6 pl-4">What people read next after this page</p>
+            <div className="grid sm:grid-cols-2 gap-3.5">
               {page.related.map((r) => (
                 <Link
                   key={r.href}
                   href={r.href}
-                  className="rounded-xl border border-stone-200 px-5 py-4 text-[15px] font-semibold text-stone-800 hover:border-rose-300 hover:text-rose-700 transition-colors"
+                  className="group overflow-hidden rounded-2xl border-2 border-stone-200 bg-white hover:border-rose-400 hover:shadow-lg hover:shadow-rose-900/5 hover:-translate-y-0.5 transition-all"
                 >
-                  {r.label}
+                  <LinkThumb seed={r.href} label={r.label} sizes="(max-width: 640px) 100vw, 50vw" />
+                  <div className="flex items-center gap-2.5 px-4 py-3.5">
+                    <span className="min-w-0 text-[15px] font-extrabold text-stone-900 leading-snug group-hover:text-rose-700 transition-colors">
+                      {r.label}
+                    </span>
+                    <span
+                      className="ml-auto shrink-0 w-7 h-7 rounded-full bg-rose-600 text-white flex items-center justify-center text-[15px] group-hover:bg-rose-700 group-hover:translate-x-0.5 transition-all"
+                      aria-hidden
+                    >
+                      &rarr;
+                    </span>
+                  </div>
                 </Link>
               ))}
             </div>
