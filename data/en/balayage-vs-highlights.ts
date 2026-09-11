@@ -114,6 +114,7 @@ export const balayageVsHighlights: EnPage = {
       ],
     },
     { t: 'p', text: 'This also prevents the most common mismatch, where someone books balayage for the low maintenance and then wants root brightness that balayage is specifically designed not to give.' },
+    { t: 'p', text: 'Looking at foilyage instead? That is balayage-style placement wrapped in foil for more lift, and it is a different comparison — see [Balayage vs Foilyage](/en/balayage-vs-foilyage).' },
   ],
   faq: [
     { q: 'Which lasts longer?', a: 'Balayage, because the grow-out is far less visible. The colour itself fades at a similar rate in both.' },

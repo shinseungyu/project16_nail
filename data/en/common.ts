@@ -19,6 +19,10 @@ export const EN_UPDATED_BATCH5_ISO = '2026-09-11'
 export const EN_UPDATED_BATCH6 = 'September 11, 2026'
 export const EN_UPDATED_BATCH6_ISO = '2026-09-11'
 
+/** 7차 배치 공개일 — 기존 microneedling +4 / press on nails +3 / balayage +3 클러스터 확장 10편 (stage 16) */
+export const EN_UPDATED_BATCH7 = 'September 12, 2026'
+export const EN_UPDATED_BATCH7_ISO = '2026-09-12'
+
 /**
  * 기획서 지정: 원화 기준 + 달러 근사치 병기.
  * 환율은 계속 움직이므로 "가정한 환산율"을 명시하고, 달러값은 어림수라고 못 박는다.
@@ -52,7 +56,7 @@ export const US_PAY_NOTE =
  * 8/24 대기열 stage 6~13(59편)은 이 값을 13으로 올려 공개. 현재 미공개 페이지 없음.
  * 다음 배치부터는 새 stage(14~)를 부여하고 이 값을 올리는 방식으로 계속 쓰면 된다.
  */
-export const EN_RELEASED_STAGE = 15
+export const EN_RELEASED_STAGE = 16
 
 /**
  * 의료 인접 시술(microneedling, chemical peel 등) 공통 고지.

@@ -93,7 +93,7 @@ export const howLongDoPressOnNailsLast: EnPage = {
         ['Best for', 'One event, frequent changes', 'Two-week wear'],
       ],
     },
-    { t: 'p', text: 'Many people use both — tabs for a weekend, glue when they want the set to hold. Buying one of each costs very little and removes the compromise entirely.' },
+    { t: 'p', text: 'Many people use both — tabs for a weekend, glue when they want the set to hold. Buying one of each costs very little and removes the compromise entirely. [Press On Nails: Glue vs Adhesive Tabs](/en/press-on-nails-glue-vs-tabs) goes through the choice in full, including how each one comes off.' },
     { t: 'h2', id: 'troubleshooting', text: 'Troubleshooting by symptom' },
     { t: 'p', text: 'Failures follow patterns, and the pattern usually points at the cause more precisely than a general checklist does.' },
     {

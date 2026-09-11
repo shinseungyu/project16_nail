@@ -111,7 +111,7 @@ export const microneedlingHealingTime: EnPage = {
         '**Weeks between sessions** is standard; your provider sets the exact interval.',
         '**Shortening the gap does not accelerate results** and increases risk.',
         '**A full course runs over months**, which is worth knowing before you start.',
-        '**Assessment happens at the end**, not after session one.',
+        '**Assessment happens at the end**, not after session one — see [How Many Microneedling Sessions Do You Need?](/en/how-many-microneedling-sessions).',
       ],
     },
     { t: 'note', title: 'Plan the course, not the appointment', text: 'People often book the first session around a date and then find the rest of the course collides with things. Mapping the whole schedule at the start avoids that.' },

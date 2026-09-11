@@ -109,7 +109,7 @@ export const isMicroneedlingWorthIt: EnPage = {
         ['What happens if you see nothing', 'Worth knowing the plan before you start'],
       ],
     },
-    { t: 'p', text: 'Taking a photo in consistent lighting at the start is more useful than memory. Gradual change is hard to notice from the inside, in both directions.' },
+    { t: 'p', text: 'Taking a photo in consistent lighting at the start is more useful than memory. Gradual change is hard to notice from the inside, in both directions. [Microneedling Before and After](/en/microneedling-before-and-after) covers how to take those photos so the comparison actually means something.' },
     { t: 'h2', id: 'who-it-suits', text: 'Who tends to be satisfied' },
     { t: 'p', text: 'Patterns worth being honest with yourself about, because they predict satisfaction better than the treatment itself does.' },
     {

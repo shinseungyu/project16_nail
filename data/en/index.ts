@@ -228,6 +228,16 @@ import { backFacialBenefits } from './back-facial-benefits'
 import { backFacialCost } from './back-facial-cost'
 import { backFacialWhatToExpect } from './back-facial-what-to-expect'
 import { preventBackAcne } from './prevent-back-acne'
+import { microneedlingBeforeAndAfter } from './microneedling-before-and-after'
+import { howManyMicroneedlingSessions } from './how-many-microneedling-sessions'
+import { microneedlingForAcneScars } from './microneedling-for-acne-scars'
+import { microneedlingVsRfMicroneedling } from './microneedling-vs-rf-microneedling'
+import { pressOnNailsGlueVsTabs } from './press-on-nails-glue-vs-tabs'
+import { pressOnNailsCost } from './press-on-nails-cost'
+import { pressOnNailsLifting } from './press-on-nails-lifting'
+import { partialVsFullBalayage } from './partial-vs-full-balayage'
+import { balayageShortHair } from './balayage-short-hair'
+import { balayageVsFoilyage } from './balayage-vs-foilyage'
 
 /**
  * 영문 콘텐츠 페이지 전체 목록.
@@ -317,6 +327,10 @@ export const EN_SECTIONS: EnSection[] = [
       isMicroneedlingWorthIt,
       microneedlingAtHomeVsProfessional,
       whoCanPerformMicroneedling,
+      microneedlingBeforeAndAfter,
+      howManyMicroneedlingSessions,
+      microneedlingForAcneScars,
+      microneedlingVsRfMicroneedling,
     ],
   },
   {
@@ -334,6 +348,9 @@ export const EN_SECTIONS: EnSection[] = [
       pressOnNailsVsGel,
       pressOnNailsShortNails,
       reusingPressOnNails,
+      pressOnNailsGlueVsTabs,
+      pressOnNailsCost,
+      pressOnNailsLifting,
     ],
   },
   {
@@ -351,6 +368,9 @@ export const EN_SECTIONS: EnSection[] = [
       balayageVsOmbre,
       balayageGoneWrong,
       balayageDamage,
+      partialVsFullBalayage,
+      balayageShortHair,
+      balayageVsFoilyage,
     ],
   },
   {

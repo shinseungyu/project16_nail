@@ -41,7 +41,7 @@ export const pressOnNailsVsGel: EnPage = {
         ['Gel every 3 weeks plus removal fees', 'approx. $700 - 1,300'],
       ],
     },
-    { t: 'p', text: '**Press ons are cheaper, but not by as much as the sticker price suggests** once you account for how often you replace them. Reusing is what turns the gap from meaningful into large.' },
+    { t: 'p', text: '**Press ons are cheaper, but not by as much as the sticker price suggests** once you account for how often you replace them. Reusing is what turns the gap from meaningful into large. [Press On Nails Cost vs a Salon Manicure](/en/press-on-nails-cost) extends this to acrylic, Gel X and polygel, plus the supplies people forget to count.' },
     { t: 'h2', id: 'damage', text: 'Which damages nails more' },
     { t: 'p', text: '**Neither, if removed properly. Both, if you pull them off.** The damage mechanism is identical: force separates the adhesive along with layers of nail plate. Soaking is the answer in both cases.' },
     { t: 'p', text: 'There is one real difference. Gel prep involves buffing the natural nail to give the product something to grip, and press ons generally need less of that. Over months of continuous wear, that is a genuine if modest advantage.' },
