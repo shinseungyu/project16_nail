@@ -11,6 +11,10 @@ export const EN_UPDATED_ISO = '2026-08-20'
 export const EN_UPDATED_BATCH4 = 'September 3, 2026'
 export const EN_UPDATED_BATCH4_ISO = '2026-09-03'
 
+/** 5차 배치 공개일 — powder brows / hair gloss·toner / hair extensions / polygel 27편 (stage 14) */
+export const EN_UPDATED_BATCH5 = 'September 11, 2026'
+export const EN_UPDATED_BATCH5_ISO = '2026-09-11'
+
 /**
  * 기획서 지정: 원화 기준 + 달러 근사치 병기.
  * 환율은 계속 움직이므로 "가정한 환산율"을 명시하고, 달러값은 어림수라고 못 박는다.
@@ -44,7 +48,7 @@ export const US_PAY_NOTE =
  * 8/24 대기열 stage 6~13(59편)은 이 값을 13으로 올려 공개. 현재 미공개 페이지 없음.
  * 다음 배치부터는 새 stage(14~)를 부여하고 이 값을 올리는 방식으로 계속 쓰면 된다.
  */
-export const EN_RELEASED_STAGE = 13
+export const EN_RELEASED_STAGE = 14
 
 /**
  * 의료 인접 시술(microneedling, chemical peel 등) 공통 고지.
@@ -126,6 +130,24 @@ export const WAX_BURN_NOTE =
  */
 export const LIP_BLUSH_HSV_NOTE =
   'General information, not medical advice. Lip tattooing can reactivate the herpes simplex virus in people who carry it, and an outbreak during healing can affect both comfort and the result. If you have ever had a cold sore, raise it at consultation — your artist may ask you to discuss antiviral prophylaxis with your doctor beforehand. Contact a doctor for blistering, spreading redness, pus, fever or increasing pain.'
+
+/**
+ * 헤어 익스텐션 전용 고지.
+ * 기획서 필수: 견인성 탈모(traction alopecia)를 "연관되어 논의됨"으로만 — 단정 금지.
+ * 이 클러스터의 최대 차별점이므로 정확하게 다루되 겁주지 않는다.
+ * 금지: "damage-free" / "익스텐션이 탈모를 유발한다" / 진단 시도
+ * 쓸 것: 통증·당김은 정상이 아니다 / 빠짐 증가·헤어라인 후퇴는 의사 상담
+ */
+export const EXTENSIONS_TENSION_NOTE =
+  'General information, not medical advice. Sustained tension on hair follicles has been discussed in connection with traction alopecia, a form of hair loss linked to prolonged pulling — which is why weight, tightness and wear time matter more than which method you choose. Extensions should not hurt: persistent pulling or soreness means they need adjusting. See a doctor or dermatologist for increased shedding at attachment points, a receding hairline, or scalp changes that do not settle.'
+
+/**
+ * 헤어 글로스·토너 전용 고지.
+ * 기획서 필수: 글로스는 밝게 만들지 못한다. 토너가 탈색보다 먼저 빠진다는 설명이 핵심 차별점.
+ * 금지: 특정 브랜드·제품 추천 / "손상 제로" / 글로스로 새치 완전 커버 가능
+ */
+export const GLOSS_TONER_NOTE =
+  'General information. Gloss, glaze and toner are deposit-only products: none of them lighten hair, and none reliably cover grey. Salons use the terms inconsistently, so describe the result you want rather than naming a product. Prices are ranges and vary by salon and region.'
 
 /**
  * 페이셜 스티머 전용 고지.

@@ -1,0 +1,138 @@
+import type { EnPage } from './types'
+import { EN_UPDATED_BATCH5, EN_UPDATED_BATCH5_ISO, NAIL_PLATE_NOTE } from './common'
+
+export const polygelVsAcrylic: EnPage = {
+  path: '/en/polygel-vs-acrylic',
+  title: 'Polygel vs Acrylic Nails: Honest Comparison',
+  h1: 'Polygel vs Acrylic Nails',
+  description:
+    'Polygel is lighter and has less odour; acrylic is cheaper and sets faster. A side-by-side on cost, working time, strength and removal.',
+  keywords: ['polygel vs acrylic', 'polygel or acrylic', 'is polygel better than acrylic'],
+  category: 'Nails',
+  stage: 14,
+  updated: EN_UPDATED_BATCH5,
+  updatedIso: EN_UPDATED_BATCH5_ISO,
+  lead:
+    '**Polygel is lighter, has minimal odour, and gives a technician unlimited working time before it cures. Acrylic is cheaper, sets within minutes, and is available almost everywhere.** Neither is more "damaging" than the other - removal technique decides that.',
+  blocks: [
+    { t: 'note', tone: 'warn', text: NAIL_PLATE_NOTE },
+    { t: 'h2', id: 'comparison', text: 'Comparison' },
+    {
+      t: 'table',
+      head: ['', 'Polygel', 'Acrylic'],
+      rows: [
+        ['Curing', 'Lamp, on command', 'Air, starts within minutes'],
+        ['Odour', 'Minimal', 'Noticeable - monomer smell'],
+        ['Working time', 'Unlimited until cured', 'A few minutes per nail'],
+        ['Weight at length', 'Lighter', 'Heavier'],
+        ['Self-levelling', 'No - shaped by hand over a form', 'No - sculpted while workable'],
+        ['Cost, full set', '$50 - 100', '$40 - 90'],
+        ['Fill', '$35 - 70', '$35 - 65'],
+        ['Removal', 'Filed seal, then soak-off', 'Usually filed'],
+      ],
+    },
+    { t: 'p', text: 'Prices vary by salon and region - treat these as typical ranges rather than a quote. See [Polygel Nails at Home](/en/polygel-nails-at-home) for kit pricing instead of salon pricing.' },
+    { t: 'h2', id: 'annual', text: 'Annual cost' },
+    {
+      t: 'table',
+      head: ['System', 'Set plus 12 fills'],
+      rows: [
+        ['Polygel, $75 plus $55 x 12', 'approx. $735'],
+        ['Acrylic, $65 plus $50 x 12', 'approx. $665'],
+      ],
+    },
+    { t: 'p', text: '**Acrylic remains the cheaper habit**, by roughly $70 a year at typical intervals. Polygel buys lighter weight, less odour, and a longer working window for the technician - whether that is worth the gap is a personal call, not a safety one.' },
+    { t: 'h2', id: 'which', text: 'Which to choose' },
+    {
+      t: 'table',
+      head: ['You want', 'Pick'],
+      rows: [
+        ['No monomer smell', 'Polygel'],
+        ['The lowest cost', 'Acrylic'],
+        ['A fully custom sculpted curve', 'Polygel'],
+        ['Very fast application per nail', 'Acrylic'],
+        ['Lighter weight at length', 'Polygel'],
+        ['The widest salon availability', 'Acrylic'],
+      ],
+    },
+    { t: 'h2', id: 'working-time', text: 'Working time changes what happens in the chair' },
+    { t: 'p', text: 'This is the least talked-about difference and arguably the most practical one. Acrylic sets on a clock the technician cannot pause; polygel cures only when placed under the lamp, so shaping can be slower and more deliberate.' },
+    {
+      t: 'table',
+      head: ['', 'Polygel', 'Acrylic'],
+      rows: [
+        ['Pace of application', 'Can pause, reposition, refine before curing', 'Continuous - product hardens as they work'],
+        ['Forgiving of a slow technician', 'Yes', 'Less so - a hardened bead cannot be reshaped'],
+        ['Risk if rushed', 'Under-curing if the lamp step is skipped', 'Uneven shape if worked too fast'],
+        ['Best for intricate custom shapes', 'Polygel, generally', 'Possible but less forgiving'],
+      ],
+    },
+    { t: 'p', text: '**Neither working-time style makes the result stronger.** It changes who finds the appointment more comfortable to sit through and which system a slower or newer technician finds easier to get right.' },
+    { t: 'h2', id: 'damage', text: 'Damage' },
+    { t: 'p', text: '**Neither product is inherently more damaging than the other.** Both come down to how the natural nail is prepped beforehand and how the enhancement is removed afterward.' },
+    { t: 'p', text: 'Polygel’s removal starts with filing the top coat and bulk to break the sealed surface, then soaking in acetone - similar in spirit to soak-off builder gel. Acrylic is more often filed down fully. **Filing-heavy removal done carelessly is the higher-risk step in either system**, not the wearing of the product itself.' },
+    { t: 'h2', id: 'switching', text: 'Switching between them' },
+    {
+      t: 'ol',
+      items: [
+        '**Book a removal plus a new set**, not a fill, when changing systems.',
+        '**Tell the technician what is currently on your nails** so they use the correct removal method.',
+        '**Look at the natural nail** before anything new goes on.',
+        '**Take a short break** if it looks thin, rather than covering it immediately.',
+      ],
+    },
+    { t: 'h2', id: 'appointment', text: 'The appointment experience' },
+    { t: 'p', text: 'Beyond cost and durability, the two are genuinely different to sit through, and for some people that alone decides it.' },
+    {
+      t: 'table',
+      head: ['', 'Polygel', 'Acrylic'],
+      rows: [
+        ['Smell', 'Minimal', 'Strong monomer odour'],
+        ['Curing', 'Hands under a lamp, repeatedly', 'Air hardens as the technician works'],
+        ['Filing dust during application', 'Less', 'More'],
+        ['Ventilation needed', 'Standard', 'Matters a great deal'],
+        ['First-set length', 'Often 3 hours or more', 'Usually shorter, 60 - 90 minutes'],
+      ],
+    },
+    { t: 'p', text: 'The odour difference moves more people than the price gap does. Monomer smell lingers on clothing and hair, and anyone sensitive to it has effectively already chosen.' },
+    { t: 'h2', id: 'availability', text: 'Availability and technician skill' },
+    { t: 'p', text: 'Acrylic has been offered almost everywhere for decades, so the skill spread between technicians has narrowed over time. Polygel is newer to many salons, and dual-form sculpting is its own skill separate from acrylic experience.' },
+    {
+      t: 'table',
+      head: ['Signal', 'What it suggests'],
+      rows: [
+        ['Comfortable fitting and sizing dual forms', 'Has done this specific system before'],
+        ['Applies in a controlled, unhurried way', 'Understands the working-time advantage'],
+        ['Keeps product off the skin and cuticle', 'Knows where lifting starts - see Why Polygel Lifts'],
+        ['Offers a filed-seal, soak-off removal', 'Expects to remove it properly, not pop it off'],
+        ['One thick lump pressed on and cured once', 'Worth asking about before booking again'],
+      ],
+    },
+    { t: 'p', text: 'Asking to see healed work at two or three weeks tells you more than a fresh photo. A set that looks flawless on day one and lifts by day five looks identical from the chair.' },
+    { t: 'h2', id: 'longevity', text: 'Which holds up over a year' },
+    { t: 'p', text: 'Both wear similarly per set at the typical three-to-four-week fill cycle. Where they diverge is in what a year of continuous wear does to the nail underneath, and that depends more on the person doing the removals than on the product line.' },
+    {
+      t: 'table',
+      head: ['', 'Polygel', 'Acrylic'],
+      rows: [
+        ['Wear per set', '3 - 4 weeks', '3 - 4 weeks'],
+        ['Removals per year, typical', '2 - 4', '2 - 4'],
+        ['Damage risk per removal', 'Lower if the seal is filed lightly and it is soaked, not forced', 'Higher, filing-technique dependent'],
+        ['Cumulative effect', 'Depends on prep and removal discipline', 'Depends on removal skill'],
+      ],
+    },
+    { t: 'p', text: 'With a careful technician on either side, a year of polygel and a year of acrylic look about the same on the nail underneath. With a rushed one, the system that relies less on freehand filing tends to forgive more.' },
+  ],
+  faq: [
+    { q: 'Which is stronger, polygel or acrylic?', a: 'Comparable in practice. Acrylic is more rigid; polygel is lighter at the same length. Technique matters more than the product category.' },
+    { q: 'Which is cheaper?', a: 'Acrylic, by roughly $70 a year at typical fill intervals.' },
+    { q: 'Which smells less?', a: 'Polygel, significantly. There is no monomer liquid involved.' },
+    { q: 'Can I switch from acrylic to polygel?', a: 'Yes, at a full removal appointment rather than a fill.' },
+    { q: 'Is polygel safer for weak nails?', a: 'Neither is inherently safer. Risk comes from removal and prep technique, not the product family.' },
+  ],
+  related: [
+    { href: '/en/what-is-polygel', label: 'What Is Polygel?' },
+    { href: '/en/polygel-removal', label: 'How to Remove Polygel Nails Safely' },
+    { href: '/en/gel-x-vs-acrylic', label: 'Gel X vs Acrylic' },
+  ],
+}

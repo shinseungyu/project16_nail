@@ -176,6 +176,38 @@ import { facialSteamerBenefits } from './facial-steamer-benefits'
 import { atHomeExtractions } from './at-home-extractions'
 import { facialSteamerVsProfessionalFacial } from './facial-steamer-vs-professional-facial'
 
+// ── 5차 배치 (2026-09-11, stage 14) ───────────────────────────
+import { whatArePowderBrows } from './what-are-powder-brows'
+import { ombreBrows } from './ombre-brows'
+import { powderBrowsCost } from './powder-brows-cost'
+import { powderBrowsHealing } from './powder-brows-healing'
+import { howLongDoPowderBrowsLast } from './how-long-do-powder-brows-last'
+import { powderBrowsOverMicroblading } from './powder-brows-over-microblading'
+
+import { hairGlossVsToner } from './hair-gloss-vs-toner'
+import { hairGlossTreatment } from './hair-gloss-treatment'
+import { tonerForHair } from './toner-for-hair'
+import { howLongDoesHairGlossLast } from './how-long-does-hair-gloss-last'
+import { howToFixBrassyHair } from './how-to-fix-brassy-hair'
+import { clearGlossVirginHair } from './clear-gloss-virgin-hair'
+import { glossVsGlazeVsDemi } from './gloss-vs-glaze-vs-demi'
+
+import { hairExtensionsTypesCompared } from './hair-extensions-types-compared'
+import { tapeInExtensions } from './tape-in-extensions'
+import { hairExtensionsCost } from './hair-extensions-cost'
+import { howLongDoHairExtensionsLast } from './how-long-do-hair-extensions-last'
+import { doHairExtensionsDamageHair } from './do-hair-extensions-damage-hair'
+import { tapeInExtensionsRemoval } from './tape-in-extensions-removal'
+import { hairExtensionsForFineHair } from './hair-extensions-for-fine-hair'
+import { hairExtensionsCare } from './hair-extensions-care'
+
+import { whatIsPolygel } from './what-is-polygel'
+import { polygelVsAcrylic } from './polygel-vs-acrylic'
+import { polygelVsGelX } from './polygel-vs-gel-x'
+import { polygelRemoval } from './polygel-removal'
+import { polygelNailsAtHome } from './polygel-nails-at-home'
+import { polygelLifting } from './polygel-lifting'
+
 /**
  * 영문 콘텐츠 페이지 전체 목록.
  * 허브의 섹션 카드와 sitemap이 여기서 파생되므로, 페이지를 추가하면 이 파일만 갱신하면 된다.
@@ -535,6 +567,69 @@ export const EN_SECTIONS: EnSection[] = [
       facialSteamerBenefits,
       atHomeExtractions,
       facialSteamerVsProfessionalFacial,
+    ],
+  },
+  {
+    key: 'powder-brows',
+    title: 'Powder brows and ombré',
+    blurb:
+      'Machine-applied cosmetic tattooing that suits oily skin better than microblading. Cost with the touch-up included, the healing stage where the colour seems to vanish, and what is possible over old work.',
+    icon: '🪄',
+    pages: [
+      whatArePowderBrows,
+      ombreBrows,
+      powderBrowsCost,
+      powderBrowsHealing,
+      howLongDoPowderBrowsLast,
+      powderBrowsOverMicroblading,
+    ],
+  },
+  {
+    key: 'hair-gloss',
+    title: 'Hair gloss and toner',
+    blurb:
+      'Two words salons use inconsistently for overlapping products. What each actually does, why blonde goes brassy long before it needs re-lightening, and what to ask for instead of naming a product.',
+    icon: '✨',
+    pages: [
+      hairGlossVsToner,
+      hairGlossTreatment,
+      tonerForHair,
+      howLongDoesHairGlossLast,
+      howToFixBrassyHair,
+      clearGlossVirginHair,
+      glossVsGlazeVsDemi,
+    ],
+  },
+  {
+    key: 'hair-extensions',
+    title: 'Hair extensions',
+    blurb:
+      'Tape-in, bonded, micro-link and clip-in compared on cost, wear time and tension. The first-year total nobody quotes, and an honest look at weight, tightness and removal.',
+    icon: '💇',
+    pages: [
+      hairExtensionsTypesCompared,
+      tapeInExtensions,
+      hairExtensionsCost,
+      howLongDoHairExtensionsLast,
+      doHairExtensionsDamageHair,
+      tapeInExtensionsRemoval,
+      hairExtensionsForFineHair,
+      hairExtensionsCare,
+    ],
+  },
+  {
+    key: 'polygel',
+    title: 'Polygel',
+    blurb:
+      'A putty-like hybrid of acrylic and hard gel, shaped in a dual form and cured under a lamp. How it really differs from acrylic and Gel-X, and why removal is where damage happens.',
+    icon: '💅',
+    pages: [
+      whatIsPolygel,
+      polygelVsAcrylic,
+      polygelVsGelX,
+      polygelRemoval,
+      polygelNailsAtHome,
+      polygelLifting,
     ],
   },
 ]
