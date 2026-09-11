@@ -11,6 +11,10 @@
  *   node scripts/indexnow.mjs --since=7       일수 지정
  *   node scripts/indexnow.mjs --all           사이트맵 전체 제출
  *   node scripts/indexnow.mjs --dry-run       전송하지 않고 대상만 출력
+ *   node scripts/indexnow.mjs --match=a,b     URL 에 a 또는 b 가 든 것만 (쉼표 = OR)
+ *
+ * --match 는 같은 날 두 배치를 공개했을 때 쓴다. lastmod 가 같으면 --since 로는
+ * 이미 제출한 쪽까지 딸려 들어가는데, 바뀌지 않은 URL 재제출은 429 사유다.
  *
  * ⚠️ 바뀌지 않은 URL 을 반복 제출하면 스팸으로 간주되어 429 가 돌아온다.
  *    기본값이 "최근 것만"인 이유다. --all 은 수동으로만 쓸 것.
@@ -45,6 +49,10 @@ const valueOf = (name, fallback) => {
 const submitAll = has('--all')
 const dryRun = has('--dry-run')
 const sinceDays = Number(valueOf('since', '7'))
+const matchTerms = valueOf('match', '')
+  .split(',')
+  .map((s) => s.trim())
+  .filter(Boolean)
 
 async function main() {
   // 키 파일이 살아있지 않으면 무조건 403 이다. 제출 전에 먼저 확인한다.
@@ -80,11 +88,13 @@ async function main() {
   const selected = entries
     .filter((e) => e.loc && e.loc.startsWith(`https://${HOST}/`))
     .filter((e) => submitAll || (e.lastmod && new Date(e.lastmod) >= cutoff))
+    .filter((e) => matchTerms.length === 0 || matchTerms.some((t) => e.loc.includes(t)))
     .map((e) => e.loc)
 
   console.log(
     `사이트맵 ${entries.length}개 중 ${selected.length}개 선택 ` +
-      (submitAll ? '(--all)' : `(최근 ${sinceDays}일 내 lastmod)`)
+      (submitAll ? '(--all)' : `(최근 ${sinceDays}일 내 lastmod)`) +
+      (matchTerms.length ? ` · --match=${matchTerms.join(',')}` : '')
   )
 
   if (selected.length === 0) {
