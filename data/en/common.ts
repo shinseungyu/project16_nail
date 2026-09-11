@@ -15,6 +15,10 @@ export const EN_UPDATED_BATCH4_ISO = '2026-09-03'
 export const EN_UPDATED_BATCH5 = 'September 11, 2026'
 export const EN_UPDATED_BATCH5_ISO = '2026-09-11'
 
+/** 6차 배치 공개일 — hydrafacial / medical esthetician / massage therapist / back facial 21편 (stage 15) */
+export const EN_UPDATED_BATCH6 = 'September 11, 2026'
+export const EN_UPDATED_BATCH6_ISO = '2026-09-11'
+
 /**
  * 기획서 지정: 원화 기준 + 달러 근사치 병기.
  * 환율은 계속 움직이므로 "가정한 환산율"을 명시하고, 달러값은 어림수라고 못 박는다.
@@ -48,7 +52,7 @@ export const US_PAY_NOTE =
  * 8/24 대기열 stage 6~13(59편)은 이 값을 13으로 올려 공개. 현재 미공개 페이지 없음.
  * 다음 배치부터는 새 stage(14~)를 부여하고 이 값을 올리는 방식으로 계속 쓰면 된다.
  */
-export const EN_RELEASED_STAGE = 14
+export const EN_RELEASED_STAGE = 15
 
 /**
  * 의료 인접 시술(microneedling, chemical peel 등) 공통 고지.
@@ -156,3 +160,39 @@ export const GLOSS_TONER_NOTE =
  */
 export const STEAM_CLAIMS_NOTE =
   'General information, not medical advice. Steam softens the skin’s surface and the debris sitting in pores, which makes cleansing and extraction easier — it does not open pores (pores have no muscles), shrink them, detoxify skin, or treat acne. Heat can aggravate rosacea and inflamed or cystic acne, so check with a doctor or a licensed professional if either applies to you.'
+
+/**
+ * HydraFacial 전용 고지.
+ * 기획서 필수: HydraFacial® 은 등록상표다. 일반명사처럼 쓰지 말고, 카테고리를 가리킬 때는
+ * hydradermabrasion 을 쓴다. 브라질리언 블로우아웃 페이지와 동일한 처리.
+ * 금지: treats / cures acne / removes scars / "a hydrafacial"(일반명사 취급)
+ * 쓸 것: may temporarily improve the appearance of
+ */
+export const HYDRAFACIAL_TM_NOTE =
+  'General information, not medical advice. HydraFacial® is a registered trademark for one branded device and protocol; the general category of treatment is called hydradermabrasion, and several companies make comparable systems. Results are cosmetic and temporary — this is not a treatment for acne, pigmentation or scarring. For any skin condition, consult a licensed medical provider.'
+
+/**
+ * medical esthetician 클러스터 전용 고지.
+ * 기획서 필수 차별점: 미국 대부분의 주에서 "medical esthetician" 은 별도 법적 자격이 아니다.
+ * 경쟁 콘텐츠(대부분 학교 사이트)는 별도 자격인 것처럼 쓴다 — 여기가 우리가 이기는 지점.
+ * 금지: 특정 학교·프로그램 추천 / "You need a medical esthetician license" / 특정 시간·요건 단정
+ */
+export const MED_ESTHETICIAN_NOTE =
+  'General information, not legal or career advice. In most US states there is no separate “medical esthetician” license — the term describes a licensed esthetician working in a medical setting. What you may perform is set by your state board, and in some cases by physician supervision rules, not by a job title or an employer. Verify your own requirements and scope directly with your state board, which is the only authoritative source.'
+
+/**
+ * 마사지 테라피스트 급여 클러스터 전용 고지.
+ * 기획서 필수 차별점: "시급 × 40시간 × 52주" 계산이 이 직종에서 틀리는 이유 — 핸즈온 시간의
+ * 물리적 한계. 금지: 단일 확정 수치 / 오래된 데이터를 현재로 제시
+ */
+export const MASSAGE_PAY_NOTE =
+  'General information, not career or financial advice. Figures are reported ranges, not quotes: pay varies widely by state, metro area, setting and commission structure. Note also that hourly rate multiplied by forty hours overstates income in this profession, because most therapists cannot sustain forty hands-on hours a week. Check the Bureau of Labor Statistics and current local listings for figures that apply to you.'
+
+/**
+ * 백페이셜 클러스터 전용 고지.
+ * 기획서 필수: 백페이셜은 등 여드름 "치료"가 아니다. 스파 마케팅이 이 선을 흐리는 지점이라
+ * 여기를 명확히 하는 것이 포지션.
+ * 금지: treats / cures / clears acne
+ */
+export const BACK_FACIAL_NOTE =
+  'General information, not medical advice. A back facial is a cosmetic cleansing and extraction treatment, not a treatment for back acne — it may temporarily improve the appearance of congestion, and that is a different claim. Persistent, painful, cystic, widespread or scarring acne is a medical condition: consult a licensed medical provider, who has options an esthetician does not.'

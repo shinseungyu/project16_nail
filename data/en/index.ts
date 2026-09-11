@@ -207,6 +207,27 @@ import { polygelVsGelX } from './polygel-vs-gel-x'
 import { polygelRemoval } from './polygel-removal'
 import { polygelNailsAtHome } from './polygel-nails-at-home'
 import { polygelLifting } from './polygel-lifting'
+import { whatIsAHydrafacial } from './what-is-a-hydrafacial'
+import { hydrafacialVsRegularFacial } from './hydrafacial-vs-regular-facial'
+import { hydrafacialCost } from './hydrafacial-cost'
+import { hydrafacialBenefits } from './hydrafacial-benefits'
+import { hydrafacialSideEffects } from './hydrafacial-side-effects'
+import { howOftenHydrafacial } from './how-often-hydrafacial'
+import { whatIsAMedicalEsthetician } from './what-is-a-medical-esthetician'
+import { medicalEstheticianSalary } from './medical-esthetician-salary'
+import { medicalEstheticianVsEsthetician } from './medical-esthetician-vs-esthetician'
+import { howToBecomeMedicalEsthetician } from './how-to-become-medical-esthetician'
+import { estheticianScopeOfPractice } from './esthetician-scope-of-practice'
+import { massageTherapistSalary } from './massage-therapist-salary'
+import { massageTherapistHourlyRate } from './massage-therapist-hourly-rate'
+import { massageTherapistSelfEmployed } from './massage-therapist-self-employed'
+import { massageTherapistCareerLongevity } from './massage-therapist-career-longevity'
+import { howToBecomeMassageTherapist } from './how-to-become-massage-therapist'
+import { whatIsABackFacial } from './what-is-a-back-facial'
+import { backFacialBenefits } from './back-facial-benefits'
+import { backFacialCost } from './back-facial-cost'
+import { backFacialWhatToExpect } from './back-facial-what-to-expect'
+import { preventBackAcne } from './prevent-back-acne'
 
 /**
  * 영문 콘텐츠 페이지 전체 목록.
@@ -630,6 +651,63 @@ export const EN_SECTIONS: EnSection[] = [
       polygelRemoval,
       polygelNailsAtHome,
       polygelLifting,
+    ],
+  },
+  {
+    key: 'hydrafacial',
+    title: 'HydraFacial',
+    blurb:
+      'A branded hydradermabrasion treatment, not a category — which is the first thing worth knowing before paying a branded price. Steps, cost, honest results and who should check with a provider first.',
+    icon: '💧',
+    pages: [
+      whatIsAHydrafacial,
+      hydrafacialVsRegularFacial,
+      hydrafacialCost,
+      hydrafacialBenefits,
+      hydrafacialSideEffects,
+      howOftenHydrafacial,
+    ],
+  },
+  {
+    key: 'medical-esthetician',
+    title: 'Medical esthetician',
+    blurb:
+      'In most US states this is not a separate licence — it describes a licensed esthetician working in a medical setting. What the role pays, how scope of practice actually works, and what to ask a school before paying.',
+    icon: '🥼',
+    pages: [
+      whatIsAMedicalEsthetician,
+      medicalEstheticianSalary,
+      medicalEstheticianVsEsthetician,
+      howToBecomeMedicalEsthetician,
+      estheticianScopeOfPractice,
+    ],
+  },
+  {
+    key: 'massage-therapist',
+    title: 'Massage therapist pay',
+    blurb:
+      'Hourly rate times forty hours overstates income in this profession, because hands-on hours are capped by your body. What the realistic numbers look like, and why career longevity is an earnings question.',
+    icon: '💆',
+    pages: [
+      massageTherapistSalary,
+      massageTherapistHourlyRate,
+      massageTherapistSelfEmployed,
+      massageTherapistCareerLongevity,
+      howToBecomeMassageTherapist,
+    ],
+  },
+  {
+    key: 'back-facial',
+    title: 'Back facial',
+    blurb:
+      'A professional deep clean for an area you cannot reach — and not a treatment for back acne, whatever the spa menu says. Steps, cost, what to expect, and the shower-order change that costs nothing.',
+    icon: '🧖',
+    pages: [
+      whatIsABackFacial,
+      backFacialBenefits,
+      backFacialCost,
+      backFacialWhatToExpect,
+      preventBackAcne,
     ],
   },
 ]
