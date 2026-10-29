@@ -29,6 +29,9 @@ export default function RevenuePage() {
       <p className="text-xs font-semibold text-stone-400 mb-2 uppercase tracking-widest">수익 가이드</p>
       <h1 className="text-3xl font-extrabold text-stone-900 mb-3">1인 네일샵 예상 수익</h1>
       <p className="text-stone-500 mb-8">시술 단가와 하루 고객 수를 기준으로 현실적인 월 수익을 계산해드립니다. 손익분기점과 고정비 구조를 먼저 이해하면 창업 후 수익 관리가 훨씬 쉬워집니다.</p>
+
+      {/* 광고 (top) */}
+      <AdUnit slot="7150499722" />
       
       {/* 시술별 단가 */}
       <section className="mb-12">

@@ -68,6 +68,9 @@ export default function CalculatorPage() {
       <p className="text-xs font-semibold text-stone-400 mb-2 uppercase tracking-widest">창업 계산기</p>
       <h1 className="text-3xl font-extrabold text-stone-900 mb-3">1인 네일샵 창업 계산기</h1>
       <p className="text-stone-500 mb-8">창업비용과 예상 수익을 직접 입력해서 손익분기점까지 한번에 계산해보세요.</p>
+
+      {/* 광고 (top) */}
+      <AdUnit slot="7150499722" />
       
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
 
