@@ -4,7 +4,6 @@ import Image from 'next/image'
 import NailCalculatorWidget from '@/components/NailCalculatorWidget'
 import AdUnit from '@/components/AdUnit'
 import { nailServices } from '@/data/services'
-import FormSection from './test/FormSection'
 import HubQuickLinks from '@/components/HubQuickLinks'
 
 const homeFaqs = [
@@ -65,12 +64,6 @@ export default function Home() {
             { href: '/revenue', label: '예상수익', icon: '📈' },
             { href: '/calculator', label: '비용 계산기', icon: '🧮' },
           ]} />
-          <div className="relative mt-12 w-full text-left animate-fade-in-up">
-            <div className="flex justify-center md:justify-start mb-3">
-              <span className="inline-block bg-[#FEE500] text-black text-sm font-extrabold px-4 py-1.5 rounded-full shadow-sm animate-bounce">간편 신청하기 👇</span>
-            </div>
-            <FormSection />
-          </div>
         </div>
       </section>
 

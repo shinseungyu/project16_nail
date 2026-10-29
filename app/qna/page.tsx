@@ -1,7 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import AdUnit from '@/components/AdUnit'
-import FormSection from '../test/FormSection'
 import { QNA_SECTIONS, QNA_ITEMS, itemsBySection, isPublished, PUBLISHED_SLUGS } from '@/data/qna'
 import { QnaLinkRow, QnaPendingRow, QnaCardLink } from '@/components/QnaLinks'
 
@@ -90,12 +89,6 @@ export default function QnaHubPage() {
             />
           ))}
         </div>
-      </section>
-
-      {/* 상담 신청 폼 — 카테고리 목록 바로 아래 1회. min-height로 CLS 방지 */}
-      <section className="mb-10" style={{ minHeight: 320 }}>
-        <h2 className="text-base font-extrabold text-stone-800 mb-3">무료 상담 신청</h2>
-        <FormSection />
       </section>
 
       <AdUnit slot="1591000951" />

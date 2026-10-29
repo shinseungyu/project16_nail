@@ -2,7 +2,6 @@ import type { Metadata } from 'next'
 import RelatedQna from '@/components/RelatedQna'
 import Link from 'next/link'
 import AdUnit from '@/components/AdUnit'
-import FormSection from '../test/FormSection'
 
 export const metadata: Metadata = {
   title: '1인 네일샵 예상 수익 2026 | 월 순수익 현실적으로 보기',
@@ -31,13 +30,6 @@ export default function RevenuePage() {
       <h1 className="text-3xl font-extrabold text-stone-900 mb-3">1인 네일샵 예상 수익</h1>
       <p className="text-stone-500 mb-8">시술 단가와 하루 고객 수를 기준으로 현실적인 월 수익을 계산해드립니다. 손익분기점과 고정비 구조를 먼저 이해하면 창업 후 수익 관리가 훨씬 쉬워집니다.</p>
       
-      <div className="mb-14 animate-fade-in-up">
-        <div className="flex justify-start mb-3">
-          <span className="inline-block bg-[#FEE500] text-black text-sm font-extrabold px-4 py-1.5 rounded-full shadow-sm animate-bounce">간편 신청하기 👇</span>
-        </div>
-        <FormSection />
-      </div>
-
       {/* 시술별 단가 */}
       <section className="mb-12">
         <h2 className="text-xl font-bold text-stone-900 mb-4">네일샵 시술별 평균 단가</h2>
@@ -138,6 +130,9 @@ export default function RevenuePage() {
           </table>
         </div>
       </section>
+
+      {/* 광고 (in-article) */}
+      <AdUnit slot="3886825955" format="fluid" layout="in-article" />
 
       {/* 손익분기점 */}
       <section className="mb-12">

@@ -2,7 +2,6 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import AdUnit from '@/components/AdUnit'
-import FormSection from '@/app/test/FormSection'
 import { QnaLinkRow, QnaPendingRow, QnaCardLink, QnaSeeAllLink } from '@/components/QnaLinks'
 import {
   QNA_DETAILS,
@@ -201,11 +200,8 @@ export default function QnaDetailPage({ params }: { params: { slug: string } }) 
         </section>
       )}
 
-      {/* ⑥ CTA — 상담 신청 폼 */}
-      <section className="mb-9" style={{ minHeight: 320 }}>
-        <h2 className="text-base font-extrabold text-stone-800 mb-3">무료 상담 신청</h2>
-        <FormSection />
-      </section>
+      {/* ⑥ 광고 (article-bottom) */}
+      <AdUnit slot="1591000951" />
 
       {/* ⑦ 관련 질문 4개 — 같은 카테고리 안에서만 */}
       <section className="mb-9">

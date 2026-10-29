@@ -2,7 +2,6 @@ import type { Metadata } from 'next'
 import RelatedQna from '@/components/RelatedQna'
 import Link from 'next/link'
 import AdUnit from '@/components/AdUnit'
-import FormSection from '../test/FormSection'
 
 export const metadata: Metadata = {
   title: '네일샵 창업 준비 단계별 가이드 2026 | 사업자 등록부터 오픈까지',
@@ -31,13 +30,6 @@ export default function GuidePage() {
       <h1 className="text-3xl font-extrabold text-stone-900 mb-3">네일샵 창업 준비 단계별 가이드</h1>
       <p className="text-stone-500 mb-8">처음 창업하는 분도 이 순서대로만 따라가면 빠짐없이 준비할 수 있습니다. 자격증 취득부터 오픈 당일까지 총 6단계로 정리했습니다.</p>
       
-      <div className="mb-14 animate-fade-in-up">
-        <div className="flex justify-start mb-3">
-          <span className="inline-block bg-[#FEE500] text-black text-sm font-extrabold px-4 py-1.5 rounded-full shadow-sm animate-bounce">간편 신청하기 👇</span>
-        </div>
-        <FormSection />
-      </div>
-
       {/* 단계별 가이드 */}
       <section className="mb-12">
         <h2 className="text-xl font-bold text-stone-900 mb-6">네일샵 창업 6단계</h2>
@@ -160,6 +152,9 @@ export default function GuidePage() {
           ))}
         </div>
       </section>
+
+      {/* 광고 (in-article) */}
+      <AdUnit slot="3886825955" format="fluid" layout="in-article" />
 
       {/* 주의사항 */}
       <section className="mb-12">

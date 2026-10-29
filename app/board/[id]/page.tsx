@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import posts from "@/data/posts.json";
-import FormSection from "@/app/test/FormSection";
 import AdUnit from "@/components/AdUnit";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://www.nailstartup.com";
@@ -102,11 +101,6 @@ export default function BoardPostPage({ params }: { params: { id: string } }) {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
       <div className="max-w-3xl mx-auto px-4 py-12 md:py-16">
-        {/* 상담 신청 폼 */}
-        <section className="mb-8">
-          <h2 className="mb-4 text-lg font-bold text-stone-800">무료 상담 신청</h2>
-          <FormSection />
-        </section>
 
         <Link
           href="/board"
