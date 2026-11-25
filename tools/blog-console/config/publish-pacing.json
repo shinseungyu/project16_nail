@@ -1,0 +1,17 @@
+{
+  "_comment": "발행 페이싱 규칙 (project15 publish-pacing.json 의 한국판). 막지 않고 경고·추천 시각만 줍니다.",
+  "_slots_설명": "예약 발행이 실제로 공개되는 시각(한국시간). GitHub Actions blog-scheduled.yml 의 cron 과 맞춰야 합니다(각 시각 5분에 실행).",
+  "slots": [7, 10, 13, 19],
+  "_preferredSlots_설명": "추천 시각을 고를 때 먼저 보는 슬롯 순서.",
+  "preferredSlots": [10, 13, 7, 19],
+  "_minGapHours_설명": "글과 글 사이 최소 간격(시간). 몰아서 올리면 검색엔진에 부자연스럽고, 서로 색인 순서를 다툽니다.",
+  "minGapHours": 20,
+  "_maxPerWeek_설명": "한 주(월~일)에 올릴 최대 편수.",
+  "maxPerWeek": 5,
+  "_maxPerCategoryPerWeek_설명": "같은 카테고리를 한 주에 몰아 쓰면 서로 카니벌라이즈됩니다.",
+  "maxPerCategoryPerWeek": 2,
+  "_weeksAhead_설명": "발행 목록의 캘린더에 보여줄 주 수.",
+  "weeksAhead": 4,
+  "_indexQueueStaleDays_설명": "발행 후 이 일수가 지나도록 구글 색인 요청을 안 했으면 경고.",
+  "indexQueueStaleDays": 3
+}

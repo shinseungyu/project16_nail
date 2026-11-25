@@ -2,7 +2,7 @@
 import fs from 'node:fs'
 import path from 'node:path'
 import { DATA_DIR } from '../env'
-import type { SerpProvider, SerpResult } from '../types'
+import { EMPTY_FEATURES, type SerpFeatures, type SerpProvider, type SerpResult } from '../types'
 
 const DIR = path.join(DATA_DIR, 'serp')
 const TTL_MS = 7 * 24 * 3600_000
@@ -12,6 +12,8 @@ interface Entry {
   provider: SerpProvider
   fetchedAt: number
   data: SerpResult[]
+  /** 예전 캐시에는 없을 수 있음 → 읽을 때 빈 값으로 채운다 */
+  features: SerpFeatures
 }
 
 const file = (keyword: string) => path.join(DIR, Buffer.from(keyword.trim(), 'utf8').toString('hex') + '.json')
@@ -19,18 +21,48 @@ const file = (keyword: string) => path.join(DIR, Buffer.from(keyword.trim(), 'ut
 export function readSerpCache(keyword: string): Entry | null {
   try {
     const e = JSON.parse(fs.readFileSync(file(keyword), 'utf8')) as Entry
-    return Date.now() - e.fetchedAt < TTL_MS ? e : null
+    return Date.now() - e.fetchedAt < TTL_MS ? { ...e, features: e.features ?? EMPTY_FEATURES } : null
   } catch {
     return null
   }
 }
 
-export function writeSerpCache(keyword: string, provider: SerpProvider, data: SerpResult[]) {
+export function writeSerpCache(keyword: string, provider: SerpProvider, data: SerpResult[], features: SerpFeatures) {
   try {
     fs.mkdirSync(DIR, { recursive: true })
-    const e: Entry = { keyword: keyword.trim(), provider, fetchedAt: Date.now(), data }
+    const e: Entry = { keyword: keyword.trim(), provider, fetchedAt: Date.now(), data, features }
     fs.writeFileSync(file(keyword), JSON.stringify(e), 'utf8')
   } catch {
     /* 캐시 실패는 무시 */
+  }
+}
+
+/** 저장된 검색 캐시 목록(관리 화면용) */
+export function listSerpCache(): { keyword: string; provider: SerpProvider; fetchedAt: string; expired: boolean; count: number }[] {
+  try {
+    return fs
+      .readdirSync(DIR)
+      .filter((f) => f.endsWith('.json'))
+      .map((f) => {
+        try {
+          const e = JSON.parse(fs.readFileSync(path.join(DIR, f), 'utf8')) as Entry
+          return { keyword: e.keyword, provider: e.provider, fetchedAt: new Date(e.fetchedAt).toISOString(), expired: Date.now() - e.fetchedAt >= TTL_MS, count: e.data.length }
+        } catch {
+          return null
+        }
+      })
+      .filter((x): x is NonNullable<typeof x> => !!x)
+      .sort((a, b) => b.fetchedAt.localeCompare(a.fetchedAt))
+  } catch {
+    return []
+  }
+}
+
+export function deleteSerpCache(keyword: string): boolean {
+  try {
+    fs.unlinkSync(file(keyword))
+    return true
+  } catch {
+    return false
   }
 }

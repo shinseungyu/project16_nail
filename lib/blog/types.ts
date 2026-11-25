@@ -50,7 +50,7 @@ export interface BlogPost extends BlogContent {
 /** 목록용 요약 */
 export type BlogPostSummary = Pick<
   BlogPost,
-  'id' | 'slug' | 'title' | 'status' | 'version' | 'category' | 'createdAt' | 'updatedAt' | 'publishedAt' | 'scheduledAt'
+  'id' | 'slug' | 'title' | 'status' | 'version' | 'category' | 'keyword' | 'createdAt' | 'updatedAt' | 'publishedAt' | 'scheduledAt'
 >
 
 export function summarize(p: BlogPost): BlogPostSummary {
@@ -61,6 +61,7 @@ export function summarize(p: BlogPost): BlogPostSummary {
     status: p.status,
     version: p.version,
     category: p.category,
+    keyword: p.keyword,
     createdAt: p.createdAt,
     updatedAt: p.updatedAt,
     publishedAt: p.publishedAt,

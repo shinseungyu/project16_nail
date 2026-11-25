@@ -4,11 +4,13 @@
 //  - 프로필 폴더(.chrome-profile-serp)를 계속 써서 쿠키가 남는다 → 캡차가 덜 뜬다.
 //  - 창 없이 먼저 시도, 캡차가 뜨면 창을 띄워 직접 풀 때까지 3분 기다린다.
 //  - 한 번에 한 검색만, 페이지 사이 2~4초 쉰다 → 차단 방지.
-//  ⚠️ 구글 화면 구조가 바뀌면 readResults 를 고쳐야 한다.
+//  - 1페이지에서 지면 특성(다른 사람들이 찾는 질문·관련 검색어·AI 개요·추천 스니펫)도 같이 읽는다.
+//  - 구글이 결과 링크를 암호화된 경유 주소(/goto?url=…)로 주므로, 하나씩 따라가 실제 주소를 얻는다(30초~1분).
+//  ⚠️ 구글 화면 구조가 바뀌면 readResults / readFeatures / resolveRedirect 를 고쳐야 한다.
 // ===========================================================================
 import path from 'node:path'
 import type { BrowserContext, Page } from 'playwright-core'
-import type { SerpResult } from '../types'
+import type { SerpFeatures, SerpFetch, SerpResult } from '../types'
 import { env } from '../env'
 
 const PROFILE_DIR = path.join(process.cwd(), '.chrome-profile-serp')
@@ -65,6 +67,42 @@ async function readResults(page: Page): Promise<{ title: string; url: string }[]
   )
 }
 
+/** 지면 특성 — 화면 구조가 자주 바뀌므로 여러 신호를 같이 보고, 못 읽으면 빈 값(검색 자체는 계속) */
+async function readFeatures(page: Page): Promise<SerpFeatures> {
+  return page
+    .evaluate(() => {
+      const txt = (el: Element | null) => (el?.textContent ?? '').replace(/\s+/g, ' ').trim()
+      const paa = new Set<string>()
+      document.querySelectorAll('[data-q]').forEach((el) => {
+        const q = (el.getAttribute('data-q') ?? '').trim()
+        if (q && q.length <= 80) paa.add(q)
+      })
+      document.querySelectorAll('.related-question-pair [role="button"], .related-question-pair').forEach((el) => {
+        const q = txt(el)
+        if (q && q.length <= 80 && /[?？]$|까요|나요|인가요|ㄹ까|는지|방법|얼마/.test(q)) paa.add(q)
+      })
+      const related = new Set<string>()
+      document.querySelectorAll('#botstuff a[href*="/search?"], #bres a[href*="/search?"]').forEach((a) => {
+        try {
+          const u = new URL((a as HTMLAnchorElement).href)
+          if (u.searchParams.has('start') || u.searchParams.has('tbm') || u.searchParams.has('udm')) return
+          const t = txt(a)
+          if (t.length >= 2 && t.length <= 40 && !/^\d+$|^(다음|이전|더보기)$/.test(t)) related.add(t)
+        } catch {
+          /* 무시 */
+        }
+      })
+      const heads = Array.from(document.querySelectorAll('h1, h2, h3, [role="heading"]')).map(txt)
+      return {
+        hasAiOverview: heads.some((h) => /AI\s*개요|AI Overview/i.test(h)),
+        hasFeaturedSnippet: heads.some((h) => /추천\s*스니펫|Featured snippet/i.test(h)) || !!document.querySelector('.xpdopen .kp-blk'),
+        peopleAlsoAsk: Array.from(paa).slice(0, 10),
+        relatedSearches: Array.from(related).slice(0, 12),
+      }
+    })
+    .catch(() => ({ hasAiOverview: false, hasFeaturedSnippet: false, peopleAlsoAsk: [], relatedSearches: [] }))
+}
+
 function cleanUrl(raw: string): string | null {
   try {
     const u = new URL(raw)
@@ -81,6 +119,41 @@ function cleanUrl(raw: string): string | null {
   }
 }
 
+/** 구글 경유 링크(/goto?url=… 암호화)인가 — 2026년 말부터 결과 링크가 전부 이 형태라 실제 주소가 화면에 없다 */
+function isGoogleRedirect(raw: string): boolean {
+  try {
+    const u = new URL(raw)
+    return /(^|\.)google\./.test(u.hostname) && (u.pathname === '/goto' || u.pathname === '/url') && (u.searchParams.has('url') || u.searchParams.has('q'))
+  } catch {
+    return false
+  }
+}
+
+/**
+ * 경유 링크 → 실제 주소. 같은 브라우저 세션으로 요청해 302 Location 을 읽는다.
+ * 연달아 요청하면 구글이 "N초 뒤 이동" 대기 화면을 주는데, 그때는 N초 기다렸다가 안내된 주소를 다시 따라간다.
+ */
+async function resolveRedirect(ctx: BrowserContext, href: string): Promise<string | null> {
+  let url = href
+  for (let i = 0; i < 4; i++) {
+    const res = await ctx.request.get(url, { maxRedirects: 0, failOnStatusCode: false, timeout: 15_000 }).catch(() => null)
+    if (!res) return null
+    const loc = res.headers()['location']
+    if (loc) {
+      const abs = new URL(loc, url).toString()
+      if (!/(^|\.)google\./.test(new URL(abs).hostname)) return cleanUrl(abs)
+      url = abs
+      continue
+    }
+    const body = await res.text().catch(() => '')
+    const m = body.match(/content="(\d+);\s*url=([^"]+)"/i)
+    if (!m) return null
+    await sleep(Math.min(10, Number(m[1])) * 1000 + 300)
+    url = new URL(m[2].replace(/&amp;/g, '&'), url).toString()
+  }
+  return null
+}
+
 async function waitCaptchaSolved(page: Page) {
   const until = Date.now() + CAPTCHA_WAIT_MS
   while (Date.now() < until) {
@@ -93,13 +166,14 @@ async function waitCaptchaSolved(page: Page) {
 
 class CaptchaError extends Error {}
 
-async function searchOnce(keyword: string, depth: number, headless: boolean): Promise<SerpResult[]> {
+async function searchOnce(keyword: string, depth: number, headless: boolean): Promise<SerpFetch> {
   const ctx = await openContext(headless)
   try {
     const page = ctx.pages()[0] ?? (await ctx.newPage())
     page.setDefaultTimeout(NAV_TIMEOUT_MS)
     const out: SerpResult[] = []
     const seen = new Set<string>()
+    let features: SerpFeatures | null = null
     for (let p = 0; p < Math.max(1, Math.ceil(depth / 10)); p++) {
       if (p > 0) await sleep(2000 + Math.random() * 2000)
       await page.goto(searchUrl(keyword, p * 10), { waitUntil: 'domcontentloaded' })
@@ -109,21 +183,35 @@ async function searchOnce(keyword: string, depth: number, headless: boolean): Pr
         await waitCaptchaSolved(page)
         await page.waitForLoadState('domcontentloaded').catch(() => undefined)
       }
+      if (p === 0) {
+        features = await readFeatures(page)
+        // data-q 에 검색어 자체가 들어오는 경우가 있다(AI 모드 질문) → 빼기
+        const kw = keyword.replace(/\s+/g, '')
+        features.peopleAlsoAsk = features.peopleAlsoAsk.filter((q) => q.replace(/[\s?？]+/g, '') !== kw)
+      }
+      let unresolved = 0
       for (const r of await readResults(page)) {
-        const url = cleanUrl(r.url)
-        if (!url || !r.title || seen.has(url)) continue
+        if (!r.title || out.length >= depth) continue
+        let url = cleanUrl(r.url)
+        if (!url && isGoogleRedirect(r.url)) {
+          url = await resolveRedirect(ctx, r.url)
+          if (!url) unresolved++
+          await sleep(400 + Math.random() * 400)
+        }
+        if (!url || seen.has(url)) continue
         seen.add(url)
         out.push({ position: out.length + 1, title: r.title, url })
       }
+      if (unresolved) console.warn(`[chrome-serp] 실제 주소를 못 찾은 결과 ${unresolved}개는 뺐습니다`)
     }
     if (!out.length) throw new Error('구글 결과를 하나도 읽지 못했어요(화면 구조가 바뀌었을 수 있음). "URL 직접 입력"을 쓰세요.')
-    return out.slice(0, depth)
+    return { results: out.slice(0, depth), features: features ?? { hasAiOverview: false, hasFeaturedSnippet: false, peopleAlsoAsk: [], relatedSearches: [] } }
   } finally {
     await ctx.close().catch(() => undefined)
   }
 }
 
-export function chromeGoogleSearch(keyword: string, depth = 10): Promise<SerpResult[]> {
+export function chromeGoogleSearch(keyword: string, depth = 10): Promise<SerpFetch> {
   return serialize(async () => {
     const headless = env.chromeHeadless
     try {

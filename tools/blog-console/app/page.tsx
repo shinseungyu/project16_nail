@@ -1,11 +1,11 @@
 'use client'
 // ===========================================================================
 //  블로그 콘솔 — project15 블로그 탭과 같은 흐름 (한국 구글 기준)
-//   ① 키워드 → 상위글 찾기(크롬 무료 / URL 직접 / DataForSEO 유료·한도)
-//   ② 고른 글 분석 → 완성 프롬프트 (채팅 AI 에 붙여넣기)
+//   ① 키워드 → 상위글 찾기(크롬 무료 / URL 직접 / DataForSEO 유료·한도) + 지면 강도(이길 수 있나)
+//   ② 고른 글 분석 → 검색의도·공통 주제·빈틈(차별화) → (목차 먼저) → 완성 프롬프트 (채팅 AI 에 붙여넣기)
 //   ③ AI 결과 붙여넣기 → 제목·설명·주소·카테고리 자동 채움 → 본문 수정·이미지
-//   ④ 검수 (발행 조건 + 표현 위험 + 상위글 유사도)
-//   ⑤ 사람 확인 3개 체크 → 초안 저장 / 바로 발행 / 예약 발행 (사이트 발행 API)
+//   ④ 검수 (발행 조건 + 표현 위험 + 상위글 유사도 + 문체·지난 글 중복·키워드 겹침)
+//   ⑤ 사람 확인 체크 → 초안 저장 / 바로 발행 / 예약 발행(페이싱 추천 시각) → 발행 이력 저장
 //  오른쪽 미리보기는 사이트와 같은 컴포넌트(BlogArticle)라 발행 모양 그대로다.
 // ===========================================================================
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
@@ -13,10 +13,13 @@ import BlogArticle from '@site/components/blog/BlogArticle'
 import { parseArticle } from '@site/lib/blog/markdown'
 import { validatePost, type BlogIssue } from '@site/lib/blog/validate'
 import { CATEGORY_KEYS } from '@site/lib/blog/config'
-import type { BlogContent, BlogCover, BlogPost } from '@site/lib/blog/types'
-import { buildPrompt } from '@/lib/prompt'
+import type { BlogContent, BlogCover, BlogPost, BlogPostSummary } from '@site/lib/blog/types'
+import { buildOutlinePrompt, buildPrompt } from '@/lib/prompt'
 import { parsePasted } from '@/lib/parse-pasted'
 import { reviewContent, type ReviewFinding } from '@/lib/review'
+import { closingSentences, styleReview, topPhrases, type HistoryEntry } from '@/lib/style-review'
+import { checkPacing, fmtKst, suggestSlot, toLocalInput, effectiveSlot } from '@/lib/pacing'
+import { SOURCE_LABEL } from '@/lib/gap'
 import { toWebp } from '@/lib/image'
 import type { AnalyzeResponse, Candidate, InternalLink, SerpProvider, SerpResponse } from '@/lib/types'
 
@@ -101,6 +104,15 @@ export default function ConsolePage() {
   const [links, setLinks] = useState<InternalLink[]>([])
   const [linkOff, setLinkOff] = useState<string[]>([])
   const [facts, setFacts] = useState('')
+  /** 사람이 고른 빈틈(차별화 포인트) key — null 이면 추천 1순위 */
+  const [gapPicks, setGapPicks] = useState<string[] | null>(null)
+  // 목차 먼저: ① 목차 프롬프트 → 받은 목차를 고쳐 확정 → ② 본문 프롬프트에 들어간다
+  const [outlineFirst, setOutlineFirst] = useState(true)
+  const [outline, setOutline] = useState('')
+
+  // 지난 글 대조용 (발행 이력 · 사이트 글 목록)
+  const [history, setHistory] = useState<HistoryEntry[]>([])
+  const [sitePosts, setSitePosts] = useState<BlogPostSummary[]>([])
 
   // ③ 원고
   const [pasted, setPasted] = useState('')
@@ -112,15 +124,25 @@ export default function ConsolePage() {
   const mdRef = useRef<HTMLTextAreaElement>(null)
 
   // ⑤ 발행
-  const [approve, setApprove] = useState({ facts: false, wording: false, read: false })
+  const [approve, setApprove] = useState({ facts: false, wording: false, read: false, images: false })
   const [scheduleAt, setScheduleAt] = useState('')
   const [restored, setRestored] = useState(false)
 
   const set = <K extends keyof Form>(k: K, v: Form[K]) => setForm((f) => ({ ...f, [k]: v }))
 
   // ── 처음: 상태 + (?id= 이면 그 글 불러오기 / 아니면 작업 백업 복원) ──
+  const loadContext = useCallback(() => {
+    api<{ history: HistoryEntry[] }>('/api/history')
+      .then((r) => setHistory(r.history))
+      .catch(() => undefined)
+    api<{ data: { posts: BlogPostSummary[] } }>('/api/site/blog/posts')
+      .then((r) => setSitePosts(r.data.posts))
+      .catch(() => undefined)
+  }, [])
+
   useEffect(() => {
     api<Status>('/api/budget').then(setStatus).catch(() => undefined)
+    loadContext()
     const id = new URLSearchParams(window.location.search).get('id')
     if (id) {
       api<{ data: { post: BlogPost } }>(`/api/site/blog/posts/${id}`)
@@ -153,6 +175,9 @@ export default function ConsolePage() {
         setPost(s.post ?? null)
         setSavedKey(s.savedKey ?? '')
         setTitleCands(s.titleCands ?? [])
+        setGapPicks(s.gapPicks ?? null)
+        setOutlineFirst(s.outlineFirst ?? true)
+        setOutline(s.outline ?? '')
       }
     } catch {
       /* 백업 없음 */
@@ -164,7 +189,7 @@ export default function ConsolePage() {
   useEffect(() => {
     if (!restored) return
     const t = setTimeout(() => {
-      const s = { keyword, provider, serp, selected, manualUrls, analysis, links, linkOff, facts, pasted, form, post, savedKey, titleCands }
+      const s = { keyword, provider, serp, selected, manualUrls, analysis, links, linkOff, facts, pasted, form, post, savedKey, titleCands, gapPicks, outlineFirst, outline }
       try {
         localStorage.setItem(LS_KEY, JSON.stringify(s))
       } catch {
@@ -176,7 +201,7 @@ export default function ConsolePage() {
       }
     }, 600)
     return () => clearTimeout(t)
-  }, [restored, keyword, provider, serp, selected, manualUrls, analysis, links, linkOff, facts, pasted, form, post, savedKey, titleCands])
+  }, [restored, keyword, provider, serp, selected, manualUrls, analysis, links, linkOff, facts, pasted, form, post, savedKey, titleCands, gapPicks, outlineFirst, outline])
 
   // ── 파생 값 ──
   const content = useMemo(() => toContent(form), [form])
@@ -188,19 +213,60 @@ export default function ConsolePage() {
     () => reviewContent({ title: form.title, description: form.description, markdown: form.markdown, keyword: form.keyword }, analysis?.sourceTexts ?? [], parsed),
     [form.title, form.description, form.markdown, form.keyword, analysis, parsed]
   )
-  const blockCount = issues.filter((i) => i.level === 'block').length + review.findings.filter((f) => f.level === 'block').length
-  const warnCount = issues.filter((i) => i.level === 'warn').length + review.findings.filter((f) => f.level === 'warn').length
-  const approved = approve.facts && approve.wording && approve.read
-  const activeLinks = links.filter((l) => !linkOff.includes(l.href))
-  const prompt = useMemo(
-    () => (keyword.trim() ? buildPrompt({ keyword: keyword.trim(), summary: analysis?.summary ?? null, links: activeLinks, facts }) : ''),
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    [keyword, analysis, links, linkOff, facts]
+  const style = useMemo(
+    () =>
+      styleReview(
+        { title: form.title, markdown: form.markdown, keyword: form.keyword, faqQuestions: parsed.faq.map((f) => f.q), postId: post?.id },
+        { history, posts: sitePosts }
+      ),
+    [form.title, form.markdown, form.keyword, parsed, post?.id, history, sitePosts]
   )
+  const allFindings: ReviewFinding[] = useMemo(
+    () =>
+      [...issues.map((i) => ({ level: i.level, category: i.field, message: i.message }) as ReviewFinding), ...review.findings, ...style].sort((a, b) =>
+        a.level === b.level ? 0 : a.level === 'block' ? -1 : 1
+      ),
+    [issues, review.findings, style]
+  )
+  const blockCount = allFindings.filter((f) => f.level === 'block').length
+  const warnCount = allFindings.filter((f) => f.level === 'warn').length
+  const hasImages = !!form.cover || parsed.images.length > 0
+  const approved = approve.facts && approve.wording && approve.read && (!hasImages || approve.images)
+  const activeLinks = links.filter((l) => !linkOff.includes(l.href))
+
+  // 빈틈: 사람이 안 골랐으면 추천 1순위
+  const pickedGapKeys = gapPicks ?? (analysis?.gap?.recommended ? [analysis.gap.recommended] : [])
+  const pickedGaps = (analysis?.gap?.gaps ?? []).filter((g) => pickedGapKeys.includes(g.key))
+  const promptInput = useMemo(
+    () => ({
+      keyword: keyword.trim(),
+      summary: analysis?.summary ?? null,
+      links: activeLinks,
+      facts,
+      intent: analysis?.intent ?? null,
+      gap: analysis?.gap ?? null,
+      gapPicks: pickedGaps,
+      features: serp?.features ?? null,
+      guides: serp?.strength?.guides ?? [],
+    }),
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    [keyword, analysis, links, linkOff, facts, gapPicks, serp]
+  )
+  const outlinePrompt = useMemo(() => (keyword.trim() ? buildOutlinePrompt(promptInput) : ''), [keyword, promptInput])
+  const prompt = useMemo(
+    () => (keyword.trim() ? buildPrompt({ ...promptInput, outline: outlineFirst ? outline : '' }) : ''),
+    [keyword, promptInput, outlineFirst, outline]
+  )
+
+  // 예약 페이싱: 고른 시각 점검 + 추천 시각
+  const pacing = useMemo(() => {
+    const t = scheduleAt ? new Date(scheduleAt).getTime() : NaN
+    return Number.isFinite(t) ? { at: effectiveSlot(t), ...checkPacing(t, form.category, sitePosts, post?.id) } : null
+  }, [scheduleAt, form.category, sitePosts, post?.id])
 
   // 내용이 바뀌면 사람 확인을 다시 받는다
   useEffect(() => {
-    setApprove({ facts: false, wording: false, read: false })
+    setApprove({ facts: false, wording: false, read: false, images: false })
   }, [contentKey])
 
   // 미리보기: /images/blog/… 를 방금 올린 이미지(브라우저 사본) 또는 레포 원본으로
@@ -220,7 +286,7 @@ export default function ConsolePage() {
   async function runSearch(fresh = false) {
     if (!keyword.trim()) return setNotice({ kind: 'err', text: '키워드를 입력하세요.' })
     if (provider === 'dataforseo' && !confirm(`DataForSEO(유료)로 검색합니다. 오늘 사용 $${status?.dfs.usd.toFixed(3) ?? '?'} / 한도 $${status?.dfs.budget ?? 1}. 계속할까요?`)) return
-    setBusy(provider === 'chrome' ? '크롬으로 구글 검색 중… (캡차가 뜨면 창에서 풀어 주세요)' : 'DataForSEO 검색 중…')
+    setBusy(provider === 'chrome' ? '크롬으로 구글 검색 중… 결과 주소 확인까지 30초~1분 걸립니다 (캡차가 뜨면 창에서 풀어 주세요)' : 'DataForSEO 검색 중…')
     setNotice(null)
     try {
       const r = await api<SerpResponse>('/api/serp', { method: 'POST', body: JSON.stringify({ keyword: keyword.trim(), provider, fresh }) })
@@ -245,10 +311,12 @@ export default function ConsolePage() {
     setNotice(null)
     try {
       const [a, l] = await Promise.all([
-        api<AnalyzeResponse>('/api/analyze', { method: 'POST', body: JSON.stringify({ keyword: keyword.trim(), urls }) }),
+        api<AnalyzeResponse>('/api/analyze', { method: 'POST', body: JSON.stringify({ keyword: keyword.trim(), urls, features: serp?.keyword === keyword.trim() ? serp.features : undefined }) }),
         api<{ links: InternalLink[]; blogError?: string }>(`/api/links?keyword=${encodeURIComponent(keyword.trim())}`),
       ])
       setAnalysis(a)
+      setGapPicks(null)
+      setOutline('')
       setLinks(l.links)
       setLinkOff([])
       if (!form.keyword) set('keyword', keyword.trim())
@@ -355,10 +423,29 @@ export default function ConsolePage() {
     }
   }
 
+  /** 발행·예약한 글의 결말 문장·자주 쓴 표현을 이 PC 에 남긴다(다음 글 문투 중복 검사용) */
+  function recordHistory(p: BlogPost) {
+    const entry: HistoryEntry = {
+      id: p.id,
+      slug: p.slug,
+      keyword: p.keyword ?? '',
+      title: p.title,
+      at: p.publishedAt ?? p.scheduledAt ?? new Date().toISOString(),
+      closingSentences: closingSentences(p.markdown),
+      topPhrases: topPhrases(p.markdown, p.keyword ?? '', 8).map((t) => t.phrase),
+    }
+    api('/api/history', { method: 'POST', body: JSON.stringify(entry) })
+      .catch(() => undefined)
+      .finally(loadContext)
+  }
+
   async function onSaveDraft() {
+    // 발행글 수정 가드: 저장 즉시 사이트에 반영되므로 한 번 더 묻는다 (project15 edit-guard 대응)
+    if (post?.status === 'published' && !confirm(`이미 발행된 글 "/blog/${post.slug}" 을 수정합니다. 저장하면 1~3분 뒤 사이트에 바로 반영됩니다. 계속할까요?`)) return
     setBusy('저장 중…')
     const p = await save()
     setBusy('')
+    if (p && p.status !== 'draft') recordHistory(p)
     if (p) setNotice({ kind: 'ok', text: p.status === 'published' ? '발행된 글을 수정했습니다 — 1~3분 뒤 사이트에 반영됩니다.' : `초안 저장 완료 (v${p.version}). 사이트에는 아직 안 나갑니다.` })
   }
 
@@ -370,9 +457,12 @@ export default function ConsolePage() {
       if (d.getTime() < Date.now() + 5 * 60_000) return setNotice({ kind: 'err', text: '예약은 5분 이후로 잡으세요.' })
       when = d.toISOString()
     }
-    const msg = scheduled
-      ? `${scheduleAt.replace('T', ' ')} 이후 첫 예약 발행 시간(07·10·13·19시 5분)에 공개됩니다. 예약할까요?`
-      : 'nailstartup.com 에 바로 공개합니다. 발행할까요?'
+    const pace = checkPacing(scheduled && when ? Date.parse(when) : Date.now(), form.category, sitePosts, post?.id)
+    const paceMsg = pace.warnings.length ? `\n\n⚠️ 발행 간격 경고\n- ${pace.warnings.join('\n- ')}` : ''
+    const msg =
+      (scheduled
+        ? `${scheduleAt.replace('T', ' ')} 이후 첫 예약 발행 시간(07·10·13·19시 5분)에 공개됩니다. 예약할까요?`
+        : 'nailstartup.com 에 바로 공개합니다. 발행할까요?') + paceMsg
     if (!confirm(msg)) return
     setBusy(scheduled ? '예약 중…' : '발행 중…')
     try {
@@ -384,6 +474,7 @@ export default function ConsolePage() {
       })
       setPost(r.data.post)
       setSavedKey(JSON.stringify(toContent(fromPost(r.data.post))))
+      recordHistory(r.data.post)
       const url = `${status?.site.siteUrl ?? ''}${r.data.publicPath}`
       setNotice({
         kind: 'ok',
@@ -415,6 +506,8 @@ export default function ConsolePage() {
     setPost(null)
     setSavedKey('')
     setTitleCands([])
+    setGapPicks(null)
+    setOutline('')
     setLocalImages({})
     setNotice(null)
     window.history.replaceState(null, '', '/')
@@ -522,6 +615,84 @@ export default function ConsolePage() {
               </div>
             )}
 
+            {provider !== 'manual' && serp?.strength && (
+              <div className="mt-4 rounded-xl border border-stone-200 p-3 text-[13px]">
+                <div className="flex flex-wrap items-center gap-2">
+                  <b>지면 강도</b>
+                  <span
+                    className={`rounded-full px-2.5 py-0.5 text-[11px] font-bold ${
+                      serp.strength.verdict === 'GO' ? 'bg-emerald-100 text-emerald-700' : serp.strength.verdict === 'HARD' ? 'bg-red-100 text-red-700' : 'bg-amber-100 text-amber-800'
+                    }`}
+                  >
+                    {serp.strength.verdict === 'GO' ? '도전 가능' : serp.strength.verdict === 'HARD' ? '어려움' : '보통'}
+                  </span>
+                  <span className="text-[11px] text-stone-400">
+                    약한 지면 {Math.round(serp.strength.weakShare * 100)}% · 강한 지면 {Math.round(serp.strength.strongShare * 100)}% (유료 도메인 지표 없이 유형으로 본 잠정 판정)
+                  </span>
+                </div>
+                <p className="mt-1 text-stone-600">{serp.strength.verdictText}</p>
+                {serp.strength.ownPosition && (
+                  <p className="mt-1.5 rounded-lg bg-sky-50 px-3 py-2 text-sky-800">
+                    우리 사이트가 이미 {serp.strength.ownPosition}위에 있습니다 ({serp.strength.ownUrl}). 새 글을 쓰면 서로 순위를 깎을 수 있으니, 그 글을 보강하는 쪽을 먼저 검토하세요.
+                  </p>
+                )}
+                <p className="mt-1.5 flex flex-wrap gap-1 text-[11px]">
+                  {serp.strength.rows.map((r) => (
+                    <span
+                      key={r.url}
+                      title={`${r.host} · ${r.reason}`}
+                      className={`rounded px-1.5 py-0.5 ${r.strength === 'STRONG' ? 'bg-red-50 text-red-700' : r.strength === 'WEAK' ? 'bg-emerald-50 text-emerald-700' : r.strength === 'OWN' ? 'bg-sky-100 text-sky-800' : 'bg-stone-100 text-stone-600'}`}
+                    >
+                      {r.position}. {r.label}
+                    </span>
+                  ))}
+                </p>
+                {serp.strength.altKeywords.length > 0 && (
+                  <p className="mt-2 text-[12px]">
+                    더 구체적인 키워드:{' '}
+                    {serp.strength.altKeywords.map((k) => (
+                      <button key={k} className="mr-1 rounded-full bg-stone-100 px-2 py-0.5 hover:bg-stone-200" onClick={() => setKeyword(k)}>
+                        {k}
+                      </button>
+                    ))}
+                  </p>
+                )}
+                {serp.strength.guides.filter((g) => g.present && g.meaning).length > 0 && (
+                  <ul className="mt-2 space-y-1 text-[12px]">
+                    {serp.strength.guides
+                      .filter((g) => g.present && g.meaning)
+                      .map((g) => (
+                        <li key={g.key} className={g.tone === 'warn' ? 'text-amber-800' : 'text-stone-600'}>
+                          <b>{g.label}</b> — {g.meaning} {g.action}
+                        </li>
+                      ))}
+                  </ul>
+                )}
+                {(serp.features.peopleAlsoAsk.length > 0 || serp.features.relatedSearches.length > 0) ? (
+                  <div className="mt-2 grid grid-cols-1 gap-2 text-[12px] text-stone-600 md:grid-cols-2">
+                    {serp.features.peopleAlsoAsk.length > 0 && (
+                      <div>
+                        <b>함께 찾는 질문</b>
+                        <ul className="mt-0.5 list-disc pl-4">
+                          {serp.features.peopleAlsoAsk.map((q) => (
+                            <li key={q}>{q}</li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
+                    {serp.features.relatedSearches.length > 0 && (
+                      <div>
+                        <b>관련 검색어</b>
+                        <p className="mt-0.5">{serp.features.relatedSearches.join(' · ')}</p>
+                      </div>
+                    )}
+                  </div>
+                ) : (
+                  <p className="mt-2 text-[11px] text-stone-400">함께 찾는 질문·관련 검색어를 읽지 못했습니다(검색 화면 구조 차이 또는 예전 캐시). 검색의도·빈틈은 상위글만으로 판정합니다.</p>
+                )}
+              </div>
+            )}
+
             <div className="mt-4">
               <label className="label">{provider === 'manual' ? '분석할 글 주소 (한 줄에 하나, 3~5개)' : '추가로 분석할 주소 (선택)'}</label>
               <textarea className="input mono h-20 text-[12px]" value={manualUrls} onChange={(e) => setManualUrls(e.target.value)} placeholder="https://blog.naver.com/…&#10;https://….tistory.com/…" />
@@ -571,6 +742,57 @@ export default function ConsolePage() {
               </details>
             )}
 
+            {analysis?.intent && (
+              <div className="mt-3 rounded-xl border border-stone-200 p-3 text-[13px]">
+                <p>
+                  <b>검색 의도</b>{' '}
+                  <span className={`ml-1 rounded-full px-2 py-0.5 text-[11px] font-bold ${analysis.intent.mixed ? 'bg-amber-100 text-amber-800' : 'bg-violet-100 text-violet-800'}`}>
+                    {analysis.intent.mixed ? '혼재' : analysis.intent.label}
+                  </span>
+                </p>
+                <p className="mt-1 text-stone-600">{analysis.intent.summary}</p>
+                <p className="mt-1 text-[11px] text-stone-400">
+                  {analysis.intent.scores.map((s) => `${s.label} ${s.score}`).join(' · ')}
+                  {analysis.intent.evidence.length > 0 && ` — 근거: ${analysis.intent.evidence.map((e) => `[${e.source}] ${e.text}`).join(' / ')}`}
+                </p>
+              </div>
+            )}
+
+            {analysis?.gap && (
+              <div className="mt-3 rounded-xl border border-violet-200 bg-violet-50/40 p-3 text-[13px]">
+                <p className="font-bold">빈틈(GAP) — 이 글의 차별화 포인트 고르기</p>
+                <p className="mt-0.5 text-[12px] text-stone-500">
+                  상위글 공통 주제만 모으면 "평균적인 글"이 됩니다. 아무도 안 다룬 것 1~2개를 골라 깊게 쓰면 이길 이유가 생깁니다. (안 고르면 1순위 자동)
+                </p>
+                {analysis.gap.gaps.length === 0 ? (
+                  <p className="mt-2 text-[12px] text-stone-400">빈틈 후보가 없습니다 — 분석한 글 수를 늘리거나 함께 찾는 질문이 있는 검색 결과로 다시 분석해 보세요.</p>
+                ) : (
+                  <ul className="mt-2 space-y-1">
+                    {analysis.gap.gaps.map((g) => (
+                      <li key={g.key}>
+                        <label className="flex items-start gap-2">
+                          <input type="checkbox" className="mt-1" checked={pickedGapKeys.includes(g.key)} onChange={() => setGapPicks(toggle(pickedGapKeys, g.key))} />
+                          <span>
+                            <b>{g.label}</b>{' '}
+                            <span className="rounded bg-white px-1 text-[10px] font-bold text-violet-700">{SOURCE_LABEL[g.source]}</span>{' '}
+                            <span className="text-[11px] text-stone-400">
+                              상위 {g.coverage}/{g.coverageTotal}
+                              {g.evidence.length > 0 && ` · ${g.evidence.slice(0, 2).join(' / ')}`}
+                            </span>
+                          </span>
+                        </label>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+                {analysis.gap.core.length + analysis.gap.common.length > 0 && (
+                  <p className="mt-2 text-[12px] text-stone-600">
+                    <b>반드시 다룰 공통 주제</b>: {[...analysis.gap.core, ...analysis.gap.common].map((t) => `${t.label}(${t.coverage}/${t.coverageTotal})`).join(' · ')}
+                  </p>
+                )}
+              </div>
+            )}
+
             {links.length > 0 && (
               <details className="mt-3 rounded-xl border border-stone-200 p-3 text-[13px]">
                 <summary className="cursor-pointer font-bold">
@@ -598,9 +820,41 @@ export default function ConsolePage() {
             </div>
 
             {prompt && (
+              <div className="mt-3 rounded-xl border border-stone-200 p-3">
+                <label className="flex items-center gap-2 text-[13px] font-bold">
+                  <input type="checkbox" checked={outlineFirst} onChange={(e) => setOutlineFirst(e.target.checked)} />
+                  목차 먼저 설계 (권장 — 끄면 한 번에 본문까지)
+                </label>
+                {outlineFirst && (
+                  <>
+                    <p className="mt-1 text-[12px] text-stone-500">구조가 틀린 글 5,000자를 고치는 것보다 목차 한 줄 고치는 게 훨씬 쌉니다. ① 목차 프롬프트 → 받은 목차를 고쳐 아래에 붙여넣기 → ② 본문 프롬프트.</p>
+                    <div className="mt-2 flex items-center gap-2">
+                      <button
+                        className="btn-dark"
+                        onClick={() => navigator.clipboard.writeText(outlinePrompt).then(() => setNotice({ kind: 'ok', text: '목차 프롬프트를 복사했습니다.' }))}
+                      >
+                        ① 목차 프롬프트 복사
+                      </button>
+                      <span className="text-[11px] text-stone-400">{outlinePrompt.length.toLocaleString()}자</span>
+                    </div>
+                    <textarea
+                      className="input mono mt-2 h-36 text-[12px]"
+                      value={outline}
+                      onChange={(e) => setOutline(e.target.value)}
+                      placeholder={'# 제목\n## 핵심 요약\n## 본문 소제목 1 〔약 600자〕\n   - ### 세부\n## …\n## 자주 묻는 질문\n## 마치며'}
+                    />
+                    <p className={`mt-1 text-[11px] ${outline.trim() ? 'text-emerald-700' : 'text-amber-700'}`}>
+                      {outline.trim() ? `✅ 목차 확정 (${outline.trim().split('\n').length}줄) — ② 본문 프롬프트에 들어갑니다.` : '⚠️ 목차를 넣기 전까지 ② 본문 프롬프트는 구조 지시 없이 나갑니다.'}
+                    </p>
+                  </>
+                )}
+              </div>
+            )}
+
+            {prompt && (
               <div className="mt-3">
                 <div className="mb-1 flex items-center justify-between">
-                  <label className="label">완성 프롬프트 — 복사해서 채팅 AI(Claude 등)에 붙여넣으세요</label>
+                  <label className="label">{outlineFirst ? '② 본문 프롬프트' : '완성 프롬프트'} — 복사해서 채팅 AI(Claude 등)에 붙여넣으세요</label>
                   <button
                     className="btn-brand"
                     onClick={() => navigator.clipboard.writeText(prompt).then(() => setNotice({ kind: 'ok', text: '프롬프트를 복사했습니다.' }))}
@@ -719,9 +973,7 @@ export default function ConsolePage() {
               <p className="text-[13px] font-semibold text-emerald-700">자동 검수에서 지적할 것이 없습니다. 그래도 사실관계는 직접 확인하세요.</p>
             ) : (
               <ul className="space-y-1.5 text-[13px]">
-                {[...issues.map((i) => ({ level: i.level, category: i.field, message: i.message } as ReviewFinding)), ...review.findings]
-                  .sort((a, b) => (a.level === b.level ? 0 : a.level === 'block' ? -1 : 1))
-                  .map((f, k) => (
+                {allFindings.map((f, k) => (
                     <li key={k} className={`rounded-lg px-3 py-2 ${f.level === 'block' ? 'bg-red-50 text-red-800' : 'bg-amber-50 text-amber-900'}`}>
                       <b>
                         {f.level === 'block' ? '🔴' : '🟡'} {f.category}
@@ -752,6 +1004,12 @@ export default function ConsolePage() {
                 <input type="checkbox" className="mt-0.5" checked={approve.read} onChange={(e) => setApprove((a) => ({ ...a, read: e.target.checked }))} />
                 미리보기로 처음부터 끝까지 읽어 봤고, 독자에게 도움이 되는 글이다
               </label>
+              {hasImages && (
+                <label className="flex items-start gap-2">
+                  <input type="checkbox" className="mt-0.5" checked={approve.images} onChange={(e) => setApprove((a) => ({ ...a, images: e.target.checked }))} />
+                  이미지: 직접 찍었거나 AI 로 만들었거나 상업 이용 가능한 것이고, 글자·로고·워터마크가 없고, 글 내용과 맞으며, 설명(alt)을 넣었다
+                </label>
+              )}
             </div>
             <div className="mt-4 flex flex-wrap items-center gap-2">
               <button className="btn-line" disabled={!!busy || !form.title || !form.slug} onClick={onSaveDraft}>
@@ -761,12 +1019,31 @@ export default function ConsolePage() {
                 바로 발행
               </button>
               <input type="datetime-local" className="input w-auto text-[13px]" value={scheduleAt} onChange={(e) => setScheduleAt(e.target.value)} />
+              <button
+                className="btn-line"
+                title="발행 간격·주간 편수·같은 카테고리 편수 규칙을 지키는 가장 빠른 예약 시각"
+                onClick={() => {
+                  const t = suggestSlot(form.category, sitePosts, post?.id)
+                  if (t) setScheduleAt(toLocalInput(t))
+                  else setNotice({ kind: 'info', text: '60일 안에 규칙을 지키는 예약 슬롯이 없습니다. 직접 고르세요.' })
+                }}
+              >
+                추천 시각
+              </button>
               <button className="btn-dark" disabled={!!busy || blockCount > 0 || !approved || post?.status === 'published'} onClick={() => onPublish(true)}>
                 예약 발행
               </button>
             </div>
+            {pacing && (
+              <div className={`mt-2 rounded-lg px-3 py-2 text-[12px] ${pacing.ok ? 'bg-emerald-50 text-emerald-800' : 'bg-amber-50 text-amber-900'}`}>
+                실제 공개: {fmtKst(pacing.at)} (한국시간){pacing.ok ? ' — 발행 간격 규칙 OK' : ''}
+                {pacing.warnings.map((w) => (
+                  <p key={w}>⚠️ {w}</p>
+                ))}
+              </div>
+            )}
             <p className="mt-2 text-[11px] leading-relaxed text-stone-400">
-              🔴 가 0개이고 확인 3개를 모두 체크해야 발행 버튼이 열립니다. 발행 = 레포 커밋 → Vercel 재배포(1~3분) → IndexNow 자동 제출. 예약 글은 07·10·13·19시 5분에 공개됩니다.
+              🔴 가 0개이고 확인 항목을 모두 체크해야 발행 버튼이 열립니다. 발행 = 레포 커밋 → Vercel 재배포(1~3분) → IndexNow 자동 제출. 예약 글은 07·10·13·19시 5분에 공개됩니다.
               하루에 몰아서 여러 편 올리기보다 예약으로 나눠 올리는 편이 검색엔진에 자연스럽습니다.
             </p>
           </section>

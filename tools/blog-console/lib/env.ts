@@ -22,6 +22,8 @@ export const env = {
     (/localhost|127\.0\.0\.1/.test(apiOrigin) ? apiOrigin : 'https://raw.githubusercontent.com/shinseungyu/project16_nail/master/public'),
   apiToken: process.env.BLOG_API_TOKEN || '',
   siteUrl: (process.env.SITE_URL || (/localhost|127\.0\.0\.1/.test(apiOrigin) ? apiOrigin : 'https://www.nailstartup.com')).replace(/\/+$/, ''),
+  /** Search Console 속성 (URL 검사 바로가기용). 도메인 속성이면 sc-domain:도메인, URL 속성이면 https://www.nailstartup.com/ */
+  gscProperty: process.env.GSC_PROPERTY || 'sc-domain:nailstartup.com',
   chromeHeadless: (process.env.CHROME_HEADLESS ?? 'true').toLowerCase() !== 'false',
   dfs: {
     enabled: (process.env.DATAFORSEO_ENABLED ?? 'false').toLowerCase() === 'true',

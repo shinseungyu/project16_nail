@@ -1,0 +1,70 @@
+{
+  "_comment": "지면 강도 판정 규칙 (project15 serp-rules.json 의 한국판). 코드 수정 없이 이 파일의 목록·숫자만 고치면 판정이 바뀝니다. 막지 않고 표시만 합니다.",
+  "ownDomain": "nailstartup.com",
+  "_pageTypes_설명": "판정 순서: domainOrder 순서대로 도메인 매칭 → titleOrder 순서대로 제목 매칭 → OTHER(개인·소규모 사이트).",
+  "pageTypes": {
+    "domainOrder": ["OWN", "GOV", "NEWS", "WIKI", "SOCIAL", "COMMERCE", "UGC"],
+    "titleOrder": ["BUSINESS", "NEWS"],
+    "OWN": { "label": "우리 사이트", "strength": "OWN", "domains": ["nailstartup.com"] },
+    "GOV": {
+      "label": "공공기관",
+      "strength": "STRONG",
+      "domains": ["go.kr", "q-net.or.kr", "semas.or.kr", "sbiz.or.kr", "kosmes.or.kr", "hrdkorea.or.kr", "work24.go.kr", "law.go.kr", "nts.go.kr", "hometax.go.kr", "gov.kr", "kostat.go.kr", "kca.go.kr"]
+    },
+    "NEWS": {
+      "label": "언론",
+      "strength": "STRONG",
+      "domains": ["n.news.naver.com", "news.naver.com", "v.daum.net", "news.daum.net", "chosun.com", "joongang.co.kr", "donga.com", "hankyung.com", "mk.co.kr", "sedaily.com", "mt.co.kr", "edaily.co.kr", "yna.co.kr", "newsis.com", "news1.kr", "hani.co.kr", "khan.co.kr", "asiae.co.kr", "fnnews.com", "heraldcorp.com", "nocutnews.co.kr", "ytn.co.kr", "kbs.co.kr", "imbc.com", "sbs.co.kr", "jtbc.co.kr", "etnews.com", "bizwatch.co.kr", "beautynury.com", "cosinkorea.com", "beautyhankook.com"],
+      "titles": ["[기자]", "기자 =", "뉴스"]
+    },
+    "WIKI": { "label": "백과·위키", "strength": "STRONG", "domains": ["namu.wiki", "wikipedia.org", "terms.naver.com", "100.daum.net", "encykorea.aks.ac.kr"] },
+    "SOCIAL": { "label": "SNS·동영상", "strength": "STRONG", "domains": ["youtube.com", "youtu.be", "instagram.com", "tiktok.com", "facebook.com", "threads.net", "threads.com", "x.com", "twitter.com"] },
+    "COMMERCE": {
+      "label": "쇼핑·중개 플랫폼",
+      "strength": "STRONG",
+      "domains": ["smartstore.naver.com", "shopping.naver.com", "coupang.com", "11st.co.kr", "gmarket.co.kr", "auction.co.kr", "ohou.se", "soomgo.com", "kmong.com", "class101.net", "taling.me", "daangn.com", "saramin.co.kr", "jobkorea.co.kr", "albamon.com", "mangoplate.com", "map.naver.com", "place.naver.com"]
+    },
+    "UGC": {
+      "label": "블로그·카페·지식인",
+      "strength": "WEAK",
+      "domains": ["blog.naver.com", "m.blog.naver.com", "post.naver.com", "cafe.naver.com", "kin.naver.com", "tistory.com", "brunch.co.kr", "blog.daum.net", "velog.io", "medium.com", "blogspot.com", "wordpress.com", "theqoo.net", "dcinside.com", "clien.net", "ppomppu.co.kr", "fmkorea.com", "82cook.com", "instiz.net"]
+    },
+    "BUSINESS": {
+      "label": "학원·프랜차이즈·업체",
+      "strength": "MID",
+      "titles": ["학원", "아카데미", "교육원", "프랜차이즈", "가맹", "창업설명회", "본사", "공식몰", "공식 홈페이지"]
+    },
+    "OTHER": { "label": "개인·소규모 사이트", "strength": "MID" }
+  },
+  "_verdict_설명": "상위 결과 중 약한 지면(블로그·카페·지식인) 비율과 강한 지면(공공·언론·위키·SNS·쇼핑) 비율로 판정. 도메인 지표(유료)는 쓰지 않는 잠정 판정입니다.",
+  "verdict": {
+    "goMinWeakShare": 0.4,
+    "hardMinStrongShare": 0.6
+  },
+  "verdictText": {
+    "GO": "도전 가능 — 블로그·카페 글이 상위에 많아 콘텐츠 품질로 겨뤄볼 만한 지면입니다.",
+    "MAYBE": "보통 — 강한 지면과 약한 지면이 섞여 있습니다. 빈틈(차별화) 주제를 분명히 잡고 쓰세요.",
+    "HARD": "어려움 — 공공기관·언론·대형 플랫폼이 상위를 차지했습니다. 더 구체적인 롱테일 키워드를 먼저 검토하세요."
+  },
+  "_serpFeatureGuide_설명": "지면 특성별 뜻·행동. 화면과 완성 프롬프트에 같이 나갑니다.",
+  "serpFeatureGuide": [
+    {
+      "key": "hasAiOverview",
+      "label": "AI 개요",
+      "whenPresent": { "tone": "warn", "meaning": "AI 요약이 맨 위를 차지해 클릭률이 깎입니다.", "action": "같은 노력이면 AI 개요가 없는 키워드를 우선하세요. 쓴다면 AI 요약이 못 담는 구체성(항목별 금액표·조건별 차이·실제 절차)으로 차별화.", "prompt": "이 검색에는 구글 AI 개요가 뜬다. AI 요약이 담기 어려운 구체성(항목별 표, 조건별 차이, 실제 절차 순서)으로 차별화한다." },
+      "whenAbsent": { "tone": "good", "meaning": "AI 개요 없음 — 순위가 곧 유입입니다.", "action": "", "prompt": "" }
+    },
+    {
+      "key": "hasFeaturedSnippet",
+      "label": "추천 스니펫",
+      "whenPresent": { "tone": "info", "meaning": "구글이 한 문단짜리 답을 뽑아 맨 위에 보여줍니다.", "action": "첫 본문 소제목 바로 아래에 질문에 대한 40~60자 정의형 답을 한 문단으로 두세요.", "prompt": "추천 스니펫이 뜨는 검색이다. 첫 번째 본문 소제목 바로 아래 첫 문장을 키워드 질문에 대한 40~60자 정의형 답으로 쓴다." },
+      "whenAbsent": { "tone": "neutral", "meaning": "", "action": "", "prompt": "" }
+    },
+    {
+      "key": "peopleAlsoAsk",
+      "label": "함께 찾는 질문",
+      "whenPresent": { "tone": "good", "meaning": "검색자가 실제로 묻는 질문이 보입니다.", "action": "이 질문들을 FAQ·소제목에 반영하세요(빈틈 분석에 자동 반영).", "prompt": "" },
+      "whenAbsent": { "tone": "neutral", "meaning": "", "action": "", "prompt": "" }
+    }
+  ]
+}

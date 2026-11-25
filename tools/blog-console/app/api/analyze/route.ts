@@ -1,9 +1,11 @@
-// POST /api/analyze { keyword, urls[] } → 크롤링 → 본문 정제 → 구조 분석
+// POST /api/analyze { keyword, urls[], features? } → 크롤링 → 본문 정제 → 구조 분석 + 검색의도 + 빈틈(GAP)
 import { NextResponse } from 'next/server'
 import { fetchHtml } from '@/lib/crawl'
 import { extractArticle } from '@/lib/extract'
 import { analyze } from '@/lib/analyze'
-import type { AnalyzeResponse } from '@/lib/types'
+import { detectSearchIntent } from '@/lib/intent'
+import { runGapAnalysis } from '@/lib/gap'
+import { EMPTY_FEATURES, type AnalyzeResponse, type SerpFeatures } from '@/lib/types'
 
 export const runtime = 'nodejs'
 export const dynamic = 'force-dynamic'
@@ -11,7 +13,14 @@ export const maxDuration = 120
 
 export async function POST(req: Request) {
   try {
-    const body = (await req.json().catch(() => ({}))) as { keyword?: string; urls?: string[] }
+    const body = (await req.json().catch(() => ({}))) as { keyword?: string; urls?: string[]; features?: Partial<SerpFeatures> }
+    const f = body.features ?? {}
+    const features: SerpFeatures = {
+      hasAiOverview: !!f.hasAiOverview,
+      hasFeaturedSnippet: !!f.hasFeaturedSnippet,
+      peopleAlsoAsk: Array.isArray(f.peopleAlsoAsk) ? f.peopleAlsoAsk.map(String).slice(0, 15) : EMPTY_FEATURES.peopleAlsoAsk,
+      relatedSearches: Array.isArray(f.relatedSearches) ? f.relatedSearches.map(String).slice(0, 15) : EMPTY_FEATURES.relatedSearches,
+    }
     const keyword = String(body.keyword ?? '').trim()
     const urls = Array.from(new Set((body.urls ?? []).map((u) => String(u).trim()).filter((u) => /^https?:\/\//.test(u)))).slice(0, 8)
     if (!urls.length) return NextResponse.json({ error: '분석할 글 주소를 1개 이상 고르세요.' }, { status: 400 })
@@ -19,9 +28,12 @@ export async function POST(req: Request) {
     const pages = await Promise.all(urls.map((u) => fetchHtml(u)))
     const extracts = pages.map((p) => (p.ok ? extractArticle(p.url, p.html) : { ...extractArticle(p.url, ''), error: p.error }))
     const summary = analyze(extracts)
+    const ok = extracts.filter((e) => e.ok)
     const out: AnalyzeResponse = {
       keyword,
       summary,
+      intent: detectSearchIntent(keyword, features, ok.map((e) => ({ title: e.metaTitle || e.title, description: e.metaDescription }))),
+      gap: runGapAnalysis(keyword, extracts, features),
       perBlog: extracts.map((e) => ({
         url: e.url,
         title: e.metaTitle || e.title,

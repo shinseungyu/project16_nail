@@ -5,7 +5,8 @@ import { readSerpCache, writeSerpCache } from '@/lib/serp/cache'
 import { chromeGoogleSearch } from '@/lib/serp/chrome'
 import { dataForSeoSearch, dfsSpentToday } from '@/lib/serp/dataforseo'
 import { scoreCandidates } from '@/lib/serp/filter'
-import type { SerpProvider, SerpResponse } from '@/lib/types'
+import { evaluateStrength } from '@/lib/strength'
+import type { SerpFeatures, SerpProvider, SerpResponse, SerpResult } from '@/lib/types'
 
 export const runtime = 'nodejs'
 export const dynamic = 'force-dynamic'
@@ -26,26 +27,34 @@ export async function POST(req: Request) {
         fromCache: true,
         fetchedAt: new Date(cached.fetchedAt).toISOString(),
         candidates: scoreCandidates(cached.data, keyword),
+        features: cached.features,
+        strength: evaluateStrength(keyword, cached.data, cached.features),
       }
       return NextResponse.json(out)
     }
 
-    let data
+    let data: SerpResult[]
+    let features: SerpFeatures
     let spentTodayUsd: number | undefined
     if (provider === 'dataforseo') {
       const r = await dataForSeoSearch(keyword, 10)
       data = r.data
+      features = r.features
       spentTodayUsd = r.spentTodayUsd
     } else {
-      data = await chromeGoogleSearch(keyword, 10)
+      const r = await chromeGoogleSearch(keyword, 10)
+      data = r.results
+      features = r.features
     }
-    if (data.length) writeSerpCache(keyword, provider, data)
+    if (data.length) writeSerpCache(keyword, provider, data, features)
     const out: SerpResponse = {
       keyword,
       provider,
       fromCache: false,
       fetchedAt: new Date().toISOString(),
       candidates: scoreCandidates(data, keyword),
+      features,
+      strength: evaluateStrength(keyword, data, features),
       ...(spentTodayUsd !== undefined ? { spentTodayUsd } : {}),
     }
     return NextResponse.json(out)

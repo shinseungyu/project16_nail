@@ -9,7 +9,7 @@
 import fs from 'node:fs'
 import path from 'node:path'
 import { DATA_DIR, env, kstDate } from '../env'
-import type { SerpResult } from '../types'
+import type { SerpFeatures, SerpResult } from '../types'
 
 const LEDGER = path.join(DATA_DIR, 'dataforseo-spend.json')
 /** Live Advanced 1페이지(10개) 실측 약 $0.002 — 여유 있게 잡는다 */
@@ -40,7 +40,24 @@ function addSpend(usd: number) {
   fs.writeFileSync(LEDGER, JSON.stringify(l, null, 2), 'utf8')
 }
 
-export async function dataForSeoSearch(keyword: string, depth = 10): Promise<{ data: SerpResult[]; spentTodayUsd: number }> {
+/** 같은 응답에서 지면 특성도 뽑는다(추가 과금 없음) */
+function parseFeatures(items: Record<string, unknown>[]): SerpFeatures {
+  const paa: string[] = []
+  const related: string[] = []
+  for (const it of items) {
+    const sub = (it.items as Record<string, unknown>[] | string[] | undefined) ?? []
+    if (it.type === 'people_also_ask') for (const q of sub) if (typeof q === 'object' && q && (q as { title?: string }).title) paa.push(String((q as { title: string }).title).trim())
+    if (it.type === 'related_searches') for (const r of sub) if (typeof r === 'string' && r.trim()) related.push(r.trim())
+  }
+  return {
+    hasAiOverview: items.some((i) => i.type === 'ai_overview'),
+    hasFeaturedSnippet: items.some((i) => i.type === 'featured_snippet'),
+    peopleAlsoAsk: Array.from(new Set(paa)).slice(0, 10),
+    relatedSearches: Array.from(new Set(related)).slice(0, 12),
+  }
+}
+
+export async function dataForSeoSearch(keyword: string, depth = 10): Promise<{ data: SerpResult[]; features: SerpFeatures; spentTodayUsd: number }> {
   const s = dfsSpentToday()
   if (!s.enabled) throw new Error('DataForSEO 가 꺼져 있습니다(.env.local 의 DATAFORSEO_ENABLED=true 와 로그인 정보 필요). 크롬 검색을 쓰세요.')
   const estimate = ESTIMATE_PER_PAGE * Math.ceil(depth / 10)
@@ -71,5 +88,5 @@ export async function dataForSeoSearch(keyword: string, depth = 10): Promise<{ d
     if (it.type !== 'organic' || !/^https?:\/\//.test(url) || /google\.[a-z.]+\/goto\?/.test(url)) continue
     out.push({ position: out.length + 1, title: String(it.title ?? ''), url })
   }
-  return { data: out.slice(0, depth), spentTodayUsd: dfsSpentToday().usd }
+  return { data: out.slice(0, depth), features: parseFeatures(items), spentTodayUsd: dfsSpentToday().usd }
 }

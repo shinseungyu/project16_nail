@@ -3,7 +3,10 @@
 //  - 출력 형식을 "정해진 틀"(사이트 템플릿 계약)에 고정해서, 붙여넣으면 그대로 요약 박스·목차·FAQ 가 된다.
 //  - 애드센스 승인 사이트라 수익 보장·과장·날조·광고 클릭 유도를 특히 강하게 막는다.
 // ===========================================================================
-import type { AnalysisSummary, InternalLink } from './types'
+import type { AnalysisSummary, InternalLink, SerpFeatures } from './types'
+import type { SearchIntent } from './intent'
+import type { GapAnalysis, GapTopic } from './gap'
+import type { FeatureGuide } from './strength'
 import { CATEGORY_KEYS, ALLOWED_EXTERNAL_HOSTS } from '@site/lib/blog/config'
 
 export interface PromptInput {
@@ -12,6 +15,82 @@ export interface PromptInput {
   links: InternalLink[]
   /** 사람이 직접 확인한 사실(선택) */
   facts?: string
+  intent?: SearchIntent | null
+  gap?: GapAnalysis | null
+  /** 사람이 고른 빈틈(차별화 포인트) */
+  gapPicks?: GapTopic[]
+  features?: SerpFeatures | null
+  guides?: FeatureGuide[]
+  /** 목차 먼저: 사람이 확정한 목차 */
+  outline?: string
+}
+
+/** 검색의도·지면·수요·공통 주제·차별화 — 목차 프롬프트와 본문 프롬프트가 같이 쓴다 */
+const NL = String.fromCharCode(10)
+
+function strategy({ intent, gap, gapPicks, features, guides }: PromptInput): string {
+  const parts: string[] = []
+  if (intent) parts.push(`# 검색 의도 (판정 결과)
+- ${intent.promptLine}`)
+  const g = (guides ?? []).filter((x) => x.present && x.prompt)
+  if (g.length) parts.push(`# 검색 화면 특성
+${g.map((x) => `- ${x.prompt}`).join(NL)}`)
+  const demand = [...(features?.peopleAlsoAsk ?? []), ...(features?.relatedSearches ?? [])]
+  if (demand.length) parts.push(`# 검색자가 실제로 찾는 것 (함께 찾는 질문·관련 검색어 — FAQ·소제목에 반영)
+${demand.slice(0, 14).map((d) => `- ${d}`).join(NL)}`)
+  if (gap) {
+    const must = [...gap.core, ...gap.common].filter((t) => !['자주 묻는 질문', '마무리'].includes(t.key))
+    if (must.length)
+      parts.push(
+        `# 반드시 다룰 공통 주제 (상위 ${gap.coverageTotal}개 글 대부분이 다룸 — 빠지면 부족한 글로 보인다)
+${must
+          .slice(0, 10)
+          .map((t) => `- ${t.label} (${t.coverage}/${t.coverageTotal})`)
+          .join(NL)}`
+      )
+  }
+  if (gapPicks?.length)
+    parts.push(
+      `# 이 글의 차별화 포인트 (상위글이 거의 다루지 않은 것 — 각각 별도 본문 소제목으로 깊게 쓴다)
+${gapPicks
+        .map((t) => `- ${t.label}${t.evidence.length ? ` ← 근거: ${t.evidence.slice(0, 2).join(' / ')}` : ''}`)
+        .join(NL)}
+공통 주제는 빠짐없이 다루되 짧고 정확하게, 차별화 포인트에 분량을 더 쓴다. 평균적인 글이 아니라 이 글에만 있는 내용으로 이긴다.`
+    )
+  return parts.join(NL + NL)
+}
+
+/** ① 목차 먼저 — 본문보다 목차에 시간을 쓰는 편이 싸다(구조가 틀린 5,000자를 고치는 것보다 목차 한 줄 고치는 게 낫다) */
+export function buildOutlinePrompt(input: PromptInput): string {
+  const { keyword, summary } = input
+  return `당신은 네일·뷰티 창업 정보 사이트(nailstartup.com) "네일샵 창업"의 편집자입니다.
+[키워드]로 쓸 한국어 블로그 글의 "목차만" 설계하세요. 본문은 아직 쓰지 않습니다.
+
+# 키워드
+${keyword}
+
+# 상위글 데이터 (구조·패턴만 참고, 복제 금지)
+${survey(summary)}
+
+${strategy(input)}
+
+# 고정 틀
+- "# 제목" → "## 핵심 요약" → 본문 소제목(##) 4~7개 → "## 자주 묻는 질문" → "## 마치며"
+- 첫 번째 본문 소제목은 검색 의도에 바로 답하는 것으로.
+- 비용·비교·절차는 표로 정리할 소제목을 1개 이상 둔다.
+
+# 출력 형식 (목차만, 이 형식 그대로)
+# (제목 후보)
+## 핵심 요약
+- (요점 3~5개를 짧게)
+## (본문 소제목 1) 〔예상 분량 약 ○○○자〕 ← 이 소제목이 답하는 검색자 질문 한 줄
+   - (필요하면 ### 세부 소제목)
+## (본문 소제목 2~7) …
+## 자주 묻는 질문
+   - (질문 3~5개)
+## 마치며
+
+목차 아래에 한 줄씩: 공통 주제 중 어느 소제목에서 다루는지, 차별화 포인트는 어느 소제목인지 적으세요.`
 }
 
 function survey(s: AnalysisSummary | null): string {
@@ -31,7 +110,8 @@ function survey(s: AnalysisSummary | null): string {
   ].join('\n')
 }
 
-export function buildPrompt({ keyword, summary, links, facts }: PromptInput): string {
+export function buildPrompt(input: PromptInput): string {
+  const { keyword, summary, links, facts, outline } = input
   const avg = summary?.avgLength ?? 0
   const target = avg > 0 ? Math.min(6000, Math.max(2500, avg)) : 3500
   const linkList = links.map((l) => `- [${l.label}](${l.href})`).join('\n')
@@ -47,6 +127,11 @@ ${keyword}
 # 상위글 데이터 (구조·패턴만 참고, 복제 금지)
 ${survey(summary)}
 
+${strategy(input)}
+${outline?.trim() ? `
+# 확정 목차 (사람이 검토해 확정함 — 이 구조·순서 그대로 쓴다. 소제목 문구는 다듬어도 되지만 빼거나 순서를 바꾸지 않는다)
+${outline.trim()}
+` : ''}
 # 사이트 기준 정보 (이 범위와 모순되는 수치를 쓰지 말 것)
 - 1인 네일샵 창업비용: 약 800만~2,000만 원 범위(사이트 대표 예시 1,480만 원). 지역·규모·인테리어 수준에 따라 달라진다고 함께 밝힌다.
 - 1인 네일샵 월 순수익: 약 250만~350만 원 범위(운영이 안정된 경우의 예시). 초기에는 더 낮을 수 있다고 밝힌다.
