@@ -41,7 +41,10 @@ const CATEGORIES: Cat[] = [
   },
 ]
 
-export default function SiteHeader() {
+export default function SiteHeader({ showBlog = false }: { showBlog?: boolean }) {
+  // 블로그 글이 하나라도 발행돼 있을 때만 네일 메뉴 끝에 '블로그'를 붙인다(빈 목록으로 보내지 않게)
+  const navOf = (c: Cat): [string, string][] => (c.key === 'nail' && showBlog ? [...c.nav, ['/blog', '블로그']] : c.nav)
+
   const pathname = usePathname() || '/'
   const [open, setOpen] = useState(false)
   // 모바일 패널에서 펼쳐진 업종 (기본값은 현재 업종)
@@ -88,7 +91,7 @@ export default function SiteHeader() {
 
         {/* 데스크톱 네비 */}
         <nav className="hidden md:flex items-center gap-5 text-[13px] text-stone-500 font-semibold uppercase tracking-wide">
-          {active.nav.map(([href, label]) => (
+          {navOf(active).map(([href, label]) => (
             <a key={href} href={href} className="hover:text-brand transition-colors">{label}</a>
           ))}
           <span className="w-px h-4 bg-stone-200" aria-hidden />
@@ -185,7 +188,7 @@ export default function SiteHeader() {
 
                     {isOpen && (
                       <ul id={`mobile-nav-${c.key}`} className="bg-stone-50 px-4 pb-2">
-                        {c.nav.map(([href, label]) => (
+                        {navOf(c).map(([href, label]) => (
                           <li key={href}>
                             <a
                               href={href}

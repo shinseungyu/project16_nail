@@ -1,0 +1,54 @@
+# 블로그 예약 발행 — 하루 4번 예약 시각이 지난 초안을 발행본으로 옮겨 커밋한다.
+#
+# 콘솔에서 "예약 발행"한 글은 content/blog/drafts 에 status=scheduled 로 들어 있다.
+# 예약 시각이 지나도 아래 시간대가 와야 공개된다(한국시간 07·10·13·19시 5분).
+#
+# ⚠️ 이 워크플로가 GITHUB_TOKEN 으로 푸시하면 다른 워크플로(IndexNow)가 자동으로 안 돈다(GitHub 규칙).
+#    그래서 여기서 배포를 기다린 뒤 IndexNow 를 직접 보낸다.
+name: Blog scheduled publish
+
+on:
+  schedule:
+    - cron: '5 22,1,4,10 * * *'
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: blog-scheduled
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: 예약 시각 지난 글 옮기기
+        id: due
+        run: |
+          node scripts/blog-publish-due.mjs | tee out.txt
+          echo "count=$(grep -o 'PUBLISHED=[0-9]*' out.txt | cut -d= -f2)" >> "$GITHUB_OUTPUT"
+
+      - name: 커밋·푸시
+        if: steps.due.outputs.count != '0'
+        run: |
+          # 레포 주인 계정으로 커밋해야 Vercel 이 배포를 막지 않는다
+          git config user.name "${{ github.repository_owner }}"
+          git config user.email "${{ github.repository_owner_id }}+${{ github.repository_owner }}@users.noreply.github.com"
+          git add content/blog
+          git commit -m "blog: 예약 발행 ${{ steps.due.outputs.count }}건"
+          git push
+
+      - name: 배포 대기
+        if: steps.due.outputs.count != '0'
+        run: sleep 180
+
+      - name: IndexNow 제출 (블로그만)
+        if: steps.due.outputs.count != '0'
+        run: node scripts/indexnow.mjs --since=1 --match=/blog/

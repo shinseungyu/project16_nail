@@ -1,0 +1,20 @@
+{
+  "_comment": "상위글 후보 필터(한국). 코드 수정 없이 이 목록만 고치면 동작이 바뀝니다. 점수 2점 이상이면 기본 체크.",
+  "excludeDomains": [
+    "youtube.com", "youtu.be", "instagram.com", "facebook.com", "tiktok.com", "x.com", "twitter.com", "pinterest.",
+    "namu.wiki", "wikipedia.org", "coupang.com", "11st.co.kr", "gmarket.co.kr", "auction.co.kr", "ssg.com",
+    "smartstore.naver.com", "shopping.naver.com", "brand.naver.com", "map.naver.com", "m.place.naver.com", "place.naver.com",
+    "danawa.com", "saramin.co.kr", "jobkorea.co.kr", "albamon.com", "alba.co.kr", "dcinside.com", "fmkorea.com",
+    "kmong.com", "soomgo.com"
+  ],
+  "_blogDomains": "개인·기업 블로그 플랫폼 — 정보성 글일 가능성이 높다(+2)",
+  "blogDomains": ["blog.naver.com", "m.blog.naver.com", "tistory.com", "brunch.co.kr", "velog.io", "medium.com", "post.naver.com", "blog.daum.net"],
+  "_urlPositive": "경로에 있으면 블로그·칼럼 신호(+1)",
+  "urlPositive": ["/blog", "/column", "/post", "/posts", "/article", "/magazine", "/info", "/guide", "/news", "/story", "/knowledge", "/board"],
+  "_urlNegative": "경로에 있으면 상품·예약·채용 신호(-2)",
+  "urlNegative": ["/product", "/goods", "/shop", "/cart", "/order", "/reservation", "/booking", "/recruit", "/careers", "/event"],
+  "_titlePositive": "정보성 제목 신호(+1)",
+  "titlePositive": ["비용", "총정리", "정리", "방법", "가이드", "준비", "절차", "후기", "차이", "비교", "자격증", "체크리스트", "?", "할까", "알아보", "주의"],
+  "_titleNegative": "거래성 제목 신호(-1)",
+  "titleNegative": ["할인", "이벤트", "예약", "쿠폰", "구매", "최저가", "채용", "모집"]
+}

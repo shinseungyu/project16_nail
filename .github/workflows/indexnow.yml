@@ -10,6 +10,11 @@ name: IndexNow
 on:
   push:
     branches: [master]
+    # 블로그 초안·이미지만 바뀐 커밋(발행 API 의 초안 저장)은 사이트가 그대로라 제출하지 않는다.
+    # 같은 URL 을 반복 제출하면 429(스팸) 사유가 된다.
+    paths-ignore:
+      - 'content/blog/drafts/**'
+      - 'public/images/blog/**'
   # 수동 실행. 전체 재제출이 필요할 때 all=true 로 돌린다.
   workflow_dispatch:
     inputs:

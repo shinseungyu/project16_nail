@@ -1,0 +1,9 @@
+/node_modules
+/.next
+next-env.d.ts
+*.tsbuildinfo
+.env*.local
+# 검색 캐시·DataForSEO 사용액 기록·작업 백업
+/.data
+# 구글 검색용 크롬 프로필(쿠키)
+/.chrome-profile-serp

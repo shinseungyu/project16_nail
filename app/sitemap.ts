@@ -7,6 +7,7 @@ import posts from '@/data/posts.json'
 import { PUBLISHED_SLUGS, QNA_DETAILS } from '@/data/qna'
 import { EN_PAGES } from '@/data/en'
 import { sitemapAlternates } from '@/lib/hreflang'
+import { getPublishedPosts } from '@/lib/blog/store'
 
 // 하드코딩하면 글이 늘어날 때마다 누락된다. 데이터에서 직접 파생시킨다.
 const POST_IDS = (posts as { id: number }[]).map((p) => p.id).sort((a, b) => a - b)
@@ -69,6 +70,27 @@ export default function sitemap(): MetadataRoute.Sitemap {
     changeFrequency: 'monthly' as const,
     priority: 0.6,
   }))
+
+  // 블로그 — 발행 API 가 content/blog/posts 에 쓴 글. lastmod 는 글마다 updatedAt 이라
+  // 새 글·수정 글만 IndexNow(--since=7) 제출 대상이 된다. 글이 없으면 목록 페이지도 뺀다(noindex).
+  const blog = getPublishedPosts()
+  const blogEntries: MetadataRoute.Sitemap =
+    blog.length === 0
+      ? []
+      : [
+          {
+            url: `${baseUrl}/blog`,
+            lastModified: new Date(blog.reduce((m, p) => (p.updatedAt > m ? p.updatedAt : m), blog[0].updatedAt)),
+            changeFrequency: 'daily',
+            priority: 0.8,
+          },
+          ...blog.map((p) => ({
+            url: `${baseUrl}/blog/${p.slug}`,
+            lastModified: new Date(p.updatedAt),
+            changeFrequency: 'monthly' as const,
+            priority: 0.75,
+          })),
+        ]
 
   const koEntries: MetadataRoute.Sitemap = [
     { url: `${baseUrl}`, lastModified: SITE_UPDATED, changeFrequency: 'daily', priority: 1.0 },
@@ -135,6 +157,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/semi-permanent/aftercare`, lastModified: SITE_UPDATED, changeFrequency: 'monthly', priority: 0.8 },
     { url: `${baseUrl}/semi-permanent/removal`, lastModified: SITE_UPDATED, changeFrequency: 'monthly', priority: 0.8 },
     ...boardPosts,
+    ...blogEntries,
     { url: `${baseUrl}/privacy`, lastModified: SITE_UPDATED, changeFrequency: 'yearly', priority: 0.3 },
     { url: `${baseUrl}/terms`, lastModified: SITE_UPDATED, changeFrequency: 'yearly', priority: 0.3 },
   ]

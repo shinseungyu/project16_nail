@@ -5,6 +5,7 @@ import { Analytics } from '@vercel/analytics/next'
 import SiteHeader from '@/components/SiteHeader'
 import SiteFooter from '@/components/SiteFooter'
 import { hreflang } from '@/lib/hreflang'
+import { getPublishedPosts } from '@/lib/blog/store'
 import './globals.css'
 
 const pretendard = localFont({
@@ -148,7 +149,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       </head>
       <body className={`${pretendard.className} antialiased`}>
         {/* 헤더 (현재 업종에 맞춰 로고·네비 전환) */}
-        <SiteHeader />
+        <SiteHeader showBlog={getPublishedPosts().length > 0} />
 
         <main className="min-h-screen">{children}</main>
 
